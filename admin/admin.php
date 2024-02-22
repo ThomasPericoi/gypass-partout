@@ -6,14 +6,14 @@
 // Add options page
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page(array(
-        'page_title'    => __('Theme options', 'gypass'),
-        'menu_title'    => __('Theme options', 'gypass'),
+        'page_title'    => __('Options du thème', 'gypass'),
+        'menu_title'    => __('Options du thème', 'gypass'),
         'menu_slug'     => 'options',
         'capability'    => 'edit_pages',
         'redirect'      => true,
         'position'      => 2,
-        'update_button' => __('Update', 'gypass'),
-        'updated_message' => __('All good', 'gypass'),
+        'update_button' => __('Mettre à jour', 'gypass'),
+        'updated_message' => __('Tout est bon !', 'gypass'),
         'icon_url'      => 'dashicons-info'
     ));
 }

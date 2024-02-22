@@ -53,7 +53,7 @@ add_filter('the_generator', 'remove_wordpress_version');
 // Hide Wordpress errors
 function hide_wordpress_errors()
 {
-    return __('Nice try!', 'gypass');
+    return __('Une erreur est survenue !', 'gypass');
 }
 add_filter('login_errors', 'hide_wordpress_errors');
 
@@ -97,11 +97,12 @@ function register_menus()
 {
     register_nav_menus(
         array(
-            'header-menu' => __('Header Menu', 'gypass'),
-            'main-footer-menu-1' => __('Main footer Menu 1', 'gypass'),
-            'main-footer-menu-2' => __('Main footer Menu 2', 'gypass'),
-            'main-footer-menu-3' => __('Main footer Menu 3', 'gypass'),
-            'sub-footer-menu' => __('Sub-footer Menu', 'gypass'),
+            'topbar-menu' => __('Barre supérieure', 'gypass'),
+            'header-menu' => __('En-tête', 'gypass'),
+            'footer-menu-1' => __('Pied de page 1', 'gypass'),
+            'footer-menu-2' => __('Pied de page 2', 'gypass'),
+            'footer-menu-3' => __('Pied de page 3', 'gypass'),
+            'footer-menu-4' => __('Pied de page 4', 'gypass'),
         )
     );
 }
@@ -176,7 +177,7 @@ function change_login_logo()
     <style type="text/css">
         #login h1 a,
         .login h1 a {
-            background-image: url(<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/logo.svg);
+            background-image: url(<?php echo get_bloginfo('stylesheet_directory'); ?>/assets/images/gypass-logo.svg);
             height: 65px;
             width: 320px;
             background-size: 320px 65px;
@@ -185,7 +186,7 @@ function change_login_logo()
         }
     </style>
 <?php }
-// add_action('login_enqueue_scripts', 'change_login_logo');
+add_action('login_enqueue_scripts', 'change_login_logo');
 
 // Change admin bar logo
 function change_admin_bar_logo()
@@ -193,7 +194,7 @@ function change_admin_bar_logo()
     echo '
     <style type="text/css">
         #wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
-            background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/images/logo.svg) !important;
+            background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/images/gypass-logo-condensed.svg) !important;
             background-position: 0 0;
             color:rgba(0, 0, 0, 0);
         }
@@ -203,24 +204,24 @@ function change_admin_bar_logo()
     </style>
     ';
 }
-// add_action('wp_before_admin_bar_render', 'change_admin_bar_logo');
+add_action('wp_before_admin_bar_render', 'change_admin_bar_logo');
 
 // Change admin footer text
 function change_admin_footer_text()
 {
-    echo __('Fueled by <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Theme realised by <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a></p>', 'gypass');
+    echo __('Propulsé par <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Thème réalisé par <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a> sous la supervision de <a href="https://www.red-agency.fr/" target="_blank">Red Agency</a></p>', 'gypass');
 }
 add_filter('admin_footer_text', 'change_admin_footer_text');
 
 // Add admin widgets
 function custom_dashboard_help()
 {
-    echo __('<p>Welcome to the Usefool Theme! Need help? Contact me <a href="mailto:thomaspericoi@gmail.com">here</a>. <br/>If you want more informations about me: <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a></p>', 'gypass');
+    echo __('Ce thème est réalisé par <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a> sous la supervision de <a href="https://www.red-agency.fr/" target="_blank">Red Agency</a>.</p>', 'gypass');
 }
 
 function add_admin_widgets()
 {
     global $wp_meta_boxes;
-    wp_add_dashboard_widget('custom_help_widget', __('Usefool Theme', 'gypass'), 'custom_dashboard_help');
+    wp_add_dashboard_widget('custom_help_widget', __('Crédits', 'gypass'), 'custom_dashboard_help');
 }
 add_action('wp_dashboard_setup', 'add_admin_widgets');
