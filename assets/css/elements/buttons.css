@@ -1,0 +1,82 @@
+/* #Buttons
+--------------------------------------------------------------- */
+.btn-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+@media screen and (min-width: 768px) {
+    .btn-wrapper {
+        flex-direction: row;
+        align-items: center;
+    }
+}
+
+.btn {
+    height: 40px;
+    padding: 0.4rem 1.4rem;
+    box-sizing: content-box;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 1em;
+    font-family: var(--bold);
+    font-weight: 400;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+    border: 0;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: color ease 350ms, background-color ease 350ms, border ease 350ms;
+}
+
+/* Icon */
+.btn[class*="btn-icon"] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn[class*="btn-icon"]:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 20px 20px;
+    transform: translateX(0);
+    transition: transform ease 350ms;
+    filter: invert(1);
+}
+
+.btn-icon-chevron-right:after {
+    background-image: url(../../icons/chevron-right.svg);
+}
+
+.btn-icon-download:after {
+    background-image: url(../../icons/download.svg);
+}
+
+.btn-icon-external-link:after {
+    background-image: url(../../icons/external-link.svg);
+}
+
+.btn-icon-heart:after {
+    background-image: url(../../icons/heart.svg);
+}
+
+.btn-icon-mail:after {
+    background-image: url(../../icons/mail.svg);
+}
+
+.btn-icon-phone:after {
+    background-image: url(../../icons/phone.svg);
+}
+
+.btn-icon-plus:after {
+    background-image: url(../../icons/plus.svg);
+}
