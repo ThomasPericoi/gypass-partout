@@ -1,10 +1,10 @@
 {
     "key": "group_6543b9a5c1a67",
-    "title": "Options du thème",
+    "title": "Options du thème - Pied de page",
     "fields": [
         {
-            "key": "field_6543b9a5f9cf6",
-            "label": "Options de l'en-tête",
+            "key": "field_65d8b5d45c209",
+            "label": "Réassurance",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -16,15 +16,15 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
-            "key": "field_6543ba04f9cf7",
-            "label": "Menu",
-            "name": "",
+            "key": "field_65d8b627b4c08",
+            "label": "Badges de réassurance",
+            "name": "footer_reinsurance",
             "aria-label": "",
-            "type": "message",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -33,13 +33,45 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Pour éditer les menus, il faut aller dans Apparence > Menus.",
-            "new_lines": "wpautop",
-            "esc_html": 0
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter un élément",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_65d8b775b4c09",
+                    "label": "Badge",
+                    "name": "badge",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_65d8b627b4c08"
+                }
+            ]
         },
         {
             "key": "field_6543be273435c",
-            "label": "Options du pied de page",
+            "label": "Informations",
             "name": "",
             "aria-label": "",
             "type": "tab",
@@ -51,12 +83,12 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
+            "placement": "top",
             "endpoint": 0
         },
         {
             "key": "field_6548b5bba0a03",
-            "label": "Logo alternative",
+            "label": "Logo alternatif",
             "name": "footer_logo_alt",
             "aria-label": "",
             "type": "image",
@@ -80,7 +112,100 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_65490d72c4880",
+            "key": "field_65dcada432885",
+            "label": "Description du site",
+            "name": "footer_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "Texte apparaissant sous le logo alternatif du footer.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_65ddb7ac8a18f",
+            "label": "Contact",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65ddc29572a40",
+            "label": "Titre de la section",
+            "name": "footer_contact_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65dcb110f3989",
+            "label": "Adresse",
+            "name": "footer_contact_address",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "Les sauts à la ligne sont pris en compte.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 3,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_65dcb2429219f",
+            "label": "Bouton de contact",
+            "name": "footer_contact_button",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_65dca50e0c75f",
             "label": "Réseaux sociaux",
             "name": "footer_socials",
             "aria-label": "",
@@ -98,17 +223,17 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Add Row",
+            "button_label": "Ajouter un élément",
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_65490d8ac4881",
-                    "label": "Icône",
+                    "key": "field_65dca53d0c760",
+                    "label": "Réseau social",
                     "name": "icon",
                     "aria-label": "",
                     "type": "select",
                     "instructions": "",
-                    "required": 0,
+                    "required": 1,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -129,30 +254,17 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65490d72c4880"
+                    "parent_repeater": "field_65dca50e0c75f"
                 },
                 {
-                    "key": "field_65490dccc4882",
+                    "key": "field_65dca5a30c761",
                     "label": "Lien vers le profil",
-                    "name": "url",
+                    "name": "link",
                     "aria-label": "",
                     "type": "url",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_65490d8ac4881",
-                                "operator": "!=",
-                                "value": "mail"
-                            },
-                            {
-                                "field": "field_65490d8ac4881",
-                                "operator": "!=",
-                                "value": "phone"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -160,9 +272,66 @@
                     },
                     "default_value": "",
                     "placeholder": "",
-                    "parent_repeater": "field_65490d72c4880"
+                    "parent_repeater": "field_65dca50e0c75f"
                 }
             ]
+        },
+        {
+            "key": "field_65ddb7c88a190",
+            "label": "Newsletter",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_65ddc219071a6",
+            "label": "Titre du formulaire",
+            "name": "footer_newsletter_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_65ddb69137a37",
+            "label": "Code court du formulaire",
+            "name": "footer_newsletter_shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Insérer l'ID du formulaire du code court généré via le plugin Contact Form 7.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
@@ -174,7 +343,7 @@
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 2,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
@@ -183,5 +352,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1708619463
+    "modified": 1709032126
 }

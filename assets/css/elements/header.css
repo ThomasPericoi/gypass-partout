@@ -2,8 +2,16 @@
 --------------------------------------------------------------- */
 #header {
     width: 100%;
+    padding: 10px 0;
     position: relative;
     z-index: 99;
+    background-color: var(--ebb);
+}
+
+@media screen and (min-width: 1200px) {
+    #header {
+        padding: 20px 0;
+    }
 }
 
 #header .inner-header {
@@ -22,7 +30,7 @@
 
 #header .custom-logo {
     width: 100%;
-    max-width: 86px;
+    max-width: 160px;
     height: auto;
 }
 

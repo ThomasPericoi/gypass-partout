@@ -1,32 +1,128 @@
 /* #Imports
 --------------------------------------------------------------- */
 /* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+}
 
 @font-face {
-    font-family: "OpenDyslexic";
-    src: url("../fonts/OpenDyslexic-Regular.otf");
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Thin-Italic.otf') format('opentype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-ExtraLight.otf') format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-ExtraLight-Italic.otf') format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Light-Italic.otf') format('opentype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "OpenDyslexic";
-    src: url("../fonts/OpenDyslexic-Italic.otf");
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Italic.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
 }
 
 @font-face {
-    font-family: "OpenDyslexic";
-    src: url("../fonts/OpenDyslexic-Bold.otf");
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Medium-Italic.otf') format('opentype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-SemiBold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-SemiBold-Italic.otf') format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Bold.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
-    font-family: "OpenDyslexic";
-    src: url("../fonts/OpenDyslexic-BoldItalic.otf");
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Bold-Italic.otf') format('opentype');
     font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-ExtraBold-Italic.otf') format('opentype');
+    font-weight: 800;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Galano Grotesque";
+    src: url('../fonts/Galano-Grotesque-Black-Italic.otf') format('opentype');
+    font-weight: 900;
     font-style: italic;
 }

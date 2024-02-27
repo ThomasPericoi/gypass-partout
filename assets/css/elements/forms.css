@@ -1,0 +1,117 @@
+/* #Forms
+--------------------------------------------------------------- */
+main input,
+main textarea {
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: var(--body);
+    outline: 0;
+    background-color: transparent;
+}
+
+main input[type="text"],
+main input[type="email"],
+main input[type="tel"] {
+    width: 100%;
+    padding: 5px;
+    border: 0;
+    border-bottom: 1px solid var(--scooter);
+}
+
+main input[type="text"]:focus,
+main input[type="email"]:focus,
+main input[type="tel"]:focus {
+    border-bottom: 1px solid var(--bay-of-many);
+}
+
+main textarea {
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: 1px solid var(--scooter);
+}
+
+/* Checkbox & Radio */
+main [type="checkbox"]:checked,
+main [type="radio"]:checked,
+main [type="checkbox"]:not(:checked),
+main [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+main [type="checkbox"]:checked+span,
+main [type="radio"]:checked+span,
+main [type="checkbox"]:not(:checked)+span,
+main [type="radio"]:not(:checked)+span {
+    padding-left: 35px;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+main [type="checkbox"]:checked+span:before,
+main [type="radio"]:checked+span:before,
+main [type="checkbox"]:not(:checked)+span:before,
+main [type="radio"]:not(:checked)+span:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 1px solid var(--scooter);
+    border-radius: 5px;
+}
+
+main [type="checkbox"]:checked+span:after,
+main [type="radio"]:checked+span:after,
+main [type="checkbox"]:not(:checked)+span:after,
+main [type="radio"]:not(:checked)+span:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    background: var(--bay-of-many);
+    border-radius: 3px;
+    transition: all 250ms ease;
+}
+
+main [type="checkbox"]:not(:checked)+span:after,
+main [type="radio"]:not(:checked)+span:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+main [type="checkbox"]:checked+span:after,
+main [type="radio"]:checked+span:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+main [type="radio"]:checked+span,
+main [type="radio"]:not(:checked)+span {
+    margin-bottom: 10px;
+}
+
+main [type="radio"]:checked+span:before,
+main [type="radio"]:not(:checked)+span:before,
+main [type="radio"]:checked+span:after,
+main [type="radio"]:not(:checked)+span:after {
+    border-radius: 100%;
+}
+
+/* Contact Form 7 */
+.wpcf7-not-valid-tip {
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+.wpcf7-response-output {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+    font-size: 0.8rem;
+}

@@ -103,10 +103,14 @@ function register_menus()
             'footer-menu-2' => __('Pied de page 2', 'gypass'),
             'footer-menu-3' => __('Pied de page 3', 'gypass'),
             'footer-menu-4' => __('Pied de page 4', 'gypass'),
+            'footer-menu-5' => __('Pied de page 5', 'gypass'),
         )
     );
 }
 add_action('init', 'register_menus');
+
+// Remove <p> and <br/> from Contact Form 7
+add_filter('wpcf7_autop_or_not', '__return_false');
 
 // Add ACF versioning
 if (class_exists('ACF')) {

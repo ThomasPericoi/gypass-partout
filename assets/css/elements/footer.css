@@ -2,32 +2,90 @@
 --------------------------------------------------------------- */
 #footer {
     width: 100%;
-    padding: var(--spacing-section-inner) 0;
     position: relative;
-    background-color: var(--secondary);
+    color: var(--white);
 }
 
-/* Main footer */
-#main-footer {
-    margin-bottom: var(--spacing-section-inner);
+/* Reinsurance */
+#reinsurance {
+    padding: var(--spacing-section-inner) 0;
+    background-color: var(--scooter);
 }
 
-#footer .container {
+#reinsurance .badges {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: space-between;
-    gap: 4em;
+    gap: 1rem;
 }
 
-@media screen and (min-width: 768px) {
-
-    #footer .container {
+@media screen and (min-width: 992px) {
+    #reinsurance .badges {
         flex-direction: row;
     }
 }
 
-#main-footer .custom-logo-link {
-    margin: 0 auto 1em auto;
+#reinsurance .badge {
+    max-width: 125px;
+}
+
+@media screen and (min-width: 992px) {
+    #reinsurance .badge {
+        max-width: 150px;
+    }
+}
+
+#reinsurance .badge img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Main footer */
+#main-footer {
+    padding: var(--spacing-section-inner) 0;
+    background-color: var(--primary);
+}
+
+#main-footer ::selection {
+    background: var(--scooter);
+}
+
+#main-footer::-moz-selection {
+    background: var(--scooter);
+}
+
+#footer .title {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+#main-footer>.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 1200px) {
+    #main-footer>.container {
+        flex-direction: row;
+        flex-flow: wrap;
+        justify-content: space-between;
+    }
+}
+
+/* Informations */
+@media screen and (min-width: 1200px) {
+    #footer .informations {
+        max-width: 350px;
+    }
+}
+
+#footer .custom-logo-link {
+    margin-bottom: 1em;
     display: block;
     text-decoration: none;
     color: var(--black);
@@ -36,64 +94,180 @@
     font-weight: 700;
 }
 
-#main-footer .custom-logo {
+#footer .custom-logo {
     width: 100%;
-    max-width: 86px;
+    max-width: 175px;
     height: auto;
     display: block;
+    filter: brightness(0) invert(1);
 }
 
-#main-footer .socials {
-    display: flex;
-    gap: 0.75em;
-    justify-content: center;
+#footer .description p {
+    font-weight: 500;
 }
 
-#main-footer .socials .social img {
-    width: 30px;
-    height: auto;
-    display: block;
-}
-
-#main-footer .socials .social {
-    transform: rotate(0deg);
-    transition: transform ease 350ms;
-}
-
-#main-footer .socials .social:hover,
-#main-footer .socials .social:focus {
-    transform: rotate(12deg);
-}
-
-#main-footer .menus {
+/* Menus */
+#footer .menus {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    gap: 2em;
+    gap: 1em;
 }
 
-@media screen and (min-width: 768px) {
-    #main-footer .menus {
+@media screen and (min-width: 992px) {
+    #footer .menus {
+        flex: 1 1 0;
         flex-direction: row;
+        justify-content: space-between;
+        gap: 2em;
     }
 }
 
-#main-footer .menus>* {
-    flex: 1 1 0;
-}
-
-#main-footer ul.menu {
+#footer .menu-footer>ul {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
 }
 
-#main-footer .menu-main-footer a {
-    color: var(--black);
+@media screen and (min-width: 1200px) {
+    #footer .menu-footer>ul {
+        min-width: 200px;
+    }
+}
+
+#footer .menu-footer a {
+    color: var(--white);
+    text-decoration: none;
+    transition: color ease 250ms;
+}
+
+#footer .menu-footer a:hover,
+#footer .menu-footer a:focus {
+    color: var(--scooter);
+}
+
+#footer .menu-external a {
+    color: var(--scooter);
+}
+
+#footer .menu-external a:hover,
+#footer .menu-external a:focus {
+    text-decoration: underline;
+}
+
+/* Contact */
+#footer .contact {
+    padding: 0 30px;
+    border-right: 1px solid var(--scooter);
+    border-left: 1px solid var(--scooter);
+}
+
+#footer .btn-contact {
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    font-weight: 700;
     text-decoration: none;
 }
 
-#main-footer .menu-main-footer a:hover,
-#main-footer .menu-main-footer a:focus {
+#footer .btn-contact:before {
+    content: "";
+    width: 34px;
+    height: 34px;
+    display: block;
+    margin-right: 5px;
+    background-size: cover;
+    background-image: url(../../icons/mail.svg);
+}
+
+#footer .btn-contact:hover,
+#footer .btn-contact:focus {
     text-decoration: underline;
+}
+
+#footer .socials {
+    max-width: 300px;
+    margin-top: 1em;
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+#footer .social>svg {
+    width: 42px;
+    height: auto;
+    display: block;
+}
+
+#footer .social>svg path,
+#footer .social>svg ellipse {
+    transition: fill ease 250ms;
+}
+
+#footer .social:hover>svg path,
+#footer .social:hover>svg ellipse,
+#footer .social:focus>svg path,
+#footer .social:focus>svg ellipse {
+    fill: var(--scooter);
+}
+
+/* Newsletter */
+#footer .newsletter {
+    margin-right: auto;
+}
+
+#footer .newsletter-wrapper {
+    display: flex;
+}
+
+#footer .newsletter-wrapper>span {
+    flex: 1 1 0;
+}
+
+#footer .newsletter-wrapper>span>input {
+    width: 100%;
+    height: 40px;
+    padding: 1em;
+    color: var(--white);
+    font-family: var(--body);
+    border: 1px solid var(--white);
+    outline: 0;
+    background-color: transparent;
+    box-sizing: border-box;
+    transition: border-color ease 250ms;
+}
+
+#footer .newsletter-wrapper>span>input:focus {
+    border-color: var(--scooter);
+}
+
+#footer .newsletter-wrapper>span>input::placeholder {
+    color: var(--scooter);
+}
+
+#footer .newsletter-wrapper .wpcf7-not-valid-tip {
+    position: absolute;
+}
+
+#footer .newsletter-wrapper .wpcf7-spinner {
+    display: none;
+}
+
+#footer input[type="submit"] {
+    padding: 0 10px;
+    color: var(--white);
+    font-family: var(--body);
+    text-transform: uppercase;
+    border: 1px solid var(--white);
+    border-left: transparent;
+    outline: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color ease 250ms, color ease 250ms;
+}
+
+#footer input[type="submit"]:hover,
+#footer input[type="submit"]:focus {
+    color: var(--scooter);
+    background-color: var(--white);
 }
