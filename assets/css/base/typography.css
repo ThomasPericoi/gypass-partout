@@ -3,20 +3,21 @@
 body {
   font-family: var(--body);
   line-height: 1.5;
-  color: var(--black);
+  color: var(--primary);
   background-color: var(--white);
 }
 
-body,
-p {
+p,
+.p-size {
   font-size: 16px;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 @media screen and (min-width: 768px) {
 
   body,
-  p {
+  p,
+  .p-size {
     font-size: 18px;
   }
 }
@@ -24,7 +25,8 @@ p {
 @media screen and (min-width: 1920px) {
 
   body,
-  p {
+  p,
+  .p-size {
     font-size: 20px;
   }
 }
@@ -62,8 +64,6 @@ h6 {
 h1,
 .h1-size {
   font-size: 28px;
-  font-weight: 400;
-  text-transform: uppercase;
 }
 
 @media screen and (min-width: 768px) {
@@ -74,32 +74,18 @@ h1,
   }
 }
 
-@media screen and (min-width: 1920px) {
-
-  h1,
-  .h1-size {
-    font-size: 50px;
-  }
-}
-
 h2,
 .h2-size {
-  font-size: 24px;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
 }
 
 @media screen and (min-width: 768px) {
 
   h2,
   .h2-size {
-    font-size: 36px;
-  }
-}
-
-@media screen and (min-width: 1920px) {
-
-  h2,
-  .h2-size {
-    font-size: 38px;
+    font-size: 32px;
   }
 }
 
@@ -185,4 +171,13 @@ h6,
   .h6-size {
     font-size: 20px;
   }
+}
+
+a {
+  color: var(--secondary);
+}
+
+hr {
+  border-top: 1px solid var(--primary);
+  width: 250px;
 }

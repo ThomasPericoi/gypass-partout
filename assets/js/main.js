@@ -97,10 +97,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   document.querySelectorAll("#menu-toggle").forEach(function (item) {
-    item.addEventListener("keydown", (event) => {
-      if (event.code === "Enter") {
+    item.addEventListener("keydown", (e) => {
+      if (e.code === "Enter") {
         item.click();
       }
     });
+  });
+
+  // Element - Vidéo
+  $("video").click(function () {
+    $(this).next($(".play")).hide();
+    $(this).attr("controls", "");
+  });
+
+  $("video").on('keypress', function (e) {
+    if ((e.keyCode || e.which) == 13) {
+      $(this).next($(".play")).hide();
+      $(this).attr("controls", "");
+    }
   });
 }); 

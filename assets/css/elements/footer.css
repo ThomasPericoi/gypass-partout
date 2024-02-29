@@ -8,7 +8,7 @@
 
 /* Reinsurance */
 #reinsurance {
-    padding: var(--spacing-section-inner) 0;
+    padding: var(--spacing-section-outer) 0;
     background-color: var(--scooter);
 }
 
@@ -20,7 +20,7 @@
     gap: 1rem;
 }
 
-@media screen and (min-width: 992px) {
+@media screen and (min-width: 768px) {
     #reinsurance .badges {
         flex-direction: row;
     }
@@ -44,7 +44,7 @@
 
 /* Main footer */
 #main-footer {
-    padding: var(--spacing-section-inner) 0;
+    padding: var(--spacing-section-outer) 0;
     background-color: var(--primary);
 }
 

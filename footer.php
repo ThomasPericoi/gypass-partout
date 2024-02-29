@@ -84,12 +84,12 @@ $logo_alt = get_field('footer_logo_alt', 'option'); ?>
                     <?php endif; ?>
                     <a href="<?php echo get_field("footer_contact_button", "options")["url"]; ?>" target="<?php echo get_field("footer_contact_button", "options")["target"]; ?>" class="btn-contact"><?php echo get_field("footer_contact_button", "options")["title"]; ?></a>
                 <?php endif; ?>
-                <?php if (have_rows('footer_socials', 'option')) : ?>
+                <?php if (have_rows('footer_socials', 'options')) : ?>
                     <div class="socials">
-                        <?php while (have_rows('footer_socials', 'option')) : the_row();
+                        <?php while (have_rows('footer_socials', 'options')) : the_row();
                             $icon = get_sub_field('icon');
-                            $url = get_sub_field('url'); ?>
-                            <a href="<?php echo $url; ?>" target="_blank" class="social">
+                            $link = get_sub_field('link'); ?>
+                            <a href="<?php echo $link; ?>" target="_blank" class="social">
                                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/socials/' . $icon . '.svg'); ?>
                             </a>
                         <?php endwhile; ?>

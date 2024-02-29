@@ -1,0 +1,16 @@
+{
+    "name": "acf/content-2-columns",
+    "title": "Contenu en 2 colonnes",
+    "description": "2 colonnes de contenu, une pour du texte, une pour un média.",
+    "category": "gypass-block",
+    "icon": "align-pull-left",
+    "keywords": [
+        "image",
+        "text",
+        "video"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "content-2-columns.php"
+    }
+}

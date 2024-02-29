@@ -56,7 +56,7 @@ add_action('init', 'register_custom_taxonomy');
 // Register blocks
 function register_acf_blocks()
 {
-    $blocks = ["sample"];
+    $blocks = ["content-2-columns"];
 
     foreach ($blocks as $block) {
         register_block_type(__DIR__ . '/blocks/' . $block);
@@ -71,8 +71,8 @@ function register_block_category($categories, $post)
         $categories,
         array(
             array(
-                'slug' => 'sample-category',
-                'title' => __('Sample category', 'gypass'),
+                'slug' => 'gypass-block',
+                'title' => __('Gypass', 'gypass'),
             ),
         )
     );

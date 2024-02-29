@@ -30,6 +30,10 @@ add_theme_support(
 add_theme_support('disable-custom-colors');
 add_theme_support('disable-custom-font-sizes');
 
+@ini_set('upload_max_size', '64M');
+@ini_set('post_max_size', '64M');
+@ini_set('max_execution_time', '300');
+
 // Disable emojis
 function disable_emojis()
 {

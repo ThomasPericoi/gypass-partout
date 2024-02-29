@@ -41,8 +41,14 @@ Text Domain: gypass
 /* #Blocks
 --------------------------------------------------------------- */
 
+@import "./assets/css/blocks/content-2-columns.css";
+@import "./assets/css/blocks/faq.css";
+
 /* #Template Parts
 --------------------------------------------------------------- */
+
+@import "./assets/css/template-parts/cta-trio.css";
+@import "./assets/css/template-parts/home-video.css";
 
 /* #Templates
 --------------------------------------------------------------- */
@@ -51,4 +57,5 @@ Text Domain: gypass
 --------------------------------------------------------------- */
 
 @import "./assets/css/pages/404.css";
+@import "./assets/css/pages/page.css";
 @import "./assets/css/pages/front-page.css";
