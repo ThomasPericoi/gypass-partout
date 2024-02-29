@@ -24,7 +24,7 @@ if (function_exists('acf_add_options_page')) {
 // Register post types
 function register_custom_post_types()
 {
-    $post_types = ["sample"];
+    $post_types = ["document", "inspiration", "product", "tip_trick"];
 
     foreach ($post_types as $post_type) {
         include_once(__DIR__ . '/post-types/' . $post_type . '.php');
@@ -32,14 +32,26 @@ function register_custom_post_types()
 }
 add_action('init', 'register_custom_post_types');
 
-// Add custom landing page taxonomy
+// Register taxonomies
 function register_custom_taxonomy()
 {
     register_taxonomy(
-        'sample',
-        array('post', 'page'),
+        'gypass_document_type',
+        array('gypass_document'),
         array(
-            'label' => __('Sample taxonomy', 'gypass'),
+            'label' => __('Types de documents', 'gypass'),
+            'public' => false,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+        )
+    );
+    register_taxonomy(
+        'gypass_product_family',
+        array('gypass_inspiration', 'gypass_product', 'gypass_tip_trick'),
+        array(
+            'label' => __('Familles de produits', 'gypass'),
             'public' => false,
             'show_ui' => true,
             'show_in_menu' => true,
