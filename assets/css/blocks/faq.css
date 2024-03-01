@@ -1,0 +1,9 @@
+/* #FAQ
+--------------------------------------------------------------- */
+.faq-block {
+    padding: var(--spacing-section-outer) 0;
+}
+
+.faq-block h2 {
+    text-align: center;
+}
