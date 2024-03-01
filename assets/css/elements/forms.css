@@ -3,7 +3,8 @@
 /* Inputs */
 main input,
 main textarea,
-main select {
+main select,
+.searchform input[type="text"] {
     box-sizing: border-box;
     font-family: var(--body);
     color: var(--manatee);
@@ -15,7 +16,8 @@ main input[type="text"],
 main input[type="email"],
 main input[type="tel"],
 main textarea,
-main select {
+main select,
+.searchform input[type="text"] {
     width: 100%;
     padding: 15px;
     background-color: transparent;
@@ -31,7 +33,8 @@ main input[type="text"]:focus,
 main input[type="email"]:focus,
 main input[type="tel"]:focus,
 main textarea:focus,
-main select:focus {
+main select:focus,
+.searchform input[type="text"]:focus {
     color: var(--bay-of-many);
     border-color: var(--bay-of-many);
 }

@@ -36,13 +36,22 @@
     transition: color ease 350ms, background-color ease 350ms, border ease 350ms;
 }
 
+.btn-primary {
+    background-color: var(--primary);
+}
+
+.btn-primary:hover {
+    background-color: var(--scooter);
+}
+
 .btn-outline-primary {
     color: var(--primary);
     border: 2px solid var(--primary);
     background-color: transparent;
 }
 
-.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
     color: var(--white);
     background-color: var(--primary);
 }
@@ -53,7 +62,8 @@
     background-color: transparent;
 }
 
-.btn-outline-secondary:hover {
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
     color: var(--white);
     background-color: var(--secondary);
 }

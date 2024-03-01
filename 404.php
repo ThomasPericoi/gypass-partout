@@ -4,7 +4,7 @@
     <div class="container">
         <h1><?php echo get_field('404_title', 'options') ?: __("404", "gypass"); ?></h1>
         <h2><?php echo get_field('404_subtitle', 'options') ?: __("Vous êtes perdu ?", "gypass"); ?></h2>
-        <button class="btn btn-outline-primary"><?php echo get_field('404_search_label', 'options') ?: __("Lancez une recherche", "gypass"); ?></button>
+        <button class="btn btn-primary js-toggleSearchModal"><?php echo get_field('404_search_label', 'options') ?: __("Lancez une recherche", "gypass"); ?></button>
     </div>
 </section>
 

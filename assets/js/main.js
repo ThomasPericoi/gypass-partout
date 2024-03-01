@@ -54,53 +54,64 @@ document.addEventListener("DOMContentLoaded", function () {
     markAsViewed(item, item);
   });
 
-  // Header - Menu
-  document
-    .querySelectorAll("header .menu-header>li>a")
-    .forEach(function (item) {
-      item.tabIndex = 0;
-    });
+  // General - Toggle hide elements
+  function toggleHideFooter() {
+    document.querySelector("footer").toggleAttribute("inert");
+    document
+      .querySelector("footer")
+      .setAttribute(
+        "aria-hidden",
+        !(document.querySelector("footer").getAttribute("aria-hidden") ==
+          "true"
+          ? true
+          : false)
+      );
+  }
 
-  document.querySelectorAll(".menu-toggle").forEach(function (item) {
+  function toggleHideMain() {
+    document.querySelector("main").toggleAttribute("inert");
+    document.querySelector("main").setAttribute("aria-hidden",
+      !(document.querySelector("main").getAttribute("aria-hidden") == "true"
+        ? true
+        : false)
+    );
+  }
+
+  // Header - Menu
+  document.querySelectorAll("header .menu-header>li>a").forEach(function (item) {
+    item.tabIndex = 0;
+  });
+
+  document.querySelectorAll(".js-toggleMenu").forEach(function (item) {
     item.addEventListener("click", function () {
       document.querySelector("body").classList.toggle("js-menuOpened");
-      document.querySelector("main").toggleAttribute("inert");
-      document
-        .querySelector("main")
-        .setAttribute(
-          "aria-hidden",
-          !(document.querySelector("main").getAttribute("aria-hidden") == "true"
-            ? true
-            : false)
-        );
       document.querySelector(".super-menu").toggleAttribute("inert");
-      document
-        .querySelector(".super-menu")
-        .setAttribute(
-          "aria-hidden",
-          !(document.querySelector(".super-menu").getAttribute("aria-hidden") ==
-            "true"
-            ? true
-            : false)
-        );
-      document.querySelector("footer").toggleAttribute("inert");
-      document
-        .querySelector("footer")
-        .setAttribute(
-          "aria-hidden",
-          !(document.querySelector("footer").getAttribute("aria-hidden") ==
-            "true"
-            ? true
-            : false)
-        );
+      document.querySelector(".super-menu").setAttribute(
+        "aria-hidden", !(document.querySelector(".super-menu").getAttribute("aria-hidden") == "true" ? true : false)
+      );
+      toggleHideMain();
+      toggleHideFooter();
     });
   });
 
-  document.querySelectorAll("#menu-toggle").forEach(function (item) {
+  document.querySelectorAll(".js-toggleMenu").forEach(function (item) {
     item.addEventListener("keydown", (e) => {
       if (e.code === "Enter") {
         item.click();
       }
+    });
+  });
+
+  // Header - Search Modal
+  document.querySelectorAll(".js-toggleSearchModal").forEach(function (item) {
+    item.addEventListener("click", function () {
+      document.querySelector("body").classList.toggle("js-searchModalOpened");
+      document.querySelector(".js-searchModal").toggleAttribute("inert");
+      document.querySelector(".js-searchModal").setAttribute(
+        "aria-hidden", !(document.querySelector(".js-searchModal").getAttribute("aria-hidden") == "true" ? true : false)
+      );
+      toggleHideMain();
+      toggleHideFooter();
     });
   });
 

@@ -308,3 +308,63 @@ body.js-menuOpened #header .menu-toggle-col {
 .super-menu-wrapper .btn-wrapper {
     padding-top: 1.5rem;
 }
+
+/* Search Modal */
+body.js-searchModalOpened {
+    overflow: hidden;
+}
+
+.search-modal {
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: rgba(37, 48, 128, 0.8);
+    overflow-y: auto;
+    opacity: 0;
+    transition: opacity ease 250ms;
+}
+
+body.js-searchModalOpened .search-modal {
+    opacity: 1;
+}
+
+.search-modal .container {
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-modal .btn-close {
+    max-width: 40px;
+    position: absolute;
+    top: 2em;
+    right: 2em;
+    display: block;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.search-modal .container .searchform {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 992px) {
+    .search-modal .container .searchform {
+        max-width: 650px;
+        flex-direction: row;
+        gap: unset;
+        align-items: stretch;
+    }
+}
+
+.search-modal input[type="text"] {
+    background-color: white;
+}
