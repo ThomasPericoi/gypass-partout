@@ -1,0 +1,65 @@
+{
+    "key": "group_65e19aefb4187",
+    "title": "Options de page - Page contact",
+    "fields": [
+        {
+            "key": "field_65e19aef252cb",
+            "label": "Description",
+            "name": "contact_description",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_65e19ef85a3e0",
+            "label": "Code court du formulaire",
+            "name": "contact_shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Insérer l'ID du formulaire du code court généré via le plugin Contact Form 7.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_template",
+                "operator": "==",
+                "value": "templates\/contact-page-template.php"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709292070
+}

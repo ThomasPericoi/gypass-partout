@@ -41,6 +41,11 @@ i {
   font-style: italic;
 }
 
+sup {
+  vertical-align: super;
+  font-size: .7em;
+}
+
 h1,
 h2,
 h3,

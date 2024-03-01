@@ -1,0 +1,55 @@
+/* #Contact page
+--------------------------------------------------------------- */
+.page-template-contact-page-template main {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.page-template-contact-page-template main h1 {
+    text-align: center;
+}
+
+.page-template-contact-page-template main .description p {
+    text-align: center;
+    font-size: 23px;
+}
+
+.page-template-contact-page-template main #contact .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+.page-template-contact-page-template main form {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px;
+    font-size: 17px;
+}
+
+@media screen and (min-width: 992px) {
+    .page-template-contact-page-template main form {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .page-template-contact-page-template main form .label-full {
+        grid-column: span 2;
+    }
+}
+
+.page-template-contact-page-template main form label input,
+.page-template-contact-page-template main form label textarea,
+.page-template-contact-page-template main form label select {
+    margin-top: 8px;
+}
+
+.page-template-contact-page-template main form .validation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px
+}
+
+.page-template-contact-page-template main form .validation input[type="submit"] {
+    margin: 0 auto;
+}

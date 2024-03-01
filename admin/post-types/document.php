@@ -31,7 +31,7 @@ $args = [
     ],
     'taxonomies' => [],
     'has_archive' => true,
-    'rewrite' => ['slug' => 'inspiration', 'with_front' => true],
+    'rewrite' => ['slug' => 'document', 'with_front' => true],
     'menu_position' => 20,
     'menu_icon' => 'dashicons-paperclip',
 ];
