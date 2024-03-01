@@ -183,7 +183,7 @@
 }
 
 #menu-toggle:focus+div {
-    outline: dashed 1px var(--secondary);
+    outline: dashed 1px var(--primary);
     outline-offset: 6px;
 }
 
@@ -204,7 +204,7 @@
     height: 2px;
     position: absolute;
     display: block;
-    background-color: var(--secondary);
+    background-color: var(--primary);
 }
 
 .menu-toggle-open>span:before,

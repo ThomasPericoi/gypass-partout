@@ -27,6 +27,7 @@
     font-family: var(--bold);
     font-weight: 400;
     text-align: center;
+    text-transform: uppercase;
     color: var(--white);
     background-color: var(--black);
     border: 0;
@@ -35,48 +36,73 @@
     transition: color ease 350ms, background-color ease 350ms, border ease 350ms;
 }
 
-/* Icon */
-.btn[class*="btn-icon"] {
+.btn-outline-primary {
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    background-color: transparent;
+}
+
+.btn-outline-primary:hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.btn-outline-secondary {
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
+    background-color: transparent;
+}
+
+.btn-outline-secondary:hover {
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+/* Pagination */
+.navigation.pagination {
+    margin-bottom: var(--spacing-section-inner);
+    font-size: 20px;
+    font-weight: 500;
+    font-family: var(--bold);
+}
+
+.navigation.pagination .nav-links {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
 }
 
-.btn[class*="btn-icon"]:after {
-    content: "";
-    width: 20px;
-    height: 20px;
+.navigation.pagination .nav-links a,
+.navigation.pagination .nav-links .current {
+    width: 30px;
+    height: 30px;
+    color: var(--primary);
+    line-height: 1.6;
+    text-decoration: none;
+    border-radius: 50%;
+    transition: background-color ease 250ms, color ease 250ms;
+}
+
+.navigation.pagination .nav-links .current,
+.navigation.pagination .nav-links a:not(.prev):hover,
+.navigation.pagination .nav-links a:not(.next):hover {
+    color: var(--white);
+    background-color: var(--primary);
+}
+
+.icon-left,
+.icon-right {
+    width: 25px;
+    height: 25px;
     display: block;
-    background-size: 20px 20px;
-    transform: translateX(0);
-    transition: transform ease 350ms;
-    filter: invert(1);
+    background-size: 25px 25px;
 }
 
-.btn-icon-chevron-right:after {
-    background-image: url(../../icons/chevron-right.svg);
+.icon-left {
+    background-image: url(../../icons/arrow-left.svg);
 }
 
-.btn-icon-download:after {
-    background-image: url(../../icons/download.svg);
-}
-
-.btn-icon-external-link:after {
-    background-image: url(../../icons/external-link.svg);
-}
-
-.btn-icon-heart:after {
-    background-image: url(../../icons/heart.svg);
-}
-
-.btn-icon-mail:after {
-    background-image: url(../../icons/mail.svg);
-}
-
-.btn-icon-phone:after {
-    background-image: url(../../icons/phone.svg);
-}
-
-.btn-icon-plus:after {
-    background-image: url(../../icons/plus.svg);
+.icon-right {
+    background-image: url(../../icons/arrow-right.svg);
 }
