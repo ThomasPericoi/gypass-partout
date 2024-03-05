@@ -9,7 +9,7 @@ $labels = [
     'view_item' => 'Voir le produit',
     'search_items' => 'Rechercher un produit',
     'not_found' =>  'Pas de produit trouvé.',
-    'all_items' => 'Toutes les produits',
+    'all_items' => 'Tous les produits',
     'not_found_in_trash' => 'Pas de produit trouvé dans la corbeille.',
     'parent_item_colon' => ''
 ];

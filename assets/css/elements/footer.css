@@ -137,7 +137,7 @@
 #footer .menu-footer a {
     color: var(--white);
     text-decoration: none;
-    transition: color ease 250ms;
+    transition: color ease 350ms;
 }
 
 #footer .menu-footer a:hover,
@@ -201,7 +201,7 @@
 
 #footer .social>svg path,
 #footer .social>svg ellipse {
-    transition: fill ease 250ms;
+    transition: fill ease 350ms;
 }
 
 #footer .social:hover>svg path,
@@ -234,7 +234,7 @@
     outline: 0;
     background-color: transparent;
     box-sizing: border-box;
-    transition: border-color ease 250ms;
+    transition: border-color ease 350ms;
 }
 
 #footer .newsletter-wrapper>span>input:focus {
@@ -263,7 +263,7 @@
     outline: 0;
     background-color: transparent;
     cursor: pointer;
-    transition: background-color ease 250ms, color ease 250ms;
+    transition: background-color ease 350ms, color ease 350ms;
 }
 
 #footer input[type="submit"]:hover,

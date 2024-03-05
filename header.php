@@ -12,26 +12,42 @@
 
     <!-- Header -->
     <header id="header" class="header">
-        <div class="container">
-            <div class="inner-header">
-                <?php
-                if (function_exists('the_custom_logo')) :
-                    if (has_custom_logo()) :
-                        the_custom_logo();
-                    else : ?>
-                        <a href="<?php echo site_url(); ?>" class="custom-logo-link h5-size">
-                            <?php echo get_bloginfo(); ?>
-                        </a>
-                <?php endif;
-                endif; ?>
-                <?php if (has_nav_menu('header-menu')) :
-                    wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu menu-header', 'container' => false));
-                endif; ?>
-                <div class="menu-toggle-col">
-                    <div class="menu-toggle-wrapper">
-                        <input id="menu-toggle" class="js-toggleMenu" type="checkbox" role="button" tabindex="0" aria-label="Ouvrir le menu" />
-                        <div class="menu-toggle-open" aria-hidden="true">
-                            <span aria-hidden="true"></span>
+        <!-- Topbar -->
+        <div id="topbar">
+            <div class="container container-full">
+                <div class="inner-topbar">
+                    <?php if (has_nav_menu('topbar-menu')) :
+                        wp_nav_menu(array('theme_location' => 'topbar-menu', 'menu_class' => 'menu menu-topbar', 'container' => false));
+                    endif; ?>
+                    <button class="btn-search js-toggleSearchModal">
+                        <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/search.svg'); ?>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Main Header -->
+        <div id="main-header">
+            <div class="container container-full">
+                <div class="inner-header">
+                    <?php
+                    if (function_exists('the_custom_logo')) :
+                        if (has_custom_logo()) :
+                            the_custom_logo();
+                        else : ?>
+                            <a href="<?php echo site_url(); ?>" class="custom-logo-link h5-size">
+                                <?php echo get_bloginfo(); ?>
+                            </a>
+                    <?php endif;
+                    endif; ?>
+                    <?php if (has_nav_menu('header-menu')) :
+                        wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu menu-header', 'container' => false));
+                    endif; ?>
+                    <div class="menu-toggle-col">
+                        <div class="menu-toggle-wrapper">
+                            <input id="menu-toggle" class="js-toggleMenu" type="checkbox" role="button" tabindex="0" aria-label="Ouvrir le menu" />
+                            <div class="menu-toggle-open" aria-hidden="true">
+                                <span aria-hidden="true"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,11 +62,19 @@
             <div class="container">
                 <button class="js-toggleMenu menu-toggle-close" type="button">
                     <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
-                        <line fill="none" stroke="#fff" stroke-width="1.1" x1="1" y1="1" x2="13" y2="13"></line>
-                        <line fill="none" stroke="#fff" stroke-width="1.1" x1="13" y1="1" x2="1" y2="13"></line>
+                        <line fill="none" stroke="#fff" stroke-width="2" x1="1" y1="1" x2="13" y2="13"></line>
+                        <line fill="none" stroke="#fff" stroke-width="2" x1="13" y1="1" x2="1" y2="13"></line>
                     </svg>
                 </button>
-                <?php wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu menu-header menu-header-mobile', 'container' => false)); ?>
+                <?php if (has_nav_menu('header-menu')) :
+                    wp_nav_menu(array('theme_location' => 'header-menu', 'menu_class' => 'menu menu-header menu-header-mobile', 'container' => false));
+                endif; ?>
+                <?php if (has_nav_menu('topbar-menu')) :
+                    wp_nav_menu(array('theme_location' => 'topbar-menu', 'menu_class' => 'menu menu-topbar', 'container' => false));
+                endif; ?>
+                <button class="btn-search js-toggleSearchModal">
+                    <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/search.svg'); ?>
+                </button>
             </div>
         </div>
     </div>

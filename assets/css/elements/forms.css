@@ -22,7 +22,7 @@ main select,
     padding: 15px;
     background-color: transparent;
     border: 1px solid var(--manatee);
-    transition: border-color ease 250ms, color ease 250ms;
+    transition: border-color ease 350ms, color ease 350ms;
 }
 
 main select {
@@ -85,7 +85,7 @@ main [type="radio"]:not(:checked)+span:after {
     left: 3px;
     background: var(--bay-of-many);
     border-radius: 3px;
-    transition: all 250ms ease;
+    transition: all 350ms ease;
 }
 
 main [type="checkbox"]:not(:checked)+span:after,
@@ -116,7 +116,7 @@ main [type="radio"]:not(:checked)+span:after {
 main label {
     font-size: 17px;
     color: var(--manatee);
-    transition: color ease 250ms;
+    transition: color ease 350ms;
 }
 
 main label:focus-within {

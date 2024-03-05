@@ -1,6 +1,6 @@
 /* #Page
 --------------------------------------------------------------- */
-.page-template-default main {
+.page-template-default:not(.home) main {
     padding: var(--spacing-section-outer) 0;
     position: relative;
 }

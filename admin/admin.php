@@ -24,7 +24,7 @@ if (function_exists('acf_add_options_page')) {
 // Register post types
 function register_custom_post_types()
 {
-    $post_types = ["document", "inspiration", "product", "tip-trick"];
+    $post_types = ["document", "inspiration", "product", "range", "tip-trick"];
 
     foreach ($post_types as $post_type) {
         include_once(__DIR__ . '/post-types/' . $post_type . '.php');
@@ -49,7 +49,7 @@ function register_custom_taxonomy()
     );
     register_taxonomy(
         'gypass_product_family',
-        array('gypass_inspiration', 'gypass_product', 'gypass_tip_trick'),
+        array('gypass_inspiration', 'gypass_product', 'gypass_range', 'gypass_tip_trick'),
         array(
             'label' => __('Familles de produits', 'gypass'),
             'public' => false,

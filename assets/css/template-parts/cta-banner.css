@@ -37,10 +37,11 @@
     font-weight: 700;
     text-decoration: none;
     border: 2px solid var(--white);
-    transition: color ease 250ms, background-color ease 250ms;
+    transition: color ease 350ms, background-color ease 350ms;
 }
 
-#cta-banner p a:hover {
+#cta-banner p a:hover,
+#cta-banner p a:focus {
     color: var(--bay-of-many);
     background-color: var(--white);
 }

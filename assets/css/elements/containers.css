@@ -63,3 +63,8 @@
     max-width: 1600px;
   }
 }
+
+/* Full */
+.container-full {
+  max-width: unset;
+}

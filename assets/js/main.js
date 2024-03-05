@@ -114,6 +114,13 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleHideFooter();
     });
   });
+  document.querySelectorAll(".js-toggleSearchModal").forEach(function (item) {
+    item.addEventListener("keydown", (e) => {
+      if (e.code === "Enter") {
+        item.click();
+      }
+    });
+  });
 
   // Element - Vidéo
   $("video").click(function () {
