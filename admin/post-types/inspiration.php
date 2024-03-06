@@ -18,6 +18,7 @@ $args = [
     'labels' => $labels,
     'public' => true,
     'publicly_queryable' => true,
+    'exclude_from_search' => true,
     'show_ui' => true,
     'show_in_menu' => true,
     'show_in_rest' => true,

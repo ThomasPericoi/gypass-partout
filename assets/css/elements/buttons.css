@@ -41,7 +41,18 @@
 }
 
 .btn-primary:hover,
-.btn-primary:focus {
+.btn-primary:focus,
+.btn-primary.active {
+    background-color: var(--scooter);
+}
+
+.btn-secondary {
+    background-color: var(--secondary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary.active {
     background-color: var(--scooter);
 }
 
@@ -52,7 +63,8 @@
 }
 
 .btn-outline-primary:hover,
-.btn-outline-primary:focus {
+.btn-outline-primary:focus,
+.btn-outline-primary.active {
     color: var(--white);
     background-color: var(--primary);
 }
@@ -64,9 +76,69 @@
 }
 
 .btn-outline-secondary:hover,
-.btn-outline-secondary:focus {
+.btn-outline-secondary:focus,
+.btn-outline-secondary.active {
     color: var(--white);
     background-color: var(--secondary);
+}
+
+.btn-inline {
+    color: var(--primary);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+[class*="btn-icon"] {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+[class*="btn-icon"]:before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    display: block;
+    background-size: 28px 28px;
+    transform: translateX(0);
+    transition: transform ease 350ms;
+}
+
+.btn-icon-download:before {
+    background-image: url(../../icons/download.svg);
+}
+
+.btn-icon-download:hover:before,
+.btn-icon-download:focus:before {
+    transform: translateY(3px);
+}
+
+.btn-icon-eye:before {
+    background-image: url(../../icons/eye.svg);
+}
+
+.btn-icon-eye:hover:before,
+.btn-icon-eye:focus:before {
+    transform: scale(1.15);
+}
+
+/* Filters */
+.filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
+}
+
+.filters-label {
+    margin-right: 1em;
+    font-weight: 700;
+    font-size: 17px;
+    text-transform: uppercase;
+}
+
+.filters .btn {
+    font-size: 17px;
 }
 
 /* Pagination */
@@ -88,6 +160,9 @@
 .navigation.pagination .nav-links .current {
     width: 30px;
     height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: var(--primary);
     line-height: 1.6;
     text-decoration: none;
@@ -102,12 +177,17 @@
     background-color: var(--primary);
 }
 
+.navigation.pagination .nav-links a.next:hover span {
+    filter: brightness(0) invert(1);
+}
+
 .icon-left,
 .icon-right {
-    width: 25px;
-    height: 25px;
+    width: 22px;
+    height: 22px;
     display: block;
-    background-size: 25px 25px;
+    background-size: 22px 22px;
+    transition: filter ease 350ms;
 }
 
 .icon-left {

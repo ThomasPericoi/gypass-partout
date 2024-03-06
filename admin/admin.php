@@ -40,7 +40,7 @@ function register_custom_taxonomy()
         array('gypass_document'),
         array(
             'label' => __('Types de documents', 'gypass'),
-            'public' => false,
+            'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
             'show_admin_column' => true,

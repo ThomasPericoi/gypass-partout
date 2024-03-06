@@ -1,0 +1,17 @@
+/* #Heros
+--------------------------------------------------------------- */
+.hero-listing {
+    margin-bottom: var(--spacing-section-outer);
+}
+
+.hero-listing h1 {
+    margin-bottom: 10px;
+}
+
+.hero-listing p {
+    color: var(--manatee);
+}
+
+.hero-listing .filters {
+    margin-top: var(--spacing-section-inner);
+}

@@ -62,7 +62,7 @@ function hide_wordpress_errors()
 add_filter('login_errors', 'hide_wordpress_errors');
 
 // Remove Wordpress admin bar
-add_filter('show_admin_bar', '__return_false');
+// add_filter('show_admin_bar', '__return_false');
 
 // Add SVG support
 add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {

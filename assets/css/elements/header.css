@@ -486,7 +486,7 @@ body.js-menuOpened .super-menu-overlay {
     z-index: 65;
     top: 0;
     background-color: var(--white);
-    transform: translateX(130vw);
+    transform: translateX(150vw);
     transition: transform ease 350ms;
 }
 

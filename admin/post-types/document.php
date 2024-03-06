@@ -18,11 +18,10 @@ $args = [
     'labels' => $labels,
     'public' => true,
     'publicly_queryable' => true,
+    'exclude_from_search' => false,
     'show_ui' => true,
     'show_in_menu' => true,
     'show_in_rest' => true,
-    'query_var' => false,
-    'hierarchical' => true,
     'capability_type' => 'page',
     'supports' => [
         'title',
@@ -37,3 +36,4 @@ $args = [
 ];
 
 register_post_type('gypass_document', $args);
+remove_rewrite_tag('%gypass_document%');

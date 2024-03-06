@@ -8,16 +8,18 @@
 
         <?php if (have_posts()) : ?>
             <h2><?php echo __("Résultat(s) pour", "gypass"); ?> "<?php echo get_query_var('s'); ?>"</h2>
+
             <ul class="search-results">
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
-                        <a href="<?php the_permalink(); ?>">
+                        <a href="<?php echo ('gypass_document' == get_post_type()) ? get_field('document_file') : get_the_permalink(); ?>">
                             <h3><?php the_title(); ?></h3>
                             <span><?php echo get_post_type_object(get_post_type())->labels->singular_name; ?></span>
                         </a>
                     </li>
                 <?php endwhile; ?>
             </ul>
+
             <?php the_posts_pagination(array(
                 'prev_text' => __('<span class="icon icon-left"></span>', 'gypass'),
                 'next_text' => __('<span class="icon icon-right"></span>', 'gypass'),
