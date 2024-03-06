@@ -138,6 +138,18 @@ if (class_exists('ACF')) {
     }
 }
 
+function my_wp_nav_menu_objects($items, $args)
+{
+    foreach ($items as &$item) {
+        $icon = get_field('icon', $item);
+        if ($icon) {
+            $item->title .= ' <img class="icon" src="' . $icon["url"] . '" alt="' . $icon["title"] . '" />';
+        }
+    }
+    return $items;
+}
+add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+
 /* INCLUDES
 --------------------------------------------------------------- */
 

@@ -1,0 +1,50 @@
+{
+    "key": "group_640af9d31e56a",
+    "title": "Options du thème - Menu",
+    "fields": [
+        {
+            "key": "field_640af9d3e561d",
+            "label": "Icône de la catégorie",
+            "name": "icon",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Ici renseignez l'icône du produit ou de la gamme qui apparaîtra dans le menu.\r\nFormat accepté : .svg, .png",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "svg, png",
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "nav_menu_item",
+                "operator": "==",
+                "value": "location\/header-menu"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1709732030
+}
