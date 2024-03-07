@@ -1,6 +1,6 @@
 <div class="documents-grid">
     <?php while (have_posts()) : the_post(); ?>
-        <div href="<?php the_permalink(); ?>" class="document">
+        <div class="document">
             <?php if (has_post_thumbnail()) : ?>
                 <?php the_post_thumbnail(); ?>
             <?php endif; ?>

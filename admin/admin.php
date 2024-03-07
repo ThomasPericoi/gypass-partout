@@ -45,22 +45,82 @@ function register_custom_taxonomy()
             'show_in_menu' => true,
             'show_admin_column' => true,
             'hierarchical' => true,
+            'rewrite' => ['slug' => 'documents', 'with_front' => true],
         )
     );
     register_taxonomy(
-        'gypass_product_family',
-        array('gypass_inspiration', 'gypass_product', 'gypass_range', 'gypass_tip_trick'),
+        'gypass_inspi_product_family',
+        array('gypass_inspiration'),
         array(
             'label' => __('Familles de produits', 'gypass'),
-            'public' => false,
+            'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
             'show_admin_column' => true,
             'hierarchical' => true,
+            'rewrite' => ['slug' => 'inspirations', 'with_front' => true],
+        )
+    );
+    register_taxonomy(
+        'gypass_product_product_family',
+        array('gypass_product'),
+        array(
+            'label' => __('Familles de produits', 'gypass'),
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'rewrite' => ['slug' => 'familles-produits', 'with_front' => true],
+        )
+    );
+    register_taxonomy(
+        'gypass_range_product_family',
+        array('gypass_range'),
+        array(
+            'label' => __('Familles de produits', 'gypass'),
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'rewrite' => ['slug' => 'gammes', 'with_front' => true],
+        )
+    );
+    register_taxonomy(
+        'gypass_trip_trick_product_family',
+        array('gypass_tip_trick'),
+        array(
+            'label' => __('Familles de produits', 'gypass'),
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'rewrite' => ['slug' => 'conseils-astuces-types', 'with_front' => true],
         )
     );
 }
 add_action('init', 'register_custom_taxonomy');
+
+// Redirect from tax to archive
+function redirect_tax_archive($template)
+{
+    if (is_tax('gypass_document_type')) {
+        $new_template = locate_template(array('archive-gypass_document.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
+    if (is_tax('gypass_trip_trick_product_family') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_tip_trick.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter('template_include', 'redirect_tax_archive');
 
 /* BLOCK(S)
 --------------------------------------------------------------- */
@@ -103,3 +163,69 @@ function manage_user_roles()
     remove_role('author');
 }
 add_action('init', 'manage_user_roles');
+
+/* COMMENTS
+--------------------------------------------------------------- */
+
+// Close comments on the front-end
+function disable_comments_status()
+{
+    return false;
+}
+add_filter('comments_open', 'disable_comments_status', 20, 2);
+add_filter('pings_open', 'disable_comments_status', 20, 2);
+
+// Hide existing comments
+function disable_comments_hide_existing_comments($comments)
+{
+    $comments = array();
+    return $comments;
+}
+add_filter('comments_array', 'disable_comments_hide_existing_comments', 10, 2);
+
+// Remove comments page in menu
+function disable_comments_admin_menu()
+{
+    remove_menu_page('edit-comments.php');
+}
+add_action('admin_menu', 'disable_comments_admin_menu');
+
+// Redirect any user trying to access comments page
+function disable_comments_admin_menu_redirect()
+{
+    global $pagenow;
+    if ($pagenow === 'edit-comments.php') {
+        wp_redirect(admin_url());
+        exit;
+    }
+}
+add_action('admin_init', 'disable_comments_admin_menu_redirect');
+
+// Remove comments metabox from dashboard
+function disable_comments_dashboard()
+{
+    remove_meta_box('dashboard_recent_comments', 'dashboard', 'normal');
+}
+add_action('admin_init', 'disable_comments_dashboard');
+
+// Remove comments links from admin bar
+function disable_comments_admin_bar()
+{
+    if (is_admin_bar_showing()) {
+        remove_action('admin_bar_menu', 'disable_comments_admin_bar', 60);
+    }
+}
+add_action('init', 'disable_comments_admin_bar');
+
+// Disable support for comments and trackbacks in post types
+function disable_comments_post_types_support()
+{
+    $post_types = get_post_types();
+    foreach ($post_types as $post_type) {
+        if (post_type_supports($post_type, 'comments')) {
+            remove_post_type_support($post_type, 'comments');
+            remove_post_type_support($post_type, 'trackbacks');
+        }
+    }
+}
+add_action('admin_init', 'disable_comments_post_types_support');

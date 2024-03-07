@@ -32,7 +32,7 @@ $args = [
     ],
     'taxonomies' => [],
     'has_archive' => true,
-    'rewrite' => ['slug' => 'inspiration', 'with_front' => true],
+    'rewrite' => ['slug' => 'inspirations', 'with_front' => true],
     'menu_position' => 20,
     'menu_icon' => 'dashicons-search',
 ];
