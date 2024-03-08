@@ -4,6 +4,9 @@
             <?php if (has_post_thumbnail()) : ?>
                 <div class="thumbnail" style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');"></div>
             <?php endif; ?>
+            <?php if (get_field("post_badge")) : ?>
+                <img class="badge" src="<?php echo get_field("post_badge")["url"]; ?>" alt="<?php echo get_field("post_badge")["title"]; ?>" />
+            <?php endif; ?>
             <div class="content">
                 <h2 class="title"><?php the_title(); ?></h2>
                 <?php if (has_excerpt()) : ?>

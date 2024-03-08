@@ -1,0 +1,79 @@
+/* #Tabs
+--------------------------------------------------------------- */
+.tabs-block {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@media screen and (min-width: 1200px) {
+    .tabs-block {
+        flex-direction: row;
+    }
+}
+
+.tabs-block .tabs-menu {
+    width: 100%;
+    padding-bottom: var(--spacing-section-inner);
+    margin-bottom: var(--spacing-section-inner);
+    display: none;
+}
+
+@media screen and (min-width: 1200px) {
+    .tabs-block .tabs-menu {
+        max-width: 400px;
+        padding-bottom: 0;
+        margin-bottom: 0;
+        padding-right: var(--spacing-section-inner);
+        margin-right: var(--spacing-section-inner);
+        display: unset;
+        border-right: 2px solid var(--primary);
+    }
+}
+
+.tabs-block nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.tabs-block nav a {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-section-inner);
+    color: var(--manatee);
+    text-decoration: none;
+    cursor: pointer;
+    border-bottom: 2px solid var(--manatee);
+}
+
+.tabs-block nav a:after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-size: 20px 20px;
+    background-image: url(../../icons/line.svg);
+}
+
+.tabs-block nav a.selected {
+    color: var(--primary);
+    font-weight: 700;
+    border-bottom: 2px solid var(--primary);
+}
+
+.tabs-block nav a.selected:after {
+    background-image: url(../../icons/arrow-line-right.svg);
+}
+
+@media screen and (min-width: 1200px) {
+    .tabs-block .tabs-content-element {
+        display: none;
+        animation: fadeIn 1s;
+    }
+}
+
+.tabs-block .tabs-content-element.visible {
+    display: block;
+}

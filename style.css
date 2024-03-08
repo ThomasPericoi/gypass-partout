@@ -31,6 +31,7 @@ Text Domain: gypass
 /* #Elements
 --------------------------------------------------------------- */
 
+@import "./assets/css/elements/breadcrumbs.css";
 @import "./assets/css/elements/buttons.css";
 @import "./assets/css/elements/containers.css";
 @import "./assets/css/elements/footer.css";
@@ -44,6 +45,7 @@ Text Domain: gypass
 
 @import "./assets/css/blocks/content-2-columns.css";
 @import "./assets/css/blocks/faq.css";
+@import "./assets/css/blocks/tabs.css";
 
 /* #Template Parts
 --------------------------------------------------------------- */
@@ -66,3 +68,4 @@ Text Domain: gypass
 @import "./assets/css/pages/index.css";
 @import "./assets/css/pages/page.css";
 @import "./assets/css/pages/search.css";
+@import "./assets/css/pages/single.css";

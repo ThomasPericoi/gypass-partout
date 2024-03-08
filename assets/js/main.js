@@ -228,6 +228,23 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Block - Tabs
+  function showContentTabs(index) {
+    $(".tabs-block .tabs-content-element.visible").removeClass("visible");
+    $(".tabs-block .tabs-content-element:nth-of-type(" + (index + 1) + ")").addClass("visible");
+    $(".tabs-block nav a.selected").removeClass("selected");
+    $(".tabs-block nav a:nth-of-type(" + (index + 1) + ")").addClass("selected");
+  }
+  $(".tabs-block nav a").on("click", function () {
+    showContentTabs($(this).index());
+  });
+  $(".tabs-block nav a").on("keypress", function (e) {
+    if ((e.keyCode || e.which) == 13) {
+      showContentTabs($(this).index());
+    }
+  });
+  showContentTabs(0);
+
   // Element - Video
   $("video").click(function () {
     $(this).next($(".play")).hide();

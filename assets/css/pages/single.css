@@ -1,0 +1,67 @@
+/* #Single
+--------------------------------------------------------------- */
+.single #breadcrumbs.no-breadcrumbs {
+    position: absolute;
+    filter: brightness(0) invert(1);
+}
+
+.single #breadcrumbs.no-breadcrumbs .rank-math-breadcrumb {
+    display: none;
+}
+
+/* Hero */
+.single #hero {
+    position: relative;
+}
+
+.single #hero .thumbnail {
+    width: 100%;
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.single #hero .container {
+    padding: var(--spacing-section-inner) 0;
+    text-align: center;
+}
+
+.single #hero .introduction {
+    margin-top: 1em;
+}
+
+.single #hero .badge {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, 70%);
+}
+
+@media screen and (min-width: 1200px) {
+    .single #hero .badge {
+        width: 175px;
+        height: 175px;
+        right: 0;
+        left: unset;
+        transform: translate(-50%, 50%);
+    }
+}
+
+/* Content */
+.single #content {
+    padding: var(--spacing-section-outer) 0;
+    background-color: var(--ebb);
+}
+
+/* Related */
+.single #related {
+    padding: var(--spacing-section-outer) 0;
+}
+
+.single #related h2 {
+    margin-bottom: 1em;
+}

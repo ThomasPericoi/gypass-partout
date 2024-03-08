@@ -6,6 +6,9 @@ html {
 
 main {
   margin-top: var(--header-height);
+  animation: fadeIn ease 1000ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 ::selection {

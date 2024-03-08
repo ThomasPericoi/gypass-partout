@@ -1,6 +1,6 @@
 {
     "key": "group_65e08c2c374b2",
-    "title": "Options de page - Page",
+    "title": "Options de contenu - Pages",
     "fields": [
         {
             "key": "field_65e08c2cb9b5c",
@@ -53,5 +53,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709289838
+    "modified": 1709820629
 }

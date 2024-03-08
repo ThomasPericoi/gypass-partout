@@ -1,6 +1,6 @@
 {
     "key": "group_65e872f26c721",
-    "title": "Options de page - Documents",
+    "title": "Options de contenu - Documents",
     "fields": [
         {
             "key": "field_65e872f218518",
@@ -58,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709735771
+    "modified": 1709817744
 }
