@@ -351,6 +351,7 @@ body.js-menuOpened .super-menu-overlay {
     background-color: var(--white);
     transform: translateX(100%);
     overflow-y: auto;
+    overflow-x: hidden;
     transition: transform ease 350ms;
 }
 
@@ -359,7 +360,7 @@ body.js-menuOpened .super-menu-overlay {
         max-width: 415px;
         border-right: 1px solid var(--primary);
         transform: translateX(-100%);
-        overflow-y: unset;
+        overflow: unset;
     }
 }
 
