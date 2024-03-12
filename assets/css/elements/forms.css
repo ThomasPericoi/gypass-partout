@@ -15,6 +15,7 @@ main select,
 main input[type="text"],
 main input[type="email"],
 main input[type="tel"],
+main input[type="file"],
 main textarea,
 main select,
 .searchform input[type="text"] {
@@ -32,6 +33,7 @@ main select {
 main input[type="text"]:focus,
 main input[type="email"]:focus,
 main input[type="tel"]:focus,
+main input[type="file"]:focus,
 main textarea:focus,
 main select:focus,
 .searchform input[type="text"]:focus {

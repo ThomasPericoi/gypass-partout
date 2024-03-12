@@ -3,7 +3,7 @@
 get_header(); ?>
 
 <!-- Contact -->
-<div id="contact">
+<section id="contact">
     <div class="container <?php echo get_field("page_container_size"); ?>">
         <h1 class="h2-size"><?php echo get_the_title(); ?></h1>
         <?php if (get_field("contact_description")) : ?>
@@ -12,7 +12,7 @@ get_header(); ?>
         <?php $shortcode_contact = '[contact-form-7 id="' . get_field("contact_shortcode") . '"]';
         echo do_shortcode($shortcode_contact); ?>
     </div>
-</div>
+</section>
 
 <?php if (get_field('cta_banner') == "true") : ?>
     <?php get_template_part('template-parts/cta-banner', '', array(

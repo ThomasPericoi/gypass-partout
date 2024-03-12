@@ -167,7 +167,7 @@
 
 #main-header li a,
 .super-menu .menu-header li a {
-    padding: 20px;
+    padding: 18px;
     position: relative;
     display: block;
     color: var(--primary);

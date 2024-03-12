@@ -6,10 +6,11 @@
   --white: #fffffb;
 
   --bay-of-many: #253080;
-  --ebb: #F1EEEE;
-  --manatee: #9799A2;
-  --scooter: #31BBBD;
-  --tango: #EC6615;
+  --ebb: #f1eeee;
+  --ghost: #ccccd4;
+  --manatee: #9799a2;
+  --scooter: #31bbbd;
+  --tango: #ec6615;
 
   --primary: var(--bay-of-many);
   --secondary: var(--tango);

@@ -2,14 +2,14 @@
 
 <!-- Footer -->
 <?php $locations = get_nav_menu_locations();
-$logo_alt = get_field('footer_logo_alt', 'option'); ?>
+$logo_alt = get_field('footer_logo_alt', 'options'); ?>
 
 <footer id="footer">
     <div id="reinsurance">
         <div class="container">
-            <?php if (have_rows('footer_reinsurance', 'option')) : ?>
+            <?php if (have_rows('footer_reinsurance', 'options')) : ?>
                 <ul class="badges">
-                    <?php while (have_rows('footer_reinsurance', 'option')) : the_row();
+                    <?php while (have_rows('footer_reinsurance', 'options')) : the_row();
                         $badge = get_sub_field('badge');
                     ?>
                         <li class="badge">
