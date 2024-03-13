@@ -513,10 +513,10 @@ body.js-menuOpened .super-menu-overlay {
 
     .super-menu[data-step="2"] .menu-header>li.opened>.sub-menu>li>.sub-menu:before {
         content: "";
-        height: 140vh;
+        height: 160vh;
         position: absolute;
         display: block;
-        top: -20vh;
+        top: -30vh;
         right: 0;
         left: 0;
         background-color: var(--white);

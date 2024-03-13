@@ -1,5 +1,5 @@
 <!-- Home Video -->
-<div id="home-video">
+<section id="home-video">
     <div class="container container-sm">
         <?php if (get_field("home_video_badge")) : ?>
             <img src="<?php echo get_field("home_video_badge")["url"]; ?>" alt="<?php echo get_field("home_video_badge")["alt"]; ?>">
@@ -39,4 +39,4 @@
             </div>
         <?php endif; ?>
     </div>
-</div>
+</section>

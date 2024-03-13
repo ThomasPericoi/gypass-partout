@@ -2,57 +2,61 @@
 --------------------------------------------------------------- */
 .post-type-archive-gypass_document main,
 .tax-gypass_document_type main {
-    padding: var(--spacing-section-outer) 0;
-    position: relative;
+  padding: var(--spacing-section-outer) 0;
+  position: relative;
+}
+
+#documents {
+  margin-bottom: var(--spacing-section-outer);
 }
 
 .documents-grid {
-    display: grid;
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    grid-gap: 1em;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-gap: 1em;
 }
 
 @media screen and (min-width: 1200px) {
-    .documents-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
+  .documents-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
 }
 
 .documents-grid .document {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background-color: var(--ebb);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: var(--ebb);
 }
 
 .documents-grid .document img {
-    max-width: 225px;
-    width: 100%;
-    height: auto;
-    margin: 2em auto;
-    display: block;
-    border: 1px solid var(--primary);
+  max-width: 225px;
+  width: 100%;
+  height: auto;
+  margin: 2em auto;
+  display: block;
+  border: 1px solid var(--primary);
 }
 
 .documents-grid .document .content {
-    padding: 1em 1.5em;
-    border-top: 1px solid var(--primary);
+  padding: 1em 1.5em;
+  border-top: 1px solid var(--primary);
 }
 
 .documents-grid .document .category,
 .documents-grid .document h2 {
-    font-size: 17px;
-    text-transform: uppercase;
+  font-size: 17px;
+  text-transform: uppercase;
 }
 
 .documents-grid .document .btn-wrapper {
-    margin-top: 1em;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  margin-top: 1em;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .post-type-archive-gypass_document .navigation,
 .tax-gypass_document_type .navigation {
-    margin-top: var(--spacing-section-inner);
+  margin-top: var(--spacing-section-inner);
 }

@@ -1,5 +1,5 @@
 <!-- CTA Trio -->
-<div id="cta-trio">
+<section id="cta-trio">
     <div class="container">
         <?php if (have_rows('global_ctas', 'options')) : ?>
             <div class="ctas">
@@ -19,4 +19,4 @@
             </div>
         <?php endif; ?>
     </div>
-</div>
+</section>

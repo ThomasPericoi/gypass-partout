@@ -332,7 +332,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  const swiper = new Swiper(".forms.swiper", {
+  // Page - Hiring
+  const swiperHiring = new Swiper(".forms.swiper", {
     autoHeight: true,
     pagination: {
       el: ".swiper-pagination",

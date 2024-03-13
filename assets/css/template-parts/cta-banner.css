@@ -1,47 +1,53 @@
 /* #CTA Banner
 --------------------------------------------------------------- */
-#cta-banner {
-    margin-top: var(--spacing-section-outer);
-    margin-bottom: calc(var(--spacing-section-outer) * -1);
-    padding: var(--spacing-section-outer) 0;
-    text-align: center;
-    background-color: var(--bay-of-many);
+.cta-banner {
+  margin-bottom: calc(var(--spacing-section-outer) * -1);
+  padding: var(--spacing-section-outer) 0;
+  text-align: center;
+  background-color: var(--bay-of-many);
 }
 
-#cta-banner ::selection {
-    background: var(--scooter);
+.cta-banner ::selection {
+  background: var(--scooter);
 }
 
-#cta-banner::-moz-selection {
-    background: var(--scooter);
+.cta-banner::-moz-selection {
+  background: var(--scooter);
 }
 
-#cta-banner .container {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-section-inner);
+.cta-banner .container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-section-inner);
 }
 
-#cta-banner h2,
-#cta-banner p {
-    color: var(--white);
+.cta-banner h2,
+.cta-banner p {
+  color: var(--white);
 }
 
-#cta-banner p {
-    font-weight: 400;
+.cta-banner p {
+  font-weight: 400;
 }
 
-#cta-banner p a {
-    padding: 2px 10px;
-    color: var(--white);
-    font-weight: 700;
-    text-decoration: none;
-    border: 2px solid var(--white);
-    transition: color ease 350ms, background-color ease 350ms;
+.cta-banner p a {
+  padding: 2px 10px;
+  display: block;
+  color: var(--white);
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid var(--white);
+  transition: color ease 350ms, background-color ease 350ms;
 }
 
-#cta-banner p a:hover,
-#cta-banner p a:focus {
-    color: var(--bay-of-many);
-    background-color: var(--white);
+@media screen and (min-width: 992px) {
+  .cta-banner p a {
+    display: inline-block;
+  }
+}
+
+.cta-banner p a:hover,
+.cta-banner p a:focus {
+  color: var(--bay-of-many);
+  background-color: var(--white);
 }
