@@ -61,6 +61,7 @@ get_header(); ?>
 
 <?php if (get_field('cta_banner') == "true") : ?>
     <?php get_template_part('template-parts/cta-banner', '', array(
+        'class' => '',
         'title' => get_field('cta_banner_title'),
         'description' => get_field('cta_banner_description'),
         'cta' => get_field('cta_banner_cta'),

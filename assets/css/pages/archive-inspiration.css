@@ -1,0 +1,80 @@
+/* #Archive inspirations
+--------------------------------------------------------------- */
+.post-type-archive-gypass_inspiration main,
+.tax-gypass_inspi_product_family main,
+.page-template-my-selection-page-template main {
+  padding: var(--spacing-section-outer) 0;
+  position: relative;
+}
+
+#inspirations {
+  margin-bottom: var(--spacing-section-outer);
+}
+
+.inspirations-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-gap: 1em;
+}
+
+@media screen and (min-width: 1200px) {
+  .inspirations-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.inspirations-grid .inspiration-thumbnail {
+  aspect-ratio: 1;
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.simplefavorite-button {
+  padding: 1em;
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  background-color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.inspirations-grid .inspiration-thumbnail .icon {
+  width: 22px;
+  height: 22px;
+  display: block;
+  background-size: 22px 22px;
+}
+
+.inspirations-grid .inspiration-thumbnail .icon-heart {
+  background-image: url(../../icons/heart.svg);
+}
+
+.inspirations-grid .inspiration-thumbnail .icon-cross {
+  background-image: url(../../icons/cross-alt.svg);
+}
+
+.inspirations-grid .inspiration-content {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+  background-color: var(--ebb);
+}
+
+.inspirations-grid .inspiration-content h2 {
+  text-transform: uppercase;
+}
+
+.post-type-archive-gypass_inspiration .inspiration-content,
+.tax-gypass_inspi_product_family .inspiration-content {
+  display: none;
+}
+
+.post-type-archive-gypass_inspiration #cta-trio,
+.tax-gypass_inspi_product_family #cta-trio {
+  border-top: 1px solid var(--primary);
+}

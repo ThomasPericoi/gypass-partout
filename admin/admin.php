@@ -58,7 +58,7 @@ function register_custom_taxonomy()
             'show_in_menu' => true,
             'show_admin_column' => true,
             'hierarchical' => true,
-            'rewrite' => ['slug' => 'inspirations', 'with_front' => true],
+            'rewrite' => ['slug' => 'inspirations-types', 'with_front' => true],
         )
     );
     register_taxonomy(
@@ -106,8 +106,8 @@ add_action('init', 'register_custom_taxonomy');
 // Redirect from tax to archive
 function redirect_tax_archive($template)
 {
-    if (is_tax('gypass_document_type')) {
-        $new_template = locate_template(array('archive-gypass_document.php'));
+    if (is_tax('gypass_inspi_product_family') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_inspiration.php'));
         if ('' != $new_template) {
             return $new_template;
         }

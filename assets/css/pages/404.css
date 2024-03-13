@@ -1,13 +1,17 @@
 /* #404 page
 --------------------------------------------------------------- */
 .error404 main {
-    padding: var(--spacing-section-outer) 0;
-    text-align: center;
+  padding: var(--spacing-section-outer) 0;
+  text-align: center;
+}
+
+.error404 #section-404 {
+  padding-bottom: var(--spacing-section-outer);
 }
 
 .error404 #section-404 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-section-inner);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-section-inner);
 }
