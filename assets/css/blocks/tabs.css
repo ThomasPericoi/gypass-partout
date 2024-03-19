@@ -22,6 +22,7 @@
 @media screen and (min-width: 1200px) {
     .tabs-block .tabs-menu {
         max-width: 400px;
+        flex-shrink: 0;
         padding-bottom: 0;
         margin-bottom: 0;
         padding-right: var(--spacing-section-inner);
@@ -52,6 +53,7 @@
     content: "";
     width: 20px;
     height: 20px;
+    flex-shrink: 0;
     display: block;
     background-size: 20px 20px;
     background-image: url(../../icons/line.svg);

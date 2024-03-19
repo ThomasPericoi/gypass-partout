@@ -106,6 +106,12 @@ add_action('init', 'register_custom_taxonomy');
 // Redirect from tax to archive
 function redirect_tax_archive($template)
 {
+    if (is_tax('gypass_document_type') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_document.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
     if (is_tax('gypass_inspi_product_family') && is_archive()) {
         $new_template = locate_template(array('archive-gypass_inspiration.php'));
         if ('' != $new_template) {

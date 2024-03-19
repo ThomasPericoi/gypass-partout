@@ -52,6 +52,8 @@ Text Domain: gypass
 
 @import "./assets/css/template-parts/cta-banner.css";
 @import "./assets/css/template-parts/cta-trio.css";
+@import "./assets/css/template-parts/home-hero.css";
+@import "./assets/css/template-parts/home-inspirations.css";
 @import "./assets/css/template-parts/home-video.css";
 
 /* #Templates

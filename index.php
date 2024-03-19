@@ -18,7 +18,9 @@ endif;
             array(
                 'taxonomy'   => 'category',
                 'hide_empty' => false,
+                'include' => array(8, 9, 10),
                 'exclude' => array(1),
+                'orderby'  => 'include',
             )
         );
         if (!empty($categories) && is_array($categories)) : ?>

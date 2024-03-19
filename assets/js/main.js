@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
       .setAttribute(
         "aria-hidden",
         !(document.querySelector(".super-menu").getAttribute("aria-hidden") ==
-        "true"
+          "true"
           ? true
           : false)
       );
@@ -173,21 +173,21 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Header - Menu - Open on click menu items
-  $(".inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
+  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
     function () {
       toggleMenu(1);
     }
   );
 
-  $(".inner-header .js-openProducts a").click(function () {
+  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").click(function () {
     $(".super-menu .js-openProducts").addClass("opened");
   });
 
-  $(".inner-header .js-openRanges a").click(function () {
+  $("footer .js-openRanges a, .inner-header .js-openRanges a").click(function () {
     $(".super-menu .js-openRanges").addClass("opened");
   });
 
-  $(".inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
+  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
     "keypress",
     function (e) {
       if ((e.keyCode || e.which) == 13) {
@@ -196,13 +196,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  $(".inner-header .js-openProducts a").on("keypress", function (e) {
+  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openProducts").addClass("opened");
     }
   });
 
-  $(".inner-header .js-openRanges a").on("keypress", function (e) {
+  $("footer .js-openRanges a, .inner-header .js-openRanges a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openRanges").addClass("opened");
     }

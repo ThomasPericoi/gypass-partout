@@ -13,7 +13,12 @@
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
                         <a href="<?php echo ('gypass_document' == get_post_type()) ? get_field('document_file') : get_the_permalink(); ?>">
-                            <h3><?php the_title(); ?></h3>
+                            <h3>
+                                <?php if (get_the_terms($post->ID, 'gypass_document_type')) : ?>
+                                    <?php echo get_the_terms($post->ID, 'gypass_document_type')[0]->name; ?> :
+                                <?php endif; ?>
+                                <?php echo get_the_title(); ?>
+                            </h3>
                             <span><?php echo get_post_type_object(get_post_type())->labels->singular_name; ?></span>
                         </a>
                     </li>

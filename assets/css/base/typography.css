@@ -14,6 +14,7 @@ p,
 }
 
 @media screen and (min-width: 768px) {
+
   body,
   p,
   .p-size {
@@ -22,6 +23,7 @@ p,
 }
 
 @media screen and (min-width: 1920px) {
+
   body,
   p,
   .p-size {
@@ -71,10 +73,29 @@ h1,
 }
 
 @media screen and (min-width: 768px) {
+
   h1,
   .h1-size,
   .h1-size p {
     font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+
+  h1,
+  .h1-size,
+  .h1-size p {
+    font-size: 60px;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+
+  h1,
+  .h1-size,
+  .h1-size p {
+    font-size: 70px;
   }
 }
 
@@ -86,6 +107,7 @@ h2,
 }
 
 @media screen and (min-width: 768px) {
+
   h2,
   .h2-size {
     font-size: 32px;
@@ -98,6 +120,7 @@ h3,
 }
 
 @media screen and (min-width: 768px) {
+
   h3,
   .h3-size {
     font-size: 30px;
@@ -105,6 +128,7 @@ h3,
 }
 
 @media screen and (min-width: 1920px) {
+
   h3,
   .h3-size {
     font-size: 32px;
@@ -117,6 +141,7 @@ h4,
 }
 
 @media screen and (min-width: 768px) {
+
   h4,
   .h4-size {
     font-size: 24px;
@@ -124,6 +149,7 @@ h4,
 }
 
 @media screen and (min-width: 1920px) {
+
   h4,
   .h4-size {
     font-size: 26px;
@@ -136,6 +162,7 @@ h5,
 }
 
 @media screen and (min-width: 768px) {
+
   h5,
   .h5-size {
     font-size: 21px;
@@ -143,6 +170,7 @@ h5,
 }
 
 @media screen and (min-width: 1920px) {
+
   h5,
   .h5-size {
     font-size: 23px;
@@ -155,6 +183,7 @@ h6,
 }
 
 @media screen and (min-width: 768px) {
+
   h6,
   .h6-size {
     font-size: 18px;
@@ -162,6 +191,7 @@ h6,
 }
 
 @media screen and (min-width: 1920px) {
+
   h6,
   .h6-size {
     font-size: 20px;

@@ -18,6 +18,8 @@ endif;
             array(
                 'taxonomy'   => 'gypass_inspi_product_family',
                 'hide_empty' => false,
+                'include' => array(26, 38, 35, 28, 27),
+                'orderby'  => 'include',
             )
         );
         if (!empty($product_types) && is_array($product_types)) : ?>

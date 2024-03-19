@@ -41,6 +41,10 @@
     font-size: 15px;
 }
 
+.rank-math-breadcrumb a {
+    cursor: pointer;
+}
+
 .rank-math-breadcrumb .last {
     font-weight: 700;
 }

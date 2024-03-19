@@ -18,6 +18,8 @@ endif;
             array(
                 'taxonomy'   => 'gypass_document_type',
                 'hide_empty' => false,
+                'include' => array(11, 12, 13, 14),
+                'orderby'  => 'include',
             )
         );
         if (!empty($document_types) && is_array($document_types)) : ?>

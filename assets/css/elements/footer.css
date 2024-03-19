@@ -137,6 +137,7 @@
     color: var(--white);
     text-decoration: none;
     transition: color ease 350ms;
+    cursor: pointer;
 }
 
 #footer .menu-footer a:hover,

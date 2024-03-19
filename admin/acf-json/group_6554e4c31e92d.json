@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "2 colonnes de contenu, une pour du texte, une pour un média.",
+            "message": "2 colonnes de contenu, une pour du texte et une pour un média.",
             "new_lines": "br",
             "esc_html": 0
         },
@@ -170,7 +170,7 @@
             "name": "video_poster",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Image qui va remplacer la miniature automatique de la vidéo.",
             "required": 0,
             "conditional_logic": [
                 [
@@ -259,5 +259,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709216196
+    "modified": 1710859321
 }

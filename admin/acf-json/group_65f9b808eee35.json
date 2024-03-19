@@ -1,0 +1,41 @@
+{
+    "key": "group_65f9b808eee35",
+    "title": "Options de contenu - Inspirations",
+    "fields": [
+        {
+            "key": "field_65f9b80906893",
+            "label": "Lien vers la gamme",
+            "name": "inspiration_url_gamme",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "Lien vers la page gamme concernée.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gypass_inspiration"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "side",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1710864529
+}

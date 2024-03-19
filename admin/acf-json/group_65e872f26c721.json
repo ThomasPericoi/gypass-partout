@@ -8,7 +8,7 @@
             "name": "document_file",
             "aria-label": "",
             "type": "file",
-            "instructions": "",
+            "instructions": "Le format demandé est PDF.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -20,7 +20,7 @@
             "library": "all",
             "min_size": "",
             "max_size": "",
-            "mime_types": ""
+            "mime_types": "pdf"
         },
         {
             "key": "field_65e87b8b90010",
@@ -28,7 +28,7 @@
             "name": "document_url_read",
             "aria-label": "",
             "type": "url",
-            "instructions": "",
+            "instructions": "Lien externe vers un PDF reader.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -58,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709817744
+    "modified": 1710859418
 }

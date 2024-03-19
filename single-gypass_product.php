@@ -3,28 +3,48 @@
 <!-- Breadcrumbs -->
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
-        <a class="btn-back" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
+        <a class="btn-back" href="<?php echo home_url(); ?>">
             <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-left.svg'); ?>
         </a>
         <?php if (get_field("product_icon")) : ?>
             <img src="<?php echo get_field("product_icon")["url"]; ?>" alt="<?php echo get_field("product_icon")["title"]; ?>">
         <?php endif; ?>
-        <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+        <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
+            <p>
+                <a href="<?php echo home_url(); ?>">GYPASS</a>
+                <span class="separator"> &gt; </span>
+                <span class="js-openProducts"><a>Produits</a></span>
+                <span class="separator"> &gt; </span>
+                <span class="last"><?php echo get_the_title(); ?></span>
+            </p>
+        </nav>
     </div>
 </section>
 
 <!-- Hero -->
 <section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
     <div class="container">
-        <h1><span class="p-size"><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></span><br /> <span class="h4-size"><?php echo get_the_title(); ?></span></h1>
+        <h1>
+            <?php if (get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
+                <span class="p-size"><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></span>
+            <?php endif; ?>
+            <br />
+            <span class="h4-size"><?php echo get_the_title(); ?></span>
+        </h1>
         <h2 class="h1-size"><?php echo get_field("product_title") ?: get_the_title(); ?></h2>
+        <a class="btn-scroll" href="#below-hero">
+            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-bottom.svg'); ?>
+        </a>
     </div>
 </section>
+
+<div id="below-hero"></div>
 
 <?php if (get_field('product_cta_banner_1') == "true") : ?>
     <?php get_template_part('template-parts/cta-banner', '', array(
         'class' => 'product-cta-banner-1',
         'title' => get_field('product_cta_banner_title_1'),
+        'description' => false,
         'cta' => get_field('product_cta_banner_cta_1'),
     )); ?>
 <?php endif; ?>

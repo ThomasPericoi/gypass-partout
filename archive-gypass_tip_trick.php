@@ -18,6 +18,8 @@ endif;
             array(
                 'taxonomy'   => 'gypass_trip_trick_product_family',
                 'hide_empty' => false,
+                'include' => array(41, 25, 23, 22, 21, 24),
+                'orderby'  => 'include',
             )
         );
         if (!empty($product_families) && is_array($product_families)) : ?>

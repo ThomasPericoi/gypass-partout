@@ -21,7 +21,7 @@
                 "default": "Normal",
                 "large": "Large"
             },
-            "default_value": "container-sm",
+            "default_value": "default",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -53,5 +53,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1709820629
+    "modified": 1710859441
 }

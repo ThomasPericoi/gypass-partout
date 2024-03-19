@@ -7,7 +7,7 @@
 
 .page-template-hiring-page-template #hero .container {
   padding-top: var(--spacing-section-outer);
-  min-height: 70vh;
+  min-height: 60vh;
   background-size: 100%;
   background-position-x: right;
   background-position-y: bottom;
@@ -16,8 +16,8 @@
 
 @media screen and (min-width: 992px) {
   .page-template-hiring-page-template #hero .container {
-    min-height: 80vh;
-    background-size: 60%;
+    min-height: 70vh;
+    background-size: 80%;
   }
 }
 
@@ -45,7 +45,7 @@
   }
 }
 
-#hiring .form > * {
+#hiring .form>* {
   flex: 1 1 0;
 }
 
@@ -84,6 +84,7 @@
 }
 
 @media screen and (min-width: 992px) {
+
   #hiring h2,
   #hiring .other {
     color: var(--white);
@@ -103,6 +104,8 @@
 }
 
 #hiring form {
+  max-width: 550px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -122,6 +125,7 @@
 }
 
 #hiring form .btn {
+  align-self: center;
   color: var(--primary);
 }
 
