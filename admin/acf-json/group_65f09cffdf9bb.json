@@ -3,6 +3,24 @@
     "title": "Options de contenu - Produits",
     "fields": [
         {
+            "key": "field_65fac2f5502de",
+            "label": "Rappel",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pensez à cocher UNE SEULE \"Familles de produits\" sur la colonne de droite avant de publier.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_65f09d00aae51",
             "label": "Hero",
             "name": "",
@@ -45,7 +63,7 @@
             "name": "product_icon",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Pensez à ajouter cet icône dans l'élément du menu correspondant à cette page en vous rendant dans Apparence > Menus et sélectionnez le menu \"Menu principal\" à modifier.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -352,5 +370,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710862559
+    "modified": 1710932740
 }

@@ -23,7 +23,8 @@
   }
 }
 
-.inspirations-grid .inspiration-thumbnail {
+.inspirations-grid .inspiration-thumbnail,
+.inspirations-slider .inspiration-thumbnail {
   aspect-ratio: 1;
   position: relative;
   background-size: cover;
@@ -43,18 +44,21 @@
   cursor: pointer;
 }
 
-.inspirations-grid .inspiration-thumbnail .icon {
+.inspirations-grid .inspiration-thumbnail .icon,
+.inspirations-slider .inspiration-thumbnail .icon {
   width: 22px;
   height: 22px;
   display: block;
   background-size: 22px 22px;
 }
 
-.inspirations-grid .inspiration-thumbnail .icon-heart {
+.inspirations-grid .inspiration-thumbnail .icon-heart,
+.inspirations-slider .inspiration-thumbnail .icon-heart {
   background-image: url(../../icons/heart.svg);
 }
 
-.inspirations-grid .inspiration-thumbnail .icon-cross {
+.inspirations-grid .inspiration-thumbnail .icon-cross,
+.inspirations-slider .inspiration-thumbnail .icon-cross {
   background-image: url(../../icons/cross-alt.svg);
 }
 

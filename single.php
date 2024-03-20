@@ -39,7 +39,7 @@
                     <?php while (have_rows('post_tabs')) : the_row();
                         $title = get_sub_field('title');
                     ?>
-                        <a class="tabs-menu-element" tabindex="0" role="button" class="btn"><?php echo $title; ?></a>
+                        <a class="tabs-menu-element" tabindex="0" role="button" class="btn" href="#content"><?php echo $title; ?></a>
                     <?php endwhile; ?>
                 </nav>
                 <div class="tabs-content formatted">

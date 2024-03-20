@@ -44,6 +44,10 @@
     transition: color ease 350ms;
 }
 
+#topbar a[aria-current="page"] {
+    font-weight: 700;
+}
+
 @media screen and (min-width: 1200px) {
 
     #topbar a,
@@ -182,6 +186,10 @@
     #main-header li a {
         padding: 26px;
     }
+}
+
+#main-header li a[aria-current="page"] {
+    font-weight: 700;
 }
 
 #main-header .menu-item-alt a,

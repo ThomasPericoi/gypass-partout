@@ -3,6 +3,24 @@
     "title": "Options de contenu – Articles",
     "fields": [
         {
+            "key": "field_65fac20cfaa23",
+            "label": "Rappel",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pensez à cocher UNE SEULE \"Familles de produits\" sur la colonne de droite avant de publier.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_65e9caeec5ad2",
             "label": "Introduction",
             "name": "",
@@ -224,5 +242,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710861338
+    "modified": 1710932597
 }

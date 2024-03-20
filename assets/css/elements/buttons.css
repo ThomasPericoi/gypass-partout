@@ -83,6 +83,19 @@
     background-color: var(--secondary);
 }
 
+.btn-outline-white {
+    color: var(--white);
+    border: 2px solid var(--white);
+    background-color: transparent;
+}
+
+.btn-outline-white:hover,
+.btn-outline-white:focus,
+.btn-outline-white.active {
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
 .btn-inline {
     color: var(--primary);
     font-weight: 700;
@@ -208,6 +221,12 @@
     justify-content: center;
     border: 1px solid var(--white);
     border-radius: 50%;
+    transition: background-color ease 350ms;
+}
+
+.btn-scroll:hover,
+.btn-scroll:focus {
+    background-color: var(--white);
 }
 
 .btn-scroll svg {
@@ -215,4 +234,13 @@
     width: 100%;
     height: auto;
     display: block;
+}
+
+.btn-scroll svg path {
+    transition: fill ease 350ms;
+}
+
+.btn-scroll:hover svg path,
+.btn-scroll:focus svg path {
+    fill: var(--primary);
 }

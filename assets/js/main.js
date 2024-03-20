@@ -145,19 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleHideFooter();
   }
 
-  // Header - Menu - Close on click outside menu
-  $("body").click(function (e) {
-    if (
-      $("body").hasClass("js-menuOpened") &&
-      !$(
-        ".js-toggleMenu, .js-openProducts a, .js-openRanges a, .menu-item-has-children > a"
-      ).is(e.target) &&
-      $(e.target).closest(".super-menu-wrapper").length === 0
-    ) {
-      toggleMenu();
-    }
-  });
-
   // Header - Menu - Close on click inner page link
   $(".super-menu-wrapper a[href*='#'], .js-toggleMenu").click(function () {
     toggleMenu();
@@ -173,21 +160,21 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Header - Menu - Open on click menu items
-  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
+  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
     function () {
       toggleMenu(1);
     }
   );
 
-  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").click(function () {
+  $("#home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").click(function () {
     $(".super-menu .js-openProducts").addClass("opened");
   });
 
-  $("footer .js-openRanges a, .inner-header .js-openRanges a").click(function () {
+  $("#home-hero .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").click(function () {
     $(".super-menu .js-openRanges").addClass("opened");
   });
 
-  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
+  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
     "keypress",
     function (e) {
       if ((e.keyCode || e.which) == 13) {
@@ -196,15 +183,28 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  $("#breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").on("keypress", function (e) {
+  $("#home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openProducts").addClass("opened");
     }
   });
 
-  $("footer .js-openRanges a, .inner-header .js-openRanges a").on("keypress", function (e) {
+  $("#home-hero .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openRanges").addClass("opened");
+    }
+  });
+
+  // Header - Menu - Close on click outside menu
+  $("body").click(function (e) {
+    if (
+      $("body").hasClass("js-menuOpened") &&
+      !$(
+        ".js-toggleMenu, .js-openProducts a, .js-openRanges a, .menu-item-has-children > a"
+      ).is(e.target) &&
+      $(e.target).closest(".super-menu-wrapper").length === 0
+    ) {
+      toggleMenu();
     }
   });
 
@@ -329,6 +329,59 @@ document.addEventListener("DOMContentLoaded", function () {
     if ((e.keyCode || e.which) == 13) {
       $(this).next($(".play")).hide();
       $(this).attr("controls", "");
+    }
+  });
+
+  // Page - Home
+  const swiperHero = new Swiper('#home-hero', {
+    loop: true,
+    autoHeight: true,
+    disableOnInteraction: false,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    autoplay: {
+      delay: 2500,
+    },
+  });
+
+  const swiperInspirations1 = new Swiper('#inspirations-slider-1', {
+    initialSlide: 1,
+    slidesPerView: 1.25,
+    centeredSlides: true,
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 1500,
+    },
+    breakpoints: {
+      992: {
+        initialSlide: 0,
+        slidesPerView: 4,
+        centeredSlides: false,
+        spaceBetween: 20,
+      }
+    }
+  });
+
+  const swiperInspirations2 = new Swiper('#inspirations-slider-2', {
+    initialSlide: 1,
+    slidesPerView: 1.25,
+    centeredSlides: true,
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 1500,
+    },
+    breakpoints: {
+      992: {
+        initialSlide: 2,
+        slidesPerView: 4,
+        centeredSlides: true,
+        spaceBetween: 20,
+      }
     }
   });
 

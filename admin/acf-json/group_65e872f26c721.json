@@ -3,6 +3,24 @@
     "title": "Options de contenu - Documents",
     "fields": [
         {
+            "key": "field_65fac2a063926",
+            "label": "Rappel",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pensez à cocher UNE SEULE \"Type de documents\" sur la colonne de droite avant de publier.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
             "key": "field_65e872f218518",
             "label": "Fichier du document",
             "name": "document_file",
@@ -50,7 +68,7 @@
         ]
     ],
     "menu_order": 0,
-    "position": "side",
+    "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
@@ -58,5 +76,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710859418
+    "modified": 1710932895
 }
