@@ -46,10 +46,10 @@
 
 .inspirations-grid .inspiration-thumbnail .icon,
 .inspirations-slider .inspiration-thumbnail .icon {
-  width: 22px;
-  height: 22px;
+  width: 40px;
+  height: 40px;
   display: block;
-  background-size: 22px 22px;
+  background-size: 40px 40px;
 }
 
 .inspirations-grid .inspiration-thumbnail .icon-heart,
@@ -59,6 +59,13 @@
 
 .inspirations-grid .inspiration-thumbnail .icon-cross,
 .inspirations-slider .inspiration-thumbnail .icon-cross {
+  background-image: url(../../icons/heart-full.svg);
+}
+
+.page-template-my-selection-page-template .inspirations-grid .inspiration-thumbnail .icon-cross {
+  width: 22px;
+  height: 22px;
+  background-size: 22px 22px;
   background-image: url(../../icons/cross-alt.svg);
 }
 

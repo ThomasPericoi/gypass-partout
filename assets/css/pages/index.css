@@ -7,6 +7,10 @@
     position: relative;
 }
 
+.blog #posts {
+    margin-bottom: var(--spacing-section-outer);
+}
+
 .posts-grid {
     display: grid;
     grid-template-columns: repeat(1, minmax(0, 1fr));
