@@ -57,7 +57,7 @@
 
 #home-video .social>svg path,
 #home-video .social>svg ellipse {
-    fill: var(--primary);
+    fill: var(--bay-of-many);
     transition: fill ease 350ms;
 }
 

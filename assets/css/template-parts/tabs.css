@@ -28,7 +28,7 @@
         padding-right: var(--spacing-section-inner);
         margin-right: var(--spacing-section-inner);
         display: unset;
-        border-right: 2px solid var(--primary);
+        border-right: 2px solid var(--bay-of-many);
     }
 }
 
@@ -60,9 +60,9 @@
 }
 
 .tabs-block nav a.selected {
-    color: var(--primary);
+    color: var(--bay-of-many);
     font-weight: 700;
-    border-bottom: 2px solid var(--primary);
+    border-bottom: 2px solid var(--bay-of-many);
 }
 
 .tabs-block nav a.selected:after {

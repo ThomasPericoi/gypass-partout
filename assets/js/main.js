@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Header - Menu - Open on click menu items
-  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
+  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openRanges a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
     function () {
       toggleMenu(1);
     }
@@ -170,11 +170,11 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".super-menu .js-openProducts").addClass("opened");
   });
 
-  $("#home-hero .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").click(function () {
+  $("#home-hero .js-openRanges a, #breadcrumbs .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").click(function () {
     $(".super-menu .js-openRanges").addClass("opened");
   });
 
-  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
+  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openRanges a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
     "keypress",
     function (e) {
       if ((e.keyCode || e.which) == 13) {
@@ -189,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  $("#home-hero .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").on("keypress", function (e) {
+  $("#home-hero .js-openRanges a, #breadcrumbs .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openRanges").addClass("opened");
     }
@@ -298,6 +298,19 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Element - Video
+  $("video").click(function () {
+    $(this).next($(".play")).hide();
+    $(this).attr("controls", "");
+  });
+
+  $("video").on("keypress", function (e) {
+    if ((e.keyCode || e.which) == 13) {
+      $(this).next($(".play")).hide();
+      $(this).attr("controls", "");
+    }
+  });
+
   // Block - Tabs
   function showContentTabs(index) {
     $(".tabs-block .tabs-content-element.visible").removeClass("visible");
@@ -318,19 +331,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
   showContentTabs(0);
-
-  // Element - Video
-  $("video").click(function () {
-    $(this).next($(".play")).hide();
-    $(this).attr("controls", "");
-  });
-
-  $("video").on("keypress", function (e) {
-    if ((e.keyCode || e.which) == 13) {
-      $(this).next($(".play")).hide();
-      $(this).attr("controls", "");
-    }
-  });
 
   // Page - Home
   const swiperHero = new Swiper('#home-hero', {

@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Pensez à cocher UNE SEULE \"Familles de produits\" sur la colonne de droite avant de publier.",
+            "message": "Pensez à cocher UNE SEULE \"Familles de produits\" sur la colonne de droite avant de publier.\r\nÉgalement, pensez à ajouter cette page produit dans le menu en vous rendant dans Apparence > Menus et sélectionnez le menu \"Menu principal\" à modifier.",
             "new_lines": "wpautop",
             "esc_html": 0
         },
@@ -43,8 +43,8 @@
             "name": "product_title",
             "aria-label": "",
             "type": "wysiwyg",
-            "instructions": "",
-            "required": 0,
+            "instructions": "Les sauts à la ligne sont pris en compte.",
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -64,7 +64,7 @@
             "aria-label": "",
             "type": "image",
             "instructions": "Pensez à ajouter cet icône dans l'élément du menu correspondant à cette page en vous rendant dans Apparence > Menus et sélectionnez le menu \"Menu principal\" à modifier.",
-            "required": 0,
+            "required": 1,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -159,6 +159,24 @@
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_65fd58827bd56",
+            "label": "Couleur de fond",
+            "name": "product_cta_banner_background_1",
+            "aria-label": "",
+            "type": "color_picker",
+            "instructions": "Laissez vide pour la couleur de GYPASS.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "enable_opacity": 0,
+            "return_format": "string"
         },
         {
             "key": "field_65f0b47215251",
@@ -370,5 +388,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710932740
+    "modified": 1711118186
 }

@@ -1,5 +1,5 @@
 <!-- CTA Banner -->
-<section class="cta-banner <?php echo $args['class'] ?: 'cta-banner-classic'; ?>">
+<section class="cta-banner-block">
     <div class="container container-sm">
         <?php if ($args['title']) : ?>
             <h2><?php echo $args['title']; ?></h2>

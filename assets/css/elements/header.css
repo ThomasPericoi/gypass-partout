@@ -69,7 +69,7 @@
 
 #topbar li:nth-last-child(1) a[target="_blank"],
 .super-menu .menu-topbar li:nth-last-child(1) a[target="_blank"] {
-    color: var(--primary);
+    color: var(--bay-of-many);
 }
 
 #topbar a:after,
@@ -104,7 +104,7 @@
 
 #topbar li:nth-last-child(1) a[target="_blank"]:after,
 .super-menu .menu-topbar li:nth-last-child(1) a[target="_blank"]:after {
-    background-color: var(--primary);
+    background-color: var(--bay-of-many);
 }
 
 #topbar .btn-search,
@@ -123,7 +123,7 @@
 #topbar .btn-search:focus>svg path,
 .super-menu .btn-search:hover>svg path,
 .super-menu .btn-search:focus>svg path {
-    fill: var(--primary);
+    fill: var(--bay-of-many);
 }
 
 /* Main header */
@@ -176,7 +176,7 @@
     padding: 18px;
     position: relative;
     display: block;
-    color: var(--primary);
+    color: var(--bay-of-many);
     font-weight: 500;
     font-family: var(--bold);
     text-decoration: none;
@@ -407,7 +407,7 @@ body.js-menuOpened .super-menu-overlay {
 @media screen and (min-width: 1200px) {
     .super-menu-wrapper {
         max-width: 415px;
-        border-right: 1px solid var(--primary);
+        border-right: 1px solid var(--bay-of-many);
         transform: translateX(-100%);
         overflow: unset;
     }
@@ -447,7 +447,7 @@ body.js-menuOpened .super-menu-overlay {
 }
 
 .super-menu-wrapper .menu-toggle-close svg line {
-    stroke: var(--primary)
+    stroke: var(--bay-of-many)
 }
 
 .super-menu-wrapper .custom-logo-link {

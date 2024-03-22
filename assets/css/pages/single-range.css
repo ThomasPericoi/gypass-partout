@@ -1,0 +1,74 @@
+/* #Single range
+--------------------------------------------------------------- */
+.single-gypass_range #breadcrumbs img {
+    max-width: 50px;
+    width: 100%;
+    height: auto;
+}
+
+/* Hero */
+.single-gypass_range #hero {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.single-gypass_range #hero:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 20%;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(90deg,
+            rgba(13, 13, 13, 0.55) 0%,
+            rgba(13, 13, 13, 0) 100%);
+}
+
+.single-gypass_range #hero .container {
+    min-height: 40vh;
+    padding-top: var(--spacing-section-inner);
+    padding-bottom: var(--spacing-section-inner);
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 992px) {
+    .single-gypass_range #hero .container {
+        min-height: 75vh;
+    }
+}
+
+.single-gypass_range #hero h1 {
+    color: var(--white);
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.single-gypass_range #hero h1 strong {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.single-gypass_range #hero h2 {
+    color: var(--white);
+    text-align: left;
+    text-transform: uppercase;
+    line-height: 1.1;
+}
+
+.single-gypass_range #hero h2 p {
+    font-weight: 300;
+}
+
+.single-gypass_range #hero .btn-scroll {
+    align-self: center;
+}
+
+.single-gypass_range #reinsurance {
+    margin-top: var(--spacing-section-outer);
+}

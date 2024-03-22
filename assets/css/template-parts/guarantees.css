@@ -1,0 +1,44 @@
+/* #Guarantees
+--------------------------------------------------------------- */
+.guarantees-block {
+    padding: var(--spacing-section-outer) 0;
+    text-align: center;
+    background-color: var(--bay-of-many);
+}
+
+.guarantees-block h2 {
+    margin-bottom: var(--spacing-section-inner);
+    color: var(--white);
+}
+
+.guarantees-block .guarantees-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--spacing-section-inner);
+}
+
+.guarantees-block .guarantees-grid>* {
+    flex: 0 0 100%;
+    color: white;
+}
+
+@media screen and (min-width: 992px) {
+    .guarantees-block .guarantees-grid>* {
+        flex: 0 0 calc((100% - (1 * var(--spacing-section-inner))) / 2);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .guarantees-block .guarantees-grid.grid-3>* {
+        flex: 0 0 calc((100% - (2 * var(--spacing-section-inner))) / 3);
+    }
+
+    .guarantees-block .guarantees-grid.grid-4>* {
+        flex: 0 0 calc((100% - (3 * var(--spacing-section-inner))) / 4);
+    }
+}
+
+.guarantees-block .guarantees-grid .text {
+    margin-top: 1em;
+}

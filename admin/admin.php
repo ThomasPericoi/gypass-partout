@@ -85,6 +85,7 @@ function register_custom_taxonomy()
             'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
+            'show_in_rest' => true,
             'show_admin_column' => true,
             'hierarchical' => true,
             'rewrite' => ['slug' => 'gammes', 'with_front' => true],

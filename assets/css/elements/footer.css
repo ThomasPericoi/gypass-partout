@@ -45,7 +45,7 @@
 /* Main footer */
 #main-footer {
     padding: var(--spacing-section-outer) 0;
-    background-color: var(--primary);
+    background-color: var(--bay-of-many);
 }
 
 #main-footer ::selection {
@@ -189,6 +189,7 @@
     max-width: 300px;
     margin-top: 1em;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 5px;
 }

@@ -87,7 +87,7 @@
   display: none;
 }
 
-.post-type-archive-gypass_inspiration #cta-trio,
-.tax-gypass_inspi_product_family #cta-trio {
-  border-top: 1px solid var(--primary);
+.post-type-archive-gypass_inspiration .cta-trio-block,
+.tax-gypass_inspi_product_family .cta-trio-block {
+  border-top: 1px solid var(--bay-of-many);
 }

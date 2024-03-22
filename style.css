@@ -44,18 +44,19 @@ Text Domain: gypass
 --------------------------------------------------------------- */
 
 @import "./assets/css/blocks/content-2-columns.css";
-@import "./assets/css/blocks/faq.css";
-@import "./assets/css/blocks/tabs.css";
 
 /* #Template Parts
 --------------------------------------------------------------- */
 
 @import "./assets/css/template-parts/cta-banner.css";
 @import "./assets/css/template-parts/cta-trio.css";
+@import "./assets/css/template-parts/faq.css";
+@import "./assets/css/template-parts/guarantees.css";
 @import "./assets/css/template-parts/home-hero.css";
 @import "./assets/css/template-parts/home-inspirations.css";
 @import "./assets/css/template-parts/home-quote.css";
 @import "./assets/css/template-parts/home-video.css";
+@import "./assets/css/template-parts/tabs.css";
 
 /* #Templates
 --------------------------------------------------------------- */
@@ -75,3 +76,4 @@ Text Domain: gypass
 @import "./assets/css/pages/search.css";
 @import "./assets/css/pages/single.css";
 @import "./assets/css/pages/single-product.css";
+@import "./assets/css/pages/single-range.css";

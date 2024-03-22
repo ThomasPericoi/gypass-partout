@@ -9,8 +9,6 @@
     margin-bottom: var(--spacing-title);
 }
 
-.faq-block details {}
-
 .faq-block details>summary {
     padding: 1rem 0;
     display: flex;
@@ -18,7 +16,7 @@
     justify-content: space-between;
     gap: 1em;
     list-style: none;
-    border-bottom: 1px solid var(--primary);
+    border-bottom: 1px solid var(--bay-of-many);
     cursor: pointer;
     transition: color ease 350ms;
 }

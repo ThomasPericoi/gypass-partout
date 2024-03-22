@@ -54,7 +54,6 @@ endif;
 
 <?php if (get_field('inspirations_cta_banner', 'options') == "true") : ?>
     <?php get_template_part('template-parts/cta-banner', '', array(
-        'class' => '',
         'title' => get_field('inspirations_cta_banner_title', 'options'),
         'description' => get_field('inspirations_cta_banner_description', 'options'),
         'cta' => get_field('inspirations_cta_banner_cta', 'options'),

@@ -11,10 +11,12 @@
         <?php endif; ?>
         <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
             <p>
-                <a href="<?php echo home_url(); ?>">GYPASS</a>
+                <span class="js-openProducts"><a><?php echo __("Produits", "gypass"); ?></a></span>
                 <span class="separator"> &gt; </span>
-                <span class="js-openProducts"><a>Produits</a></span>
-                <span class="separator"> &gt; </span>
+                <?php if (get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
+                    <span class="js-openProducts"><a><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></a></span>
+                    <span class="separator"> &gt; </span>
+                <?php endif; ?>
                 <span class="last"><?php echo get_the_title(); ?></span>
             </p>
         </nav>
@@ -32,26 +34,27 @@
             <span class="h4-size"><?php echo get_the_title(); ?></span>
         </h1>
         <h2 class="h1-size"><?php echo get_field("product_title") ?: get_the_title(); ?></h2>
-        <a class="btn-scroll" href="#below-hero">
+        <a class="btn-scroll" href="#content">
             <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-bottom.svg'); ?>
         </a>
     </div>
 </section>
 
-<div id="below-hero"></div>
+<section id="content">
+</section>
 
 <?php if (get_field('product_cta_banner_1') == "true") : ?>
-    <?php get_template_part('template-parts/cta-banner', '', array(
-        'class' => 'product-cta-banner-1',
+    <?php get_template_part('template-parts/cta-banner-simple', '', array(
         'title' => get_field('product_cta_banner_title_1'),
-        'description' => false,
         'cta' => get_field('product_cta_banner_cta_1'),
+        'background' => get_field('product_cta_banner_background_1'),
     )); ?>
 <?php endif; ?>
 
 <?php get_template_part('template-parts/cta-trio'); ?>
 
-<section id="content">
+<!-- Content CTA -->
+<section id="cta-content">
     <div class="container">
         <div class="ornament">
             <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/settings.svg'); ?>
@@ -75,7 +78,6 @@
 
 <?php if (get_field('product_cta_banner_2') == "true") : ?>
     <?php get_template_part('template-parts/cta-banner', '', array(
-        'class' => 'product-cta-banner-2',
         'title' => get_field('product_cta_banner_title_2'),
         'description' => get_field('product_cta_banner_description_2'),
         'cta' => get_field('product_cta_banner_cta_2'),

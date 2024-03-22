@@ -2,6 +2,7 @@
 --------------------------------------------------------------- */
 .post-type-archive-gypass_tip_trick main,
 .blog main,
+.tax-gypass_trip_trick_product_family main,
 .category main {
     padding: var(--spacing-section-outer) 0;
     position: relative;

@@ -1,5 +1,5 @@
 <!-- CTA Trio -->
-<section id="cta-trio">
+<section class="cta-trio-block">
     <div class="container">
         <?php if (have_rows('global_ctas', 'options')) : ?>
             <div class="ctas">

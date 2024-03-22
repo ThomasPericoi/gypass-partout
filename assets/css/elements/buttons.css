@@ -92,8 +92,8 @@
 .btn-outline-white:hover,
 .btn-outline-white:focus,
 .btn-outline-white.active {
-    background-color: var(--primary);
-    border-color: var(--primary);
+    color: var(--primary);
+    background-color: var(--white);
 }
 
 .btn-inline {

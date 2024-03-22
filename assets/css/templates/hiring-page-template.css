@@ -51,7 +51,7 @@
 
 #hiring .form-informations {
   padding: var(--spacing-section-outer) 0;
-  background-color: var(--primary);
+  background-color: var(--bay-of-many);
   color: var(--white);
 }
 
@@ -126,7 +126,7 @@
 
 #hiring form .btn {
   align-self: center;
-  color: var(--primary);
+  color: var(--bay-of-many);
 }
 
 #hiring form .btn:hover,

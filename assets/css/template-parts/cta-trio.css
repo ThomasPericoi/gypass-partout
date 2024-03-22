@@ -1,48 +1,48 @@
 /* #CTA Trio
 --------------------------------------------------------------- */
-#cta-trio {
+.cta-trio-block {
     padding: var(--spacing-section-outer) 0;
 }
 
-#cta-trio .ctas {
+.cta-trio-block .ctas {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: var(--spacing-section-inner);
 }
 
 @media screen and (min-width: 992px) {
-    #cta-trio .ctas {
-        align-items: end;
+    .cta-trio-block .ctas {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 80px;
     }
 }
 
-#cta-trio .cta {
+.cta-trio-block .cta {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
     gap: 1em;
 }
 
-#cta-trio img {
+.cta-trio-block img {
     max-width: 90px;
     width: 100%;
     height: auto;
     display: block;
 }
 
-#cta-trio h2 {
+.cta-trio-block h2 {
     color: var(--secondary);
     text-align: center;
 }
 
-#cta-trio p {
+.cta-trio-block p {
     color: var(--manatee);
     text-align: center;
 }
 
-#cta-trio .btn {
+.cta-trio-block .btn {
     width: 100%;
     box-sizing: border-box;
 }
