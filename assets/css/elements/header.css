@@ -475,7 +475,7 @@ body.js-menuOpened .super-menu-overlay {
 
 @media screen and (min-width: 1200px) {
     .super-menu-wrapper .menu-header li a {
-        padding: 10px 20px;
+        padding: 10px 50px 10px 20px;
         font-weight: 400;
     }
 }
@@ -499,7 +499,7 @@ body.js-menuOpened .super-menu-overlay {
     display: inline-block;
     position: absolute;
     top: 50%;
-    right: 2em;
+    right: 1em;
     background-size: cover;
     background-image: url(../../icons/arrow-line-right.svg);
     transform: translate(0, -50%);
@@ -632,6 +632,12 @@ body.js-menuOpened .super-menu-overlay {
     width: auto;
     display: block;
     max-height: 28px;
+    transition: filter ease 350ms;
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu .sub-menu li a:hover img,
+.super-menu-wrapper .js-openRanges>.sub-menu .sub-menu li a:hover img {
+    filter: brightness(0) invert(1);
 }
 
 /* Search Modal */

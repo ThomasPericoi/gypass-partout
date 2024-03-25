@@ -345,6 +345,16 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  const swiperHeroNested = new Swiper('#home-hero .nested-slider', {
+    loop: true,
+    autoHeight: true,
+    disableOnInteraction: false,
+    effect: "fade",
+    autoplay: {
+      delay: 5000,
+    },
+  });
+
   const swiperInspirations1 = new Swiper('#inspirations-slider-1', {
     initialSlide: 1,
     slidesPerView: 1.25,
@@ -374,6 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
     spaceBetween: 10,
     autoplay: {
       delay: 1500,
+      reverseDirection: true,
     },
     breakpoints: {
       992: {

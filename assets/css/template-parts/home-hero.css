@@ -1,6 +1,6 @@
 /* #Home Hero
 --------------------------------------------------------------- */
-#home-hero .swiper-slide {
+#home-hero .slider-element {
     padding: var(--spacing-section-outer) 0;
     background-size: cover;
     background-position: center;
@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-#home-hero .swiper-slide>.container {
+#home-hero .slider-element>.container {
     height: 80vh;
     position: relative;
     display: flex;
@@ -19,13 +19,13 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #home-hero .swiper-slide.news>.container {
+    #home-hero .slider-element.news>.container {
         align-items: flex-start;
         justify-content: flex-end;
     }
 }
 
-#home-hero .swiper-slide .range {
+#home-hero .slider-element .range {
     max-width: 250px;
     width: 100%;
     height: auto;
@@ -33,14 +33,14 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #home-hero .swiper-slide .range {
+    #home-hero .slider-element .range {
         position: absolute;
         top: 0;
         left: 2em;
     }
 }
 
-#home-hero .swiper-slide .badge {
+#home-hero .slider-element .badge {
     max-width: 100px;
     width: 100%;
     height: auto;
@@ -51,31 +51,31 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #home-hero .swiper-slide .badge {
+    #home-hero .slider-element .badge {
         max-width: 150px;
         top: 0;
     }
 }
 
-#home-hero .swiper-slide .h1-size p {
+#home-hero .slider-element .h1-size p {
     color: var(--white);
     text-transform: uppercase;
     font-weight: 300;
 }
 
 @media screen and (min-width: 1200px) {
-    #home-hero .swiper-slide .h1-size p {
+    #home-hero .slider-element .h1-size p {
         line-height: 1.15;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    #home-hero .swiper-slide .btn {
+    #home-hero .slider-element .btn {
         font-size: 30px;
     }
 }
 
-#home-hero .swiper-slide.news .btn {
+#home-hero .slider-element.news .btn {
     margin-bottom: var(--spacing-section-inner);
 }
 
