@@ -1,0 +1,94 @@
+/* #Plus
+--------------------------------------------------------------- */
+#plus {
+    padding: calc(var(--spacing-section-outer) + 73px + var(--spacing-section-outer)) 0 var(--spacing-section-outer) 0;
+    position: relative;
+    background-color: var(--ebb);
+}
+
+@media screen and (min-width: 992px) {
+    #plus {
+        padding: var(--spacing-section-outer) 0;
+    }
+}
+
+#plus:before {
+    content: "";
+    width: 73px;
+    height: 258px;
+    position: absolute;
+    top: calc(var(--spacing-section-outer) - 258px);
+    left: var(--spacing-section-inner);
+    background-image: url("../../images/les+.svg");
+    background-size: 71px 256px;
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(90deg);
+    transform-origin: bottom left;
+}
+
+@media screen and (min-width: 992px) {
+    #plus:before {
+        top: var(--spacing-section-inner);
+        left: var(--spacing-section-inner);
+        transform: unset;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    #plus:before {
+        left: var(--spacing-section-outer);
+    }
+}
+
+.plus-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-outer);
+}
+
+.plus-list .plus {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 992px) {
+    .plus-list .plus {
+        flex-direction: row;
+    }
+}
+
+.plus-list .plus img {
+    max-width: 125px;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .plus-list .plus img {
+        max-width: 200px;
+    }
+}
+
+.plus-list .plus .content {
+    position: relative;
+    flex-grow: 1;
+}
+
+.plus-list .plus:not(:last-child) .content:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    bottom: calc(var(--spacing-section-outer) * -0.5);
+    left: 0;
+    display: block;
+    background-color: var(--primary);
+}
+
+.plus-list .plus h2 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}

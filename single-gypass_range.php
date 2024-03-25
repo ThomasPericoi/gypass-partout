@@ -31,11 +31,15 @@
             <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
         </h1>
         <h2 class="h1-size"><?php echo get_field("range_title") ?: get_the_title(); ?></h2>
-        <a class="btn-scroll" href="#content">
+        <a class="btn-scroll" href="#plus">
             <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-bottom.svg'); ?>
         </a>
     </div>
 </section>
+
+<?php get_template_part('template-parts/plus', '', array(
+    'plus' => get_field('range_plus'),
+)); ?>
 
 <!-- Content -->
 <section id="content">
