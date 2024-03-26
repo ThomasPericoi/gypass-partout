@@ -38,6 +38,36 @@
             "endpoint": 0
         },
         {
+            "key": "field_6602d83c7298e",
+            "label": "Couleur principale de la page",
+            "name": "range_color",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Définit la couleur utilisée par plusieurs éléments, notamment le texte et certains boutons.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bahama-blue": "Bahama Blue",
+                "bay-of-many": "Bay of Many",
+                "boston-blue": "Boston Blue",
+                "fountain-blue": "Fountain Blue",
+                "havelock-blue": "Havelock Blue",
+                "lochmara": "Lochmara"
+            },
+            "default_value": "bay-of-many",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_65fd96aa745b6",
             "label": "Gamme",
             "name": "range_range",
@@ -52,9 +82,22 @@
                 "id": ""
             },
             "choices": {
+                "claustras-maestria": "Claustras Maestria",
+                "claustras-panneaux": "Claustras Panneaux Aluminium",
+                "claustras-vitrees": "Claustras Vitrées",
+                "connect": "#Connect",
+                "evolys": "Evolys",
                 "infini": "Infini",
                 "integrale": "Intégrale",
-                "latérale": "Latérale"
+                "latérales": "Latérales",
+                "maestria": "Maestria",
+                "perspective": "Perspective",
+                "portes-a-vantaux": "Portes à vantaux",
+                "rivage": "Rivage",
+                "tendance": "Tendance",
+                "traditionnelle": "Traditionnelle",
+                "urban": "Urban",
+                "vitree": "Vitrée"
             },
             "default_value": false,
             "return_format": "label",
@@ -596,5 +639,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711358978
+    "modified": 1711462638
 }

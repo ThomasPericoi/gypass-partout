@@ -1,10 +1,10 @@
 {
-    "key": "group_6554e4c31e92d",
-    "title": "Bloc - Contenu en 2 colonnes",
+    "key": "group_6602f84cba2f5",
+    "title": "Bloc - Image avec légende",
     "fields": [
         {
-            "key": "field_6554e4c3245fd",
-            "label": "Contenu en 2 colonnes",
+            "key": "field_6602f84cc0022",
+            "label": "Image avec légende",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -16,12 +16,12 @@
                 "class": "",
                 "id": ""
             },
-            "message": "2 colonnes de contenu, une pour du texte et une pour un média.",
+            "message": "2 colonnes, une pour du texte et une grande pour une image.",
             "new_lines": "br",
             "esc_html": 0
         },
         {
-            "key": "field_6554e4c3281ce",
+            "key": "field_6602f84cc3a7b",
             "label": "Contenu",
             "name": "",
             "aria-label": "",
@@ -39,8 +39,8 @@
             "endpoint": 0
         },
         {
-            "key": "field_6554e95e1aeef",
-            "label": "Titre (Colonne 1)",
+            "key": "field_6602f84cc7523",
+            "label": "Titre",
             "name": "title",
             "aria-label": "",
             "type": "text",
@@ -59,8 +59,8 @@
             "append": ""
         },
         {
-            "key": "field_6554e8e4057e7",
-            "label": "Contenu (Colonne 1)",
+            "key": "field_6602f84ccaf85",
+            "label": "Contenu",
             "name": "content",
             "aria-label": "",
             "type": "wysiwyg",
@@ -79,11 +79,11 @@
             "delay": 0
         },
         {
-            "key": "field_6569ff441c33c",
-            "label": "Type de média (Colonne 2)",
-            "name": "media",
+            "key": "field_6602f8b484e79",
+            "label": "CTA",
+            "name": "cta",
             "aria-label": "",
-            "type": "radio",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -92,20 +92,11 @@
                 "class": "",
                 "id": ""
             },
-            "choices": {
-                "image": "Image",
-                "video": "Vidéo"
-            },
-            "default_value": "",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
+            "return_format": "array"
         },
         {
-            "key": "field_6554e923057e8",
-            "label": "Image (Colonne 2)",
+            "key": "field_6602f84cd2451",
+            "label": "Image",
             "name": "image",
             "aria-label": "",
             "type": "image",
@@ -114,7 +105,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_6569ff441c33c",
+                        "field": "field_6602f84cce9f9",
                         "operator": "==",
                         "value": "image"
                     }
@@ -137,68 +128,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_6569ffe31c33d",
-            "label": "Vidéo (Colonne 2)",
-            "name": "video",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6569ff441c33c",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": "mp4, mkv, avi"
-        },
-        {
-            "key": "field_657dc1a703781",
-            "label": "Miniature de la vidéo (Colonne 2)",
-            "name": "video_poster",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "Image qui va remplacer la miniature automatique de la vidéo.",
-            "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6569ff441c33c",
-                        "operator": "==",
-                        "value": "video"
-                    }
-                ]
-            ],
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_6554e4c33700b",
+            "key": "field_6602f84cdd3c2",
             "label": "Options de style",
             "name": "",
             "aria-label": "",
@@ -216,32 +146,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_6554ec52002c1",
-            "label": "Ordre des colonnes",
-            "name": "order",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "normal": "Contenu + Média",
-                "reverse": "Média + Contenu"
-            },
-            "default_value": "normal",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_660292c7ba4dd",
+            "key": "field_6602f84ce48a2",
             "label": "Taille du conteneur du bloc",
             "name": "container_size",
             "aria-label": "",
@@ -266,6 +171,31 @@
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
+        },
+        {
+            "key": "field_6602f8c284e7a",
+            "label": "Fond de couleur",
+            "name": "background",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg": "Activer",
+                "no-bg": "Désactiver"
+            },
+            "default_value": "no-bg",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -273,7 +203,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/content-2-columns"
+                "value": "acf\/image-legend"
             }
         ]
     ],
@@ -286,5 +216,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711470859
+    "modified": 1711470827
 }

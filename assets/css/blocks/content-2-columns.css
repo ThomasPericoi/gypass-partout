@@ -13,12 +13,6 @@
 }
 
 @media screen and (min-width: 992px) {
-    .col-wrapper>div {
-        max-width: 50%;
-    }
-}
-
-@media screen and (min-width: 992px) {
     .content-2-columns-block .col-wrapper {
         flex-direction: row;
     }
@@ -30,6 +24,12 @@
 
 .content-2-columns-block .col-wrapper>div {
     flex: 1 1 0;
+}
+
+@media screen and (min-width: 992px) {
+    .content-2-columns-block .col-wrapper>div {
+        max-width: 50%;
+    }
 }
 
 @media screen and (min-width: 992px) {

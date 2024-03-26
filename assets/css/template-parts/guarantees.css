@@ -42,3 +42,9 @@
 .guarantees-block .guarantees-grid .text {
     margin-top: 1em;
 }
+
+.guarantees-block .guarantees-grid img {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+}

@@ -138,7 +138,7 @@ add_filter('template_include', 'redirect_tax_archive');
 // Register blocks
 function register_acf_blocks()
 {
-    $blocks = ["content-2-columns"];
+    $blocks = ["content-2-columns", "image-legend", "video"];
 
     foreach ($blocks as $block) {
         register_block_type(__DIR__ . '/blocks/' . $block);

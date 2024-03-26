@@ -1,0 +1,15 @@
+{
+    "name": "acf/video",
+    "title": "Vidéo",
+    "description": "Un simple module qui permet d'ajouter une vidéo, avec toute une flopée de titres optionnels.",
+    "category": "gypass-block",
+    "icon": "video-alt3",
+    "keywords": [
+        "text",
+        "video"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "video.php"
+    }
+}

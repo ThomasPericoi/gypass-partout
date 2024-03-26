@@ -6,6 +6,12 @@
   height: auto;
 }
 
+@media screen and (min-width: 992px) {
+  .single-gypass_product #breadcrumbs img {
+    margin-right: -40px;
+  }
+}
+
 /* Hero */
 .single-gypass_product #hero {
   position: relative;

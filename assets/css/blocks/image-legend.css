@@ -1,0 +1,36 @@
+/* #Image w/ Legend
+--------------------------------------------------------------- */
+.image-legend-block {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.image-legend-block.bg {
+    background-color: var(--ebb);
+}
+
+.image-legend-block .col-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 992px) {
+    .image-legend-block .col-wrapper {
+        flex-direction: row;
+        gap: 2em;
+    }
+}
+
+.image-legend-block .content {
+    max-width: 375px;
+}
+
+.image-legend-block .media {
+    flex-grow: 1;
+}
+
+.image-legend-block .media>* {
+    width: 100%;
+}

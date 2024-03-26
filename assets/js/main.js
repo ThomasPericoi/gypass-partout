@@ -299,12 +299,12 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Element - Video
-  $("video").click(function () {
+  $("video:not(.gif)").click(function () {
     $(this).next($(".play")).hide();
     $(this).attr("controls", "");
   });
 
-  $("video").on("keypress", function (e) {
+  $("video:not(.gif)").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(this).next($(".play")).hide();
       $(this).attr("controls", "");
@@ -336,22 +336,22 @@ document.addEventListener("DOMContentLoaded", function () {
   const swiperHero = new Swiper('#home-hero', {
     loop: true,
     autoHeight: true,
-    disableOnInteraction: false,
     pagination: {
       el: ".swiper-pagination",
     },
     autoplay: {
       delay: 2500,
+      disableOnInteraction: false,
     },
   });
 
   const swiperHeroNested = new Swiper('#home-hero .nested-slider', {
     loop: true,
     autoHeight: true,
-    disableOnInteraction: false,
     effect: "fade",
     autoplay: {
       delay: 5000,
+      disableOnInteraction: false,
     },
   });
 

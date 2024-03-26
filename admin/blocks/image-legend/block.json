@@ -1,0 +1,16 @@
+{
+    "name": "acf/image-legend",
+    "title": "Image avec légende",
+    "description": "2 colonnes, une pour du texte et une grande pour une image.",
+    "category": "gypass-block",
+    "icon": "cover-image",
+    "keywords": [
+        "text",
+        "title",
+        "image"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "image-legend.php"
+    }
+}

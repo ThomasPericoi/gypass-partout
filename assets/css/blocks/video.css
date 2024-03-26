@@ -1,0 +1,81 @@
+/* #Video
+--------------------------------------------------------------- */
+.video-block {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.video-block.bg {
+    background-color: var(--ebb);
+}
+
+.video-block.bg:before {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 125px;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--white);
+}
+
+@media screen and (min-width: 992px) {
+    .video-block.bg:before {
+        height: 300px;
+    }
+}
+
+.video-block .introduction {
+    margin-bottom: 2em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+.video-block .sub-section {
+    margin-top: 2em;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+}
+
+@media screen and (min-width: 992px) {
+    .video-block .sub-section {
+        flex-direction: row;
+        font-size: 17px;
+        gap: 4em;
+    }
+}
+
+.video-block .sub-section:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    position: absolute;
+    top: -2em;
+    left: 0;
+    display: block;
+    background-color: var(--primary);
+}
+
+.video-block .sub-section img {
+    max-width: 250px;
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 992px) {
+    .video-block .sub-section p {
+        text-align: left;
+        font-size: 17px;
+    }
+}
+
+.video-block iframe {
+    width: 100%;
+    height: calc(100vw/1.77777778);
+}
