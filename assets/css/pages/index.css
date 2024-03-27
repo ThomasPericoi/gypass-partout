@@ -70,9 +70,3 @@
     color: var(--white);
     background-color: var(--primary);
 }
-
-.post-type-archive-gypass_tip_trick .navigation,
-.blog .navigation,
-.category .navigation {
-    margin-top: var(--spacing-section-inner);
-}

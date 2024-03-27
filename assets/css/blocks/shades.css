@@ -1,0 +1,143 @@
+/* #Variables
+--------------------------------------------------------------- */
+.shades-block {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: var(--background);
+    transition: background-image 350ms ease;
+}
+
+.shades-block .col-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 1200px) {
+    .shades-block .col-wrapper {
+        flex-direction: row;
+    }
+}
+
+/* Introduction */
+.shades-block .introduction {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.shades-block h2 {
+    display: inline;
+    margin-right: 3px;
+}
+
+.shades-block h2+span {
+    font-weight: 600;
+}
+
+/* Selector */
+.shades-block .selector {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: flex-start;
+}
+
+.shades-block .shades-title {
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.shades-block h2,
+.shades-block h3,
+.shades-block span,
+.shades-block p {
+    color: var(--theme);
+}
+
+.shades-wrapper {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.shades-block .shades-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.shades-block .shades-grid>button {
+    width: 37px;
+    height: 37px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: var(--thumbnail);
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+
+.shades-block .shades-grid>button.active {
+    outline: 2px solid var(--bay-of-many);
+}
+
+.shades-block #shades-3 .shades-grid>span {
+    width: 37px;
+    height: 37px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #C46096;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+
+.shades-block #shades-3 .shades-grid>span:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    display: block;
+    background-image: url(../../icons/paint.svg);
+    background-size: 20px 20px;
+    transform: translateX(0);
+    transition: transform ease 350ms;
+}
+
+.shades-block .chart a {
+    font-weight: 700;
+    color: var(--theme);
+}
+
+.shades-block .btn {
+    font-weight: 700;
+    color: var(--theme);
+    border: 2px solid var(--theme);
+    background-color: transparent;
+}
+
+/* Result */
+.shades-block .result {
+    max-width: 600px;
+    width: 100%;
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 60px;
+    border: 2px solid var(--theme);
+    border-radius: 50%;
+    transition: border ease 350ms;
+}
+
+@media screen and (min-width: 992px) {
+    .shades-block .result {
+        font-size: 100px;
+    }
+}

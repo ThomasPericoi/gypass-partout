@@ -1,0 +1,15 @@
+{
+    "name": "acf/shades",
+    "title": "Teintes",
+    "description": "Un sélecteur de teintes.",
+    "category": "gypass-block",
+    "icon": "admin-appearance",
+    "keywords": [
+        "text",
+        "title"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "shades.php"
+    }
+}

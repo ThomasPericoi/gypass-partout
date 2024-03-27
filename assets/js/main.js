@@ -311,6 +311,31 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Block - Shades
+  if ($("#shades-count-1")) {
+    $("#shades-count-1").text($("#shades-1 .shades-grid").children().length);
+  }
+  if ($("#shades-count-2")) {
+    $("#shades-count-2").text($("#shades-2 .shades-grid").children().length);
+  }
+
+  function changeShadesActive(element) {
+    var theme = $(element).data('theme');
+    var background = $(element).data('background');
+    var code = $(element).data('code');
+    $('.shades-block button').removeClass('active');
+    $(element).addClass('active');
+    $('.shades-block').css({ "--theme": theme });
+    $('.shades-block').css({ "--background": "url(" + background + ")" });
+    $("#selector-code").text(code);
+  }
+
+  $('.shades-block button').click(function () {
+    changeShadesActive(this);
+  });
+
+  changeShadesActive("#shades-1 .shades-grid button:last-child");
+
   // Block - Tabs
   function showContentTabs(index) {
     $(".tabs-block .tabs-content-element.visible").removeClass("visible");

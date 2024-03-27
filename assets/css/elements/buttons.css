@@ -157,6 +157,7 @@
 
 /* Pagination */
 .navigation.pagination {
+    margin-top: var(--spacing-section-inner);
     margin-bottom: var(--spacing-section-inner);
     font-size: 20px;
     font-weight: 500;

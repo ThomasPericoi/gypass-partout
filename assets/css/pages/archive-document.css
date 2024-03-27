@@ -55,8 +55,3 @@
   justify-content: space-between;
   flex-wrap: wrap;
 }
-
-.post-type-archive-gypass_document .navigation,
-.tax-gypass_document_type .navigation {
-  margin-top: var(--spacing-section-inner);
-}
