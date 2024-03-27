@@ -99,6 +99,7 @@ function register_custom_taxonomy()
             'public' => true,
             'show_ui' => true,
             'show_in_menu' => true,
+            'show_in_rest' => true,
             'show_admin_column' => true,
             'hierarchical' => true,
             'rewrite' => ['slug' => 'conseils-astuces-types', 'with_front' => true],
@@ -131,6 +132,78 @@ function redirect_tax_archive($template)
     return $template;
 }
 add_filter('template_include', 'redirect_tax_archive');
+
+// Redirect from single to cat
+function redirect_single_cat($template)
+{
+    if (has_term('motorisations-domotique', 'gypass_product_product_family') && is_single()) {
+        $new_template = locate_template(array('single-gypass_product-motorisation-domotique.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
+    if (has_term('motorisations-domotique', 'gypass_range_product_family') && is_single()) {
+        $new_template = locate_template(array('single-gypass_range-motorisation-domotique.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
+    return $template;
+}
+add_filter("template_include", "redirect_single_cat");
+
+// Rewrite URL for content types
+function rewrite_post_type_permalink($post_link, $post)
+{
+    if (is_object($post) && $post->post_type == 'gypass_product') {
+        $terms = wp_get_object_terms($post->ID, 'gypass_product_product_family');
+        if ($terms) {
+            return str_replace('%gypass_product_product_family%', $terms[0]->slug, $post_link);
+        }
+    }
+    if (is_object($post) && $post->post_type == 'gypass_range') {
+        $terms = wp_get_object_terms($post->ID, 'gypass_range_product_family');
+        if ($terms) {
+            return str_replace('%gypass_range_product_family%', $terms[0]->slug, $post_link);
+        }
+    }
+    return $post_link;
+}
+add_filter('post_type_link', 'rewrite_post_type_permalink', 10, 2);
+
+function enable_dynamic_rw_rules()
+{
+    $product_terms = get_terms(array(
+        'taxonomy' => 'gypass_product_product_family',
+        'hide_empty' => false,
+    ));
+
+    if (!empty($product_terms)) {
+        foreach ($product_terms as $term) {
+            add_rewrite_rule(
+                '^' . $term->slug . '/(.*)/?$',
+                'index.php?post_type=gypass_product&name=$matches[1]',
+                'top'
+            );
+        }
+    }
+
+    $range_terms = get_terms(array(
+        'taxonomy' => 'gypass_range_product_family',
+        'hide_empty' => false,
+    ));
+
+    if (!empty($range_terms)) {
+        foreach ($range_terms as $term) {
+            add_rewrite_rule(
+                '^' . $term->slug . '/(.*)/?$',
+                'index.php?post_type=gypass_range&name=$matches[1]',
+                'top'
+            );
+        }
+    }
+}
+add_action('init', 'enable_dynamic_rw_rules');
 
 /* BLOCK(S)
 --------------------------------------------------------------- */

@@ -45,6 +45,13 @@
     margin-top: 0.65em;
 }
 
+/* Image */
+.formatted img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* Quote */
 .wp-block-quote {
     position: relative;

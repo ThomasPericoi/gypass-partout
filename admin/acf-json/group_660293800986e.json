@@ -79,6 +79,31 @@
             "delay": 0
         },
         {
+            "key": "field_66043efdbb2fb",
+            "label": "Image",
+            "name": "img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_6602dbacda4f8",
             "label": "CTA",
             "name": "cta",
@@ -95,11 +120,11 @@
             "return_format": "array"
         },
         {
-            "key": "field_6602f8b484e79",
-            "label": "CTA (copier)",
-            "name": "cta_copier",
+            "key": "field_66043cfb9d69a",
+            "label": "Sous-section",
+            "name": "sub",
             "aria-label": "",
-            "type": "link",
+            "type": "radio",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -108,7 +133,16 @@
                 "class": "",
                 "id": ""
             },
-            "return_format": "array"
+            "choices": {
+                "true": "Activer",
+                "false": "Désactiver"
+            },
+            "default_value": "false",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         },
         {
             "key": "field_6602de87782b4",
@@ -118,7 +152,15 @@
             "type": "image",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66043cfb9d69a",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -143,7 +185,15 @@
             "type": "wysiwyg",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66043cfb9d69a",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -358,9 +408,9 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_6602f8c284e7a",
-            "label": "Fond de couleur (copier)",
-            "name": "background_copier",
+            "key": "field_66043d5b4570d",
+            "label": "Bordure colorée",
+            "name": "border_top",
             "aria-label": "",
             "type": "radio",
             "instructions": "",
@@ -372,10 +422,10 @@
                 "id": ""
             },
             "choices": {
-                "bg": "Activer",
-                "no-bg": "Désactiver"
+                "bordered": "Activer",
+                "no-border": "Désactiver"
             },
-            "default_value": "no-bg",
+            "default_value": "no-border",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -434,5 +484,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711470788
+    "modified": 1711554321
 }

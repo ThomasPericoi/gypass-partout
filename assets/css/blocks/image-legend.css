@@ -31,6 +31,12 @@
     flex-grow: 1;
 }
 
-.image-legend-block .media>* {
+.image-legend-block .media img {
     width: 100%;
+}
+
+.image-legend-block .media figcaption {
+    text-transform: uppercase;
+    font-size: 15px;
+    color: var(--manatee);
 }

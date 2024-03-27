@@ -27,11 +27,11 @@
 <section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
     <div class="container">
         <h1>
-            <?php if (get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
-                <span class="p-size"><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></span>
+            <?php if (get_field("product_top_title_1") || get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
+                <span class="p-size"><?php echo get_field("product_top_title_1") ?: get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></span>
             <?php endif; ?>
             <br />
-            <span class="h4-size"><?php echo get_the_title(); ?></span>
+            <span class="h4-size"><?php echo get_field("product_top_title_2") ?: get_the_title(); ?></span>
         </h1>
         <h2 class="h1-size"><?php echo get_field("product_title") ?: get_the_title(); ?></h2>
         <a class="btn-scroll" href="#content">
@@ -81,6 +81,8 @@
         'title' => get_field('product_cta_banner_title_2'),
         'description' => get_field('product_cta_banner_description_2'),
         'cta' => get_field('product_cta_banner_cta_2'),
+        'additional_description' => false,
+        'additional_cta' => false,
     )); ?>
 <?php endif; ?>
 

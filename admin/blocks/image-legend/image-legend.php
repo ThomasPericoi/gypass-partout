@@ -45,7 +45,12 @@ $style  = implode('; ', $styles);
             </div>
             <?php if ($image) : ?>
                 <div class="media">
-                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <figure>
+                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                        <?php if ($image['caption']) : ?>
+                            <figcaption><?php echo $image['caption']; ?></figcaption>
+                        <?php endif; ?>
+                    </figure>
                 </div>
             <?php endif; ?>
         </div>

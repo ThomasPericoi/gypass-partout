@@ -24,37 +24,34 @@
 </section>
 
 <!-- Hero -->
-<section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
+<section id="hero-alt">
     <div class="container">
-        <h1 class="h4-size">
-            <?php echo __("Gammes", "gypass"); ?><br />
-            <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
-        </h1>
-        <h2 class="h1-size"><?php echo get_field("range_title") ?: get_the_title(); ?></h2>
-        <a class="btn-scroll" href="#plus">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-bottom.svg'); ?>
-        </a>
+        <div class="formatted">
+            <h1 class="h3-size"><?php echo get_the_title(); ?></span></h1>
+            <?php echo get_field("range_description"); ?>
+        </div>
+        <div class="filters">
+            <span class="filters-label"><?php echo __("Filtres <br /> par marques", "gypass"); ?></span>
+            <button class="btn btn-outline-primary all-filter active">
+                <?php echo __("Tout", "gypass"); ?>
+            </button>
+            <?php if (have_rows('range_filters')) : ?>
+                <?php while (have_rows('range_filters')) : the_row();
+                    $label = get_sub_field('label');
+                    $classname = get_sub_field('classname');
+                ?>
+                    <button class="btn btn-outline-primary class-filter" data-classname="<?php echo $classname; ?>">
+                        <?php echo $label; ?>
+                    </button>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
     </div>
 </section>
 
-<?php get_template_part('template-parts/plus', '', array(
-    'plus' => get_field('range_plus'),
-)); ?>
-
-<!-- Content -->
-<section id="content" class="primary-<?php echo get_field("range_color"); ?>">
+<section id="content">
     <?php the_content(); ?>
 </section>
-
-<?php get_template_part('template-parts/guarantees', '', array(
-    'title' => get_field('range_guarantees_title'),
-    'guarantees' => get_field('range_guarantees'),
-)); ?>
-
-<?php get_template_part('template-parts/faq', '', array(
-    'title' => false,
-    'faq' => get_field('range_faq'),
-)); ?>
 
 <?php if (get_field('range_cta_banner') == "true") : ?>
     <?php get_template_part('template-parts/cta-banner', '', array(

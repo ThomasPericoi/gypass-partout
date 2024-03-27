@@ -627,6 +627,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "gypass_range"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "gypass_range_product_family:motorisations-domotique"
             }
         ]
     ],
@@ -639,5 +644,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711462638
+    "modified": 1711561406
 }

@@ -55,6 +55,8 @@ endif;
         'title' => get_field('documents_cta_banner_title', 'options'),
         'description' => get_field('documents_cta_banner_description', 'options'),
         'cta' => get_field('documents_cta_banner_cta', 'options'),
+        'additional_description' => false,
+        'additional_cta' => false,
     )); ?>
 <?php endif; ?>
 

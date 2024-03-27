@@ -32,12 +32,10 @@
 }
 
 .cta-banner-block p a {
-  padding: 2px 10px;
   display: block;
   color: var(--white);
   font-weight: 700;
   text-decoration: none;
-  border: 2px solid var(--white);
   transition: color ease 350ms, background-color ease 350ms;
 }
 
@@ -47,8 +45,18 @@
   }
 }
 
-.cta-banner-block p a:hover,
-.cta-banner-block p a:focus {
+.cta-banner-block p a:first-of-type {
+  padding: 2px 10px;
+  border: 2px solid var(--white);
+}
+
+.cta-banner-block p a:first-of-type:hover,
+.cta-banner-block p a:first-of-type:focus {
   color: var(--bay-of-many);
   background-color: var(--white);
+}
+
+.cta-banner-block p a:nth-of-type(2):hover,
+.cta-banner-block p a:nth-of-type(2):focus {
+  text-decoration: underline;
 }

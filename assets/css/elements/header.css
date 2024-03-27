@@ -660,6 +660,11 @@ body.js-menuOpened .super-menu-overlay {
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(2) .sub-menu a,
 .super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(2) .sub-menu a {
+    color: var(--bahama-blue);
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(2) .sub-menu a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(2) .sub-menu a {
     color: var(--lochmara);
 }
 

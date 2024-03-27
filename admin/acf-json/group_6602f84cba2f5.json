@@ -100,17 +100,9 @@
             "name": "image",
             "aria-label": "",
             "type": "image",
-            "instructions": "",
+            "instructions": "Pour ajouter une légende à l'image, il suffit d'ajouter du texte dans le champs \"légende\" de l'image.",
             "required": 0,
-            "conditional_logic": [
-                [
-                    {
-                        "field": "field_6602f84cce9f9",
-                        "operator": "==",
-                        "value": "image"
-                    }
-                ]
-            ],
+            "conditional_logic": 0,
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -216,5 +208,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711470827
+    "modified": 1711553417
 }

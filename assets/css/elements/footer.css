@@ -161,6 +161,18 @@
     border-left: 1px solid var(--scooter);
 }
 
+#footer .contact a[href*="tel"] {
+    margin-top: 5px;
+    display: block;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--white);
+}
+
+#footer .contact a[href*="tel"]:hover {
+    text-decoration: underline;
+}
+
 #footer .btn-contact {
     margin-top: 5px;
     display: flex;

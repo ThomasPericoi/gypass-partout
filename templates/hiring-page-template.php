@@ -65,6 +65,8 @@ get_header(); ?>
         'title' => get_field('cta_banner_title'),
         'description' => get_field('cta_banner_description'),
         'cta' => get_field('cta_banner_cta'),
+        'additional_description' => get_field('cta_banner_additional_description'),
+        'additional_cta' => get_field('cta_banner_additional_cta'),
     )); ?>
 <?php endif; ?>
 

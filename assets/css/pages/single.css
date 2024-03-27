@@ -33,8 +33,8 @@
   text-align: center;
 }
 
-.single-post #hero .container,
-.single-gypass_tip_trick #hero .container {
+.single-post #hero .introduction,
+.single-gypass_tip_trick #hero .introduction {
   margin-top: 1em;
 }
 
@@ -50,7 +50,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-
   .single-post #hero .badge,
   .single-gypass_tip_trick #hero .badge {
     width: 175px;

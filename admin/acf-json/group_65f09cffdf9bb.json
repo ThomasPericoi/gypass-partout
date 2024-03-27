@@ -38,6 +38,46 @@
             "endpoint": 0
         },
         {
+            "key": "field_660438317dfba",
+            "label": "Titre supérieur (partie 1)",
+            "name": "product_top_title_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Laissez vide pour afficher la liste de produits.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_660438ad7dfbb",
+            "label": "Titre supérieur (partie 2)",
+            "name": "product_top_title_2",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Laissez vide pour afficher le titre du produit.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_65f09d11aae52",
             "label": "Titre",
             "name": "product_title",
@@ -321,7 +361,15 @@
             "type": "text",
             "instructions": "",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a186ba0a4",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -341,7 +389,15 @@
             "type": "textarea",
             "instructions": "Les sauts à la ligne sont pris en compte.",
             "required": 1,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a186ba0a4",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -361,7 +417,15 @@
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a186ba0a4",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -376,6 +440,11 @@
                 "param": "post_type",
                 "operator": "==",
                 "value": "gypass_product"
+            },
+            {
+                "param": "post_taxonomy",
+                "operator": "!=",
+                "value": "gypass_product_product_family:motorisations-domotique"
             }
         ]
     ],
@@ -388,5 +457,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711470911
+    "modified": 1711559297
 }

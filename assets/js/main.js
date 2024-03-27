@@ -429,4 +429,19 @@ document.addEventListener("DOMContentLoaded", function () {
       type: "fraction",
     },
   });
+
+  // Page - Range
+  $(".single-gypass_range #hero-alt .filters button.all-filter").on("click", function () {
+    $('.single-gypass_range #hero-alt .filters button').removeClass('active');
+    $(this).addClass('active');
+    $(".single-gypass_range #content > section").show();
+  });
+
+  $(".single-gypass_range #hero-alt .filters button.class-filter").on("click", function () {
+    var classname = $(this).data('classname');
+    $('.single-gypass_range #hero-alt .filters button').removeClass('active');
+    $(this).addClass('active');
+    $(".single-gypass_range #content > section").show();
+    $(".single-gypass_range #content > section").filter(":not('." + classname + "')").hide();
+  });
 });

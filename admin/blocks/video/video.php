@@ -14,7 +14,9 @@
 
 $title = get_field('title');
 $text = get_field('text');
+$img = get_field('img');
 $cta = get_field('cta');
+$sub = get_field('sub');
 $sub_img = get_field('sub_img');
 $sub_text = get_field('sub_text');
 $media = get_field("media");
@@ -24,9 +26,10 @@ $youtube = get_field("youtube");
 
 $container = get_field('container_size');
 $background = get_field('background');
+$border_top = get_field('border_top');
 $gif_mode = get_field("gif_mode");
 
-$classes = array('video-block', $background);
+$classes = array('video-block', $background, $border_top);
 $classes  = implode(' ', $classes);
 if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];
@@ -46,10 +49,13 @@ $style  = implode('; ', $styles);
             <?php if ($text) : ?>
                 <div><?php echo $text; ?></div>
             <?php endif; ?>
+            <?php if ($img) : ?>
+                <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" />
+            <?php endif; ?>
             <?php if ($cta) : ?>
                 <a href="<?php echo $cta["url"]; ?>" class="btn btn-outline-primary"><?php echo $cta["title"]; ?></a>
             <?php endif; ?>
-            <?php if ($sub_img || $sub_text) : ?>
+            <?php if ($sub && ($sub_img || $sub_text)) : ?>
                 <div class="sub-section">
                     <?php if ($sub_img) : ?>
                         <img src="<?php echo $sub_img['url']; ?>" alt="<?php echo $sub_img['alt']; ?>" />

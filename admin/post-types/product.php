@@ -32,7 +32,7 @@ $args = [
     ],
     'taxonomies' => [],
     'has_archive' => true,
-    'rewrite' => ['slug' => 'produits', 'with_front' => true],
+    'rewrite' => ['slug' => 'produits/%gypass_product_product_family%', 'with_front' => true],
     'menu_position' => 20,
     'menu_icon' => 'dashicons-cart',
 ];

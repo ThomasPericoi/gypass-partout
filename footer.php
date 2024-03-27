@@ -82,6 +82,9 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
                     <?php if (get_field("footer_contact_address", "options")) : ?>
                         <p><?php echo get_field("footer_contact_address", "options"); ?></p>
                     <?php endif; ?>
+                    <?php if (get_field("footer_contact_tel", "options")) : ?>
+                        <a href="tel:<?php echo get_field("footer_contact_tel", "options"); ?>"><?php echo get_field("footer_contact_tel", "options"); ?></a>
+                    <?php endif; ?>
                     <a href="<?php echo get_field("footer_contact_button", "options")["url"]; ?>" target="<?php echo get_field("footer_contact_button", "options")["target"]; ?>" class="btn-contact"><?php echo get_field("footer_contact_button", "options")["title"]; ?></a>
                 <?php endif; ?>
                 <?php if (have_rows('footer_socials', 'options')) : ?>
