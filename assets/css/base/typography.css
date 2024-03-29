@@ -11,6 +11,7 @@ p,
 .p-size {
   font-size: 16px;
   font-weight: 400;
+  color: var(--primary);
 }
 
 @media screen and (min-width: 768px) {
@@ -57,7 +58,7 @@ h6,
   font-family: var(--bold);
   font-weight: 700;
   line-height: 1.25;
-  color: var(--primary-1);
+  color: var(--primary);
   -webkit-font-smoothing: antialiased;
 }
 

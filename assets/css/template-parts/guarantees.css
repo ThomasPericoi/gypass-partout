@@ -20,7 +20,7 @@
 
 .guarantees-block .guarantees-grid>* {
     flex: 0 0 100%;
-    color: white;
+    color: var(--white);
 }
 
 @media screen and (min-width: 992px) {
@@ -41,6 +41,14 @@
 
 .guarantees-block .guarantees-grid .text {
     margin-top: 1em;
+}
+
+.guarantees-block .guarantees-grid .text {
+    margin-top: 1em;
+}
+
+.guarantees-block .guarantees-grid .text p {
+    color: var(--white);
 }
 
 .guarantees-block .guarantees-grid img {

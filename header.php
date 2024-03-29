@@ -20,7 +20,7 @@
                         wp_nav_menu(array('theme_location' => 'topbar-menu', 'menu_class' => 'menu menu-topbar', 'container' => false, 'depth' => 1));
                     endif; ?>
                     <button class="btn-search js-toggleSearchModal">
-                        <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/search.svg'); ?>
+                        <?php get_template_part('assets/icons/search.svg'); ?>
                     </button>
                 </div>
             </div>
@@ -62,7 +62,7 @@
             <div class="container">
                 <div class="btn-wrapper">
                     <button class="btn-back" role="button" tabindex="0">
-                        <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-left.svg'); ?>
+                        <?php get_template_part('assets/icons/arrow-left.svg'); ?>
                     </button>
                     <button class="js-toggleMenu menu-toggle-close" type="button">
                         <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
@@ -88,7 +88,7 @@
                     wp_nav_menu(array('theme_location' => 'topbar-menu', 'menu_class' => 'menu menu-topbar', 'container' => false));
                 endif; ?>
                 <button class="btn-search js-toggleSearchModal">
-                    <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/search.svg'); ?>
+                    <?php get_template_part('assets/icons/search.svg'); ?>
                 </button>
             </div>
         </div>
@@ -98,7 +98,7 @@
     <div class="search-modal js-searchModal" aria-hidden="true" aria-modal="true" inert>
         <div class="container">
             <a class="btn-close js-toggleSearchModal" role="button" tabindex="0">
-                <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/cross.svg'); ?>
+                <?php get_template_part('assets/icons/cross.svg'); ?>
             </a>
             <?php get_search_form(); ?>
         </div>

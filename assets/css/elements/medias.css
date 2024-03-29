@@ -5,6 +5,7 @@
 /* Videos */
 .video-wrapper {
     width: 100%;
+    display: block;
     object-fit: fill;
     position: relative;
 }

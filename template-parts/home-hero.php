@@ -61,7 +61,7 @@
         </div>
         <div class="swiper-pagination"></div>
         <a class="btn-scroll" href="#home-quote">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-bottom.svg'); ?>
+            <?php get_template_part('assets/icons/arrow-line-bottom.svg'); ?>
         </a>
     </section>
 <?php endif; ?>

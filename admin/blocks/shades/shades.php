@@ -27,7 +27,7 @@ if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];
 }
 
-$styles = array("--theme: var(--bay-of-many)");
+$styles = array("--theme: var(--bay-of-many)", "--primary: var(--bay-of-many");
 $style  = implode('; ', $styles);
 ?>
 
@@ -40,13 +40,13 @@ $style  = implode('; ', $styles);
                     <?php if ($title) : ?>
                         <div>
                             <h2><?php echo $title; ?></h2>
-                            <?php if ($instructions) : ?>
-                                <span class="h5-size"><?php echo $instructions; ?></span>
-                            <?php endif; ?>
                         </div>
                     <?php endif; ?>
                     <?php if ($text) : ?>
                         <?php echo $text; ?>
+                    <?php endif; ?>
+                    <?php if ($instructions) : ?>
+                        <p class="instructions"><?php echo $instructions; ?></p>
                     <?php endif; ?>
                 </div>
                 <div class="shades-wrapper">
@@ -80,7 +80,22 @@ $style  = implode('; ', $styles);
                             </div>
                         </div>
                     <?php endif; ?>
-                    <div id="shades-3" class="shades">
+                    <?php if (have_rows('shades_3')) : ?>
+                        <div id="shades-3" class="shades">
+                            <h3 class="shades-title p-size"><?php echo __("Teinte Métallisée mat"); ?></h3>
+                            <div class="shades-grid">
+                                <?php while (have_rows('shades_3')) : the_row();
+                                    $code = get_sub_field('code');
+                                    $background_thumbnail = get_sub_field('background_thumbnail');
+                                    $background = get_sub_field('background');
+                                    $theme = get_sub_field('theme');
+                                ?>
+                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>"></button>
+                                <?php endwhile; ?>
+                            </div>
+                        </div>
+                    <?php endif; ?>
+                    <div id="shades-4" class="shades">
                         <h3 class="shades-title p-size"><?php echo __("Teinte personnalisée"); ?></h3>
                         <div class="shades-grid">
                             <span></span>

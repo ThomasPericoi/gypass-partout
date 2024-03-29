@@ -4,7 +4,7 @@
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
         <a class="btn-back" href="<?php echo home_url(); ?>">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-left.svg'); ?>
+            <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
         </a>
         <?php if (get_field("product_icon")) : ?>
             <img src="<?php echo get_field("product_icon")["url"]; ?>" alt="<?php echo get_field("product_icon")["title"]; ?>">
@@ -26,16 +26,15 @@
 <!-- Hero -->
 <section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
     <div class="container">
-        <h1>
+        <h1 class="h4-size">
             <?php if (get_field("product_top_title_1") || get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
-                <span class="p-size"><?php echo get_field("product_top_title_1") ?: get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></span>
+                <?php echo get_field("product_top_title_1") ?: get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?><br />
             <?php endif; ?>
-            <br />
-            <span class="h4-size"><?php echo get_field("product_top_title_2") ?: get_the_title(); ?></span>
+            <strong><?php echo get_field("product_top_title_2") ?: get_the_title(); ?></strong>
         </h1>
         <h2 class="h1-size"><?php echo get_field("product_title") ?: get_the_title(); ?></h2>
         <a class="btn-scroll" href="#content">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-bottom.svg'); ?>
+            <?php get_template_part('assets/icons/arrow-line-bottom.svg'); ?>
         </a>
     </div>
 </section>
@@ -57,7 +56,7 @@
 <section id="cta-content">
     <div class="container">
         <div class="ornament">
-            <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/settings.svg'); ?>
+            <?php get_template_part('assets/icons/settings.svg'); ?>
         </div>
         <div class="content">
             <?php if (get_field('product_content_title')) : ?>

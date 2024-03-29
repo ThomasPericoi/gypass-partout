@@ -5,7 +5,8 @@
     position: relative;
 }
 
-.video-block.bg {
+.video-block.bg,
+.video-block.bg-full {
     background-color: var(--ebb);
 }
 
@@ -84,6 +85,6 @@
     height: calc(100vw/1.77777778);
 }
 
-.video-block video.gif {
+video.gif {
     cursor: default;
 }

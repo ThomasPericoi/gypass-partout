@@ -95,6 +95,57 @@
             "return_format": "array"
         },
         {
+            "key": "field_660544bc7d4fb",
+            "label": "Classe du bouton",
+            "name": "cta_classname",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "js-openProducts": "js-openProducts",
+                "js-openRanges": "js-openRanges"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_66054a1d8f167",
+            "label": "Type de média",
+            "name": "media",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "video": "Vidéo"
+            },
+            "default_value": "image",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6602f84cd2451",
             "label": "Image",
             "name": "image",
@@ -102,7 +153,15 @@
             "type": "image",
             "instructions": "Pour ajouter une légende à l'image, il suffit d'ajouter du texte dans le champs \"légende\" de l'image.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66054a1d8f167",
+                        "operator": "==",
+                        "value": "image"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -118,6 +177,34 @@
             "max_size": "",
             "mime_types": "",
             "preview_size": "medium"
+        },
+        {
+            "key": "field_66054a268f168",
+            "label": "Vidéo",
+            "name": "video",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_66054a1d8f167",
+                        "operator": "==",
+                        "value": "video"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "mp4, mkv, avi"
         },
         {
             "key": "field_6602f84cdd3c2",
@@ -154,9 +241,9 @@
             "choices": {
                 "container-sm": "Petit",
                 "default": "Normal",
-                "large": "Large"
+                "container-lg": "Large"
             },
-            "default_value": "default",
+            "default_value": "container-lg",
             "return_format": "value",
             "multiple": 0,
             "allow_null": 0,
@@ -182,7 +269,7 @@
                 "bg": "Activer",
                 "no-bg": "Désactiver"
             },
-            "default_value": "no-bg",
+            "default_value": "bg",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -208,5 +295,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711553417
+    "modified": 1711721022
 }

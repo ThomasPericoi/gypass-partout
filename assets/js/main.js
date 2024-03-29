@@ -160,21 +160,21 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Header - Menu - Open on click menu items
-  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openRanges a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").click(
-    function () {
+  $("a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a").click(
+    function (e) {
       toggleMenu(1);
     }
   );
 
-  $("#home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").click(function () {
+  $("a.js-openProducts, .js-openProducts > a").click(function () {
     $(".super-menu .js-openProducts").addClass("opened");
   });
 
-  $("#home-hero .js-openRanges a, #breadcrumbs .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").click(function () {
+  $("a.js-openRanges, .js-openRanges > a").click(function () {
     $(".super-menu .js-openRanges").addClass("opened");
   });
 
-  $("#home-hero .js-openRanges a, #home-hero .js-openProducts a, #breadcrumbs .js-openRanges a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, footer .js-openRanges a, .inner-header .js-openProducts a, .inner-header .js-openRanges a").on(
+  $("a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a").on(
     "keypress",
     function (e) {
       if ((e.keyCode || e.which) == 13) {
@@ -183,13 +183,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  $("#home-hero .js-openProducts a, #breadcrumbs .js-openProducts a, footer .js-openProducts a, .inner-header .js-openProducts a").on("keypress", function (e) {
+  $("a.js-openProducts, .js-openProducts > a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openProducts").addClass("opened");
     }
   });
 
-  $("#home-hero .js-openRanges a, #breadcrumbs .js-openRanges a, footer .js-openRanges a, .inner-header .js-openRanges a").on("keypress", function (e) {
+  $("a.js-openRanges, .js-openRanges > a").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openRanges").addClass("opened");
     }
@@ -200,7 +200,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (
       $("body").hasClass("js-menuOpened") &&
       !$(
-        ".js-toggleMenu, .js-openProducts a, .js-openRanges a, .menu-item-has-children > a"
+        ".js-toggleMenu, a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a, .menu-item-has-children > a"
       ).is(e.target) &&
       $(e.target).closest(".super-menu-wrapper").length === 0
     ) {
@@ -357,7 +357,17 @@ document.addEventListener("DOMContentLoaded", function () {
   });
   showContentTabs(0);
 
-  // Page - Home
+  // Page - Hiring
+  const swiperHiring = new Swiper(".forms.swiper", {
+    autoHeight: true,
+    grabCursor: true,
+    pagination: {
+      el: ".swiper-pagination",
+      type: "fraction",
+    },
+  });
+
+  // Page - Homepage
   const swiperHero = new Swiper('#home-hero', {
     loop: true,
     autoHeight: true,
@@ -388,7 +398,7 @@ document.addEventListener("DOMContentLoaded", function () {
     grabCursor: true,
     spaceBetween: 10,
     autoplay: {
-      delay: 1500,
+      delay: 3000,
     },
     breakpoints: {
       992: {
@@ -408,7 +418,7 @@ document.addEventListener("DOMContentLoaded", function () {
     grabCursor: true,
     spaceBetween: 10,
     autoplay: {
-      delay: 1500,
+      delay: 3000,
       reverseDirection: true,
     },
     breakpoints: {
@@ -419,15 +429,6 @@ document.addEventListener("DOMContentLoaded", function () {
         spaceBetween: 20,
       }
     }
-  });
-
-  // Page - Hiring
-  const swiperHiring = new Swiper(".forms.swiper", {
-    autoHeight: true,
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction",
-    },
   });
 
   // Page - Range

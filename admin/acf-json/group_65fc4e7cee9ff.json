@@ -54,6 +54,7 @@
             "choices": {
                 "bahama-blue": "Bahama Blue",
                 "bay-of-many": "Bay of Many",
+                "blue-lagoon": "Blue Lagoon",
                 "boston-blue": "Boston Blue",
                 "fountain-blue": "Fountain Blue",
                 "havelock-blue": "Havelock Blue",
@@ -644,5 +645,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711561406
+    "modified": 1711625309
 }

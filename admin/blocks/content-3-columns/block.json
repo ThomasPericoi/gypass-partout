@@ -1,0 +1,15 @@
+{
+    "name": "acf/content-3-columns",
+    "title": "Contenu en 3 colonnes",
+    "description": "3 colonnes de contenu, une pour du texte et une pour un média et une pour un complément.",
+    "category": "gypass-block",
+    "icon": "table-col-delete",
+    "keywords": [
+        "image",
+        "text"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "content-3-columns.php"
+    }
+}

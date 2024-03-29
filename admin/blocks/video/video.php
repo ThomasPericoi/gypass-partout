@@ -12,6 +12,7 @@
  * @param   array $context The context provided to the block by the post or it's parent block.
  */
 
+$sup_img = get_field('sup_img');
 $title = get_field('title');
 $text = get_field('text');
 $img = get_field('img');
@@ -43,11 +44,14 @@ $style  = implode('; ', $styles);
 <section class="<?php echo esc_attr($classes); ?>" style="<?php echo esc_attr($style); ?>">
     <div class="container container-sm">
         <div class="introduction">
+            <?php if ($sup_img) : ?>
+                <img src="<?php echo $sup_img['url']; ?>" alt="<?php echo $sup_img['alt']; ?>" />
+            <?php endif; ?>
             <?php if ($title) : ?>
                 <h2><?php echo $title; ?></h2>
             <?php endif; ?>
             <?php if ($text) : ?>
-                <div><?php echo $text; ?></div>
+                <div class="formatted"><?php echo $text; ?></div>
             <?php endif; ?>
             <?php if ($img) : ?>
                 <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" />

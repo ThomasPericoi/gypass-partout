@@ -10,7 +10,7 @@ else :
 endif;
 ?>
 <section id="hero" class="hero-listing">
-    <div class="container">
+    <div class="container container-lg">
         <h1 class="h2-size"><?php echo $title; ?></h1>
         <p><?php echo $description; ?></p>
 

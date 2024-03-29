@@ -145,6 +145,48 @@
                     "parent_repeater": "field_65f06e42f467f"
                 },
                 {
+                    "key": "field_6605895b0a222",
+                    "label": "Sous-titre du poste",
+                    "name": "subtitle",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_65f06e42f467f"
+                },
+                {
+                    "key": "field_660589800a223",
+                    "label": "Description du poste",
+                    "name": "description",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 1,
+                    "parent_repeater": "field_65f06e42f467f"
+                },
+                {
                     "key": "field_65f06ea6f4681",
                     "label": "Date de publication",
                     "name": "date",
@@ -261,5 +303,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710862559
+    "modified": 1711638948
 }

@@ -4,22 +4,8 @@
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
         <a class="btn-back" href="<?php echo home_url(); ?>">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-left.svg'); ?>
+            <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
         </a>
-        <?php if (get_field("range_icon")) : ?>
-            <img src="<?php echo get_field("range_icon")["url"]; ?>" alt="<?php echo get_field("range_icon")["title"]; ?>">
-        <?php endif; ?>
-        <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
-            <p>
-                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a></span>
-                <span class="separator"> &gt; </span>
-                <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
-                    <span class="js-openRanges"><a><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a></span>
-                    <span class="separator"> &gt; </span>
-                <?php endif; ?>
-                <span class="last"><?php echo get_the_title(); ?></span>
-            </p>
-        </nav>
     </div>
 </section>
 
@@ -30,12 +16,12 @@
             <h1 class="h3-size"><?php echo get_the_title(); ?></span></h1>
             <?php echo get_field("range_description"); ?>
         </div>
-        <div class="filters">
-            <span class="filters-label"><?php echo __("Filtres <br /> par marques", "gypass"); ?></span>
-            <button class="btn btn-outline-primary all-filter active">
-                <?php echo __("Tout", "gypass"); ?>
-            </button>
-            <?php if (have_rows('range_filters')) : ?>
+        <?php if (have_rows('range_filters')) : ?>
+            <div class="filters">
+                <span class="filters-label"><?php echo __("Filtres <br /> par marques", "gypass"); ?></span>
+                <button class="btn btn-outline-primary all-filter active">
+                    <?php echo __("Tout", "gypass"); ?>
+                </button>
                 <?php while (have_rows('range_filters')) : the_row();
                     $label = get_sub_field('label');
                     $classname = get_sub_field('classname');
@@ -44,8 +30,8 @@
                         <?php echo $label; ?>
                     </button>
                 <?php endwhile; ?>
-            <?php endif; ?>
-        </div>
+            </div>
+        <?php endif; ?>
     </div>
 </section>
 

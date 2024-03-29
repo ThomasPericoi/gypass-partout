@@ -13,6 +13,7 @@
 .shades-block .col-wrapper {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
     gap: var(--spacing-section-inner);
 }
 
@@ -34,7 +35,7 @@
     margin-right: 3px;
 }
 
-.shades-block h2+span {
+.shades-block .instructions {
     font-weight: 600;
 }
 
@@ -86,7 +87,7 @@
     outline: 2px solid var(--bay-of-many);
 }
 
-.shades-block #shades-3 .shades-grid>span {
+.shades-block #shades-4 .shades-grid>span {
     width: 37px;
     height: 37px;
     position: relative;
@@ -99,7 +100,7 @@
     cursor: pointer;
 }
 
-.shades-block #shades-3 .shades-grid>span:before {
+.shades-block #shades-4 .shades-grid>span:before {
     content: "";
     width: 20px;
     height: 20px;

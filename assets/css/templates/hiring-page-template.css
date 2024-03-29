@@ -58,7 +58,7 @@
 #hiring .form-informations .container {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-section-outer);
+  gap: var(--spacing-section-inner);
 }
 
 #hiring .date {
@@ -79,17 +79,21 @@
   text-transform: uppercase;
 }
 
-#hiring h2 {
+#hiring h2,
+#hiring h3 {
   color: var(--white);
 }
 
 @media screen and (min-width: 992px) {
 
-  #hiring h2,
-  #hiring .other {
+  #hiring h2 {
     color: var(--white);
     font-size: 65px;
   }
+}
+
+#hiring .description>* {
+  color: var(--scooter);
 }
 
 #hiring .form-form {
@@ -97,7 +101,7 @@
   background-color: var(--ghost);
 }
 
-#hiring h3 {
+#hiring .form-form h3 {
   text-transform: uppercase;
   text-align: center;
   margin-bottom: var(--spacing-section-inner);

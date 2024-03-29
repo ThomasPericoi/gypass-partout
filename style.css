@@ -44,6 +44,7 @@ Text Domain: gypass
 --------------------------------------------------------------- */
 
 @import "./assets/css/blocks/content-2-columns.css";
+@import "./assets/css/blocks/content-3-columns.css";
 @import "./assets/css/blocks/image-legend.css";
 @import "./assets/css/blocks/shades.css";
 @import "./assets/css/blocks/video.css";

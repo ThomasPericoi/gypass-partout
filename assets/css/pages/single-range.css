@@ -12,6 +12,10 @@
     }
 }
 
+.single-gypass_range #content .btn {
+    font-weight: 600;
+}
+
 /* Hero */
 .single-gypass_range #hero {
     position: relative;
@@ -68,107 +72,12 @@
 }
 
 .single-gypass_range #hero h2 p {
+    color: var(--white);
     font-weight: 300;
 }
 
 .single-gypass_range #hero .btn-scroll {
     align-self: center;
-}
-
-/* Content */
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) h2,
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) h3,
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) p {
-    color: var(--bahama-blue);
-}
-
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) .btn-outline-primary {
-    color: var(--bahama-blue);
-    border: 2px solid var(--bahama-blue);
-    background-color: transparent;
-}
-
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) .btn-outline-primary:hover,
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) .btn-outline-primary:focus,
-.single-gypass_range #content.primary-bahama-blue section:not(.shades-block) .btn-outline-primary.active {
-    color: var(--white);
-    background-color: var(--bahama-blue);
-}
-
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) h2,
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) h3,
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) p {
-    color: var(--boston-blue);
-}
-
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) .btn-outline-primary {
-    color: var(--boston-blue);
-    border: 2px solid var(--boston-blue);
-    background-color: transparent;
-}
-
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) .btn-outline-primary:hover,
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) .btn-outline-primary:focus,
-.single-gypass_range #content.primary-boston-blue section:not(.shades-block) .btn-outline-primary.active {
-    color: var(--white);
-    background-color: var(--boston-blue);
-}
-
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) h2,
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) h3,
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) p {
-    color: var(--fountain-blue);
-}
-
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) .btn-outline-primary {
-    color: var(--fountain-blue);
-    border: 2px solid var(--fountain-blue);
-    background-color: transparent;
-}
-
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) .btn-outline-primary:hover,
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) .btn-outline-primary:focus,
-.single-gypass_range #content.primary-fountain-blue section:not(.shades-block) .btn-outline-primary.active {
-    color: var(--white);
-    background-color: var(--fountain-blue);
-}
-
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) h2,
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) h3,
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) p {
-    color: var(--havelock-blue);
-}
-
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) .btn-outline-primary {
-    color: var(--havelock-blue);
-    border: 2px solid var(--havelock-blue);
-    background-color: transparent;
-}
-
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) .btn-outline-primary:hover,
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) .btn-outline-primary:focus,
-.single-gypass_range #content.primary-havelock-blue section:not(.shades-block) .btn-outline-primary.active {
-    color: var(--white);
-    background-color: var(--havelock-blue);
-}
-
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) h2,
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) h3,
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) p {
-    color: var(--lochmara);
-}
-
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) .btn-outline-primary {
-    color: var(--lochmara);
-    border: 2px solid var(--lochmara);
-    background-color: transparent;
-}
-
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) .btn-outline-primary:hover,
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) .btn-outline-primary:focus,
-.single-gypass_range #content.primary-lochmara section:not(.shades-block) .btn-outline-primary.active {
-    color: var(--white);
-    background-color: var(--lochmara);
 }
 
 /* Footer */

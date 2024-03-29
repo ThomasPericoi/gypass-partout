@@ -39,6 +39,31 @@
             "endpoint": 0
         },
         {
+            "key": "field_6606917763d91",
+            "label": "Image d'en-tête",
+            "name": "sup_img",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
             "key": "field_660293801825f",
             "label": "Titre",
             "name": "title",
@@ -372,7 +397,7 @@
             "choices": {
                 "container-sm": "Petit",
                 "default": "Normal",
-                "large": "Large"
+                "container-lg": "Large"
             },
             "default_value": "default",
             "return_format": "value",
@@ -397,7 +422,8 @@
                 "id": ""
             },
             "choices": {
-                "bg": "Activer",
+                "bg": "Activer (Partiellement)",
+                "bg-full": "Activer (Entièrement)",
                 "no-bg": "Désactiver"
             },
             "default_value": "no-bg",
@@ -484,5 +510,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711554321
+    "modified": 1711720976
 }

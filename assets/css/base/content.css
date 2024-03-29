@@ -12,6 +12,7 @@
     margin-bottom: 0.65em;
     position: relative;
     text-indent: 0;
+    color: var(--primary);
 }
 
 .formatted ol>li {

@@ -177,7 +177,6 @@ function enable_dynamic_rw_rules()
         'taxonomy' => 'gypass_product_product_family',
         'hide_empty' => false,
     ));
-
     if (!empty($product_terms)) {
         foreach ($product_terms as $term) {
             add_rewrite_rule(
@@ -187,12 +186,10 @@ function enable_dynamic_rw_rules()
             );
         }
     }
-
     $range_terms = get_terms(array(
         'taxonomy' => 'gypass_range_product_family',
         'hide_empty' => false,
     ));
-
     if (!empty($range_terms)) {
         foreach ($range_terms as $term) {
             add_rewrite_rule(
@@ -211,7 +208,7 @@ add_action('init', 'enable_dynamic_rw_rules');
 // Register blocks
 function register_acf_blocks()
 {
-    $blocks = ["content-2-columns", "image-legend", "shades", "video"];
+    $blocks = ["content-2-columns", "content-3-columns", "image-legend", "shades", "video"];
 
     foreach ($blocks as $block) {
         register_block_type(__DIR__ . '/blocks/' . $block);

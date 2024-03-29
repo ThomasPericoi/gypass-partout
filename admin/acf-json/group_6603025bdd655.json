@@ -59,26 +59,6 @@
             "append": ""
         },
         {
-            "key": "field_6603033c753b5",
-            "label": "Instructions",
-            "name": "instructions",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
             "key": "field_6603025bef95b",
             "label": "Texte",
             "name": "text",
@@ -97,6 +77,26 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 0
+        },
+        {
+            "key": "field_6603033c753b5",
+            "label": "Instructions",
+            "name": "instructions",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_660306d3c3df9",
@@ -229,7 +229,7 @@
             "name": "shades_2",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "La dernière teinte sera celle sélectionnée de base.",
+            "instructions": "",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -349,6 +349,131 @@
             ]
         },
         {
+            "key": "field_66053498724f7",
+            "label": "Teintes \"Métallisée\"",
+            "name": "shades_3",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_6603070bc3dfa",
+            "button_label": "Ajouter un élément",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_66053498724f8",
+                    "label": "Code",
+                    "name": "code",
+                    "aria-label": "",
+                    "type": "number",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "min": "",
+                    "max": "",
+                    "placeholder": "",
+                    "step": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66053498724f7"
+                },
+                {
+                    "key": "field_66053498724f9",
+                    "label": "Image de fond (Vignette)",
+                    "name": "background_thumbnail",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_66053498724f7"
+                },
+                {
+                    "key": "field_66053498724fa",
+                    "label": "Image de fond",
+                    "name": "background",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_66053498724f7"
+                },
+                {
+                    "key": "field_66053498724fb",
+                    "label": "Thème des textes",
+                    "name": "theme",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "var(--bay-of-many)": "Sombre",
+                        "var(--white)": "Clair"
+                    },
+                    "default_value": "var(--bay-of-many)",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "horizontal",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_66053498724f7"
+                }
+            ]
+        },
+        {
             "key": "field_66030638c3df8",
             "label": "Nuancier",
             "name": "download_chart_file",
@@ -439,7 +564,7 @@
             "choices": {
                 "container-sm": "Petit",
                 "default": "Normal",
-                "large": "Large"
+                "container-lg": "Large"
             },
             "default_value": "default",
             "return_format": "value",
@@ -468,5 +593,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711533638
+    "modified": 1711721042
 }

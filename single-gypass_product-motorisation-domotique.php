@@ -4,22 +4,8 @@
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
         <a class="btn-back" href="<?php echo home_url(); ?>">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-left.svg'); ?>
+            <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
         </a>
-        <?php if (get_field("product_icon")) : ?>
-            <img src="<?php echo get_field("product_icon")["url"]; ?>" alt="<?php echo get_field("product_icon")["title"]; ?>">
-        <?php endif; ?>
-        <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
-            <p>
-                <span class="js-openProducts"><a><?php echo __("Produits", "gypass"); ?></a></span>
-                <span class="separator"> &gt; </span>
-                <?php if (get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
-                    <span class="js-openProducts"><a><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></a></span>
-                    <span class="separator"> &gt; </span>
-                <?php endif; ?>
-                <span class="last"><?php echo get_the_title(); ?></span>
-            </p>
-        </nav>
     </div>
 </section>
 

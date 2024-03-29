@@ -4,7 +4,7 @@
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
         <a class="btn-back" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
-            <?php echo file_get_contents(get_stylesheet_directory_uri() . '/assets/icons/arrow-line-left.svg'); ?>
+            <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
         </a>
         <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
     </div>

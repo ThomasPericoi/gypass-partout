@@ -19,6 +19,8 @@ get_header(); ?>
                     $type = get_sub_field('type');
                     $time = get_sub_field('time');
                     $title = get_sub_field('title');
+                    $subtitle = get_sub_field('subtitle');
+                    $description = get_sub_field('description');
                     $shortcode = '[contact-form-7 id="' . get_sub_field("shortcode") . '"]';
                 ?>
                     <div class="form swiper-slide">
@@ -40,7 +42,14 @@ get_header(); ?>
                                 <?php if ($title) : ?>
                                     <h2><?php echo $title; ?></h2>
                                 <?php endif; ?>
-                                <div class="other"><?php echo __("H/F", "gypass"); ?></div>
+                                <?php if ($subtitle) : ?>
+                                    <h3><?php echo $subtitle; ?></h3>
+                                <?php endif; ?>
+                                <?php if ($description) : ?>
+                                    <div class="description formatted">
+                                        <?php echo $description; ?>
+                                    </div>
+                                <?php endif; ?>
                             </div>
                         </div>
                         <div class="form-form">

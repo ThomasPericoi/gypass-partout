@@ -6,6 +6,10 @@
     color: var(--white);
 }
 
+#footer p {
+    color: var(--white);
+}
+
 /* Reinsurance */
 #reinsurance {
     padding: var(--spacing-section-outer) 0;
@@ -58,6 +62,7 @@
 
 #footer .title {
     text-transform: uppercase;
+    color: var(--white);
     font-weight: 700;
     font-size: 18px;
     margin-bottom: 1em;

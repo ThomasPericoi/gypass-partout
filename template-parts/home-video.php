@@ -21,7 +21,7 @@
                         $icon = get_sub_field('icon');
                         $link = get_sub_field('link'); ?>
                         <a href="<?php echo $link; ?>" target="_blank" class="social">
-                            <?php echo file_get_contents(get_template_directory_uri() . '/assets/icons/socials/' . $icon . '.svg'); ?>
+                            <?php get_template_part('assets/icons/socials/' . $icon . '.svg'); ?>
                         </a>
                     <?php endwhile; ?>
                 </div>
