@@ -1,7 +1,7 @@
 /* #Content (3 columns)
 --------------------------------------------------------------- */
 .content-3-columns-block {
-    padding: var(--spacing-section-inner) 0;
+    padding: var(--spacing-section-outer) 0;
 }
 
 .content-3-columns-block.bg {

@@ -1,0 +1,15 @@
+{
+    "name": "acf/accordion-tabs",
+    "title": "Tabs accordéon",
+    "description": "Un menu déroulant pour sélectionner l'image que l'on souhaite.",
+    "category": "gypass-block",
+    "icon": "list-view",
+    "keywords": [
+        "image",
+        "text"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion-tabs.php"
+    }
+}

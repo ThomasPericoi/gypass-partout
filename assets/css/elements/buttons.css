@@ -187,12 +187,15 @@
 
 .navigation.pagination .nav-links .current,
 .navigation.pagination .nav-links a:not(.prev):hover,
-.navigation.pagination .nav-links a:not(.next):hover {
+.navigation.pagination .nav-links a:not(.next):hover,
+.navigation.pagination .nav-links a:not(.prev):focus,
+.navigation.pagination .nav-links a:not(.next):focus {
     color: var(--white);
     background-color: var(--primary);
 }
 
-.navigation.pagination .nav-links a.next:hover span {
+.navigation.pagination .nav-links a.next:hover span,
+.navigation.pagination .nav-links a.next:focus span {
     filter: brightness(0) invert(1);
 }
 

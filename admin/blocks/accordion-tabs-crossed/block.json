@@ -1,0 +1,15 @@
+{
+    "name": "acf/accordion-tabs-crossed",
+    "title": "Tabs accordéon croisé",
+    "description": "Un menu déroulant pour sélectionner l'image que l'on souhaite, croisé avec un autre sélecteur.",
+    "category": "gypass-block",
+    "icon": "list-view",
+    "keywords": [
+        "image",
+        "text"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion-tabs-crossed.php"
+    }
+}

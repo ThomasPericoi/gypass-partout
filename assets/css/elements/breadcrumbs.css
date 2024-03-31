@@ -22,7 +22,8 @@
     transition: transform ease 350ms;
 }
 
-#breadcrumbs .btn-back:hover {
+#breadcrumbs .btn-back:hover,
+#breadcrumbs .btn-back:focus {
     transform: translateX(-5px);
 }
 

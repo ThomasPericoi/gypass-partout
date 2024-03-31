@@ -1,0 +1,84 @@
+/* #Accordion Tabs (Crossed)
+--------------------------------------------------------------- */
+.accordion-tabs-crossed-block .media {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.accordion-tabs-crossed-block .label {
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--manatee);
+    text-transform: uppercase;
+}
+
+.accordion-tabs-crossed-block .label span {
+    font-weight: 400;
+}
+
+.accordion-tabs-crossed-block .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .accordion-tabs-crossed-block .options {
+        gap: 35px;
+    }
+}
+
+.accordion-tabs-crossed-block .options>button {
+    position: relative;
+    border: 5px solid var(--white);
+    border-radius: 0;
+    cursor: pointer;
+}
+
+.accordion-tabs-crossed-block .options>button.color {
+    width: 70px;
+    height: 70px;
+    border: 5px solid var(--white);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.accordion-tabs-crossed-block.bg .options>button.color {
+    border: 5px solid var(--ebb);
+}
+
+.accordion-tabs-crossed-block .options>button.color.active {
+    outline: 5px solid var(--manatee);
+}
+
+.accordion-tabs-crossed-block .options>button.image.active {
+    border: 5px solid var(--manatee);
+}
+
+.accordion-tabs-crossed-block.bg .options>button.image>img {
+    max-width: 100px;
+    height: auto;
+}
+
+.accordion-tabs-crossed-block .options>button.image>div {
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--manatee);
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 350ms ease;
+}
+
+@media screen and (min-width: 992px) {
+    .accordion-tabs-crossed-block .options>button.image>div {
+        position: absolute;
+        bottom: -12px;
+        left: -5px;
+        transform: translateY(100%);
+    }
+}
+
+.accordion-tabs-crossed-block .options>button.image.active>div {
+    opacity: 1;
+}
