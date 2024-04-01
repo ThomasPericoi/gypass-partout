@@ -8,10 +8,22 @@
     background-color: var(--ebb);
 }
 
+.accordion-tabs-block.bordered {
+    border-top: 1px solid var(--primary);
+}
+
+.accordion-tabs-block .introduction {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: var(--spacing-section-inner);
+}
+
 .accordion-tabs-block .col-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    justify-content: space-between;
     gap: var(--spacing-section-inner);
 }
 
@@ -26,6 +38,12 @@
     }
 }
 
+@media screen and (min-width: 1200px) {
+    .accordion-tabs-block .col-wrapper {
+        gap: 4em;
+    }
+}
+
 .accordion-tabs-block .col-wrapper>.content {
     order: 1;
 }
@@ -35,6 +53,17 @@
         flex: 1 1 25%;
         order: unset;
     }
+}
+
+.accordion-tabs-block .col-wrapper>.content .logo {
+    max-width: 150px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.accordion-tabs-block .content.formatted>*:not(:nth-last-child(1)) {
+    margin-bottom: 1rem;
 }
 
 .accordion-tabs-block .col-wrapper>.media {
@@ -48,14 +77,15 @@
     }
 }
 
-.accordion-tabs-block .col-wrapper>.media>img {
+.accordion-tabs-block .col-wrapper>.media>img,
+.accordion-tabs-block .col-wrapper>.media>.video-wrapper {
     width: 100%;
     height: auto;
     display: none;
     animation: fadeIn 1s;
 }
 
-.accordion-tabs-block .col-wrapper>.media>img.visible {
+.accordion-tabs-block .col-wrapper>.media>*.visible {
     display: block;
 }
 
@@ -66,8 +96,8 @@
 
 @media screen and (min-width: 992px) {
     .accordion-tabs-block .col-wrapper>.menus {
-        order: unset;
         flex: 1 1 25%;
+        order: unset;
     }
 }
 
@@ -125,6 +155,11 @@
     flex-direction: column;
 }
 
+.accordion-tabs-block.scroll .menu .accordion-list {
+    max-height: 450px;
+    overflow-y: auto;
+}
+
 .accordion-tabs-block .menu .accordion-list button {
     padding: 8px 10px;
     font-size: 15px;
@@ -147,4 +182,28 @@
 .accordion-tabs-block .menu .accordion-list button.active {
     font-weight: 700;
     background-color: #D9D9D9;
+}
+
+.accordion-tabs-block .menu .accordion-list ul {
+    margin-top: 5px;
+}
+
+.accordion-tabs-block .menu .accordion-list li {
+    padding-left: 15px;
+    margin-bottom: 0.1em;
+    position: relative;
+    text-indent: 0;
+    text-transform: none;
+    font-size: 14px;
+}
+
+.accordion-tabs-block .menu .accordion-list li:before {
+    content: "";
+    border: 2px solid var(--manatee);
+    border-radius: 50%;
+    transform: translateY(-200%);
+    display: block;
+    position: absolute;
+    top: 1em;
+    left: 5px;
 }

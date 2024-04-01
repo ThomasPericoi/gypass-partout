@@ -11,7 +11,7 @@
 
 <!-- Hero -->
 <section id="hero-alt">
-    <div class="container">
+    <div class="container container-lg">
         <div class="formatted">
             <h1 class="h3-size"><?php echo get_the_title(); ?></span></h1>
             <?php echo get_field("range_description"); ?>

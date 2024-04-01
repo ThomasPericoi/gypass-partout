@@ -20,9 +20,10 @@ $options_title = get_field('options_title');
 
 $container = get_field('container_size');
 $background = get_field('background');
+$border_top = get_field('border_top');
 $options_mode = get_field('options_mode');
 
-$classes = array('accordion-tabs-block', 'accordion-tabs-crossed-block', $background);
+$classes = array('accordion-tabs-block', 'accordion-tabs-crossed-block', $background, $border_top);
 $classes  = implode(' ', $classes);
 if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];

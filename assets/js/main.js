@@ -378,8 +378,8 @@ document.addEventListener("DOMContentLoaded", function () {
   $(".accordion-tabs-block nav.menu:first-child h3 + .accordion-content").slideToggle(350);
 
   function showContentAccordionTabs(tab, element, parent) {
-    parent.find("img.visible").removeClass("visible");
-    parent.find("img[data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
+    parent.find("img.visible, .video-wrapper.visible").removeClass("visible");
+    parent.find("img[data-tab-index='" + tab + "'][data-element-index='" + element + "'], .video-wrapper[data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
     parent.find("nav.menu button.active").removeClass("active");
     parent.find("nav.menu button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
   }
@@ -396,11 +396,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Block - Accordion Tabs (Crossed)
   function showContentAccordionTabsCrossed(tab, element, option, parent) {
+    parent.find("nav.menu button").each(function (index) {
+      tabIndex = $(this).data("tab-target");
+      elementIndex = $(this).data("element-target");
+      if (parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tabIndex + "'][data-element-index='" + elementIndex + "']").length > 0) {
+        $(this).show();
+      } else {
+        $(this).hide();
+      }
+    });
     parent.find("img.visible").removeClass("visible");
+    if (parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length == 0) {
+      tab = parent.find("img[data-options-id='" + option + "']:first").data("tab-index");
+      element = parent.find("img[data-options-id='" + option + "']:first").data("element-index");
+    }
     parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
     parent.find("nav.menu button.active").removeClass("active");
     parent.find("nav.menu button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
-    parent.find("nav.options button.active").removeClass("active");
     $("#" + option).addClass("active");
     parent.find('#active-label') && parent.find('#active-label').text($("#" + option).data("label"));
   }

@@ -43,9 +43,9 @@
             "label": "Titre",
             "name": "title",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -54,9 +54,9 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": 2,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": "br"
         },
         {
             "key": "field_6608a12c0b2a1",
@@ -492,6 +492,31 @@
             "save_other_choice": 0
         },
         {
+            "key": "field_660a95b9dca24",
+            "label": "Bordure colorée",
+            "name": "border_top",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bordered": "Activer",
+                "no-border": "Désactiver"
+            },
+            "default_value": "no-border",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6608a85a99d73",
             "label": "Mode de la donnée croisée",
             "name": "options_mode",
@@ -535,5 +560,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711844450
+    "modified": 1711969751
 }
