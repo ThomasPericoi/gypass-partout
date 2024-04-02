@@ -162,11 +162,11 @@
 }
 
 .tooltip-block .tooltip-popup[class*="left"] {
-    transform: translateX(-2000px);
+    transform: translateX(-100%);
 }
 
 .tooltip-block .tooltip-popup[class*="right"] {
-    transform: translateX(2000px);
+    transform: translateX(100%);
 }
 
 @media screen and (min-width: 992px) {

@@ -1,0 +1,442 @@
+{
+    "key": "group_660bdcb179b62",
+    "title": "Bloc - Image avec tooltips (Spécial)",
+    "fields": [
+        {
+            "key": "field_660bdcb181714",
+            "label": "Tooltip (Spécial)",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Une image avec des points d'interactions et une liste de badges.",
+            "new_lines": "br",
+            "esc_html": 0
+        },
+        {
+            "key": "field_660bdcb185306",
+            "label": "Contenu - Introduction",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_660bdcb188f22",
+            "label": "Titre",
+            "name": "title",
+            "aria-label": "",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "rows": 2,
+            "placeholder": "",
+            "new_lines": "br"
+        },
+        {
+            "key": "field_660bdcb18c873",
+            "label": "Contenu",
+            "name": "content",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 0
+        },
+        {
+            "key": "field_660bdcb19029e",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_660bdeacc71d5",
+            "label": "Contenu - Fonctionnalités",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_660bdebcc71d6",
+            "label": "Fonctionnalités",
+            "name": "features",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter une fonctionnalité",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_660bdedbc71d7",
+                    "label": "Image",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_660bdebcc71d6"
+                },
+                {
+                    "key": "field_660bdef1c71d8",
+                    "label": "Contenu",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 1,
+                    "parent_repeater": "field_660bdebcc71d6"
+                }
+            ]
+        },
+        {
+            "key": "field_660bdcb19b517",
+            "label": "Contenu - Tooltips",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_660bdcb19f0b6",
+            "label": "Image essentielle",
+            "name": "image_map",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "Elle sert de base pour pointer la position des tooltips.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_660bdcb1a2b9c",
+            "label": "Tooltips",
+            "name": "tooltips",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "field_660ae4fcf5f53",
+            "button_label": "Ajouter un tooltip",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_660bdcb1cb82b",
+                    "label": "Contenu",
+                    "name": "popup_content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 1,
+                    "parent_repeater": "field_660bdcb1a2b9c"
+                },
+                {
+                    "key": "field_660bdcb1cf4dc",
+                    "label": "Image",
+                    "name": "popup_image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_660bdcb1a2b9c"
+                },
+                {
+                    "key": "field_660bdcb1d2e8d",
+                    "label": "Position du tooltip",
+                    "name": "position",
+                    "aria-label": "",
+                    "type": "image_mapping",
+                    "instructions": "Cliquez sur le point de l'image où le tooltip doit apparaître.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "image_field_label": "image_map",
+                    "percent_based": 1,
+                    "font_size": 14,
+                    "x": 0,
+                    "y": 0,
+                    "parent_repeater": "field_660bdcb1a2b9c"
+                },
+                {
+                    "key": "field_660bdcb1d69ef",
+                    "label": "Arrivée du pop-up",
+                    "name": "entrance",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "Où est-ce que le pop-up doit atterrir.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "top-left": "Haut gauche",
+                        "center-left": "Centre gauche",
+                        "bottom-left": "Bas gauche",
+                        "top-right": "Haut droite",
+                        "center-right": "Centre droite",
+                        "bottom-right": "Bas droite"
+                    },
+                    "default_value": "bottom-right",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_660bdcb1a2b9c"
+                }
+            ]
+        },
+        {
+            "key": "field_660bdcb1a65d5",
+            "label": "Options de style",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_660bdcb1aa152",
+            "label": "Taille du conteneur du bloc",
+            "name": "container_size",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "container-sm": "Petit",
+                "default": "Normal",
+                "container-lg": "Large"
+            },
+            "default_value": "container-lg",
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_660bdcb1adbdf",
+            "label": "Fond de couleur",
+            "name": "background",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bg": "Activer (Partiellement)",
+                "bg-full": "Activer (Entièrement)",
+                "no-bg": "Désactiver"
+            },
+            "default_value": "no-bg",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "block",
+                "operator": "==",
+                "value": "acf\/tooltip-special"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1712054861
+}

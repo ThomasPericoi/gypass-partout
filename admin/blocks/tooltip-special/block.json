@@ -1,0 +1,15 @@
+{
+    "name": "acf/tooltip-special",
+    "title": "Tooltip (Spécial)",
+    "description": "Une image avec des points d'interactions et une liste de badges.",
+    "category": "gypass-block",
+    "icon": "remove",
+    "keywords": [
+        "text",
+        "title"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "tooltip-special.php"
+    }
+}
