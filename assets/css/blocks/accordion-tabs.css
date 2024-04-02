@@ -181,7 +181,7 @@
 
 .accordion-tabs-block .menu .accordion-list button.active {
     font-weight: 700;
-    background-color: #D9D9D9;
+    background-color: var(--alto);
 }
 
 .accordion-tabs-block .menu .accordion-list ul {

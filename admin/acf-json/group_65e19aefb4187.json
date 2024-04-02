@@ -3,23 +3,6 @@
     "title": "Options de page - Page contact",
     "fields": [
         {
-            "key": "field_65f06801ac6fc",
-            "label": "Hero",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
-        },
-        {
             "key": "field_65e19aef252cb",
             "label": "Description",
             "name": "contact_description",
@@ -38,23 +21,6 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 1
-        },
-        {
-            "key": "field_65f06816ac6fd",
-            "label": "Formulaire",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "left",
-            "endpoint": 0
         },
         {
             "key": "field_65e19ef85a3e0",
@@ -95,5 +61,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1710254113
+    "modified": 1712049556
 }

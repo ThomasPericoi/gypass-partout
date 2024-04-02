@@ -76,7 +76,7 @@
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_6607eeb4b5426",
@@ -159,7 +159,7 @@
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_6607eeb4c047b",
@@ -223,7 +223,7 @@
         },
         {
             "key": "field_6607f01d09744",
-            "label": "Menus",
+            "label": "Menus déroulants",
             "name": "menus",
             "aria-label": "",
             "type": "repeater",
@@ -240,7 +240,7 @@
             "min": 1,
             "max": 2,
             "collapsed": "",
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter un menu déroulant",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -285,6 +285,7 @@
                     "collapsed": "",
                     "button_label": "Ajouter un élément",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6607f01d09744",
                     "sub_fields": [
                         {
                             "key": "field_6607f0be09747",
@@ -396,8 +397,7 @@
                             "mime_types": "mp4",
                             "parent_repeater": "field_6607f08f09746"
                         }
-                    ],
-                    "parent_repeater": "field_6607f01d09744"
+                    ]
                 }
             ]
         },
@@ -497,31 +497,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_660a95b9dca24",
-            "label": "Bordure colorée (copier)",
-            "name": "border_top_copier",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "bordered": "Activer",
-                "no-border": "Désactiver"
-            },
-            "default_value": "no-border",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_6609d1a459473",
             "label": "Scroll interne",
             "name": "scroll",
@@ -565,5 +540,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711969725
+    "modified": 1712049555
 }

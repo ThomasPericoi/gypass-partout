@@ -1,0 +1,80 @@
+/* #Tooltip (Double)
+--------------------------------------------------------------- */
+.tooltip-block.tooltip-double-block .col-wrapper {
+    flex-direction: column;
+}
+
+.tooltip-block.tooltip-double-block .col-wrapper .content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    flex-direction: column;
+}
+
+.tooltip-block.tooltip-double-block .col-wrapper .legend-wrapper {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip-block.tooltip-double-block .col-wrapper .legend-wrapper {
+        flex-direction: row;
+    }
+}
+
+.tooltip-block.tooltip-double-block .col-wrapper .legend-wrapper:before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    display: block;
+    position: absolute;
+    top: calc(var(--spacing-section-inner) / -2);
+    left: 0;
+    background-color: var(--bay-of-many);
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip-block.tooltip-double-block .col-wrapper .legend-wrapper:before {
+        top: calc(2em / -2);
+    }
+}
+
+.tooltip-block.tooltip-double-block .col-wrapper .legend {
+    max-width: 500px;
+}
+
+.tooltip-block.tooltip-double-block .switch {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.tooltip-block.tooltip-double-block .switch span {
+    text-transform: uppercase;
+    color: var(--manatee);
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+.tooltip-block.tooltip-double-block .switch .btn {
+    border-color: transparent;
+}
+
+.tooltip-block.tooltip-double-block .switch .btn.active {
+    border-color: var(--primary);
+    background-color: transparent;
+    color: var(--primary);
+}
+
+.tooltip-block.tooltip-double-block .col-wrapper .image-wrapper {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+}

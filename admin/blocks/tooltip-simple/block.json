@@ -1,0 +1,15 @@
+{
+    "name": "acf/tooltip-simple",
+    "title": "Tooltip (Simple)",
+    "description": "Une image avec des points d'interactions.",
+    "category": "gypass-block",
+    "icon": "remove",
+    "keywords": [
+        "text",
+        "title"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "tooltip-simple.php"
+    }
+}

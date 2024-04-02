@@ -1,0 +1,218 @@
+/* #Tooltip (Simple)
+--------------------------------------------------------------- */
+.tooltip-block {
+    position: relative;
+    padding: var(--spacing-section-outer) 0;
+    overflow: hidden;
+}
+
+.tooltip-block.bg,
+.tooltip-block.bg-full {
+    background-color: var(--ebb);
+}
+
+.tooltip-block.bg:before {
+    content: "";
+    width: 100%;
+    display: block;
+    height: 125px;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--white);
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip-block.bg:before {
+        height: 200px;
+    }
+}
+
+.tooltip-block .container {
+    position: relative;
+}
+
+.tooltip-block .col-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-section-inner);
+}
+
+.tooltip-block.column .col-wrapper {
+    flex-direction: column;
+    align-items: center;
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip-block .col-wrapper {
+        flex-direction: row;
+        gap: 2em;
+    }
+
+    .tooltip-block.column .col-wrapper {
+        gap: 1em;
+    }
+}
+
+.tooltip-block.column .content {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip-block .col-wrapper>.content {
+        margin-top: var(--spacing-section-inner);
+        flex-basis: 30%;
+    }
+}
+
+.tooltip-block .col-wrapper .legend {
+    display: flex;
+    align-items: flex-end;
+    gap: 1em;
+}
+
+.tooltip-block.column .col-wrapper .legend {
+    flex-basis: 30%;
+    flex-direction: column;
+    align-items: start;
+    gap: 13px;
+}
+
+.tooltip-block .col-wrapper .legend img {
+    max-width: 100px;
+}
+
+.tooltip-block.column .col-wrapper .legend img {
+    max-width: 250px;
+}
+
+.tooltip-block .content.formatted>*:not(:nth-last-child(1)) {
+    margin-bottom: 1rem;
+}
+
+/* Tooltip */
+@media screen and (min-width: 992px) {
+    .tooltip-block .col-wrapper .medias {
+        flex-basis: 50%;
+        height: auto;
+    }
+
+    .tooltip-block.column .col-wrapper .medias {
+        flex-basis: 30%;
+        display: flex;
+        gap: var(--spacing-section-inner);
+    }
+}
+
+.tooltip-block .col-wrapper .image-wrapper {
+    position: relative;
+}
+
+.tooltip-block.column .col-wrapper .image-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tooltip-block .col-wrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.tooltip-block .tooltip {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    position: absolute;
+    background: none;
+    border: 0;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    animation: fadeIn 350ms;
+}
+
+/* Popup */
+.tooltip-block .tooltip-popup {
+    max-width: 200px;
+    margin: 0 auto;
+    padding: 16px;
+    display: none;
+    font-size: 15px;
+    text-align: center;
+    background-color: var(--alto);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease 350ms, transform ease 350ms;
+}
+
+@media screen and (min-width: 992px) {
+    .tooltip-block .tooltip-popup {
+        display: block;
+        position: absolute;
+    }
+}
+
+.tooltip-block .tooltip-popup.visible {
+    display: block;
+    opacity: 1;
+    transform: translateX(0) !important;
+    visibility: unset;
+    z-index: 1;
+}
+
+.tooltip-block .tooltip-popup[class*="left"] {
+    transform: translateX(-2000px);
+}
+
+.tooltip-block .tooltip-popup[class*="right"] {
+    transform: translateX(2000px);
+}
+
+@media screen and (min-width: 992px) {
+
+    .tooltip-block .tooltip-popup.top-left {
+        left: 2em;
+        top: 0;
+    }
+
+    .tooltip-block .tooltip-popup.center-left {
+        left: 2em;
+        top: 50%;
+    }
+
+    .tooltip-block .tooltip-popup.bottom-left {
+        left: 2em;
+        bottom: 0;
+    }
+
+    .tooltip-block .tooltip-popup.top-right {
+        right: 2em;
+        top: 0;
+    }
+
+    .tooltip-block .tooltip-popup.center-right {
+        right: 2em;
+        top: 50%;
+    }
+
+    .tooltip-block .tooltip-popup.bottom-right {
+        right: 2em;
+        bottom: 0;
+    }
+}
+
+.tooltip-block .tooltip-popup img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tooltip-block .tooltip-popup .content {
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+.tooltip-block .tooltip-popup p {
+    font-size: 15px;
+}

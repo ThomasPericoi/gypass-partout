@@ -1,0 +1,15 @@
+{
+    "name": "acf/tooltip-double",
+    "title": "Tooltip (Double)",
+    "description": "Deux image avec des points d'interactions.",
+    "category": "gypass-block",
+    "icon": "remove",
+    "keywords": [
+        "text",
+        "title"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "tooltip-double.php"
+    }
+}

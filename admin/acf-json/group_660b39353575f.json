@@ -1,10 +1,10 @@
 {
-    "key": "group_660ae449b74e8",
-    "title": "Bloc - Image avec tooltips (Simple)",
+    "key": "group_660b39353575f",
+    "title": "Bloc - Image avec tooltips (Double)",
     "fields": [
         {
-            "key": "field_660ae449c91c8",
-            "label": "Tooltip (Simple)",
+            "key": "field_660b39353dfa3",
+            "label": "Tooltip (Double)",
             "name": "",
             "aria-label": "",
             "type": "message",
@@ -16,13 +16,13 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Une image avec des points d'interactions.",
+            "message": "Deux image avec des points d'interactions.",
             "new_lines": "br",
             "esc_html": 0
         },
         {
-            "key": "field_660ae449ccc72",
-            "label": "Contenu - Colonne 1",
+            "key": "field_660b39354270c",
+            "label": "Contenu - Introduction",
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -39,7 +39,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_660ae449d06b2",
+            "key": "field_660b3935455de",
             "label": "Titre",
             "name": "title",
             "aria-label": "",
@@ -59,7 +59,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_660ae449d40d9",
+            "key": "field_660b393548f23",
             "label": "Contenu",
             "name": "content",
             "aria-label": "",
@@ -79,48 +79,7 @@
             "delay": 0
         },
         {
-            "key": "field_660ae449d7b9e",
-            "label": "CTA",
-            "name": "cta",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
-            "key": "field_660b19c2ae212",
-            "label": "Image additionnelle",
-            "name": "extra_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_660b1d999c04f",
+            "key": "field_660bbd58dbc3d",
             "label": "Texte additionnel",
             "name": "extra_content",
             "aria-label": "",
@@ -140,7 +99,96 @@
             "delay": 1
         },
         {
-            "key": "field_660ae449e2ae2",
+            "key": "field_660bbda1dbc3f",
+            "label": "Contenu - Switch d'image",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_660bbdc6dbc40",
+            "label": "Switch d'images",
+            "name": "switch",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter un switch",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_660bbe36dbc42",
+                    "label": "Nom du bouton",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_660bbdc6dbc40"
+                },
+                {
+                    "key": "field_660bbe18dbc41",
+                    "label": "Image associée",
+                    "name": "image",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_660bbdc6dbc40"
+                }
+            ]
+        },
+        {
+            "key": "field_660b393557973",
             "label": "Contenu - Tooltips",
             "name": "",
             "aria-label": "",
@@ -158,12 +206,12 @@
             "endpoint": 0
         },
         {
-            "key": "field_660ae449df079",
+            "key": "field_660bcc7ba667b",
             "label": "Image essentielle",
             "name": "image_map",
             "aria-label": "",
             "type": "image",
-            "instructions": "Elle sert de base pour pointer la position des tooltips.",
+            "instructions": "Elle sert de base pour pointer la position des tooltips. Ne sera pas affichée.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -183,7 +231,7 @@
             "preview_size": "medium"
         },
         {
-            "key": "field_660ae4bbf5f51",
+            "key": "field_660bcc7ea667c",
             "label": "Tooltips",
             "name": "tooltips",
             "aria-label": "",
@@ -205,7 +253,7 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
-                    "key": "field_660ae4fcf5f53",
+                    "key": "field_660bcc7ea667d",
                     "label": "Contenu",
                     "name": "popup_content",
                     "aria-label": "",
@@ -223,10 +271,10 @@
                     "toolbar": "basic",
                     "media_upload": 0,
                     "delay": 1,
-                    "parent_repeater": "field_660ae4bbf5f51"
+                    "parent_repeater": "field_660bcc7ea667c"
                 },
                 {
-                    "key": "field_660ae55af5f54",
+                    "key": "field_660bcc7ea667e",
                     "label": "Image",
                     "name": "popup_image",
                     "aria-label": "",
@@ -249,10 +297,10 @@
                     "max_size": "",
                     "mime_types": "",
                     "preview_size": "medium",
-                    "parent_repeater": "field_660ae4bbf5f51"
+                    "parent_repeater": "field_660bcc7ea667c"
                 },
                 {
-                    "key": "field_660ae4e4f5f52",
+                    "key": "field_660bcc7ea667f",
                     "label": "Position du tooltip",
                     "name": "position",
                     "aria-label": "",
@@ -270,10 +318,10 @@
                     "font_size": 14,
                     "x": 0,
                     "y": 0,
-                    "parent_repeater": "field_660ae4bbf5f51"
+                    "parent_repeater": "field_660bcc7ea667c"
                 },
                 {
-                    "key": "field_660ae57ff5f55",
+                    "key": "field_660bcc7ea6680",
                     "label": "Arrivée du pop-up",
                     "name": "entrance",
                     "aria-label": "",
@@ -300,12 +348,12 @@
                     "other_choice": 0,
                     "layout": "vertical",
                     "save_other_choice": 0,
-                    "parent_repeater": "field_660ae4bbf5f51"
+                    "parent_repeater": "field_660bcc7ea667c"
                 }
             ]
         },
         {
-            "key": "field_660ae449e9fe2",
+            "key": "field_660b393562b1d",
             "label": "Options de style",
             "name": "",
             "aria-label": "",
@@ -323,7 +371,7 @@
             "endpoint": 0
         },
         {
-            "key": "field_660ae449eda55",
+            "key": "field_660b39356678f",
             "label": "Taille du conteneur du bloc",
             "name": "container_size",
             "aria-label": "",
@@ -350,7 +398,7 @@
             "placeholder": ""
         },
         {
-            "key": "field_660ae449f1495",
+            "key": "field_660b39356a657",
             "label": "Fond de couleur",
             "name": "background",
             "aria-label": "",
@@ -374,31 +422,6 @@
             "other_choice": 0,
             "layout": "horizontal",
             "save_other_choice": 0
-        },
-        {
-            "key": "field_660b1e865cf2a",
-            "label": "Disposition",
-            "name": "display",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "row": "Rangée",
-                "column": "Colonne"
-            },
-            "default_value": "row",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
         }
     ],
     "location": [
@@ -406,7 +429,7 @@
             {
                 "param": "block",
                 "operator": "==",
-                "value": "acf\/tooltip-simple"
+                "value": "acf\/tooltip-double"
             }
         ]
     ],

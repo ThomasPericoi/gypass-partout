@@ -68,7 +68,7 @@
             "label": "Titre",
             "name": "title",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -79,9 +79,9 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": 2,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": "br"
         },
         {
             "key": "field_660293801bdc2",
@@ -101,7 +101,7 @@
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_66043efdbb2fb",
@@ -228,7 +228,7 @@
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_66029380147c5",
@@ -459,31 +459,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_660949f26b4af",
-            "label": "Bordure colorée (copier)",
-            "name": "border_top_copier",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "bordered": "Activer",
-                "no-border": "Désactiver"
-            },
-            "default_value": "no-border",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_66029e1a976ac",
             "label": "Vidéo en mode GIF",
             "name": "gif_mode",
@@ -535,5 +510,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711884789
+    "modified": 1712049555
 }

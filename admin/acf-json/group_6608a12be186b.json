@@ -76,7 +76,7 @@
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_6608a12c0ed4b",
@@ -114,7 +114,7 @@
         },
         {
             "key": "field_6608a12c16326",
-            "label": "Menus",
+            "label": "Menus déroulants",
             "name": "menus",
             "aria-label": "",
             "type": "repeater",
@@ -131,7 +131,7 @@
             "min": 1,
             "max": 2,
             "collapsed": "",
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter un menu déroulant",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -175,6 +175,7 @@
                     "collapsed": "",
                     "button_label": "Ajouter un élément",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6608a12c16326",
                     "sub_fields": [
                         {
                             "key": "field_6608a12c55edc",
@@ -212,12 +213,12 @@
                                 "id": ""
                             },
                             "layout": "table",
-                            "pagination": 0,
                             "min": 0,
                             "max": 0,
                             "collapsed": "",
-                            "button_label": "Ajouter un élément",
+                            "button_label": "Ajouter une image associée",
                             "rows_per_page": 20,
+                            "parent_repeater": "field_6608a12c4a81d",
                             "sub_fields": [
                                 {
                                     "key": "field_6608a12c59852",
@@ -266,11 +267,9 @@
                                     "append": "",
                                     "parent_repeater": "field_6608a6c999d6c"
                                 }
-                            ],
-                            "parent_repeater": "field_6608a12c4a81d"
+                            ]
                         }
-                    ],
-                    "parent_repeater": "field_6608a12c16326"
+                    ]
                 }
             ]
         },
@@ -560,5 +559,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711969751
+    "modified": 1712049555
 }

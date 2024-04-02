@@ -43,7 +43,7 @@
             "label": "Titre",
             "name": "title",
             "aria-label": "",
-            "type": "text",
+            "type": "textarea",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -54,9 +54,9 @@
             },
             "default_value": "",
             "maxlength": "",
+            "rows": 2,
             "placeholder": "",
-            "prepend": "",
-            "append": ""
+            "new_lines": "br"
         },
         {
             "key": "field_6602f84ccaf85",
@@ -76,7 +76,7 @@
             "tabs": "all",
             "toolbar": "basic",
             "media_upload": 0,
-            "delay": 0
+            "delay": 1
         },
         {
             "key": "field_6602f8b484e79",
@@ -98,32 +98,6 @@
             "key": "field_660544bc7d4fb",
             "label": "Classe du bouton",
             "name": "cta_classname",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "js-openProducts": "js-openProducts",
-                "js-openRanges": "js-openRanges"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_66099177c5636",
-            "label": "Classe du bouton (copier)",
-            "name": "cta_classname_copier",
             "aria-label": "",
             "type": "select",
             "instructions": "",
@@ -321,5 +295,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1711903098
+    "modified": 1712049554
 }

@@ -437,6 +437,44 @@ document.addEventListener("DOMContentLoaded", function () {
     showContentAccordionTabsCrossed(1, 1, $(this).find("nav.options button:first-child").attr('id'), $(this));
   });
 
+  // Block - Tooltip
+  function convertToAbsolute() {
+    $(".tooltip-block button.tooltip").each(function (index) {
+      positionRaw = $(this).data("position");
+      coordinates = positionRaw.split(',');
+      $(this).css("top", coordinates[1])
+      $(this).css("left", coordinates[0])
+    });
+  }
+  convertToAbsolute();
+
+  function showContentTooltip(target, parent) {
+    parent.find("button.tooltip.active").removeClass("active");
+    parent.find(".tooltip-popup.visible").removeClass("visible");
+    parent.find(".tooltip-popup[data-trigger='" + target + "']").addClass("visible");
+    parent.find("button.tooltip[data-target='" + target + "']").addClass("active");
+  }
+
+  $(".tooltip-block button.tooltip").on("click", function () {
+    target = $(this).data("target");
+    showContentTooltip(target, $(this).closest('.tooltip-block'));
+  });
+
+  // Block - Tooltip (Double)
+  function switchImageTooltip(element, parent) {
+    parent.find(".switch button.active").removeClass("active");
+    element.addClass("active");
+    parent.find(".image-wrapper > img").attr("src", element.data("image-url"));
+  }
+
+  $(".tooltip-double-block .switch button").on("click", function () {
+    switchImageTooltip($(this), $(this).closest('.tooltip-double-block'));
+  });
+
+  $('.tooltip-double-block').each(function () {
+    switchImageTooltip($(this).find('.switch button:first'), $(this));
+  });
+
   // Page - Hiring
   const swiperHiring = new Swiper(".forms.swiper", {
     autoHeight: true,
