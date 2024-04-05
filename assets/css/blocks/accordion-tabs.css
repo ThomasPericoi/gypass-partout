@@ -138,14 +138,6 @@
     flex-direction: column;
 }
 
-.accordion-tabs-block .menu:nth-child(2) {
-    flex-direction: column-reverse;
-}
-
-.accordion-tabs-block .menu:nth-child(2) h3.active:after {
-    transform: rotate(-90deg);
-}
-
 .accordion-tabs-block .menu .accordion-content {
     display: none;
 }

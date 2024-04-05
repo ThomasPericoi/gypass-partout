@@ -1,0 +1,54 @@
+/* #My project (Start) page
+--------------------------------------------------------------- */
+.page-template-my-project-start-page-template main {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+/* Hero */
+.page-template-my-project-start-page-template #hero {
+    margin-bottom: var(--spacing-section-outer);
+    text-align: center;
+}
+
+.page-template-my-project-start-page-template #hero h1 {
+    margin-bottom: 1em;
+    color: var(--secondary);
+}
+
+/* Grid */
+.page-template-my-project-start-page-template .project-grid {
+    margin-bottom: var(--spacing-section-outer);
+    display: grid;
+    grid-gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 1200px) {
+    .page-template-my-project-start-page-template .project-grid {
+        margin-bottom: 275px;
+        grid-template-columns: repeat(5, 1fr);
+    }
+}
+
+.page-template-my-project-start-page-template .project-grid .project {
+    padding: 0 1.5em;
+    aspect-ratio: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+.page-template-my-project-start-page-template .project .icon {
+    width: 100%;
+    height: auto;
+}
+
+.page-template-my-project-start-page-template .project span {
+    font-weight: 500;
+    color: var(--white);
+}

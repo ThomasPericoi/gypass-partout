@@ -94,6 +94,7 @@
     margin: 0 auto;
     width: 100%;
     height: auto;
+    display: block;
 }
 
 @media screen and (min-width: 992px) {
@@ -135,8 +136,9 @@
 
 @media screen and (min-width: 1200px) {
     .postid-620 .tooltip-block.tooltip-special-block .medias .image-wrapper {
+        width: 55%;
         position: absolute;
-        left: calc(50% + 1em);
+        left: calc(49% + 1em);
     }
 }
 

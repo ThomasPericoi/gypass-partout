@@ -335,36 +335,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  // Block - Shades
-  if ($("#shades-count-1")) {
-    $("#shades-count-1").text($("#shades-1 .shades-grid").children().length);
-  }
-  if ($("#shades-count-2")) {
-    $("#shades-count-2").text($("#shades-2 .shades-grid").children().length);
-  }
-
-  function changeShadesActive(element) {
-    var theme = $(element).data('theme');
-    var background = $(element).data('background');
-    var code = $(element).data('code');
-    $('.shades-block button').removeClass('active');
-    $(element).addClass('active');
-    $('.shades-block').css({ "--theme": theme });
-    $('.shades-block').css({ "--background": "url(" + background + ")" });
-    $("#selector-code").text(code);
-  }
-
-  $('.shades-block button').click(function () {
-    changeShadesActive(this);
-  });
-
-  changeShadesActive("#shades-1 .shades-grid button:last-child");
-
   // Block - Accordion Tabs
   $(".accordion-tabs-block nav.menu h3").on("click", function (e) {
     e.preventDefault();
-    $(this).closest('.accordion-tabs-block').find('nav.menu h3').toggleClass("active");
-    $(this).closest('.accordion-tabs-block').find('nav.menu h3').next().slideToggle();
+    $(this).closest('.accordion-tabs-block').find('nav.menu h3.active').next().slideToggle(350);
+    $(this).closest('.accordion-tabs-block').find('nav.menu h3').removeClass("active");
+    $(this).addClass("active");
+    $(this).closest('.accordion-tabs-block').find('nav.menu h3.active').next().slideToggle(350);
   });
 
   $(".accordion-tabs-block nav.menu h3").on("keypress", function (e) {
@@ -373,9 +350,6 @@ document.addEventListener("DOMContentLoaded", function () {
       $(this).closest('.accordion-tabs-block').find('nav.menu h3').next().slideToggle(350);
     }
   });
-
-  $(".accordion-tabs-block nav.menu:first-child h3").toggleClass("active");
-  $(".accordion-tabs-block nav.menu:first-child h3 + .accordion-content").slideToggle(350);
 
   function showContentAccordionTabs(tab, element, parent) {
     parent.find("img.visible, .video-wrapper.visible").removeClass("visible");
@@ -390,7 +364,11 @@ document.addEventListener("DOMContentLoaded", function () {
     showContentAccordionTabs(tabIndex, elementIndex, $(this).closest('.accordion-tabs-block'));
   });
 
-  $('.accordion-tabs-block:not(.accordion-tabs-crossed-block)').each(function () {
+  $('.accordion-tabs-block').each(function () {
+    if ($(this).find("nav.menu").length == 1) {
+      $(this).find("nav.menu:first-child h3").toggleClass("active");
+      $(this).find("nav.menu:first-child h3 + .accordion-content").slideToggle(350);
+    }
     showContentAccordionTabs(1, 1, $(this));
   });
 
@@ -413,6 +391,7 @@ document.addEventListener("DOMContentLoaded", function () {
     parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
     parent.find("nav.menu button.active").removeClass("active");
     parent.find("nav.menu button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
+    parent.find("nav.options button.active").removeClass("active");
     $("#" + option).addClass("active");
     parent.find('#active-label') && parent.find('#active-label').text($("#" + option).data("label"));
   }
@@ -436,6 +415,33 @@ document.addEventListener("DOMContentLoaded", function () {
   $('.accordion-tabs-crossed-block').each(function () {
     showContentAccordionTabsCrossed(1, 1, $(this).find("nav.options button:first-child").attr('id'), $(this));
   });
+
+  // Block - Shades
+  if ($("#shades-count-1")) {
+    $("#shades-count-1").text($("#shades-1 .shades-grid").children().length);
+  }
+  if ($("#shades-count-2")) {
+    $("#shades-count-2").text($("#shades-2 .shades-grid").children().length);
+  }
+
+  function changeShadesActive(element) {
+    var theme = $(element).data('theme');
+    var background = $(element).data('background');
+    var label = $(element).data('label');
+    var code = $(element).data('code');
+    $('.shades-block button').removeClass('active');
+    $(element).addClass('active');
+    $('.shades-block').css({ "--theme": theme });
+    $('.shades-block').css({ "--background": "url(" + background + ")" });
+    $("#selector-code-label").text(label);
+    $("#selector-code").text(code);
+  }
+
+  $('.shades-block button').click(function () {
+    changeShadesActive(this);
+  });
+
+  changeShadesActive("#shades-1 .shades-grid button:last-child");
 
   // Block - Tooltip
   function convertToAbsolute() {

@@ -1,11 +1,11 @@
 {
-    "key": "group_65e998ead73b2",
-    "title": "Options du thème - Page Conseils &amp; Astuces",
+    "key": "group_660d6d5299281",
+    "title": "Options du thème - Page Inspirations",
     "fields": [
         {
-            "key": "field_65e998ead9a76",
+            "key": "field_660d70e20606c",
             "label": "Titre de la page",
-            "name": "tips_tricks_title",
+            "name": "inspirations_title",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -23,9 +23,9 @@
             "new_lines": "br"
         },
         {
-            "key": "field_65e998eadd558",
+            "key": "field_660d70b6e0ec8",
             "label": "Description de la page",
-            "name": "tips_tricks_description",
+            "name": "inspirations_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "",
@@ -43,9 +43,9 @@
             "new_lines": "br"
         },
         {
-            "key": "field_65e998eae1050",
+            "key": "field_660d6d52a6dbb",
             "label": "Activer la bannière",
-            "name": "tips_tricks_cta_banner",
+            "name": "inspirations_cta_banner",
             "aria-label": "",
             "type": "radio",
             "instructions": "",
@@ -68,9 +68,9 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_65e998eae4b49",
+            "key": "field_660d6d52aa893",
             "label": "Titre de la bannière",
-            "name": "tips_tricks_cta_banner_title",
+            "name": "inspirations_cta_banner_title",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -78,7 +78,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_65e998eae1050",
+                        "field": "field_660d6d52a6dbb",
                         "operator": "==",
                         "value": "true"
                     }
@@ -96,9 +96,9 @@
             "append": ""
         },
         {
-            "key": "field_65e998eae87b3",
+            "key": "field_660d6d52ae447",
             "label": "Description de la bannière",
-            "name": "tips_tricks_cta_banner_description",
+            "name": "inspirations_cta_banner_description",
             "aria-label": "",
             "type": "textarea",
             "instructions": "Les sauts à la ligne sont pris en compte.",
@@ -106,7 +106,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_65e998eae1050",
+                        "field": "field_660d6d52a6dbb",
                         "operator": "==",
                         "value": "true"
                     }
@@ -124,9 +124,9 @@
             "new_lines": "br"
         },
         {
-            "key": "field_65e998eaec310",
+            "key": "field_660d6d52b1ff0",
             "label": "CTA",
-            "name": "tips_tricks_cta_banner_cta",
+            "name": "inspirations_cta_banner_cta",
             "aria-label": "",
             "type": "link",
             "instructions": "",
@@ -134,7 +134,7 @@
             "conditional_logic": [
                 [
                     {
-                        "field": "field_65e998eae1050",
+                        "field": "field_660d6d52a6dbb",
                         "operator": "==",
                         "value": "true"
                     }
@@ -157,7 +157,7 @@
             }
         ]
     ],
-    "menu_order": 9,
+    "menu_order": 8,
     "position": "normal",
     "style": "default",
     "label_placement": "top",

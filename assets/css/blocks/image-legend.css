@@ -33,6 +33,7 @@
 
 .image-legend-block .media img {
     width: 100%;
+    display: block;
 }
 
 .image-legend-block .media figcaption {

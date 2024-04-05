@@ -59,6 +59,7 @@
 .accordion-tabs-crossed-block.bg .options>button.image>img {
     max-width: 100px;
     height: auto;
+    display: block;
 }
 
 .accordion-tabs-crossed-block .options>button.image>div {

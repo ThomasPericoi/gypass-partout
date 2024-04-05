@@ -84,7 +84,7 @@
             },
             "choices": {
                 "claustras-maestria": "Claustras Maestria",
-                "claustras-panneaux": "Claustras Panneaux Aluminium",
+                "claustras-panneaux": "Claustras Panneaux",
                 "claustras-vitrees": "Claustras Vitrées",
                 "connect": "#Connect",
                 "evolys": "Evolys",
@@ -645,5 +645,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712049555
+    "modified": 1712329110
 }

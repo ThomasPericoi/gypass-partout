@@ -92,8 +92,17 @@
   }
 }
 
-#hiring .description>* {
+#hiring .description>*,
+#hiring .description li {
   color: var(--scooter);
+}
+
+#hiring .description li:before {
+  border-color: var(--scooter);
+}
+
+#hiring .description strong {
+  color: var(--white);
 }
 
 #hiring .form-form {

@@ -126,6 +126,16 @@
     }
 }
 
+#footer .menus>.menu {
+    max-width: 190px;
+}
+
+@media screen and (min-width: 1920px) {
+    #footer .menus>.menu {
+        max-width: unset;
+    }
+}
+
 #footer .menu-footer>ul {
     display: flex;
     flex-direction: column;

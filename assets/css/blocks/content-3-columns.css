@@ -42,12 +42,14 @@
 .content-3-columns-block .col-wrapper>img {
     width: 100%;
     height: auto;
+    display: block;
 }
 
 @media screen and (min-width: 992px) {
     .content-3-columns-block .col-wrapper>img {
         flex: 1 1 45%;
         height: auto;
+        display: block;
     }
 }
 

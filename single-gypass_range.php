@@ -27,7 +27,7 @@
 <section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
     <div class="container">
         <h1 class="h4-size">
-            <?php echo __("Gammes", "gypass"); ?><br />
+            <?php echo __("Gamme", "gypass"); ?><br />
             <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
         </h1>
         <h2 class="h1-size"><?php echo get_field("range_title") ?: get_the_title(); ?></h2>

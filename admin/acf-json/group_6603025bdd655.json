@@ -121,6 +121,27 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "key": "field_66100d76a5c5f",
+                    "label": "Label au-dessus du code",
+                    "name": "code_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "RAL",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_660306d3c3df9"
+                },
+                {
                     "key": "field_6603070bc3dfa",
                     "label": "Code",
                     "name": "code",
@@ -593,5 +614,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712049555
+    "modified": 1712329109
 }

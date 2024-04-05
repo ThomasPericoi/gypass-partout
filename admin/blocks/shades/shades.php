@@ -55,12 +55,13 @@ $style  = implode('; ', $styles);
                             <h3 class="shades-title p-size"><span id="shades-count-1"></span> <?php echo __("teintes Fine texture"); ?></h3>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_1')) : the_row();
+                                    $label = get_sub_field('code_label');
                                     $code = get_sub_field('code');
                                     $background_thumbnail = get_sub_field('background_thumbnail');
                                     $background = get_sub_field('background');
                                     $theme = get_sub_field('theme');
                                 ?>
-                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>"></button>
+                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>"></button>
                                 <?php endwhile; ?>
                             </div>
                         </div>
@@ -110,6 +111,7 @@ $style  = implode('; ', $styles);
                 <?php endif; ?>
             </div>
             <div class="result">
+                <span id="selector-code-label"></span>
                 <span id="selector-code"></span>
             </div>
         </div>

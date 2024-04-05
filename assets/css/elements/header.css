@@ -9,6 +9,10 @@
     text-transform: uppercase;
 }
 
+.admin-bar #header {
+    top: 32px;
+}
+
 #header a,
 .super-menu .menu-topbar a {
     text-decoration: none;
@@ -154,6 +158,7 @@
     width: 100%;
     max-width: 160px;
     height: auto;
+    display: block;
 }
 
 #main-header .menu-header {
@@ -173,7 +178,7 @@
 
 #main-header li a,
 .super-menu .menu-header li a {
-    padding: 18px;
+    padding: 25px 18px;
     position: relative;
     display: block;
     color: var(--bay-of-many);
@@ -186,7 +191,7 @@
 
 @media screen and (min-width: 1920px) {
     #main-header li a {
-        padding: 26px;
+        padding: 25px;
     }
 }
 
@@ -213,6 +218,13 @@
     background-color: var(--secondary);
 }
 
+#main-header .menu-item-secondary a:hover,
+#main-header .menu-item-secondary a:focus,
+#main-header .menu-item-secondary a[aria-current="page"] {
+    color: var(--secondary);
+    background-color: var(--white);
+}
+
 #main-header .menu-item-secondary a:before,
 .super-menu .menu-header .menu-item-secondary a:before {
     content: "";
@@ -233,6 +245,12 @@
         bottom: 18px;
         left: 15px;
     }
+}
+
+#main-header .menu-item-secondary a:hover:before,
+#main-header .menu-item-secondary a:focus:before,
+#main-header .menu-item-secondary a[aria-current="page"]:before {
+    border-color: var(--secondary);
 }
 
 #main-header li a:after {
@@ -508,7 +526,7 @@ body.js-menuOpened .super-menu-overlay {
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(1) .sub-menu a:after,
 .super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(1) .sub-menu a:after {
-    filter: brightness(0) saturate(100%) invert(13%) sepia(68%) saturate(2553%) hue-rotate(223deg) brightness(97%) contrast(90%);
+    filter: brightness(0) saturate(100%) invert(17%) sepia(82%) saturate(2773%) hue-rotate(188deg) brightness(103%) contrast(101%);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(2) .sub-menu a:after,
@@ -658,8 +676,8 @@ body.js-menuOpened .super-menu-overlay {
     gap: 20px;
 }
 
-.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(2) .sub-menu a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(2) .sub-menu a {
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(1) .sub-menu a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(1) .sub-menu a {
     color: var(--bahama-blue);
 }
 
