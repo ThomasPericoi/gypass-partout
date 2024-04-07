@@ -39,24 +39,6 @@ $style  = implode('; ', $styles);
                     <h2><?php echo $title; ?></h2>
                 <?php endif; ?>
                 <?php echo $content; ?>
-                <?php if (have_rows('tooltips')) :
-                    while (have_rows('tooltips')) : the_row();
-                    $index = get_row_index();
-                        $content = get_sub_field('popup_content');
-                        $popup_image = get_sub_field('popup_image');
-                        $entrance = get_sub_field('entrance');  ?>
-                        <div class="tooltip-popup <?php echo $entrance; ?>" data-trigger="<?php echo $index; ?>">
-                            <?php if ($popup_image) : ?>
-                                <img src="<?php echo $popup_image['url']; ?>" alt="<?php echo $popup_image['alt']; ?>" />
-                            <?php endif; ?>
-                            <?php if ($content) : ?>
-                                <div class="content">
-                                    <?php echo $content; ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                <?php endwhile;
-                endif; ?>
             </div>
             <?php if ($extra_content) : ?>
                 <div class="legend-wrapper">
@@ -80,7 +62,7 @@ $style  = implode('; ', $styles);
                     <img src="" alt="<?php echo $image['alt']; ?>" />
                     <?php if (have_rows('tooltips')) :
                         while (have_rows('tooltips')) : the_row();
-                        $index = get_row_index();
+                            $index = get_row_index();
                             $position = get_sub_field('position'); ?>
                             <button class="tooltip" data-position="<?php echo $position; ?>" data-target="<?php echo $index; ?>">
                                 <?php get_template_part('assets/icons/tooltip-minus.svg'); ?>
@@ -89,6 +71,24 @@ $style  = implode('; ', $styles);
                     endif; ?>
                 </div>
             <?php endif; ?>
+            <?php if (have_rows('tooltips')) :
+                while (have_rows('tooltips')) : the_row();
+                    $index = get_row_index();
+                    $content = get_sub_field('popup_content');
+                    $popup_image = get_sub_field('popup_image');
+                    $entrance = get_sub_field('entrance');  ?>
+                    <div class="tooltip-popup <?php echo $entrance; ?>" data-trigger="<?php echo $index; ?>">
+                        <?php if ($popup_image) : ?>
+                            <img src="<?php echo $popup_image['url']; ?>" alt="<?php echo $popup_image['alt']; ?>" />
+                        <?php endif; ?>
+                        <?php if ($content) : ?>
+                            <div class="content">
+                                <?php echo $content; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
         </div>
     </div>
 </section>

@@ -46,7 +46,7 @@ $style  = implode('; ', $styles);
             <?php if ($image) : ?>
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
             <?php endif; ?>
-            <div class="features" style="--primary: var(--manatee);">
+            <div class="features" style="--primary: var(--manatee); --content-color: var(--manatee);">
                 <?php if (have_rows('features')) : ?>
                     <?php while (have_rows('features')) : the_row();
                         $title = get_sub_field('title');

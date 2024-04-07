@@ -53,24 +53,6 @@ $style  = implode('; ', $styles);
                         <?php endif; ?>
                     </div>
                 <?php endif; ?>
-                <?php if (have_rows('tooltips')) :
-                    while (have_rows('tooltips')) : the_row();
-                        $index = get_row_index();
-                        $content = get_sub_field('popup_content');
-                        $popup_image = get_sub_field('popup_image');
-                        $entrance = get_sub_field('entrance');  ?>
-                        <div class="tooltip-popup <?php echo $entrance; ?>" data-trigger="<?php echo $index; ?>">
-                            <?php if ($popup_image) : ?>
-                                <img src="<?php echo $popup_image['url']; ?>" alt="<?php echo $popup_image['alt']; ?>" />
-                            <?php endif; ?>
-                            <?php if ($content) : ?>
-                                <div class="content">
-                                    <?php echo $content; ?>
-                                </div>
-                            <?php endif; ?>
-                        </div>
-                <?php endwhile;
-                endif; ?>
             </div>
             <div class="medias">
                 <?php if ($extra_image && ($display == "column")) : ?>
@@ -96,6 +78,24 @@ $style  = implode('; ', $styles);
                     </div>
                 <?php endif; ?>
             </div>
+            <?php if (have_rows('tooltips')) :
+                while (have_rows('tooltips')) : the_row();
+                    $index = get_row_index();
+                    $content = get_sub_field('popup_content');
+                    $popup_image = get_sub_field('popup_image');
+                    $entrance = get_sub_field('entrance');  ?>
+                    <div class="tooltip-popup <?php echo $entrance; ?>" data-trigger="<?php echo $index; ?>">
+                        <?php if ($popup_image) : ?>
+                            <img src="<?php echo $popup_image['url']; ?>" alt="<?php echo $popup_image['alt']; ?>" />
+                        <?php endif; ?>
+                        <?php if ($content) : ?>
+                            <div class="content">
+                                <?php echo $content; ?>
+                            </div>
+                        <?php endif; ?>
+                    </div>
+            <?php endwhile;
+            endif; ?>
         </div>
     </div>
 </section>

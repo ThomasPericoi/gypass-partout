@@ -93,18 +93,13 @@
     flex-direction: column;
 }
 
-.single-gypass_range #hero-alt .formatted>*:not(:nth-last-child(1)) {
-    margin-bottom: 1rem;
+.single-gypass_range #hero-alt .formatted {
+    --content-spacing: 1rem;
 }
 
 .single-gypass_range #hero-alt p,
 .single-gypass_range #hero-alt li {
     color: var(--manatee);
-}
-
-.single-gypass_range #hero-alt .formatted ul>li:before {
-    border-color: var(--manatee);
-
 }
 
 .single-gypass_range #hero-alt .filters {

@@ -108,17 +108,16 @@
     flex-grow: 1;
 }
 
-.tooltip-block.tooltip-special-block .feature .content.formatted>*:not(:nth-last-child(1)) {
-    margin-bottom: 0.05rem;
+.tooltip-block.tooltip-special-block .feature .content {
+    --content-spacing: 0.05rem;
 }
 
-.tooltip-block.tooltip-special-block .feature .content.formatted ul>li {
+.tooltip-block.tooltip-special-block .feature .content {
     margin-bottom: 0.05rem;
 }
 
 .tooltip-block.tooltip-special-block .feature .content.formatted ul>li:before {
     border: 3px solid var(--primary);
-    transform: translateY(-100%);
 }
 
 /* Special */
