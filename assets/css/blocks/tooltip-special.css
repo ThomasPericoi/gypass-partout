@@ -135,9 +135,10 @@
 
 @media screen and (min-width: 1200px) {
     .postid-620 .tooltip-block.tooltip-special-block .medias .image-wrapper {
-        width: 55%;
+        max-width: 750px;
+        width: 50%;
         position: absolute;
-        left: calc(49% + 1em);
+        left: 50%;
     }
 }
 
@@ -152,5 +153,9 @@
 
     .postid-634 .tooltip-block.tooltip-special-block .features .feature {
         max-width: 475px;
+    }
+
+    .postid-634 .tooltip-block.tooltip-special-block .image-wrapper {
+        left: -1%;
     }
 }

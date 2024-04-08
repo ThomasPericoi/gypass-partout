@@ -267,6 +267,27 @@
             "rows_per_page": 20,
             "sub_fields": [
                 {
+                    "key": "field_66140b61b0898",
+                    "label": "Label au-dessus du code",
+                    "name": "code_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "RAL",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6603091c9bdb5"
+                },
+                {
                     "key": "field_6603091c9bdb6",
                     "label": "Code",
                     "name": "code",
@@ -391,6 +412,27 @@
             "button_label": "Ajouter un élément",
             "rows_per_page": 20,
             "sub_fields": [
+                {
+                    "key": "field_66140b83b0899",
+                    "label": "Label au-dessus du code",
+                    "name": "code_label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "RAL",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_66053498724f7"
+                },
                 {
                     "key": "field_66053498724f8",
                     "label": "Code",
@@ -614,5 +656,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712329109
+    "modified": 1712589725
 }

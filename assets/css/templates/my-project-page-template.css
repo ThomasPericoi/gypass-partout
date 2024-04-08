@@ -1,0 +1,6 @@
+/* #My Project page
+--------------------------------------------------------------- */
+.page-template-my-project-page-template main {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}

@@ -73,7 +73,9 @@ Text Domain: gypass
 
 @import "./assets/css/templates/contact-page-template.css";
 @import "./assets/css/templates/hiring-page-template.css";
+@import "./assets/css/templates/my-project-page-template.css";
 @import "./assets/css/templates/my-project-start-page-template.css";
+@import "./assets/css/templates/my-project-thank-you-page-template.css";
 
 /* #Pages
 --------------------------------------------------------------- */

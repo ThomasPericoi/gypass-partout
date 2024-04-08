@@ -1,0 +1,27 @@
+/* #My Project (Thank you) page
+--------------------------------------------------------------- */
+.page-template-my-project-thank-you-page-template main {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.page-template-my-project-thank-you-page-template #content .container {
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    text-align: center;
+    background-color: var(--ebb);
+}
+
+.page-template-my-project-thank-you-page-template h1 {
+    color: var(--secondary);
+}
+
+.page-template-my-project-thank-you-page-template #content a {
+    font-weight: 600;
+}
+
+.page-template-my-project-thank-you-page-template #content a[href*="tel"] {
+    text-decoration: none;
+}

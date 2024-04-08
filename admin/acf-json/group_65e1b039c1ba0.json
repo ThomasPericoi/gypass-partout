@@ -204,6 +204,16 @@
                 "param": "page_type",
                 "operator": "!=",
                 "value": "front_page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/my-project-page-template.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/my-project-thank-you-page-template.php"
             }
         ]
     ],
@@ -216,5 +226,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712329112
+    "modified": 1712584725
 }
