@@ -10,6 +10,10 @@
     transition: background-image 350ms ease;
 }
 
+.shades-block.bordered {
+    border-top: 1px solid var(--primary);
+}
+
 .shades-block .col-wrapper {
     display: flex;
     flex-direction: column;

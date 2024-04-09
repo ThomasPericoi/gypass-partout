@@ -8,6 +8,10 @@
     background-color: var(--ebb);
 }
 
+.content-3-columns-block.bordered {
+    border-top: 1px solid var(--primary);
+}
+
 .content-3-columns-block .col-wrapper {
     display: flex;
     flex-direction: column;

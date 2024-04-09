@@ -129,10 +129,6 @@
     }
 }
 
-.postid-620 .tooltip-special-block {
-    border-top: 1px solid var(--primary);
-}
-
 @media screen and (min-width: 1200px) {
     .postid-620 .tooltip-block.tooltip-special-block .medias .image-wrapper {
         max-width: 750px;

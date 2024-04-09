@@ -9,6 +9,10 @@
     background-color: var(--ebb);
 }
 
+.image-legend-block.bordered {
+    border-top: 1px solid var(--primary);
+}
+
 .image-legend-block .col-wrapper {
     display: flex;
     flex-direction: column;

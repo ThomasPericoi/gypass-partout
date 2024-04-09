@@ -10,10 +10,6 @@
     background-color: var(--ebb);
 }
 
-.video-block.bordered {
-    border-top: 1px solid var(--primary);
-}
-
 .video-block.bg:before {
     content: "";
     width: 100%;
@@ -28,6 +24,10 @@
     .video-block.bg:before {
         height: 300px;
     }
+}
+
+.video-block.bordered {
+    border-top: 1px solid var(--primary);
 }
 
 .video-block .introduction {

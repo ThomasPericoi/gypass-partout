@@ -20,8 +20,9 @@ $download_chart_label = get_field('download_chart_label');
 $cta = get_field('cta');
 
 $container = get_field('container_size');
+$border_top = get_field('border_top');
 
-$classes = array('shades-block');
+$classes = array('shades-block', $border_top);
 $classes  = implode(' ', $classes);
 if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];

@@ -42,7 +42,7 @@
 )); ?>
 
 <!-- Content -->
-<section id="content" style="--primary: var(--<?php echo get_field("range_color"); ?>)">
+<section id="content" style="--primary: var(--<?php echo get_field("range_color"); ?>);--content-color: var(--<?php echo get_field("range_color"); ?>)">
     <?php the_content(); ?>
 </section>
 

@@ -19,8 +19,9 @@ $image = get_field("image");
 
 $container = get_field('container_size');
 $background = get_field('background');
+$border_top = get_field('border_top');
 
-$classes = array('content-3-columns-block', $background);
+$classes = array('content-3-columns-block', $background, $border_top);
 $classes  = implode(' ', $classes);
 if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];

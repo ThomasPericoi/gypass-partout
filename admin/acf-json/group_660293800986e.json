@@ -435,7 +435,7 @@
         },
         {
             "key": "field_66043d5b4570d",
-            "label": "Bordure colorée",
+            "label": "Bordure colorée (Top)",
             "name": "border_top",
             "aria-label": "",
             "type": "radio",
@@ -510,5 +510,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712329110
+    "modified": 1712653128
 }

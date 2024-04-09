@@ -418,6 +418,31 @@
             "other_choice": 0,
             "layout": "horizontal",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_6615052a663ee",
+            "label": "Bordure colorée (Top)",
+            "name": "border_top",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "bordered": "Activer",
+                "no-border": "Désactiver"
+            },
+            "default_value": "no-border",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -438,5 +463,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712329108
+    "modified": 1712653664
 }

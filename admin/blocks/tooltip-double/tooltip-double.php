@@ -19,8 +19,9 @@ $image = get_field('image_map');
 
 $container = get_field('container_size');
 $background = get_field('background');
+$border_top = get_field('border_top');
 
-$classes = array('tooltip-block', 'tooltip-double-block', $background);
+$classes = array('tooltip-block', 'tooltip-double-block', $background, $border_top);
 $classes  = implode(' ', $classes);
 if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];
