@@ -39,7 +39,7 @@
 
 @media screen and (min-width: 992px) {
     .content-3-columns-block .col-wrapper>.content {
-        flex: 1 1 25%;
+        flex: 1 1 30%;
     }
 }
 
@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 992px) {
     .content-3-columns-block .col-wrapper>img {
-        flex: 1 1 45%;
+        flex: 1 1 40%;
         height: auto;
         display: block;
     }

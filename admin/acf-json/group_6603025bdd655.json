@@ -100,11 +100,11 @@
         },
         {
             "key": "field_660306d3c3df9",
-            "label": "Teintes \"Fine texture\"",
+            "label": "Teintes \"Fine Texture\"",
             "name": "shades_1",
             "aria-label": "",
             "type": "repeater",
-            "instructions": "La dernière teinte sera celle sélectionnée de base.",
+            "instructions": "La deuxième teinte sera celle sélectionnée de base.",
             "required": 1,
             "conditional_logic": 0,
             "wrapper": {
@@ -117,7 +117,7 @@
             "min": 2,
             "max": 0,
             "collapsed": "field_6603070bc3dfa",
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter une teinte \"Fine Texture\"",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -263,7 +263,7 @@
             "min": 2,
             "max": 0,
             "collapsed": "field_6603070bc3dfa",
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter une teinte \"Sablée\"",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -409,7 +409,7 @@
             "min": 0,
             "max": 0,
             "collapsed": "field_6603070bc3dfa",
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter une teinte \"Métallisée\"",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -681,5 +681,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712652940
+    "modified": 1713271069
 }

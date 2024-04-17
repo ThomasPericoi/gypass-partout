@@ -94,6 +94,10 @@
     outline: 2px solid var(--bay-of-many);
 }
 
+.shades-block #shades-3 + #shades-4 {
+    width: 100%;
+}
+
 .shades-block #shades-4 .shades-grid>span {
     width: 37px;
     height: 37px;

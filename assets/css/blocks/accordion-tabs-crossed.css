@@ -3,6 +3,13 @@
 .accordion-tabs-crossed-block .media {
     display: flex;
     flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+.accordion-tabs-crossed-block .options-wrapper {
+    margin-top: var(--spacing-section-inner);
+    display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
@@ -27,13 +34,29 @@
     .accordion-tabs-crossed-block .options {
         gap: 35px;
     }
+
+    .accordion-tabs-crossed-block .options.options-3 {
+        column-gap: 20px;
+    }
+
+    .accordion-tabs-crossed-block .options.options-4 {
+        row-gap: 50px;
+    }
 }
 
 .accordion-tabs-crossed-block .options>button {
+    max-width: 120px;
     position: relative;
-    border: 5px solid var(--white);
+    background-color: unset;
+    border: 5px solid transparent;
     border-radius: 0;
     cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+    .accordion-tabs-crossed-block .options.options-4>button {
+        max-width: 135px;
+    }
 }
 
 .accordion-tabs-crossed-block .options>button.color {
@@ -57,13 +80,12 @@
 }
 
 .accordion-tabs-crossed-block.bg .options>button.image>img {
-    max-width: 100px;
     height: auto;
     display: block;
 }
 
 .accordion-tabs-crossed-block .options>button.image>div {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 600;
     color: var(--manatee);
     text-transform: uppercase;

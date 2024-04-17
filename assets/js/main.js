@@ -441,7 +441,7 @@ document.addEventListener("DOMContentLoaded", function () {
     changeShadesActive(this);
   });
 
-  changeShadesActive("#shades-1 .shades-grid button:last-child");
+  changeShadesActive("#shades-1 .shades-grid button:nth-child(2)");
 
   // Block - Tooltip
   function convertToAbsolute() {

@@ -53,7 +53,7 @@ $style  = implode('; ', $styles);
                 <div class="shades-wrapper">
                     <?php if (have_rows('shades_1')) : ?>
                         <div id="shades-1" class="shades">
-                            <h3 class="shades-title p-size"><span id="shades-count-1"></span> <?php echo __("teintes Fine texture"); ?></h3>
+                            <h3 class="shades-title p-size"><span id="shades-count-1"></span> <?php echo __("teintes Fine Texture"); ?></h3>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_1')) : the_row();
                                     $label = get_sub_field('code_label');
@@ -69,7 +69,7 @@ $style  = implode('; ', $styles);
                     <?php endif; ?>
                     <?php if (have_rows('shades_2')) : ?>
                         <div id="shades-2" class="shades">
-                            <h3 class="shades-title p-size"><span id="shades-count-2"></span> <?php echo __("teintes Sablée"); ?></h3>
+                            <h3 class="shades-title p-size"><span id="shades-count-2"></span> <?php echo __("teintes Sablées"); ?></h3>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_2')) : the_row();
                                     $label = get_sub_field('code_label');

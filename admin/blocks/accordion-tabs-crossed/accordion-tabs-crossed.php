@@ -17,6 +17,7 @@ $title = get_field('title');
 $content = get_field('content');
 $cta = get_field('cta');
 $options_title = get_field('options_title');
+$options_count = count(get_field('options'));
 
 $container = get_field('container_size');
 $background = get_field('background');
@@ -45,6 +46,38 @@ $style  = implode('; ', $styles);
                 <?php if ($cta) : ?>
                     <a href="<?php echo $cta["url"]; ?>" class="btn btn-outline-primary" target="<?php echo $cta["target"]; ?>"><?php echo $cta["title"]; ?></a>
                 <?php endif; ?>
+                <?php if (have_rows('options')) : ?>
+                    <div class="options-wrapper">
+                        <?php if ($options_mode == "color") : ?>
+                            <div class="label">
+                                <?php echo $options_title; ?> : <span id="active-label"></span>
+                            </div>
+                            <nav class="options options-<?php echo $options_count; ?> <?php echo $options_mode; ?>">
+                                <?php while (have_rows('options')) : the_row();
+                                    $id = get_sub_field('id');
+                                    $title = get_sub_field('title');
+                                    $color = get_sub_field('color'); ?>
+                                    <button class="color" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" style="background-color: <?php echo $color; ?>;"></button>
+                                <?php endwhile; ?>
+                            </nav>
+                        <?php else : ?>
+                            <div class="label">
+                                <?php echo $options_title; ?>
+                            </div>
+                            <nav class="options options-<?php echo $options_count; ?> <?php echo $options_mode; ?>">
+                                <?php while (have_rows('options')) : the_row();
+                                    $id = get_sub_field('id');
+                                    $title = get_sub_field('title');
+                                    $image = get_sub_field('image'); ?>
+                                    <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                        <div><?php echo $title; ?></div>
+                                    </button>
+                                <?php endwhile; ?>
+                            </nav>
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
             </div>
             <div class="media">
                 <?php if (have_rows('menus')) :
@@ -58,42 +91,12 @@ $style  = implode('; ', $styles);
                                         $image = get_sub_field('image');
                                         $options_id = get_sub_field('options_id'); ?>
                                         <img data-options-id="<?php echo $options_id; ?>" data-tab-index="<?php echo $tab_index; ?>" data-element-index="<?php echo $element_index; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                <?php endwhile;
+                            <?php endwhile;
                                 endif;
                             endwhile;
                         endif;
                     endwhile;
                 endif; ?>
-                <?php if (have_rows('options')) : ?>
-                    <?php if ($options_mode == "color") : ?>
-                        <div class="label">
-                            <?php echo $options_title; ?> : <span id="active-label"></span>
-                        </div>
-                        <nav class="options <?php echo $options_mode; ?>">
-                            <?php while (have_rows('options')) : the_row();
-                                $id = get_sub_field('id');
-                                $title = get_sub_field('title');
-                                $color = get_sub_field('color'); ?>
-                                <button class="color" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" style="background-color: <?php echo $color; ?>;"></button>
-                            <?php endwhile; ?>
-                        </nav>
-                    <?php else : ?>
-                        <div class="label">
-                            <?php echo $options_title; ?>
-                        </div>
-                        <nav class="options <?php echo $options_mode; ?>">
-                            <?php while (have_rows('options')) : the_row();
-                                $id = get_sub_field('id');
-                                $title = get_sub_field('title');
-                                $image = get_sub_field('image'); ?>
-                                <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                    <div><?php echo $title; ?></div>
-                                </button>
-                            <?php endwhile; ?>
-                        </nav>
-                    <?php endif; ?>
-                <?php endif; ?>
             </div>
             <div class="menus">
                 <?php if (have_rows('menus')) :

@@ -51,7 +51,7 @@
 
 @media screen and (min-width: 992px) {
     .accordion-tabs-block .col-wrapper>.content {
-        flex: 1 1 25%;
+        flex: 1 1 30%;
         order: unset;
     }
 }
@@ -69,7 +69,7 @@
 
 @media screen and (min-width: 992px) {
     .accordion-tabs-block .col-wrapper>.media {
-        flex: 1 1 45%;
+        flex: 1 1 40%;
         order: unset;
     }
 }
