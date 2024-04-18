@@ -4,3 +4,187 @@
     padding: var(--spacing-section-outer) 0;
     position: relative;
 }
+
+.page-template-my-project-page-template section section {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.page-template-my-project-page-template section.dark {
+    background-color: var(--ebb);
+}
+
+.page-template-my-project-page-template section[data-step]:before {
+    content: attr(data-step);
+    width: 35px;
+    height: 35px;
+    margin: 0 auto 30px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: 700;
+    color: var(--white);
+    background-color: var(--secondary);
+}
+
+@media screen and (min-width: 992px) {
+    .page-template-my-project-page-template section[data-step]:before {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translate(-50%, 70%);
+    }
+}
+
+.page-template-my-project-page-template section[data-step] .container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.page-template-my-project-page-template section[data-step] h2 {
+    color: var(--secondary);
+    text-align: center;
+}
+
+.page-template-my-project-page-template section[data-step] p {
+    text-align: center;
+}
+
+/* Grid */
+.page-template-my-project-page-template .form-elements,
+.page-template-my-project-page-template .form-elements .uacf7_conditional {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
+
+.page-template-my-project-page-template .form-elements label {
+    flex: 0 0 100%;
+    outline: 1px solid var(--secondary);
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.page-template-my-project-page-template .form-elements.grid-9 label img {
+    aspect-ratio: 0.66;
+}
+
+@media screen and (min-width: 992px) {
+    .page-template-my-project-page-template .form-elements label {
+        flex: 0 0 calc((100% - (2 * 1em)) / 2);
+    }
+
+    .page-template-my-project-page-template .form-elements.grid-9 label {
+        flex: 0 0 calc((100% - (3 * 1em)) / 3);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .page-template-my-project-page-template .form-elements.grid-3 label {
+        flex: 0 0 calc((100% - (3 * 1em)) / 3);
+    }
+
+    .page-template-my-project-page-template .form-elements.grid-4 label {
+        flex: 0 0 calc((100% - (4 * 1em)) / 4);
+    }
+
+    .page-template-my-project-page-template .form-elements.grid-9 label {
+        flex: 0 0 calc((100% - (9 * 1em)) / 9);
+    }
+}
+
+.page-template-my-project-page-template .form-elements input:checked+label {
+    outline: 4px solid var(--secondary);
+}
+
+.page-template-my-project-page-template .form-elements label img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-template-my-project-page-template .form-elements label img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.page-template-my-project-page-template .form-elements label .label {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+/* Tabs */
+.page-template-my-project-page-template .options-tabs {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.page-template-my-project-page-template details>summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    list-style: none;
+    color: var(--secondary);
+    border-bottom: 2px solid var(--secondary);
+    cursor: pointer;
+    transition: color ease 350ms;
+}
+
+.page-template-my-project-page-template details[open]>summary,
+.page-template-my-project-page-template details:hover>summary,
+.page-template-my-project-page-template details:focus>summary {
+    color: var(--secondary);
+}
+
+.page-template-my-project-page-template details>summary:after {
+    content: '+';
+    font-weight: 300;
+    font-size: 40px;
+    line-height: 1;
+}
+
+.page-template-my-project-page-template details[open]>summary:after {
+    content: '-';
+}
+
+.page-template-my-project-page-template details>summary h3 {
+    font-weight: 500;
+    color: var(--secondary);
+}
+
+.page-template-my-project-page-template details .form-elements {
+    margin: var(--spacing-section-inner) 0;
+}
+
+/* Email */
+.page-template-my-project-page-template .form-elements input[type="email"] {
+    color: var(--secondary);
+    border: 0;
+    outline: 1px solid var(--secondary);
+}
+
+.page-template-my-project-page-template .form-elements input[type="email"]:not(:placeholder-shown),
+.page-template-my-project-page-template .form-elements input[type="email"]:focus {
+    outline: 4px solid var(--secondary);
+}
+
+.page-template-my-project-page-template .form-elements input[type="email"]::placeholder {
+    color: var(--secondary);
+}
+
+.page-template-my-project-page-template input[type="submit"] {
+    margin: 0 auto;
+    display: block;
+    font-weight: 700;
+}

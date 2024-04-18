@@ -191,6 +191,155 @@ function enqueue_theme_scripts()
 }
 add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
 
+
+/* CONTACT
+--------------------------------------------------------------- */
+
+// Add Shortcode(s) Contact Form 7
+function add_shortcode_cf7()
+{
+    wpcf7_add_form_tag(
+        array('checkbox_image', 'checkbox_image*'),
+        'checkbox_image_handler',
+        true
+    );
+    wpcf7_add_form_tag(
+        array('radio_button', 'radio_button*'),
+        'radio_button_handler',
+        true
+    );
+    wpcf7_add_form_tag(
+        array('radio_image', 'radio_image*'),
+        'radio_image_handler',
+        true
+    );
+}
+add_action('wpcf7_init', 'add_shortcode_cf7');
+
+function checkbox_image_handler($tag)
+{
+    $tag = new WPCF7_FormTag($tag);
+
+    if (empty($tag->name)) {
+        return '';
+    }
+    $validation_error = wpcf7_get_validation_error($tag->name);
+    $class = wpcf7_form_controls_class($tag->type);
+    if ($validation_error) {
+        $class .= ' wpcf7-not-valid';
+    }
+
+    $atts = array(
+        'type' => 'checkbox',
+        'name' => $tag->name,
+        'id' => $tag->get_id_option(),
+        'class' => $tag->get_class_option($class),
+    );
+
+    if ($tag->is_required()) {
+        $atts['aria-required'] = 'true';
+    }
+    $atts['aria-invalid'] = $validation_error ? 'true' : 'false';
+
+    $input = sprintf(
+        '<input %1$s value="%2$s" required />
+        <label for="%3$s">
+            <img src="%4$s" alt="%2$s">
+            <div class="label">%2$s</div>
+            %5$s
+        </label>',
+        wpcf7_format_atts($atts),
+        $tag->values[0],
+        $atts["id"],
+        $tag->values[1],
+        $validation_error
+    );
+
+    return $input;
+}
+
+function radio_button_handler($tag)
+{
+    $tag = new WPCF7_FormTag($tag);
+
+    if (empty($tag->name)) {
+        return '';
+    }
+    $validation_error = wpcf7_get_validation_error($tag->name);
+    $class = wpcf7_form_controls_class($tag->type);
+    if ($validation_error) {
+        $class .= ' wpcf7-not-valid';
+    }
+
+    $atts = array(
+        'type' => 'radio',
+        'name' => $tag->name,
+        'id' => $tag->get_id_option(),
+        'class' => $tag->get_class_option($class),
+    );
+
+    if ($tag->is_required()) {
+        $atts['aria-required'] = 'true';
+    }
+    $atts['aria-invalid'] = $validation_error ? 'true' : 'false';
+
+    $input = sprintf(
+        '<input %1$s value="%2$s" required />
+        <label for="%3$s">
+            <div class="label">%2$s</div>
+            %4$s
+        </label>',
+        wpcf7_format_atts($atts),
+        $tag->values[0],
+        $atts["id"],
+        $validation_error
+    );
+
+    return $input;
+}
+
+function radio_image_handler($tag)
+{
+    $tag = new WPCF7_FormTag($tag);
+
+    if (empty($tag->name)) {
+        return '';
+    }
+    $validation_error = wpcf7_get_validation_error($tag->name);
+    $class = wpcf7_form_controls_class($tag->type);
+    if ($validation_error) {
+        $class .= ' wpcf7-not-valid';
+    }
+
+    $atts = array(
+        'type' => 'radio',
+        'name' => $tag->name,
+        'id' => $tag->get_id_option(),
+        'class' => $tag->get_class_option($class),
+    );
+
+    if ($tag->is_required()) {
+        $atts['aria-required'] = 'true';
+    }
+    $atts['aria-invalid'] = $validation_error ? 'true' : 'false';
+
+    $input = sprintf(
+        '<input %1$s value="%2$s" required />
+        <label for="%3$s">
+            <img src="%4$s" alt="%2$s">
+            <div class="label">%2$s</div>
+            %5$s
+        </label>',
+        wpcf7_format_atts($atts),
+        $tag->values[0],
+        $atts["id"],
+        $tag->values[1],
+        $validation_error
+    );
+
+    return $input;
+}
+
 /* WHITE LABEL
 --------------------------------------------------------------- */
 
