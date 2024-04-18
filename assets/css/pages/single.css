@@ -1,24 +1,28 @@
 /* #Single
 --------------------------------------------------------------- */
 .single-post #breadcrumbs.no-breadcrumbs,
-.single-gypass_tip_trick #breadcrumbs.no-breadcrumbs {
+.single-gypass_tip_trick #breadcrumbs.no-breadcrumbs,
+.page-template-tabs-page-template #breadcrumbs.no-breadcrumbs {
   position: absolute;
   filter: brightness(0) invert(1);
 }
 
 .single-post #breadcrumbs.no-breadcrumbs .rank-math-breadcrumb,
-.single-gypass_tip_trick #breadcrumbs.no-breadcrumbs .rank-math-breadcrumb {
+.single-gypass_tip_trick #breadcrumbs.no-breadcrumbs .rank-math-breadcrumb,
+.page-template-tabs-page-template #breadcrumbs.no-breadcrumbs .rank-math-breadcrumb {
   display: none;
 }
 
 /* Hero */
 .single-post #hero,
-.single-gypass_tip_trick #hero {
+.single-gypass_tip_trick #hero,
+.page-template-tabs-page-template #hero {
   position: relative;
 }
 
 .single-post #hero .thumbnail,
-.single-gypass_tip_trick #hero .thumbnail {
+.single-gypass_tip_trick #hero .thumbnail,
+.page-template-tabs-page-template #hero .thumbnail {
   width: 100%;
   height: 450px;
   background-size: cover;
@@ -27,19 +31,22 @@
 }
 
 .single-post #hero .container,
-.single-gypass_tip_trick #hero .container {
+.single-gypass_tip_trick #hero .container,
+.page-template-tabs-page-template #hero .container {
   padding-top: var(--spacing-section-inner);
   padding-bottom: var(--spacing-section-inner);
   text-align: center;
 }
 
 .single-post #hero .introduction,
-.single-gypass_tip_trick #hero .introduction {
+.single-gypass_tip_trick #hero .introduction,
+.page-template-tabs-page-template #hero .introduction {
   margin-top: 1em;
 }
 
 .single-post #hero .badge,
-.single-gypass_tip_trick #hero .badge {
+.single-gypass_tip_trick #hero .badge,
+.page-template-tabs-page-template #hero .badge {
   width: 80px;
   height: 80px;
   position: absolute;
@@ -50,8 +57,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+
   .single-post #hero .badge,
-  .single-gypass_tip_trick #hero .badge {
+  .single-gypass_tip_trick #hero .badge,
+  .page-template-tabs-page-template #hero .badge {
     width: 175px;
     height: 175px;
     right: 0;
@@ -62,18 +71,27 @@
 
 /* Content */
 .single-post #content,
-.single-gypass_tip_trick #content {
+.single-gypass_tip_trick #content,
+.page-template-tabs-page-template #content {
   padding: var(--spacing-section-outer) 0;
   background-color: var(--ebb);
 }
 
+@media screen and (min-width: 1200px) {
+  .tabs-content.formatted>* {
+    margin: 0;
+  }
+}
+
 /* Related */
 .single-post #related,
-.single-gypass_tip_trick #related {
+.single-gypass_tip_trick #related,
+.page-template-tabs-page-template #related {
   padding: var(--spacing-section-outer) 0;
 }
 
 .single-post #related h2,
-.single-gypass_tip_trick #related h2 {
+.single-gypass_tip_trick #related h2,
+.page-template-tabs-page-template #related h2 {
   margin-bottom: 1em;
 }

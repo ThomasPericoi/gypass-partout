@@ -116,7 +116,7 @@
   margin-bottom: var(--spacing-section-inner);
 }
 
-#hiring form {
+#hiring form div[class*="uacf7-form"] {
   max-width: 550px;
   margin: 0 auto;
   display: flex;

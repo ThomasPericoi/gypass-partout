@@ -20,7 +20,7 @@
     gap: var(--spacing-section-inner);
 }
 
-.page-template-contact-page-template main form {
+.page-template-contact-page-template main form div[class*="uacf7-form"] {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 20px;
@@ -28,7 +28,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    .page-template-contact-page-template main form {
+    .page-template-contact-page-template main form div[class*="uacf7-form"] {
         grid-template-columns: repeat(2, 1fr);
     }
 

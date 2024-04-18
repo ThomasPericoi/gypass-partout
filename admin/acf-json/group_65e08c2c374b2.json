@@ -41,6 +41,11 @@
                 "param": "page_type",
                 "operator": "!=",
                 "value": "front_page"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/tabs-page-template.php"
             }
         ]
     ],
@@ -53,5 +58,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712329111
+    "modified": 1713452910
 }

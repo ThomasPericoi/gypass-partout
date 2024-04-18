@@ -32,43 +32,36 @@
 
 @media screen and (min-width: 992px) {
     .accordion-tabs-crossed-block .options {
-        gap: 35px;
+        gap: 30px;
     }
 
-    .accordion-tabs-crossed-block .options.options-3 {
-        column-gap: 20px;
-    }
-
-    .accordion-tabs-crossed-block .options.options-4 {
-        row-gap: 50px;
+    .accordion-tabs-crossed-block .options.image {
+        gap: 15px;
     }
 }
 
 .accordion-tabs-crossed-block .options>button {
-    max-width: 120px;
+    width: 70px;
+    height: 70px;
+    padding: 0;
     position: relative;
     background-color: unset;
     border: 5px solid transparent;
-    border-radius: 0;
-    cursor: pointer;
-}
-
-@media screen and (min-width: 992px) {
-    .accordion-tabs-crossed-block .options.options-4>button {
-        max-width: 135px;
-    }
-}
-
-.accordion-tabs-crossed-block .options>button.color {
-    width: 70px;
-    height: 70px;
-    border: 5px solid var(--white);
     border-radius: 50%;
     cursor: pointer;
 }
 
+.accordion-tabs-crossed-block .options>button.color {
+    border-color: var(--white);
+}
+
+.accordion-tabs-crossed-block .options>button.image {
+    width: 90px;
+    height: 90px;
+}
+
 .accordion-tabs-crossed-block.bg .options>button.color {
-    border: 5px solid var(--ebb);
+    border-color: var(--ebb);
 }
 
 .accordion-tabs-crossed-block .options>button.color.active {
@@ -79,29 +72,7 @@
     border: 5px solid var(--manatee);
 }
 
-.accordion-tabs-crossed-block.bg .options>button.image>img {
+.accordion-tabs-crossed-block .options>button.image>img {
     height: auto;
     display: block;
-}
-
-.accordion-tabs-crossed-block .options>button.image>div {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--manatee);
-    text-transform: uppercase;
-    opacity: 0;
-    transition: opacity 350ms ease;
-}
-
-@media screen and (min-width: 992px) {
-    .accordion-tabs-crossed-block .options>button.image>div {
-        position: absolute;
-        bottom: -12px;
-        left: -5px;
-        transform: translateY(100%);
-    }
-}
-
-.accordion-tabs-crossed-block .options>button.image.active>div {
-    opacity: 1;
 }

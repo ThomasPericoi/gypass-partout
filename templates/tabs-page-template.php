@@ -1,0 +1,63 @@
+<?php 
+/* Template Name: Page avec tabs */
+get_header(); ?>
+
+<!-- Breadcrumbs -->
+<section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
+    <div class="container container-lg">
+        <a class="btn-back" href="<?php echo get_post_type_archive_link(get_post_type()); ?>">
+            <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
+        </a>
+        <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+    </div>
+</section>
+
+<!-- Hero -->
+<section id="hero">
+    <?php if (get_field("post_image_cover")) : ?>
+        <div class="thumbnail" style="background-image: url('<?php echo get_field("post_image_cover"); ?>');"></div>
+    <?php endif; ?>
+    <div class="container container-sm">
+        <h1 class="h2-size"><?php echo get_the_title(); ?></h1>
+        <?php if (get_field("post_introduction")) : ?>
+            <div class="introduction">
+                <?php echo get_field("post_introduction"); ?>
+            </div>
+        <?php endif; ?>
+    </div>
+    <?php if (get_field("post_badge")) : ?>
+        <img class="badge" src="<?php echo get_field("post_badge")["url"]; ?>" alt="<?php echo get_field("post_badge")["title"]; ?>" />
+    <?php endif; ?>
+</section>
+
+<!-- Content -->
+<section id="content">
+    <div class="container formatted">
+        <?php the_content(); ?>
+
+        <?php if (have_rows('post_tabs')) : ?>
+            <div class="tabs-block">
+                <nav class="tabs-menu">
+                    <?php while (have_rows('post_tabs')) : the_row();
+                        $title = get_sub_field('title');
+                    ?>
+                        <a class="tabs-menu-element" tabindex="0" role="button" class="btn" href="#content"><?php echo $title; ?></a>
+                    <?php endwhile; ?>
+                </nav>
+                <div class="tabs-content formatted">
+                    <?php while (have_rows('post_tabs')) : the_row();
+                        $title = get_sub_field('title');
+                        $content = get_sub_field('content');
+                    ?>
+                        <div class="tabs-content-element formatted">
+                            <h2><?php echo $title; ?></h2>
+                            <?php echo $content; ?>
+                        </div>
+                    <?php endwhile; ?>
+                </div>
+            </div>
+        <?php endif; ?>
+    </div>
+</section>
+
+<?php get_footer(); ?>

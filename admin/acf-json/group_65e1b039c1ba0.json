@@ -214,6 +214,11 @@
                 "param": "page_template",
                 "operator": "!=",
                 "value": "templates\/my-project-thank-you-page-template.php"
+            },
+            {
+                "param": "page_template",
+                "operator": "!=",
+                "value": "templates\/tabs-page-template.php"
             }
         ]
     ],
@@ -226,5 +231,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712584725
+    "modified": 1713452943
 }

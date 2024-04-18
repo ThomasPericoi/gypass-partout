@@ -127,3 +127,12 @@
 .has-text-align-center {
     text-align: center;
 }
+
+.formatted .alignnone {
+    margin: 0;
+}
+
+/* Medias */
+.formatted .wp-playlist {
+    margin: 0;
+}

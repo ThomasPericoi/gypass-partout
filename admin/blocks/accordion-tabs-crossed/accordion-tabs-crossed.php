@@ -48,10 +48,10 @@ $style  = implode('; ', $styles);
                 <?php endif; ?>
                 <?php if (have_rows('options')) : ?>
                     <div class="options-wrapper">
+                        <div class="label">
+                            <?php echo $options_title; ?> : <span id="active-label"></span>
+                        </div>
                         <?php if ($options_mode == "color") : ?>
-                            <div class="label">
-                                <?php echo $options_title; ?> : <span id="active-label"></span>
-                            </div>
                             <nav class="options options-<?php echo $options_count; ?> <?php echo $options_mode; ?>">
                                 <?php while (have_rows('options')) : the_row();
                                     $id = get_sub_field('id');
@@ -61,9 +61,6 @@ $style  = implode('; ', $styles);
                                 <?php endwhile; ?>
                             </nav>
                         <?php else : ?>
-                            <div class="label">
-                                <?php echo $options_title; ?>
-                            </div>
                             <nav class="options options-<?php echo $options_count; ?> <?php echo $options_mode; ?>">
                                 <?php while (have_rows('options')) : the_row();
                                     $id = get_sub_field('id');
@@ -71,7 +68,6 @@ $style  = implode('; ', $styles);
                                     $image = get_sub_field('image'); ?>
                                     <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
                                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                        <div><?php echo $title; ?></div>
                                     </button>
                                 <?php endwhile; ?>
                             </nav>
@@ -91,7 +87,7 @@ $style  = implode('; ', $styles);
                                         $image = get_sub_field('image');
                                         $options_id = get_sub_field('options_id'); ?>
                                         <img data-options-id="<?php echo $options_id; ?>" data-tab-index="<?php echo $tab_index; ?>" data-element-index="<?php echo $element_index; ?>" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                            <?php endwhile;
+                <?php endwhile;
                                 endif;
                             endwhile;
                         endif;
