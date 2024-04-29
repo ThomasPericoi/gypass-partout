@@ -3,7 +3,7 @@
 <!-- Breadcrumbs -->
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
-        <a class="btn-back" href="<?php echo home_url(); ?>">
+        <a class="btn-back" href="javascript: if (document.referrer.indexOf(window.location.host) !== -1) { history.go(-1); } else { window.location.href = 'https://gypass.fr/'; }">
             <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
         </a>
         <?php if (get_field("range_icon")) : ?>

@@ -53,8 +53,7 @@
 }
 
 /* Grid */
-.page-template-my-project-page-template .form-elements,
-.page-template-my-project-page-template .form-elements .uacf7_conditional {
+.page-template-my-project-page-template .form-elements {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -62,37 +61,39 @@
 }
 
 .page-template-my-project-page-template .form-elements label {
-    flex: 0 0 100%;
-    outline: 1px solid var(--secondary);
     cursor: pointer;
+}
+
+.page-template-my-project-page-template .form-elements>label,
+.page-template-my-project-page-template .form-elements>.uacf7_conditional {
+    flex: 0 0 calc((100% - (2 * 1em)) / 2);
+    outline: 1px solid var(--secondary);
     box-sizing: border-box;
 }
 
-.page-template-my-project-page-template .form-elements.grid-9 label img {
-    aspect-ratio: 0.66;
-}
-
 @media screen and (min-width: 992px) {
-    .page-template-my-project-page-template .form-elements label {
-        flex: 0 0 calc((100% - (2 * 1em)) / 2);
-    }
 
-    .page-template-my-project-page-template .form-elements.grid-9 label {
+    .page-template-my-project-page-template .form-elements.grid-10>label,
+    .page-template-my-project-page-template .form-elements.grid-10>.uacf7_conditional {
         flex: 0 0 calc((100% - (3 * 1em)) / 3);
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .page-template-my-project-page-template .form-elements.grid-3 label {
+
+    .page-template-my-project-page-template .form-elements.grid-3>label,
+    .page-template-my-project-page-template .form-elements.grid-3>.uacf7_conditional {
         flex: 0 0 calc((100% - (3 * 1em)) / 3);
     }
 
-    .page-template-my-project-page-template .form-elements.grid-4 label {
+    .page-template-my-project-page-template .form-elements.grid-4>label,
+    .page-template-my-project-page-template .form-elements.grid-4>.uacf7_conditional {
         flex: 0 0 calc((100% - (4 * 1em)) / 4);
     }
 
-    .page-template-my-project-page-template .form-elements.grid-9 label {
-        flex: 0 0 calc((100% - (9 * 1em)) / 9);
+    .page-template-my-project-page-template .form-elements.grid-10>label,
+    .page-template-my-project-page-template .form-elements.grid-10>.uacf7_conditional {
+        flex: 0 0 calc((100% - (10 * 1em)) / 10);
     }
 }
 
@@ -106,10 +107,8 @@
     display: block;
 }
 
-.page-template-my-project-page-template .form-elements label img {
-    width: 100%;
-    height: auto;
-    display: block;
+.page-template-my-project-page-template .form-elements.grid-10 label img {
+    aspect-ratio: 0.7;
 }
 
 .page-template-my-project-page-template .form-elements label .label {

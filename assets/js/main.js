@@ -148,7 +148,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Element - Header - Menu - Close on click inner page link
   $(".super-menu-wrapper a[href*='#'], .js-toggleMenu").click(function () {
     toggleMenu();
-    console.log("-1");
   });
 
   $(".super-menu-wrapper a[href*='#'], .js-toggleMenu").on(
