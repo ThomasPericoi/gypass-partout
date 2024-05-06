@@ -20,6 +20,7 @@
 #breadcrumbs .btn-back {
     display: block;
     transition: transform ease 350ms;
+    cursor: pointer;
 }
 
 #breadcrumbs .btn-back:hover,
@@ -32,6 +33,7 @@
     width: 100%;
     height: auto;
     display: block;
+    pointer-events: none;
 }
 
 .rank-math-breadcrumb a,

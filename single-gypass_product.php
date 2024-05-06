@@ -3,9 +3,11 @@
 <!-- Breadcrumbs -->
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
-        <a class="btn-back" href="javascript: if (document.referrer.indexOf(window.location.host) !== -1) { history.go(-1); } else { window.location.href = 'https://gypass.fr/'; }">
-            <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
-        </a>
+        <span class="js-openRanges">
+            <a class="btn-back">
+                <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
+            </a>
+        </span>
         <?php if (get_field("product_icon")) : ?>
             <img src="<?php echo get_field("product_icon")["url"]; ?>" alt="<?php echo get_field("product_icon")["title"]; ?>">
         <?php endif; ?>
