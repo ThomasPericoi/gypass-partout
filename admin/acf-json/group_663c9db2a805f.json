@@ -373,7 +373,11 @@
             "layout": "block",
             "pagination": 0,
             "min": 1,
+<<<<<<< HEAD
             "max": 3,
+=======
+            "max": 2,
+>>>>>>> ee2981a32dc770e9bb2b31db1b5540f73d981880
             "collapsed": "",
             "button_label": "Ajouter un menu déroulant",
             "rows_per_page": 20,
@@ -560,7 +564,11 @@
                                     "aria-label": "",
                                     "type": "text",
                                     "instructions": "Indiquez la même ID associée au champs \"ID\" du champs \"Données croisées\".",
+<<<<<<< HEAD
                                     "required": 0,
+=======
+                                    "required": 1,
+>>>>>>> ee2981a32dc770e9bb2b31db1b5540f73d981880
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -694,5 +702,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+<<<<<<< HEAD
     "modified": 1715259346
+=======
+    "modified": 1715250961
+>>>>>>> ee2981a32dc770e9bb2b31db1b5540f73d981880
 }
