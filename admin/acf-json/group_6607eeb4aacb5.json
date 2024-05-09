@@ -178,32 +178,6 @@
             "return_format": "array"
         },
         {
-            "key": "field_66099177c5636",
-            "label": "Classe du bouton",
-            "name": "cta_classname",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "js-openProducts": "js-openProducts",
-                "js-openRanges": "js-openRanges"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
             "key": "field_6607eeb4c3e6f",
             "label": "Contenu - Colonne 2 & 3",
             "name": "",
@@ -402,6 +376,50 @@
             ]
         },
         {
+            "key": "field_6639ef4bdedce",
+            "label": "Options de contenu",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_66099177c5636",
+            "label": "Classe du CTA",
+            "name": "cta_classname",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Ces classes permettent d'ouvrir le menu du header si il n'y a pas de lien renseigné dans l'élément CTA.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "js-openProducts": "js-openProducts",
+                "js-openRanges": "js-openRanges"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
             "key": "field_6607eeb4d28b1",
             "label": "Options de style",
             "name": "",
@@ -497,31 +515,6 @@
             "save_other_choice": 0
         },
         {
-            "key": "field_6615035280b88",
-            "label": "Bordure colorée (Top) (copier)",
-            "name": "border_top_copier",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "bordered": "Activer",
-                "no-border": "Désactiver"
-            },
-            "default_value": "no-border",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_6609d1a459473",
             "label": "Scroll interne",
             "name": "scroll",
@@ -565,5 +558,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712653143
+    "modified": 1715250913
 }

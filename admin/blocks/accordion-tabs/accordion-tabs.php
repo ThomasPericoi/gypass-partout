@@ -19,6 +19,7 @@ $image = get_field('image');
 $title = get_field('title');
 $content = get_field('content');
 $cta = get_field('cta');
+
 $cta_classname = get_field('cta_classname');
 
 $container = get_field('container_size');

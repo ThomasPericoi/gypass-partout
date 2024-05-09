@@ -396,10 +396,9 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   $(".accordion-tabs-crossed-block nav.menu button").on("click", function () {
-    activeOption = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active");
     tabIndex = $(this).data("tab-target");
     elementIndex = $(this).data("element-target");
-    optionId = activeOption.attr('id');
+    optionId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active").attr('id');
     showContentAccordionTabsCrossed(tabIndex, elementIndex, optionId, $(this).closest('.accordion-tabs-block'));
   });
 

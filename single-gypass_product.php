@@ -3,7 +3,7 @@
 <!-- Breadcrumbs -->
 <section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
     <div class="container container-lg">
-        <span class="js-openRanges">
+        <span class="js-openProducts">
             <a class="btn-back">
                 <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
             </a>
