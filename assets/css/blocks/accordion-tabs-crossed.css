@@ -1,4 +1,4 @@
-/* #Accordion Tabs (Crossed)
+/* #Accordion Tabs Crossed
 --------------------------------------------------------------- */
 .accordion-tabs-crossed-block .media {
     display: flex;
@@ -41,23 +41,18 @@
 }
 
 .accordion-tabs-crossed-block .options>button {
-    width: 70px;
-    height: 70px;
     padding: 0;
     position: relative;
     background-color: unset;
-    border: 5px solid transparent;
-    border-radius: 50%;
+    border: 0;
     cursor: pointer;
 }
 
 .accordion-tabs-crossed-block .options>button.color {
-    border-color: var(--white);
-}
-
-.accordion-tabs-crossed-block .options>button.image {
-    width: 90px;
-    height: 90px;
+    width: 70px;
+    height: 70px;
+    border: 5px solid var(--white);
+    border-radius: 50%;
 }
 
 .accordion-tabs-crossed-block.bg .options>button.color {
@@ -68,11 +63,31 @@
     outline: 5px solid var(--manatee);
 }
 
-.accordion-tabs-crossed-block .options>button.image.active {
-    border: 5px solid var(--manatee);
+.accordion-tabs-crossed-block .options>button.image {
+    width: 90px;
+    height: auto;
 }
 
-.accordion-tabs-crossed-block .options>button.image>img {
+.accordion-tabs-crossed-block nav[class*="options"]>button.image:after {
+    content: "";
+    width: 27px;
+    height: 6px;
+    position: absolute;
+    left: 12px;
+    bottom: 0;
+    display: block;
+    background-color: var(--primary);
+    transform: translateY(200%) scaleX(0);
+    transform-origin: left;
+    transition: transform ease 350ms;
+}
+
+.accordion-tabs-crossed-block nav[class*="options"]>button.image.active:after {
+    transform: translateY(200%) scaleX(1);
+}
+
+.accordion-tabs-crossed-block nav[class*="options"]>button.image>img {
+    width: 100%;
     height: auto;
     display: block;
 }

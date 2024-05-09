@@ -215,11 +215,12 @@
 .tooltip-block .tooltip-popup img {
     width: 100%;
     height: auto;
+    margin-bottom: 25px;
     display: block;
 }
 
 .tooltip-block .tooltip-popup .content {
-    margin-top: 26px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 

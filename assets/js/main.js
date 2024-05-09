@@ -371,8 +371,9 @@ document.addEventListener("DOMContentLoaded", function () {
     showContentAccordionTabs(1, 1, $(this));
   });
 
-  // Block - Accordion Tabs (Crossed)
+  // Block - Accordion Tabs Crossed
   function showContentAccordionTabsCrossed(tab, element, option, parent) {
+    // Hide empty menu
     parent.find("nav.menu button").each(function (index) {
       tabIndex = $(this).data("tab-target");
       elementIndex = $(this).data("element-target");
@@ -383,6 +384,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
     parent.find("img.visible").removeClass("visible");
+    // Fallback
     if (parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length == 0) {
       tab = parent.find("img[data-options-id='" + option + "']:first").data("tab-index");
       element = parent.find("img[data-options-id='" + option + "']:first").data("element-index");
@@ -395,15 +397,14 @@ document.addEventListener("DOMContentLoaded", function () {
     parent.find('#active-label') && parent.find('#active-label').text($("#" + option).data("label"));
   }
 
-  $(".accordion-tabs-crossed-block nav.menu button").on("click", function () {
-    activeOption = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active");
+  $(".accordion-tabs-crossed-block:not(.accordion-tabs-crossed-double-block) nav.menu button").on("click", function () {
     tabIndex = $(this).data("tab-target");
     elementIndex = $(this).data("element-target");
-    optionId = activeOption.attr('id');
+    optionId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active").attr('id');
     showContentAccordionTabsCrossed(tabIndex, elementIndex, optionId, $(this).closest('.accordion-tabs-block'));
   });
 
-  $(".accordion-tabs-crossed-block nav.options button").on("click", function () {
+  $(".accordion-tabs-crossed-block:not(.accordion-tabs-crossed-double-block) nav.options button").on("click", function () {
     activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu button.active");
     tabIndex = activeTab.data("tab-target");
     elementIndex = activeTab.data("element-target");
@@ -411,8 +412,92 @@ document.addEventListener("DOMContentLoaded", function () {
     showContentAccordionTabsCrossed(tabIndex, elementIndex, optionId, $(this).closest('.accordion-tabs-crossed-block'));
   });
 
-  $('.accordion-tabs-crossed-block').each(function () {
+  $('.accordion-tabs-crossed-block:not(.accordion-tabs-crossed-double-block)').each(function () {
     showContentAccordionTabsCrossed(1, 1, $(this).find("nav.options button:first-child").attr('id'), $(this));
+  });
+
+  // Block - Accordion Tabs (Double)
+  function showContentAccordionTabsCrossedDouble(tab, element, option, optionAlt = "", parent) {
+    // Hide empty options
+    optionsIndex = 0;
+    parent.find("nav.options button").each(function (index) {
+      option_1 = $(this).attr('id');
+      if (parent.find("img[data-options-id='" + option_1 + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length > 0) {
+        $(this).show();
+        optionsIndex++;
+      } else {
+        $(this).hide();
+      }
+    });
+    optionsAltIndex = 0;
+    optionsAltDefault = "";
+    parent.find("nav.options-alt button").each(function (index) {
+      option_2 = $(this).attr('id');
+      if (parent.find("img[data-options-alt-id='" + option_2 + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length > 0) {
+        $(this).show();
+        optionsAltIndex++;
+        if (optionsAltIndex == 1) {
+          optionsAltDefault = option_2;
+        }
+      } else {
+        $(this).hide();
+      }
+    });
+    // Hide options if 1 choice
+    (optionsIndex < 2) ? parent.find(".options-wrapper").hide() : parent.find(".options-wrapper").show();
+    (optionsAltIndex < 2) ? parent.find(".options-alt-wrapper").hide() : parent.find(".options-alt-wrapper").show();
+    parent.find("img.visible").removeClass("visible");
+    // Fallback
+    if (parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length == 0) {
+      option = parent.find("img[data-tab-index='" + tab + "'][data-element-index='" + element + "']:first").data("options-id");
+    }
+    if (parent.find("img[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length == 0) {
+      optionAlt = optionsAltDefault;
+    }
+    console.log(parent.find("img[data-options-id='" + option + "']img[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']"));
+    parent.find("img[data-options-id='" + option + "']img[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
+    parent.find(".content .formatted.visible").removeClass("visible");
+    parent.find(".content .formatted[data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
+    parent.find("nav.menu button.active").removeClass("active");
+    parent.find("nav.menu button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
+    parent.find("nav.options button.active").removeClass("active");
+    $("#" + option).addClass("active");
+    parent.find('#option-active-label') && parent.find('#option-active-label').text($("#" + option).data("label"));
+    parent.find("nav.options-alt button.active").removeClass("active");
+    if (optionAlt !== "") {
+      $("#" + optionAlt).addClass("active");
+      parent.find('#option-alt-active-label') && parent.find('#option-alt-active-label').text($("#" + optionAlt).data("label"));
+    }
+  }
+
+  $(".accordion-tabs-crossed-double-block nav.menu button").on("click", function () {
+    tabIndex = $(this).data("tab-target");
+    elementIndex = $(this).data("element-target");
+    optionId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active").attr('id');
+    optionAltId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options-alt button.active").attr('id');
+    showContentAccordionTabsCrossedDouble(tabIndex, elementIndex, optionId, optionAltId, $(this).closest('.accordion-tabs-block'));
+  });
+
+  $(".accordion-tabs-crossed-double-block nav.options button").on("click", function () {
+    activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu button.active");
+    tabIndex = activeTab.data("tab-target");
+    elementIndex = activeTab.data("element-target");
+    optionId = $(this).attr('id');
+    optionAltId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options-alt button.active").attr('id');
+    showContentAccordionTabsCrossedDouble(tabIndex, elementIndex, optionId, optionAltId, $(this).closest('.accordion-tabs-crossed-block'));
+  });
+
+  $(".accordion-tabs-crossed-double-block nav.options-alt button").on("click", function () {
+    activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu button.active");
+    tabIndex = activeTab.data("tab-target");
+    elementIndex = activeTab.data("element-target");
+    optionId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active").attr('id');
+    optionAltId = $(this).attr('id');
+    showContentAccordionTabsCrossedDouble(tabIndex, elementIndex, optionId, optionAltId, $(this).closest('.accordion-tabs-crossed-block'));
+  });
+
+  $('.accordion-tabs-crossed-double-block').each(function () {
+    showContentAccordionTabsCrossedDouble(1, 1, $(this).find("nav.options button:first-child").attr('id'), $(this).find("nav.options-alt button:first-child").attr('id'), $(this));
   });
 
   // Block - Shades

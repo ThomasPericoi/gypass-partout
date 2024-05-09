@@ -15,10 +15,11 @@
 $title = get_field('title');
 $content = get_field('content');
 $cta = get_field('cta');
-$cta_classname = get_field('cta_classname');
-$media = get_field("media");
 $image = get_field("image");
 $video = get_field("video");
+
+$cta_classname = get_field('cta_classname');
+$media = get_field("media");
 
 $container = get_field('container_size');
 $background = get_field('background');

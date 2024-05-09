@@ -95,57 +95,6 @@
             "return_format": "array"
         },
         {
-            "key": "field_660544bc7d4fb",
-            "label": "Classe du bouton",
-            "name": "cta_classname",
-            "aria-label": "",
-            "type": "select",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "js-openProducts": "js-openProducts",
-                "js-openRanges": "js-openRanges"
-            },
-            "default_value": false,
-            "return_format": "value",
-            "multiple": 0,
-            "allow_null": 1,
-            "ui": 0,
-            "ajax": 0,
-            "placeholder": ""
-        },
-        {
-            "key": "field_66054a1d8f167",
-            "label": "Type de média",
-            "name": "media",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "image": "Image",
-                "video": "Vidéo"
-            },
-            "default_value": "image",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
             "key": "field_6602f84cd2451",
             "label": "Image",
             "name": "image",
@@ -205,6 +154,75 @@
             "min_size": "",
             "max_size": "",
             "mime_types": "mp4, mkv, avi"
+        },
+        {
+            "key": "field_6639eeb3ba263",
+            "label": "Options de contenu",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_660544bc7d4fb",
+            "label": "Classe du CTA",
+            "name": "cta_classname",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "Ces classes permettent d'ouvrir le menu du header si il n'y a pas de lien renseigné dans l'élément CTA.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "js-openProducts": "js-openProducts",
+                "js-openRanges": "js-openRanges"
+            },
+            "default_value": false,
+            "return_format": "value",
+            "multiple": 0,
+            "allow_null": 1,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_66054a1d8f167",
+            "label": "Type de média",
+            "name": "media",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "image": "Image",
+                "video": "Vidéo"
+            },
+            "default_value": "image",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
         },
         {
             "key": "field_6602f84cdd3c2",
@@ -320,5 +338,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712653622
+    "modified": 1715254656
 }

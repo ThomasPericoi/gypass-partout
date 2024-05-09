@@ -17,13 +17,14 @@ $title = get_field('title');
 $text = get_field('text');
 $img = get_field('img');
 $cta = get_field('cta');
-$sub = get_field('sub');
 $sub_img = get_field('sub_img');
 $sub_text = get_field('sub_text');
-$media = get_field("media");
 $video = get_field("video");
 $video_poster = get_field("video_poster");
 $youtube = get_field("youtube");
+
+$sub = get_field('sub');
+$media = get_field("media");
 
 $container = get_field('container_size');
 $background = get_field('background');

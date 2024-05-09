@@ -421,6 +421,49 @@
             ]
         },
         {
+            "key": "field_6639ed81d9c55",
+            "label": "Options de contenu",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6608a85a99d73",
+            "label": "Mode de la donnée croisée",
+            "name": "options_mode",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "color": "Couleur",
+                "image": "Image"
+            },
+            "default_value": "color",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "layout": "horizontal",
+            "save_other_choice": 0
+        },
+        {
             "key": "field_6608a12c19e66",
             "label": "Options de style",
             "name": "",
@@ -492,7 +535,7 @@
         },
         {
             "key": "field_660a95b9dca24",
-            "label": "Bordure colorée",
+            "label": "Bordure colorée (Top)",
             "name": "border_top",
             "aria-label": "",
             "type": "radio",
@@ -509,31 +552,6 @@
                 "no-border": "Désactiver"
             },
             "default_value": "no-border",
-            "return_format": "value",
-            "allow_null": 0,
-            "other_choice": 0,
-            "layout": "horizontal",
-            "save_other_choice": 0
-        },
-        {
-            "key": "field_6608a85a99d73",
-            "label": "Mode de la donnée croisée",
-            "name": "options_mode",
-            "aria-label": "",
-            "type": "radio",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "choices": {
-                "color": "Couleur",
-                "image": "Image"
-            },
-            "default_value": "color",
             "return_format": "value",
             "allow_null": 0,
             "other_choice": 0,
@@ -559,5 +577,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712329109
+    "modified": 1715254657
 }

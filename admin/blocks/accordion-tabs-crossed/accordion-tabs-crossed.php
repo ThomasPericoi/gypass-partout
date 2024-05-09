@@ -19,10 +19,11 @@ $cta = get_field('cta');
 $options_title = get_field('options_title');
 $options_count = count(get_field('options'));
 
+$options_mode = get_field('options_mode');
+
 $container = get_field('container_size');
 $background = get_field('background');
 $border_top = get_field('border_top');
-$options_mode = get_field('options_mode');
 
 $classes = array('accordion-tabs-block', 'accordion-tabs-crossed-block', $background, $border_top);
 $classes  = implode(' ', $classes);

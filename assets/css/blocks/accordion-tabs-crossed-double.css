@@ -1,0 +1,48 @@
+/* #Accordion Tabs Crossed (Double)
+--------------------------------------------------------------- */
+.accordion-tabs-crossed-double-block .col-wrapper>.content>.formatted {
+    display: none;
+    animation: fadeIn 1s;
+}
+
+.accordion-tabs-crossed-double-block .col-wrapper>.content>.formatted.visible {
+    display: block;
+}
+
+.accordion-tabs-crossed-double-block .options-wrapper {
+    gap: 5px;
+}
+
+.accordion-tabs-crossed-double-block .options {
+    gap: 5px;
+}
+
+.accordion-tabs-crossed-double-block .options>button.image {
+    width: 60px;
+    height: auto;
+}
+
+.accordion-tabs-crossed-double-block .options>button.image:not(.active) img {
+    filter: brightness(0) saturate(100%) invert(64%) sepia(8%) saturate(275%) hue-rotate(192deg) brightness(94%) contrast(91%);
+}
+
+.accordion-tabs-crossed-double-block .options>button.image:after {
+    left: 0px;
+}
+
+/* Options alt */
+.accordion-tabs-crossed-double-block .options-alt {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.accordion-tabs-crossed-double-block .options-alt>button {
+    width: 90px;
+    height: auto;
+    padding: 0;
+    position: relative;
+    background-color: unset;
+    border: 0;
+    cursor: pointer;
+}
