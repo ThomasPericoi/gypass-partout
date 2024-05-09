@@ -500,6 +500,16 @@ document.addEventListener("DOMContentLoaded", function () {
     showContentAccordionTabsCrossedDouble(1, 1, $(this).find("nav.options button:first-child").attr('id'), $(this).find("nav.options-alt button:first-child").attr('id'), $(this));
   });
 
+  const swiperAccordionOptionsAlt = new Swiper(".options-alt.swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 15,
+    loop: false,
+    navigation: {
+      nextEl: ".button-next",
+      prevEl: ".button-prev",
+    },
+  });
+
   // Block - Shades
   if ($("#shades-count-1")) {
     $("#shades-count-1").text($("#shades-1 .shades-grid").children().length);

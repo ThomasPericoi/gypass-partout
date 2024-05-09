@@ -17,32 +17,77 @@
     gap: 5px;
 }
 
-.accordion-tabs-crossed-double-block .options>button.image {
+.accordion-tabs-crossed-double-block .options button.image {
     width: 60px;
     height: auto;
 }
 
-.accordion-tabs-crossed-double-block .options>button.image:not(.active) img {
+.accordion-tabs-crossed-double-block .options button.image:not(.active) img {
     filter: brightness(0) saturate(100%) invert(64%) sepia(8%) saturate(275%) hue-rotate(192deg) brightness(94%) contrast(91%);
 }
 
-.accordion-tabs-crossed-double-block .options>button.image:after {
+.accordion-tabs-crossed-double-block .options button.image:after {
     left: 0px;
 }
 
 /* Options alt */
+.accordion-tabs-crossed-double-block .col-wrapper>.media {
+    gap: 0;
+    padding-bottom: 40px;
+}
+
 .accordion-tabs-crossed-double-block .options-alt {
+    width: 70%;
+    position: absolute;
+    left: 15%;
+    bottom: 63px;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
 
-.accordion-tabs-crossed-double-block .options-alt>button {
-    width: 90px;
-    height: auto;
+.accordion-tabs-crossed-double-block .options-alt-wrapper .label {
+    position: absolute;
+    bottom: 0px;
+}
+
+.accordion-tabs-crossed-double-block .options-alt-wrapper .swipper-wrapper {
+    align-items: flex-end;
+}
+
+.accordion-tabs-crossed-double-block .options-alt button {
+    flex: 0 0 calc((100% - (5 * 15px)) / 6);
+    margin-bottom: 12px;
     padding: 0;
     position: relative;
     background-color: unset;
     border: 0;
     cursor: pointer;
+}
+
+.accordion-tabs-crossed-double-block .button-prev,
+.accordion-tabs-crossed-double-block .button-next {
+    width: 23px;
+    position: absolute;
+    top: calc(50% - 40px + (23px / 2));
+    cursor: pointer;
+    filter: brightness(0) saturate(100%) invert(64%) sepia(8%) saturate(275%) hue-rotate(192deg) brightness(94%) contrast(91%);
+}
+
+.accordion-tabs-crossed-double-block .button-prev {
+    left: 10px;
+}
+
+.accordion-tabs-crossed-double-block .button-next {
+    right: 10px;
+    transform: rotate(180deg);
+}
+
+.accordion-tabs-crossed-double-block .button-prev svg,
+.accordion-tabs-crossed-double-block .button-next svg {
+    max-width: 23px;
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
 }

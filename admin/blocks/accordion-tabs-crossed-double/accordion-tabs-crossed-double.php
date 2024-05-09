@@ -102,16 +102,24 @@ $style  = implode('; ', $styles);
                 endif; ?>
                 <?php if (have_rows('options_2')) : ?>
                     <div class="options-alt-wrapper">
-                        <nav class="options-alt">
-                            <?php while (have_rows('options_2')) : the_row();
-                                $id = get_sub_field('id');
-                                $title = get_sub_field('title');
-                                $image = get_sub_field('image'); ?>
-                                <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
-                                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-                                </button>
-                            <?php endwhile; ?>
+                        <nav class="options-alt swiper">
+                            <div class="swiper-wrapper">
+                                <?php while (have_rows('options_2')) : the_row();
+                                    $id = get_sub_field('id');
+                                    $title = get_sub_field('title');
+                                    $image = get_sub_field('image'); ?>
+                                    <button class="image swiper-slide" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    </button>
+                                <?php endwhile; ?>
+                            </div>
                         </nav>
+                        <div class="button-prev">
+                            <?php get_template_part('assets/icons/arrow-left.svg'); ?>
+                        </div>
+                        <div class="button-next">
+                            <?php get_template_part('assets/icons/arrow-left.svg'); ?>
+                        </div>
                         <div class="label">
                             <?php echo $options_2_title; ?> : <span id="option-alt-active-label"></span>
                         </div>
