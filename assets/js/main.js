@@ -502,7 +502,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const swiperAccordionOptionsAlt = new Swiper(".options-alt.swiper", {
     slidesPerView: "auto",
-    spaceBetween: 15,
+    spaceBetween: 10,
     loop: false,
     navigation: {
       nextEl: ".button-next",
