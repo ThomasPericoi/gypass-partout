@@ -382,6 +382,12 @@
 }
 
 /* Super Menu */
+@media screen and (min-width: 768px) {
+    .super-menu {
+        font-size: 18px;
+    }
+}
+
 body.js-menuOpened {
     overflow: hidden;
 }
