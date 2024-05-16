@@ -137,7 +137,7 @@
 }
 
 /* Filters */
-.filters {
+.filters .filter {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;

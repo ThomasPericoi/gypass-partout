@@ -104,6 +104,9 @@
 
 .single-gypass_range #hero-alt .filters {
     margin-top: 4em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
     position: relative;
 }
 

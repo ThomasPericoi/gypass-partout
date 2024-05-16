@@ -20,18 +20,32 @@
         </div>
         <?php if (have_rows('range_filters')) : ?>
             <div class="filters">
-                <span class="filters-label"><?php echo __("Filtres <br /> par marques", "gypass"); ?></span>
-                <button class="btn btn-outline-primary all-filter active">
-                    <?php echo __("Tout", "gypass"); ?>
-                </button>
-                <?php while (have_rows('range_filters')) : the_row();
-                    $label = get_sub_field('label');
-                    $classname = get_sub_field('classname');
-                ?>
-                    <button class="btn btn-outline-primary class-filter" data-classname="<?php echo $classname; ?>">
-                        <?php echo $label; ?>
+                <div class="filter class-filter">
+                    <span class="filters-label"><?php echo __("Filtres <br /> par marque", "gypass"); ?></span>
+                    <button class="btn btn-outline-primary all-filter active">
+                        <?php echo __("Tout", "gypass"); ?>
                     </button>
-                <?php endwhile; ?>
+                    <?php while (have_rows('range_filters')) : the_row();
+                        $label = get_sub_field('label');
+                        $classname = get_sub_field('classname');
+                    ?>
+                        <button class="btn btn-outline-primary" data-classname="<?php echo $classname; ?>">
+                            <?php echo $label; ?>
+                        </button>
+                    <?php endwhile; ?>
+                </div>
+                <div class="filter opening-filter">
+                    <span class="filters-label"><?php echo __("Filtres <br /> par ouverture", "gypass"); ?></span>
+                    <button class="btn btn-outline-primary all-filter active">
+                        <?php echo __("Tout", "gypass"); ?>
+                    </button>
+                    <button class="btn btn-outline-primary" data-opening="laterale">
+                        <?php echo __("Latérale", "gypass"); ?>
+                    </button>
+                    <button class="btn btn-outline-primary" data-opening="sectionnelle">
+                        <?php echo __("Sectionnelle", "gypass"); ?>
+                    </button>
+                </div>
             </div>
         <?php endif; ?>
     </div>
