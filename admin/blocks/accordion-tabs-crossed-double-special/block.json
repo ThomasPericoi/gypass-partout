@@ -1,0 +1,15 @@
+{
+    "name": "acf/accordion-tabs-crossed-double-special",
+    "title": "Tabs accordéon croisé (Double / Spécial)",
+    "description": "Un menu déroulant pour sélectionner l'image que l'on souhaite, croisé avec deux autres sélecteurs (dont un en menu déroulant).",
+    "category": "gypass-block",
+    "icon": "list-view",
+    "keywords": [
+        "image",
+        "text"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion-tabs-crossed-double-special.php"
+    }
+}

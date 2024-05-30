@@ -443,10 +443,27 @@ document.addEventListener("DOMContentLoaded", function () {
         $(this).hide();
       }
     });
+
     // Hide options if 1 choice
     (optionsIndex < 2) ? parent.find(".options-wrapper").hide() : parent.find(".options-wrapper").show();
     (optionsAltIndex < 2) ? parent.find(".options-alt-wrapper").hide() : parent.find(".options-alt-wrapper").show();
     parent.find("img.visible").removeClass("visible");
+
+    // Only for Accordion Tabs (Double / Special)
+    if (parent.hasClass("accordion-tabs-crossed-special-block")) {
+      if (optionAlt.indexOf(option) === -1) {
+        optionAlt = option + optionAlt.slice(4);
+      }
+      parent.find("nav.options-alt button").each(function (index) {
+        option_1 = $(this).attr('id');
+        if (option_1.indexOf(option) === -1) {
+          $(this).hide();
+        } else {
+          $(this).show();
+        }
+      });
+    }
+
     // Fallback
     if (parent.find("img[data-options-id='" + option + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length == 0) {
       option = parent.find("img[data-tab-index='" + tab + "'][data-element-index='" + element + "']:first").data("options-id");
@@ -454,12 +471,11 @@ document.addEventListener("DOMContentLoaded", function () {
     if (parent.find("img[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").length == 0) {
       optionAlt = optionsAltDefault;
     }
-    console.log(parent.find("img[data-options-id='" + option + "']img[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']"));
-    parent.find("img[data-options-id='" + option + "']img[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
+    parent.find("img[data-options-id='" + option + "'][data-options-alt-id='" + optionAlt + "'][data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
     parent.find(".content .formatted.visible").removeClass("visible");
     parent.find(".content .formatted[data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
-    parent.find("nav.menu button.active").removeClass("active");
-    parent.find("nav.menu button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
+    parent.find("nav.menu:not(.options-alt) button.active").removeClass("active");
+    parent.find("nav.menu:not(.options-alt) button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
     parent.find("nav.options button.active").removeClass("active");
     $("#" + option).addClass("active");
     parent.find('#option-active-label') && parent.find('#option-active-label').text($("#" + option).data("label"));
@@ -470,7 +486,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  $(".accordion-tabs-crossed-double-block nav.menu button").on("click", function () {
+  $(".accordion-tabs-crossed-double-block nav.menu:not(.options-alt) button").on("click", function () {
     tabIndex = $(this).data("tab-target");
     elementIndex = $(this).data("element-target");
     optionId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active").attr('id');
@@ -479,7 +495,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   $(".accordion-tabs-crossed-double-block nav.options button").on("click", function () {
-    activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu button.active");
+    activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu:not(.options-alt) button.active");
     tabIndex = activeTab.data("tab-target");
     elementIndex = activeTab.data("element-target");
     optionId = $(this).attr('id');
@@ -488,7 +504,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   $(".accordion-tabs-crossed-double-block nav.options-alt button").on("click", function () {
-    activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu button.active");
+    activeTab = $(this).closest('.accordion-tabs-crossed-block').find("nav.menu:not(.options-alt) button.active");
     tabIndex = activeTab.data("tab-target");
     elementIndex = activeTab.data("element-target");
     optionId = $(this).closest('.accordion-tabs-crossed-block').find("nav.options button.active").attr('id');

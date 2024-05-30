@@ -1,32 +1,32 @@
 /* #Accordion Tabs Crossed (Double)
 --------------------------------------------------------------- */
-.accordion-tabs-crossed-double-block .col-wrapper>.content>.formatted {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .col-wrapper>.content>.formatted {
     display: none;
     animation: fadeIn 1s;
 }
 
-.accordion-tabs-crossed-double-block .col-wrapper>.content>.formatted.visible {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .col-wrapper>.content>.formatted.visible {
     display: block;
 }
 
-.accordion-tabs-crossed-double-block .options-wrapper {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options-wrapper {
     gap: 5px;
 }
 
-.accordion-tabs-crossed-double-block .options {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options {
     gap: 5px;
 }
 
-.accordion-tabs-crossed-double-block .options button.image {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options button.image {
     width: 60px;
     height: auto;
 }
 
-.accordion-tabs-crossed-double-block .options button.image:not(.active) img {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options button.image:not(.active) img {
     filter: brightness(0) saturate(100%) invert(64%) sepia(8%) saturate(275%) hue-rotate(192deg) brightness(94%) contrast(91%);
 }
 
-.accordion-tabs-crossed-double-block .options button.image:after {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options button.image:after {
     left: 0px;
 }
 
@@ -36,7 +36,7 @@
     padding-bottom: 40px;
 }
 
-.accordion-tabs-crossed-double-block .options-alt {
+.accordion-tabs-crossed-double-block .options-alt:not(.menu) {
     width: 70%;
     position: absolute;
     left: 15%;
@@ -46,16 +46,16 @@
     gap: 20px;
 }
 
-.accordion-tabs-crossed-double-block .options-alt-wrapper .label {
+.accordion-tabs-crossed-double-block div:not(.menus) .options-alt-wrapper:not(.has-menu) .label {
     position: absolute;
     bottom: 0px;
 }
 
-.accordion-tabs-crossed-double-block .options-alt-wrapper .swipper-wrapper {
+.accordion-tabs-crossed-double-block div:not(.menus) .options-alt-wrapper:not(.has-menu) .swipper-wrapper {
     align-items: flex-end;
 }
 
-.accordion-tabs-crossed-double-block .options-alt button {
+.accordion-tabs-crossed-double-block div:not(.menus) .options-alt:not(.menu) button {
     flex: 0 0 calc((100% - (5 * 10px)) / 6);
     margin-bottom: 12px;
     padding: 0;
