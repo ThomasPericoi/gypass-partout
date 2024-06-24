@@ -48,6 +48,8 @@
     <?php get_template_part('template-parts/cta-banner-simple', '', array(
         'title' => get_field('product_cta_banner_title_1'),
         'cta' => get_field('product_cta_banner_cta_1'),
+        'cta_file' => get_field('product_cta_banner_cta_file_1'),
+        'cta_file_label' => get_field('product_cta_banner_cta_file_label_1'),
         'background' => get_field('product_cta_banner_background_1'),
     )); ?>
 <?php endif; ?>

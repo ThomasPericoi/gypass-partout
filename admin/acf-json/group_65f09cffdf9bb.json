@@ -35,7 +35,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_660438317dfba",
@@ -137,7 +138,8 @@
                 "id": ""
             },
             "placement": "top",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_65f0a76d50ad6",
@@ -172,7 +174,15 @@
             "type": "textarea",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a76d50ad6",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -186,19 +196,83 @@
         },
         {
             "key": "field_65f0a7a650ad9",
-            "label": "CTA",
+            "label": "CTA (Lien)",
             "name": "product_cta_banner_cta_1",
             "aria-label": "",
             "type": "link",
             "instructions": "",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a76d50ad6",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
                 "id": ""
             },
             "return_format": "array"
+        },
+        {
+            "key": "field_6679a19b7204e",
+            "label": "CTA (PDF)",
+            "name": "product_cta_banner_cta_file_1",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a76d50ad6",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6679a1f97204f",
+            "label": "CTA (PDF) Label",
+            "name": "product_cta_banner_cta_file_label_1",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a76d50ad6",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_65fd58827bd56",
@@ -208,7 +282,15 @@
             "type": "color_picker",
             "instructions": "Laissez vide pour la couleur de GYPASS.",
             "required": 0,
-            "conditional_logic": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_65f0a76d50ad6",
+                        "operator": "==",
+                        "value": "true"
+                    }
+                ]
+            ],
             "wrapper": {
                 "width": "",
                 "class": "",
@@ -233,7 +315,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_65f0b50015252",
@@ -326,7 +409,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_65f0a186ba0a4",
@@ -457,5 +541,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715254660
+    "modified": 1719247721
 }

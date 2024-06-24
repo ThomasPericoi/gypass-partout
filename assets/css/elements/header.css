@@ -430,7 +430,7 @@ body.js-menuOpened .super-menu-overlay {
 
 @media screen and (min-width: 1200px) {
     .super-menu-wrapper {
-        max-width: 415px;
+        max-width: 450px;
         border-right: 1px solid var(--bay-of-many);
         transform: translateX(-100%);
         overflow: unset;
