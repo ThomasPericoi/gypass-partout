@@ -85,7 +85,7 @@ $style  = implode('; ', $styles);
             </div>
             <div class="menus">
                 <?php if (have_rows('options_2')) : ?>
-                    <div class="options-alt-wrapper has-menu">
+                    <div class="options-alt-wrapper">
                         <nav class="menu options-alt">
                             <h3 tabindex="0" role="button"><?php echo $options_2_title; ?></h3>
                             <div class="accordion-content">

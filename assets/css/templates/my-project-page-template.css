@@ -91,6 +91,11 @@
         flex: 0 0 calc((100% - (4 * 1em)) / 4);
     }
 
+    .page-template-my-project-page-template .form-elements.grid-5>label,
+    .page-template-my-project-page-template .form-elements.grid-5>.uacf7_conditional {
+        flex: 0 0 calc((100% - (5 * 1em)) / 5);
+    }
+
     .page-template-my-project-page-template .form-elements.grid-10>label,
     .page-template-my-project-page-template .form-elements.grid-10>.uacf7_conditional {
         flex: 0 0 calc((100% - (10 * 1em)) / 10);
@@ -112,7 +117,8 @@
 }
 
 .page-template-my-project-page-template .form-elements label .label {
-    min-height: 58px;
+    min-height: 60px;
+    padding: 0 5px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -162,7 +168,8 @@
     color: var(--secondary);
 }
 
-.page-template-my-project-page-template details .form-elements {
+.page-template-my-project-page-template details .form-elements, 
+.page-template-my-project-page-template details .video-wrapper {
     margin: var(--spacing-section-inner) 0;
 }
 
