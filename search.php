@@ -17,6 +17,9 @@
                                 <?php if (get_the_terms($post->ID, 'gypass_document_type')) : ?>
                                     <?php echo get_the_terms($post->ID, 'gypass_document_type')[0]->name; ?> :
                                 <?php endif; ?>
+                                <?php if (('gypass_range' == get_post_type()) && (get_the_terms($post->ID, 'gypass_range_product_family'))) : ?>
+                                    <?php echo get_the_terms($post->ID, 'gypass_range_product_family')[0]->name; ?> |
+                                <?php endif; ?>
                                 <?php echo get_the_title(); ?>
                             </h3>
                             <span><?php echo get_post_type_object(get_post_type())->labels->singular_name; ?></span>
