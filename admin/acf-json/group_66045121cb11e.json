@@ -35,7 +35,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_6604512211cdf",
@@ -72,7 +73,8 @@
                 "id": ""
             },
             "placement": "left",
-            "endpoint": 0
+            "endpoint": 0,
+            "selected": 0
         },
         {
             "key": "field_660451221ce9d",
@@ -203,5 +205,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1715254660
+    "modified": 1719818411
 }

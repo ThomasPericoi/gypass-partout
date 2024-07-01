@@ -244,7 +244,7 @@ function checkbox_image_handler($tag)
     $input = sprintf(
         '<input %1$s value="%2$s" required />
         <label for="%3$s">
-            <img src="%4$s" alt="%2$s">
+            <img src="%4$s" alt="%2$s" decoding="sync">
             <div class="label">%2$s</div>
             %5$s
         </label>',
@@ -326,7 +326,7 @@ function radio_image_handler($tag)
     $input = sprintf(
         '<input %1$s value="%2$s" required />
         <label for="%3$s">
-            <img src="%4$s" alt="%2$s">
+            <img src="%4$s" alt="%2$s" decoding="sync">
             <div class="label">%2$s</div>
             %5$s
         </label>',
