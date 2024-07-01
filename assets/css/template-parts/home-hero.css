@@ -3,10 +3,15 @@
 #home-hero .slider-element {
     padding: var(--spacing-section-outer) 0;
     position: relative;
-    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    background-size: 120%;
     cursor: pointer;
+    transition: background-size linear 4000ms;
+}
+
+#home-hero .slider-element.swiper-slide-active {
+    background-size: 109%;
 }
 
 #home-hero .slider-element:before {
