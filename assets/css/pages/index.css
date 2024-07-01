@@ -52,6 +52,12 @@
 
 .posts-grid .post .content {
     padding: 1em;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1em;
 }
 
 .posts-grid .post h2,
@@ -61,7 +67,6 @@
 
 .posts-grid .post .btn {
     height: auto;
-    margin-top: 1em;
     padding: 0.5em 1.5em;
     font-size: 15px;
 }

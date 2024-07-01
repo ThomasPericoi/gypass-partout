@@ -22,6 +22,18 @@
     height: auto;
 }
 
+@media screen and (min-width: 1200px) {
+    .accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options button.image img {
+        max-height: 105px;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options button.image img {
+        max-height: 110px;
+    }
+}
+
 .accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .options button.image:not(.active) img {
     filter: brightness(0) saturate(100%) invert(64%) sepia(8%) saturate(275%) hue-rotate(192deg) brightness(94%) contrast(91%);
 }
@@ -56,13 +68,19 @@
 }
 
 .accordion-tabs-crossed-double-block div:not(.menus) .options-alt:not(.menu) button {
-    flex: 0 0 calc((100% - (5 * 10px)) / 6);
+    flex: 0 0 calc((100% - (5 * 8px)) / 6);
     margin-bottom: 12px;
     padding: 0;
     position: relative;
     background-color: unset;
     border: 0;
     cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+    .accordion-tabs-crossed-double-block div:not(.menus) .options-alt:not(.menu) button {
+        flex: 0 0 calc((100% - (4 * 8px)) / 5);
+    }
 }
 
 .accordion-tabs-crossed-double-block .button-prev,

@@ -5,13 +5,21 @@
     position: relative;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 120%;
+    background-size: cover;
     cursor: pointer;
-    transition: background-size linear 4000ms;
 }
 
-#home-hero .slider-element.swiper-slide-active {
-    background-size: 109%;
+@media screen and (min-width: 1600px) {
+    #home-hero .slider-element {
+        background-size: 120%;
+        transition: background-size linear 4000ms;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #home-hero .slider-element.swiper-slide-active {
+        background-size: 112%;
+    }
 }
 
 #home-hero .slider-element:before {
