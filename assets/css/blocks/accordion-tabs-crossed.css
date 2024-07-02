@@ -20,7 +20,7 @@
     text-transform: uppercase;
 }
 
-.accordion-tabs-crossed-block .label span {
+.accordion-tabs-crossed-block .label #option-alt-active-label {
     font-weight: 400;
 }
 

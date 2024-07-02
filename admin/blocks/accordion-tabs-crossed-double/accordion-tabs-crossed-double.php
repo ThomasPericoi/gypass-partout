@@ -16,7 +16,6 @@ $id = uniqid("accordion-crossed-");
 $intro_title = get_field('intro_title');
 $intro_content = get_field('intro_content');
 $options_1_title = get_field('options_1_title');
-$options_2_title = get_field('options_2_title');
 
 $container = get_field('container_size');
 $background = get_field('background');
@@ -106,9 +105,10 @@ $style  = implode('; ', $styles);
                             <div class="swiper-wrapper">
                                 <?php while (have_rows('options_2')) : the_row();
                                     $id = get_sub_field('id');
+                                    $cat = get_sub_field('category');
                                     $title = get_sub_field('title');
                                     $image = get_sub_field('image'); ?>
-                                    <button class="image swiper-slide" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
+                                    <button class="image swiper-slide" id="<?php echo $id; ?>" data-title="<?php echo $cat; ?>" data-label="<?php echo $title; ?>">
                                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                     </button>
                                 <?php endwhile; ?>
@@ -121,7 +121,7 @@ $style  = implode('; ', $styles);
                             <?php get_template_part('assets/icons/arrow-left.svg'); ?>
                         </div>
                         <div class="label">
-                            <?php echo $options_2_title; ?> : <span id="option-alt-active-label"></span>
+                            <span id="option-alt-active-title"></span> : <span id="option-alt-active-label"></span>
                         </div>
                     </div>
                 <?php endif; ?>

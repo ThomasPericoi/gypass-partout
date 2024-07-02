@@ -446,7 +446,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hide options if 1 choice
     (optionsIndex < 2) ? parent.find(".options-wrapper").hide() : parent.find(".options-wrapper").show();
-    (optionsAltIndex < 2) ? parent.find(".options-alt-wrapper").hide() : parent.find(".options-alt-wrapper").show();
+    (optionsAltIndex < 2) ? parent.find(".options-alt-wrapper nav, .options-alt-wrapper .button-prev, .options-alt-wrapper .button-next").hide() : parent.find(".options-alt-wrapper nav, .options-alt-wrapper .button-prev, .options-alt-wrapper .button-next").show();
+    (optionsAltIndex < 1) ? parent.find(".options-alt-wrapper").hide() : parent.find(".options-alt-wrapper").show();
     parent.find("img.visible").removeClass("visible");
 
     // Only for Accordion Tabs (Double / Special)
@@ -482,6 +483,7 @@ document.addEventListener("DOMContentLoaded", function () {
     parent.find("nav.options-alt button.active").removeClass("active");
     if (optionAlt !== "") {
       $("#" + optionAlt).addClass("active");
+      parent.find('#option-alt-active-title') && parent.find('#option-alt-active-title').text($("#" + optionAlt).data("title"));
       parent.find('#option-alt-active-label') && parent.find('#option-alt-active-label').text($("#" + optionAlt).data("label"));
     }
   }
