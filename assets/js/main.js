@@ -668,29 +668,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Page - Range
-  $(".single-gypass_range #hero-alt .filters .class-filter button.all-filter").on("click", function () {
-    $('.single-gypass_range #hero-alt .filters .class-filter button').removeClass('active');
-    $(this).addClass('active');
-    $(".single-gypass_range #content > section").show();
-  });
-
-  $(".single-gypass_range #hero-alt .filters .class-filter button:not(.all-filter)").on("click", function () {
+  $(".single-gypass_range .filters .class-filter button").on("click", function () {
     var classname = $(this).data('classname');
-    $('.single-gypass_range #hero-alt .filters .class-filter button').removeClass('active');
+    $('.single-gypass_range .filters .class-filter button').removeClass('active');
     $(this).addClass('active');
     $(".single-gypass_range #content > section").show();
     $(".single-gypass_range #content > section").filter(":not('." + classname + "')").hide();
   });
 
-  $(".single-gypass_range #hero-alt .filters .opening-filter button.all-filter").on("click", function () {
-    $('.single-gypass_range #hero-alt .filters .opening-filter button').removeClass('active');
+  $(".single-gypass_range .filters .opening-filter button.all-filter").on("click", function () {
+    $('.single-gypass_range .filters .opening-filter button').removeClass('active');
     $(this).addClass('active');
     $(".accordion-tabs-block .accordion-list button").show();
   });
 
-  $(".single-gypass_range #hero-alt .filters .opening-filter button:not(.all-filter)").on("click", function () {
+  $(".single-gypass_range .filters .opening-filter button").on("click", function () {
     var opening = $(this).data('opening');
-    $('.single-gypass_range #hero-alt .filters .opening-filter button').removeClass('active');
+    $('.single-gypass_range .filters .opening-filter button').removeClass('active');
     $(this).addClass('active');
     $(".accordion-tabs-block .accordion-list button").show();
     if (opening == "laterale") {

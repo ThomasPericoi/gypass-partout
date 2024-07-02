@@ -39,11 +39,11 @@
             "selected": 0
         },
         {
-            "key": "field_660458e65d231",
-            "label": "Texte",
-            "name": "range_description",
+            "key": "field_6683f840b0696",
+            "label": "Les +",
+            "name": "range_hero_plus",
             "aria-label": "",
-            "type": "wysiwyg",
+            "type": "repeater",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -52,11 +52,152 @@
                 "class": "",
                 "id": ""
             },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 1
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 3,
+            "collapsed": "",
+            "button_label": "Ajouter un +",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6683f887b0697",
+                    "label": "Titre",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_6683f840b0696"
+                },
+                {
+                    "key": "field_6683f8b2b0698",
+                    "label": "+",
+                    "name": "points",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "table",
+                    "min": 0,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Ajouter un point",
+                    "rows_per_page": 20,
+                    "sub_fields": [
+                        {
+                            "key": "field_6683f8c5b0699",
+                            "label": "Contenu",
+                            "name": "text",
+                            "aria-label": "",
+                            "type": "textarea",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "rows": 2,
+                            "placeholder": "",
+                            "new_lines": "br",
+                            "parent_repeater": "field_6683f8b2b0698"
+                        }
+                    ],
+                    "parent_repeater": "field_6683f840b0696"
+                }
+            ]
+        },
+        {
+            "key": "field_6683f90eb069b",
+            "label": "Fonctionnalités",
+            "name": "range_hero_features",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter une fonctionnalité",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6683f90eb069c",
+                    "label": "Contenu",
+                    "name": "content",
+                    "aria-label": "",
+                    "type": "wysiwyg",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "tabs": "all",
+                    "toolbar": "full",
+                    "media_upload": 1,
+                    "delay": 0,
+                    "parent_repeater": "field_6683f90eb069b"
+                },
+                {
+                    "key": "field_6683f941b069f",
+                    "label": "Icône",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6683f90eb069b"
+                }
+            ]
         },
         {
             "key": "field_66045d72190ee",
@@ -78,8 +219,8 @@
         },
         {
             "key": "field_66045d7f190ef",
-            "label": "Filtres",
-            "name": "range_filters",
+            "label": "Filtres (ouvertures)",
+            "name": "range_filters_openings",
             "aria-label": "",
             "type": "repeater",
             "instructions": "",
@@ -95,9 +236,35 @@
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Ajouter un élément",
+            "button_label": "Ajouter un filtre",
             "rows_per_page": 20,
             "sub_fields": [
+                {
+                    "key": "field_6683f77588d89",
+                    "label": "Icône",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_66045d7f190ef"
+                },
                 {
                     "key": "field_66045d99190f0",
                     "label": "Label",
@@ -105,7 +272,7 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -139,6 +306,98 @@
                     "prepend": "",
                     "append": "",
                     "parent_repeater": "field_66045d7f190ef"
+                }
+            ]
+        },
+        {
+            "key": "field_6683f7efb0692",
+            "label": "Filtres (marques)",
+            "name": "range_filters_brands",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "table",
+            "pagination": 0,
+            "min": 0,
+            "max": 0,
+            "collapsed": "",
+            "button_label": "Ajouter un filtre",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6683f7efb0693",
+                    "label": "Icône",
+                    "name": "icon",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "preview_size": "medium",
+                    "parent_repeater": "field_6683f7efb0692"
+                },
+                {
+                    "key": "field_6683f7efb0694",
+                    "label": "Label",
+                    "name": "label",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6683f7efb0692"
+                },
+                {
+                    "key": "field_6683f7efb0695",
+                    "label": "Classe associée",
+                    "name": "classname",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6683f7efb0692"
                 }
             ]
         },
@@ -289,5 +548,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719818410
+    "modified": 1719928662
 }

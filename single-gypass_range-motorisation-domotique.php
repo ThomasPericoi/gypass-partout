@@ -8,48 +8,92 @@
                 <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
             </a>
         </span>
+        <h1 class="h3-size"><?php echo get_the_title(); ?></span></h1>
     </div>
 </section>
 
-<!-- Hero -->
-<section id="hero-alt">
-    <div class="container container-lg">
-        <div class="formatted">
-            <h1 class="h3-size"><?php echo get_the_title(); ?></span></h1>
-            <?php echo get_field("range_description"); ?>
+<?php if (have_rows('range_hero_plus')) : ?>
+    <!-- Hero -->
+    <section id="hero-alt">
+        <div class="container">
+            <div class="plus-grid">
+                <?php while (have_rows('range_hero_plus')) : the_row();
+                    $title = get_sub_field('title');
+                ?>
+                    <div class="plus">
+                        <?php get_template_part('assets/icons/plus.svg'); ?>
+                        <?php if (have_rows('points')) : ?>
+                            <ul>
+                                <li>
+                                    <h2 class="p-size"><?php echo $title; ?></h2>
+                                </li>
+                                <?php while (have_rows('points')) : the_row();
+                                    $text = get_sub_field('text');
+                                ?>
+                                    <li><?php echo $text; ?></li>
+                                <?php endwhile; ?>
+                            </ul>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; ?>
+            </div>
         </div>
-        <?php if (have_rows('range_filters')) : ?>
-            <div class="filters">
-                <div class="filter class-filter">
-                    <span class="filters-label"><?php echo __("Filtres <br /> par marque", "gypass"); ?></span>
-                    <button class="btn btn-outline-primary all-filter active">
-                        <?php echo __("Tout", "gypass"); ?>
-                    </button>
-                    <?php while (have_rows('range_filters')) : the_row();
-                        $label = get_sub_field('label');
+    </section>
+<?php endif; ?>
+
+<?php if (have_rows('range_hero_features')) : ?>
+    <!-- Features -->
+    <section class="features">
+        <div class="container container-sm">
+            <h2><?php echo __("Fonctionnalités principales", "gypass"); ?></h2>
+            <div class="features-grid">
+                <?php while (have_rows('range_hero_features')) : the_row();
+                    $content = get_sub_field('content');
+                    $icon = get_sub_field('icon');
+                ?>
+                    <div class="feature">
+                        <img src="<?php echo $icon["url"]; ?>" alt="<?php echo $icon["alt"]; ?>">
+                        <?php echo $content; ?>
+                    </div>
+                <?php endwhile; ?>
+            </div>
+        </div>
+    </section>
+<?php endif; ?>
+
+<?php if ((have_rows('range_filters_openings')) && (have_rows('range_filters_brands'))) : ?>
+    <!-- Filters -->
+    <section class="filters">
+        <div class="container">
+            <div class="filters-wrapper">
+                <div class="filter opening-filter">
+                    <span class="filters-label"><?php echo __("Sélectionnez <br /> votre ouverture", "gypass"); ?></span>
+
+                    <?php while (have_rows('range_filters_openings')) : the_row();
+                        $icon = get_sub_field('icon');
                         $classname = get_sub_field('classname');
                     ?>
-                        <button class="btn btn-outline-primary" data-classname="<?php echo $classname; ?>">
-                            <?php echo $label; ?>
+                        <button data-opening="<?php echo $classname; ?>">
+                            <img src="<?php echo $icon["url"]; ?>" alt="<?php echo $icon["alt"]; ?>">
                         </button>
                     <?php endwhile; ?>
                 </div>
-                <div class="filter opening-filter">
-                    <span class="filters-label"><?php echo __("Filtres <br /> par ouverture", "gypass"); ?></span>
-                    <button class="btn btn-outline-primary all-filter active">
-                        <?php echo __("Tout", "gypass"); ?>
-                    </button>
-                    <button class="btn btn-outline-primary" data-opening="laterale">
-                        <?php echo __("Latérale", "gypass"); ?>
-                    </button>
-                    <button class="btn btn-outline-primary" data-opening="sectionnelle">
-                        <?php echo __("Sectionnelle", "gypass"); ?>
-                    </button>
+                <div class="filter class-filter">
+                    <span class="filters-label"><?php echo __("Sélectionnez <br /> votre marque", "gypass"); ?></span>
+
+                    <?php while (have_rows('range_filters_brands')) : the_row();
+                        $icon = get_sub_field('icon');
+                        $classname = get_sub_field('classname');
+                    ?>
+                        <button data-classname="<?php echo $classname; ?>">
+                            <img src="<?php echo $icon["url"]; ?>" alt="<?php echo $icon["alt"]; ?>">
+                        </button>
+                    <?php endwhile; ?>
                 </div>
             </div>
-        <?php endif; ?>
-    </div>
-</section>
+        </div>
+    </section>
+<?php endif; ?>
 
 <section id="content">
     <?php the_content(); ?>

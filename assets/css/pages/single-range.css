@@ -81,42 +81,165 @@
     align-self: center;
 }
 
-/* Footer */
 .single-gypass_range #reinsurance {
     margin-top: var(--spacing-section-outer);
 }
 
 /* Motorisation et domotique */
-.single-gypass_range #hero-alt .container {
-    padding-bottom: var(--spacing-section-inner);
+.single-gypass_range #breadcrumbs {
+    background-color: var(--athens-gray);
+}
+
+@media screen and (min-width: 1200px) {
+    .single-gypass_range #breadcrumbs>.container {
+        justify-content: center;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single-gypass_range #breadcrumbs>.container>span {
+        position: absolute;
+        left: 2em;
+    }
+}
+
+.single-gypass_range #hero-alt {
+    background-color: var(--athens-gray);
+}
+
+.single-gypass_range #hero-alt>.container {
+    padding-top: var(--spacing-section-outer);
+    padding-bottom: var(--spacing-section-outer);
+    border-top: 1px solid var(--bay-of-many);
+}
+
+.single-gypass_range #hero-alt .plus-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 992px) {
+    .single-gypass_range #hero-alt .plus-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.single-gypass_range #hero-alt .plus-grid .plus {
     display: flex;
-    flex-direction: column;
+    gap: 20px;
 }
 
-.single-gypass_range #hero-alt .formatted {
-    --content-spacing: 1rem;
-}
-
-.single-gypass_range #hero-alt p,
-.single-gypass_range #hero-alt li {
-    color: var(--manatee);
-}
-
-.single-gypass_range #hero-alt .filters {
-    margin-top: 4em;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    position: relative;
-}
-
-.single-gypass_range #hero-alt .filters:after {
-    content: "";
+.single-gypass_range #hero-alt .plus-grid .plus svg {
+    max-width: 65px;
     width: 100%;
-    height: 1px;
+}
+
+.single-gypass_range #hero-alt .plus-grid .plus h2 {
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.single-gypass_range #hero-alt .plus-grid .plus ul {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.single-gypass_range .features {
+    padding-top: var(--spacing-section-inner);
+    padding-bottom: var(--spacing-section-outer);
+}
+
+.single-gypass_range .features h2 {
+    margin-bottom: var(--spacing-section-inner);
+    text-align: center;
+}
+
+.single-gypass_range .features-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 992px) {
+    .single-gypass_range .features-grid {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+}
+
+.single-gypass_range .features-grid .feature {
+    max-width: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1em;
+    text-align: center;
+}
+
+.single-gypass_range .features-grid .feature img {
+    width: 100%;
+    max-width: 125px;
+    height: auto;
+    display: block;
+}
+
+.single-gypass_range .filters {
+    padding: 1em 0;
+    background-color: var(--ebb);
+    border-bottom: 1px solid var(--manatee);
+}
+
+.single-gypass_range .filters-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 992px) {
+    .single-gypass_range .filters-wrapper {
+        flex-direction: row;
+        gap: 1em;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .single-gypass_range .filters .filter {
+        flex: 1 1 0;
+        gap: 3em;
+    }
+}
+
+.single-gypass_range .filters .filter .filters-label {
+    padding-left: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-left: 2px solid var(--bay-of-many);
+}
+
+.single-gypass_range .filters .filter button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+.single-gypass_range .filters .filter button:after {
+    content: "";
+    width: 47px;
+    height: 3px;
     position: absolute;
-    top: -2em;
-    left: 0;
     display: block;
     background-color: var(--primary);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform ease 350ms;
+}
+
+.single-gypass_range .filters .filter button:hover:after,
+.single-gypass_range .filters .filter button:focus:after,
+.single-gypass_range .filters .filter button.active:after {
+    transform: scaleX(1);
 }
