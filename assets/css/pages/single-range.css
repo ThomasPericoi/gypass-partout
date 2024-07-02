@@ -159,7 +159,6 @@
 .single-gypass_range .features-grid {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: var(--spacing-section-inner);
 }
 
@@ -183,6 +182,7 @@
 .single-gypass_range .features-grid .feature img {
     width: 100%;
     max-width: 125px;
+    max-height: 105px;
     height: auto;
     display: block;
 }

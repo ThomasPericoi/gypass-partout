@@ -674,29 +674,42 @@ document.addEventListener("DOMContentLoaded", function () {
     $(this).addClass('active');
     $(".single-gypass_range #content > section").show();
     $(".single-gypass_range #content > section").filter(":not('." + classname + "')").hide();
-  });
 
-  $(".single-gypass_range .filters .opening-filter button.all-filter").on("click", function () {
-    $('.single-gypass_range .filters .opening-filter button').removeClass('active');
-    $(this).addClass('active');
-    $(".accordion-tabs-block .accordion-list button").show();
+    if ($(".single-gypass_range .filters .opening-filter button.active").length > 0) {
+      var opening = $(".single-gypass_range .filters .opening-filter button.active").data('opening');
+      if ((opening == "coulissant") || (opening == "battant")) {
+        $(".single-gypass_range #content > section").filter(":not('." + opening + "')").hide();
+      }
+    }
   });
 
   $(".single-gypass_range .filters .opening-filter button").on("click", function () {
     var opening = $(this).data('opening');
     $('.single-gypass_range .filters .opening-filter button').removeClass('active');
     $(this).addClass('active');
-    $(".accordion-tabs-block .accordion-list button").show();
-    if (opening == "laterale") {
-      var allowedTexts = ["SMART IO", "ELMO-SMART 1000", "TIGRE 500 NW", "TANDEM 650 NW", "JAGUAR 800 NW", "TANDEM PRO + 600 NW", "JAGUAR PRO + 800 NW", "APACHE PRO + 1100 NW"];
-    } else if (opening == "sectionnelle") {
-      var allowedTexts = ["SMART IO", "ELMO-SMART 1000", "COMPACT 600 IO", "COMPACT 750 IO", "TIGRE 500 NW", "TANDEM 650 NW", "JAGUAR 800 NW", "LYNX 400 NW", "TANDEM PRO + 600 NW", "JAGUAR PRO + 800 NW", "APACHE PRO + 1100 NW"];
-    }
-    $(".accordion-tabs-block .accordion-list button").each(function () {
-      var text = $(this).text().trim();
-      if (allowedTexts.indexOf(text) === -1) {
-        $(this).hide();
+
+    if ((opening == "laterale") || (opening == "sectionnelle")) {
+      $(".accordion-tabs-block .accordion-list button").show();
+      if (opening == "laterale") {
+        var allowedTexts = ["SMART IO", "ELMO-SMART 1000", "TIGRE 500 NW", "TANDEM 650 NW", "JAGUAR 800 NW", "TANDEM PRO + 600 NW", "JAGUAR PRO + 800 NW", "APACHE PRO + 1100 NW"];
+      } else if (opening == "sectionnelle") {
+        var allowedTexts = ["SMART IO", "ELMO-SMART 1000", "COMPACT 600 IO", "COMPACT 750 IO", "TIGRE 500 NW", "TANDEM 650 NW", "JAGUAR 800 NW", "LYNX 400 NW", "TANDEM PRO + 600 NW", "JAGUAR PRO + 800 NW", "APACHE PRO + 1100 NW"];
       }
-    });
+      $(".accordion-tabs-block #menu-1 .accordion-list button").each(function () {
+        var text = $(this).text().trim();
+        if (allowedTexts.indexOf(text) === -1) {
+          $(this).hide();
+        }
+      });
+    }
+
+    if ((opening == "coulissant") || (opening == "battant")) {
+      $(".single-gypass_range #content > section").show();
+      if ($(".single-gypass_range .filters .class-filter button.active").length > 0) {
+        var brand = $(".single-gypass_range .filters .class-filter button.active").data('classname');
+        $(".single-gypass_range #content > section").filter(":not('." + brand + "')").hide();
+      }
+      $(".single-gypass_range #content > section").filter(":not('." + opening + "')").hide();
+    }
   });
 });

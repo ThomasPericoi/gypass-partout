@@ -166,9 +166,9 @@
                     },
                     "default_value": "",
                     "tabs": "all",
-                    "toolbar": "full",
-                    "media_upload": 1,
-                    "delay": 0,
+                    "toolbar": "basic",
+                    "media_upload": 0,
+                    "delay": 1,
                     "parent_repeater": "field_6683f90eb069b"
                 },
                 {
@@ -548,5 +548,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719928662
+    "modified": 1719931722
 }
