@@ -9,7 +9,7 @@
     cursor: pointer;
 }
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1200px) {
     #home-hero .slider-element {
         background-size: 120%;
         transition: background-size linear 4000ms;

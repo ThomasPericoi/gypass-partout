@@ -12,7 +12,13 @@
             <ul class="search-results">
                 <?php while (have_posts()) : the_post(); ?>
                     <li>
-                        <a href="<?php echo ('gypass_document' == get_post_type()) ? get_field('document_file') : get_the_permalink(); ?>">
+                        <?php if ('gypass_document' == get_post_type()) : ?>
+                        <a href="<?php echo get_field('document_file'); ?>">
+                        <?php elseif ('gypass_inspiration' == get_post_type()) : ?>
+                        <a href="<?php echo get_post_type_archive_link('gypass_inspiration'); ?>">
+                        <?php else : ?>
+                        <a href="<?php echo get_the_permalink(); ?>">
+                        <?php endif; ?>
                             <h3>
                                 <?php if (get_the_terms($post->ID, 'gypass_document_type')) : ?>
                                     <?php echo get_the_terms($post->ID, 'gypass_document_type')[0]->name; ?> :
