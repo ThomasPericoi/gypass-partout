@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <!-- Breadcrumbs -->
-<section id="breadcrumbs" class="<?php echo get_field("post_style_breadcrumbs"); ?>">
+<section id="breadcrumbs" class="motorisation-domotique">
     <div class="container container-lg">
         <span class="js-openRanges">
             <a class="btn-back">

@@ -86,18 +86,18 @@
 }
 
 /* Motorisation et domotique */
-.single-gypass_range #breadcrumbs {
+.single-gypass_range #breadcrumbs.motorisation-domotique {
     background-color: var(--athens-gray);
 }
 
 @media screen and (min-width: 1200px) {
-    .single-gypass_range #breadcrumbs>.container {
+    .single-gypass_range #breadcrumbs.motorisation-domotique>.container {
         justify-content: center;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .single-gypass_range #breadcrumbs>.container>span {
+    .single-gypass_range #breadcrumbs.motorisation-domotique>.container>span {
         position: absolute;
         left: 2em;
     }
