@@ -60,6 +60,11 @@
     gap: 1em;
 }
 
+.page-template-my-project-page-template .form-elements-special {
+    flex-direction: column;
+    align-items: center;
+}
+
 .page-template-my-project-page-template .form-elements label {
     cursor: pointer;
 }
@@ -168,25 +173,52 @@
     color: var(--secondary);
 }
 
-.page-template-my-project-page-template details .form-elements, 
+.page-template-my-project-page-template details .form-elements,
 .page-template-my-project-page-template details .video-wrapper {
     margin: var(--spacing-section-inner) 0;
 }
 
-/* Email */
-.page-template-my-project-page-template .form-elements input[type="email"] {
+/* Informations */
+.page-template-my-project-page-template .form-elements .wpcf7-form-control-wrap {
+    max-width: 500px;
+    width: 100%;
+}
+
+.page-template-my-project-page-template .form-elements .wpcf7-form-control-wrap .wpcf7-radio {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.page-template-my-project-page-template .form-elements input[type="email"],
+.page-template-my-project-page-template .form-elements input[type="text"],
+.page-template-my-project-page-template .form-elements input[type="tel"],
+.page-template-my-project-page-template .form-elements textarea {
     color: var(--secondary);
     border: 0;
     outline: 1px solid var(--secondary);
 }
 
 .page-template-my-project-page-template .form-elements input[type="email"]:not(:placeholder-shown),
-.page-template-my-project-page-template .form-elements input[type="email"]:focus {
+.page-template-my-project-page-template .form-elements input[type="email"]:focus,
+.page-template-my-project-page-template .form-elements input[type="text"]:not(:placeholder-shown),
+.page-template-my-project-page-template .form-elements input[type="text"]:focus,
+.page-template-my-project-page-template .form-elements input[type="tel"]:not(:placeholder-shown),
+.page-template-my-project-page-template .form-elements input[type="tel"]:focus,
+.page-template-my-project-page-template .form-elements textarea:not(:placeholder-shown),
+.page-template-my-project-page-template .form-elements textarea:focus {
     outline: 4px solid var(--secondary);
 }
 
-.page-template-my-project-page-template .form-elements input[type="email"]::placeholder {
+.page-template-my-project-page-template .form-elements input[type="email"]::placeholder,
+.page-template-my-project-page-template .form-elements input[type="text"]::placeholder,
+.page-template-my-project-page-template .form-elements input[type="tel"]::placeholder,
+.page-template-my-project-page-template .form-elements textarea::placeholder {
     color: var(--secondary);
+}
+
+.page-template-my-project-page-template .form-elements [type="radio"]:checked+span:after {
+    background: var(--secondary);
 }
 
 .page-template-my-project-page-template input[type="submit"] {
