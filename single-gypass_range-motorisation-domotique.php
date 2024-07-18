@@ -71,9 +71,10 @@
 
                     <?php while (have_rows('range_filters_openings')) : the_row();
                         $icon = get_sub_field('icon');
+                        $label = get_sub_field('label');
                         $classname = get_sub_field('classname');
                     ?>
-                        <button data-opening="<?php echo $classname; ?>">
+                        <button data-opening="<?php echo $classname; ?>" title="<?php echo $label; ?>">
                             <img src="<?php echo $icon["url"]; ?>" alt="<?php echo $icon["alt"]; ?>">
                         </button>
                     <?php endwhile; ?>
@@ -83,9 +84,10 @@
 
                     <?php while (have_rows('range_filters_brands')) : the_row();
                         $icon = get_sub_field('icon');
+                        $label = get_sub_field('label');
                         $classname = get_sub_field('classname');
                     ?>
-                        <button data-classname="<?php echo $classname; ?>">
+                        <button data-classname="<?php echo $classname; ?>" title="<?php echo $label; ?>">
                             <img src="<?php echo $icon["url"]; ?>" alt="<?php echo $icon["alt"]; ?>">
                         </button>
                     <?php endwhile; ?>

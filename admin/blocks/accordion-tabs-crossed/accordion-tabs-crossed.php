@@ -58,7 +58,7 @@ $style  = implode('; ', $styles);
                                     $id = get_sub_field('id');
                                     $title = get_sub_field('title');
                                     $color = get_sub_field('color'); ?>
-                                    <button class="color" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" style="background-color: <?php echo $color; ?>;"></button>
+                                    <button class="color" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" style="background-color: <?php echo $color; ?>;" title="<?php echo $title; ?>"></button>
                                 <?php endwhile; ?>
                             </nav>
                         <?php else : ?>
@@ -67,7 +67,7 @@ $style  = implode('; ', $styles);
                                     $id = get_sub_field('id');
                                     $title = get_sub_field('title');
                                     $image = get_sub_field('image'); ?>
-                                    <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
+                                    <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" title="<?php echo $title; ?>">
                                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                     </button>
                                 <?php endwhile; ?>

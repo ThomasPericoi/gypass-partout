@@ -19,7 +19,7 @@
                     <?php if (has_nav_menu('topbar-menu')) :
                         wp_nav_menu(array('theme_location' => 'topbar-menu', 'menu_class' => 'menu menu-topbar', 'container' => false, 'depth' => 1));
                     endif; ?>
-                    <button class="btn-search js-toggleSearchModal">
+                    <button class="btn-search js-toggleSearchModal" title="<?php echo __("Rechercher", "gypass"); ?>">
                         <?php get_template_part('assets/icons/search.svg'); ?>
                     </button>
                 </div>
@@ -61,10 +61,10 @@
         <div class="super-menu-wrapper">
             <div class="container">
                 <div class="btn-wrapper">
-                    <button class="btn-back" role="button" tabindex="0">
+                    <button class="btn-back" tabindex="0" title="<?php echo __("Retour", "gypass"); ?>">
                         <?php get_template_part('assets/icons/arrow-left.svg'); ?>
                     </button>
-                    <button class="js-toggleMenu menu-toggle-close" type="button">
+                    <button class="js-toggleMenu menu-toggle-close" title="<?php echo __("Menu", "gypass"); ?>">
                         <svg viewBox="0 0 14 14" xmlns="http://www.w3.org/2000/svg" data-svg="close-icon">
                             <line fill="none" stroke="#fff" stroke-width="2" x1="1" y1="1" x2="13" y2="13"></line>
                             <line fill="none" stroke="#fff" stroke-width="2" x1="13" y1="1" x2="1" y2="13"></line>
@@ -87,7 +87,7 @@
                 <?php if (has_nav_menu('topbar-menu')) :
                     wp_nav_menu(array('theme_location' => 'topbar-menu', 'menu_class' => 'menu menu-topbar', 'container' => false));
                 endif; ?>
-                <button class="btn-search js-toggleSearchModal">
+                <button class="btn-search js-toggleSearchModal" title="<?php echo __("Rechercher", "gypass"); ?>">
                     <?php get_template_part('assets/icons/search.svg'); ?>
                 </button>
             </div>

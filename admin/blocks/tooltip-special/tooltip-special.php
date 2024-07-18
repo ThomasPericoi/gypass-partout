@@ -63,7 +63,7 @@ $style  = implode('; ', $styles);
                             while (have_rows('tooltips')) : the_row();
                                 $index = get_row_index();
                                 $position = get_sub_field('position'); ?>
-                                <button class="tooltip" data-position="<?php echo $position; ?>" data-target="<?php echo $index; ?>">
+                                <button class="tooltip" data-position="<?php echo $position; ?>" data-target="<?php echo $index; ?>" title="<?php echo __("Ouvrir le tooltip", "gypass"); ?>">
                                     <?php get_template_part('assets/icons/tooltip-minus.svg'); ?>
                                 </button>
                         <?php endwhile;

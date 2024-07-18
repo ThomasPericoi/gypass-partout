@@ -72,7 +72,7 @@ $style  = implode('; ', $styles);
                                 $id = get_sub_field('id');
                                 $title = get_sub_field('title');
                                 $image = get_sub_field('image'); ?>
-                                <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>">
+                                <button class="image" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" title="<?php echo $title; ?>">
                                     <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                 </button>
                             <?php endwhile; ?>
@@ -108,7 +108,7 @@ $style  = implode('; ', $styles);
                                     $cat = get_sub_field('category');
                                     $title = get_sub_field('title');
                                     $image = get_sub_field('image'); ?>
-                                    <button class="image swiper-slide" id="<?php echo $id; ?>" data-title="<?php echo $cat; ?>" data-label="<?php echo $title; ?>">
+                                    <button class="image swiper-slide" id="<?php echo $id; ?>" data-title="<?php echo $cat; ?>" data-label="<?php echo $title; ?>" title="<?php echo $title; ?>">
                                         <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
                                     </button>
                                 <?php endwhile; ?>

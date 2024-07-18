@@ -62,7 +62,7 @@ $style  = implode('; ', $styles);
                                     $background = get_sub_field('background');
                                     $theme = get_sub_field('theme');
                                 ?>
-                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>"></button>
+                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>" title="<?php echo $label; ?>"></button>
                                 <?php endwhile; ?>
                             </div>
                         </div>
@@ -78,7 +78,7 @@ $style  = implode('; ', $styles);
                                     $background = get_sub_field('background');
                                     $theme = get_sub_field('theme');
                                 ?>
-                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>"></button>
+                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>" title="<?php echo $label; ?>"></button>
                                 <?php endwhile; ?>
                             </div>
                         </div>
@@ -94,7 +94,7 @@ $style  = implode('; ', $styles);
                                     $background = get_sub_field('background');
                                     $theme = get_sub_field('theme');
                                 ?>
-                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>"></button>
+                                    <button style="--thumbnail: url(<?php echo $background_thumbnail["url"]; ?>);" data-label="<?php echo $label; ?>" data-code="<?php echo $code; ?>" data-background="<?php echo $background["url"]; ?>" data-theme="<?php echo $theme; ?>" title="<?php echo $label; ?>"></button>
                                 <?php endwhile; ?>
                             </div>
                         </div>
