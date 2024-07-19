@@ -32,12 +32,6 @@
     }
 }
 
-@media screen and (min-width: 992px) {
-    .content-2-columns-block .col-wrapper>div {
-        max-width: 50%;
-    }
-}
-
 .content-2-columns-block .media>* {
     width: 100%;
 }

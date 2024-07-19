@@ -24,7 +24,7 @@ if (function_exists('acf_add_options_page')) {
 // Register post types
 function register_custom_post_types()
 {
-    $post_types = ["document", "inspiration", "product", "range", "tip-trick"];
+    $post_types = ["document", "hiring", "inspiration", "product", "range", "tip-trick"];
     foreach ($post_types as $post_type) {
         include_once(__DIR__ . '/post-types/' . $post_type . '.php');
     }

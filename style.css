@@ -73,7 +73,6 @@ Text Domain: gypass
 --------------------------------------------------------------- */
 
 @import "./assets/css/templates/contact-page-template.css";
-@import "./assets/css/templates/hiring-page-template.css";
 @import "./assets/css/templates/my-project-page-template.css";
 @import "./assets/css/templates/my-project-start-page-template.css";
 @import "./assets/css/templates/my-project-thank-you-page-template.css";
@@ -84,11 +83,13 @@ Text Domain: gypass
 
 @import "./assets/css/pages/404.css";
 @import "./assets/css/pages/archive-document.css";
+@import "./assets/css/pages/archive-hiring.css";
 @import "./assets/css/pages/archive-inspiration.css";
 @import "./assets/css/pages/front-page.css";
 @import "./assets/css/pages/index.css";
 @import "./assets/css/pages/page.css";
 @import "./assets/css/pages/search.css";
 @import "./assets/css/pages/single.css";
+@import "./assets/css/pages/single-hiring.css";
 @import "./assets/css/pages/single-product.css";
 @import "./assets/css/pages/single-range.css";

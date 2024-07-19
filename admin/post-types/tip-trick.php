@@ -7,6 +7,7 @@ $labels = [
     'edit_item' => 'Modifier un conseil et astuce',
     'new_item' => 'Nouveau conseil et astuce',
     'view_item' => 'Voir le conseil et astuce',
+    'view_items' => 'Voir les conseils et astuces',
     'search_items' => 'Rechercher un conseil et astuce',
     'not_found' =>  'Pas de conseil et astuce trouvé.',
     'all_items' => 'Tous les conseils et astuces',

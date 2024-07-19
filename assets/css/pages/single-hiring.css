@@ -1,0 +1,92 @@
+/* #Single hiring
+--------------------------------------------------------------- */
+/* Hero */
+.single-gypass_hiring .hiring {
+    text-align: center;
+}
+
+.single-gypass_hiring .hiring .container {
+    margin-right: auto;
+}
+
+.single-gypass_hiring .hiring .date {
+    margin: 0 auto;
+    border-bottom: 0;
+}
+
+.single-gypass_hiring .hiring .pills-wrapper {
+    justify-content: center;
+}
+
+/* Content */
+.single-gypass_hiring .content {
+    padding: var(--spacing-section-outer) 0;
+}
+
+.single-gypass_hiring .content .col-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-section-outer);
+}
+
+@media screen and (min-width: 992px) {
+    .single-gypass_hiring .content .col-wrapper {
+        flex-direction: row;
+    }
+}
+
+.single-gypass_hiring .content .col-wrapper>div {
+    flex: 1 1 0;
+}
+
+@media screen and (min-width: 992px) {
+    .single-gypass_hiring .content .col-wrapper>div {
+        max-width: 50%;
+    }
+}
+
+/* Form */
+.single-gypass_hiring .form {
+    padding: var(--spacing-section-outer) 0;
+    background-color: var(--ghost);
+}
+
+.single-gypass_hiring .form h3 {
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: var(--spacing-section-inner);
+}
+
+.single-gypass_hiring form div[class*="uacf7-form"] {
+    max-width: 550px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.single-gypass_hiring form label {
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.single-gypass_hiring form input {
+    background-color: var(--white);
+}
+
+.single-gypass_hiring form input::placeholder {
+    color: var(--primary);
+}
+
+.single-gypass_hiring form .btn {
+    align-self: center;
+    font-weight: 600;
+    color: var(--scooter);
+}
+
+.single-gypass_hiring form .btn:hover,
+.single-gypass_hiring form .btn:focus {
+    color: var(--white);
+    background-color: var(--scooter);
+}

@@ -1,9 +1,9 @@
 {
     "key": "group_65f0604b80df2",
-    "title": "Options de page – Page recrutement",
+    "title": "Options de contenu – Recrutement",
     "fields": [
         {
-            "key": "field_65f067bba06e2",
+            "key": "field_669a331a98cac",
             "label": "Hero",
             "name": "",
             "aria-label": "",
@@ -21,56 +21,11 @@
             "selected": 0
         },
         {
-            "key": "field_65f0604cf741c",
-            "label": "Titre de la page",
-            "name": "hiring_title",
+            "key": "field_6605895b0a222",
+            "label": "Sous-titre du poste",
+            "name": "hiring_subtitle",
             "aria-label": "",
-            "type": "wysiwyg",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "tabs": "all",
-            "toolbar": "basic",
-            "media_upload": 0,
-            "delay": 1
-        },
-        {
-            "key": "field_65f062092e28d",
-            "label": "Image de couverture",
-            "name": "hiring_cover_image",
-            "aria-label": "",
-            "type": "image",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": "",
-            "preview_size": "medium"
-        },
-        {
-            "key": "field_65f067cca06e3",
-            "label": "Formulaires de recrutement",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
+            "type": "text",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -79,14 +34,16 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
+            "default_value": "H\/F",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
-            "key": "field_65f06f8bf4686",
-            "label": "Indication du formulaire",
-            "name": "hiring_forms_label",
+            "key": "field_65f06ea6f4681",
+            "label": "Date de publication",
+            "name": "hiring_date",
             "aria-label": "",
             "type": "text",
             "instructions": "",
@@ -104,11 +61,65 @@
             "append": ""
         },
         {
-            "key": "field_65f06e42f467f",
-            "label": "Formulaires de candidature",
-            "name": "hiring_forms",
+            "key": "field_65f06f3cf4684",
+            "label": "Type de poste",
+            "name": "hiring_type",
             "aria-label": "",
-            "type": "repeater",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "cdi": "CDI",
+                "cdd": "CDD",
+                "stage": "Stage",
+                "alternance": "Alternance"
+            },
+            "default_value": "cdi",
+            "return_format": "label",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_65f06ebbf4682",
+            "label": "Temps",
+            "name": "hiring_time",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "plein": "Temps plein",
+                "partiel": "Temps partiel"
+            },
+            "default_value": "plein",
+            "return_format": "label",
+            "multiple": 0,
+            "allow_null": 0,
+            "ui": 0,
+            "ajax": 0,
+            "placeholder": ""
+        },
+        {
+            "key": "field_669a334f98cad",
+            "label": "Contenu",
+            "name": "",
+            "aria-label": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -117,182 +128,77 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "row",
-            "pagination": 0,
-            "min": 0,
-            "max": 0,
-            "collapsed": "",
-            "button_label": "Ajouter un élément",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_65f06e87f4680",
-                    "label": "Intitulé du poste",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65f06e42f467f"
-                },
-                {
-                    "key": "field_6605895b0a222",
-                    "label": "Sous-titre du poste",
-                    "name": "subtitle",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65f06e42f467f"
-                },
-                {
-                    "key": "field_660589800a223",
-                    "label": "Description du poste",
-                    "name": "description",
-                    "aria-label": "",
-                    "type": "wysiwyg",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "tabs": "all",
-                    "toolbar": "basic",
-                    "media_upload": 0,
-                    "delay": 1,
-                    "parent_repeater": "field_65f06e42f467f"
-                },
-                {
-                    "key": "field_65f06ea6f4681",
-                    "label": "Date de publication",
-                    "name": "date",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65f06e42f467f"
-                },
-                {
-                    "key": "field_65f06ebbf4682",
-                    "label": "Temps",
-                    "name": "time",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "plein": "Temps plein",
-                        "partiel": "Temps partiel"
-                    },
-                    "default_value": "plein",
-                    "return_format": "label",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_65f06e42f467f"
-                },
-                {
-                    "key": "field_65f06f3cf4684",
-                    "label": "Type de poste",
-                    "name": "type",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "cdi": "CDI",
-                        "cdd": "CDD"
-                    },
-                    "default_value": "cdi",
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 0,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_65f06e42f467f"
-                },
-                {
-                    "key": "field_65f07d78ed664",
-                    "label": "Code court du formulaire",
-                    "name": "shortcode",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_65f06e42f467f"
-                }
-            ]
+            "placement": "left",
+            "endpoint": 0,
+            "selected": 0
+        },
+        {
+            "key": "field_660589800a223",
+            "label": "Description du poste (Colonne 1)",
+            "name": "hiring_description_1",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_669a327998cab",
+            "label": "Description du poste (Colonne 2)",
+            "name": "hiring_description_2",
+            "aria-label": "",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "basic",
+            "media_upload": 0,
+            "delay": 1
+        },
+        {
+            "key": "field_65f07d78ed664",
+            "label": "Code court du formulaire",
+            "name": "hiring_shortcode",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         }
     ],
     "location": [
         [
             {
-                "param": "post_template",
+                "param": "post_type",
                 "operator": "==",
-                "value": "templates\/hiring-page-template.php"
+                "value": "gypass_hiring"
             }
         ]
     ],
@@ -305,5 +211,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719818411
+    "modified": 1721384398
 }

@@ -7,6 +7,7 @@ $labels = [
     'edit_item' => 'Modifier une gamme',
     'new_item' => 'Nouvelle gamme',
     'view_item' => 'Voir la gamme',
+    'view_items' => 'Voir les gammes',
     'search_items' => 'Rechercher une gamme',
     'not_found' =>  'Pas de gamme trouvée.',
     'all_items' => 'Toutes les gammes',

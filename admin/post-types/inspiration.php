@@ -7,6 +7,7 @@ $labels = [
     'edit_item' => 'Modifier une inspiration',
     'new_item' => 'Nouvelle inspiration',
     'view_item' => 'Voir l\'inspiration',
+    'view_items' => 'Voir les inspirations',
     'search_items' => 'Rechercher une inspiration',
     'not_found' =>  'Pas d\'inspiration trouvée.',
     'all_items' => 'Toutes les inspirations',

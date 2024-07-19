@@ -7,6 +7,7 @@ $labels = [
     'edit_item' => 'Modifier un document',
     'new_item' => 'Nouveau document',
     'view_item' => 'Voir le document',
+    'view_items' => 'Voir les documents',
     'search_items' => 'Rechercher un document',
     'not_found' =>  'Pas de document trouvé.',
     'all_items' => 'Tous les documents',

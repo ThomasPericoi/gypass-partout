@@ -7,6 +7,7 @@ $labels = [
     'edit_item' => 'Modifier un produit',
     'new_item' => 'Nouveau produit',
     'view_item' => 'Voir le produit',
+    'view_items' => 'Voir les produits',
     'search_items' => 'Rechercher un produit',
     'not_found' =>  'Pas de produit trouvé.',
     'all_items' => 'Tous les produits',
@@ -26,7 +27,6 @@ $args = [
     'capability_type' => 'page',
     'supports' => [
         'title',
-        'editor',
         'thumbnail',
         'custom-fields',
     ],
