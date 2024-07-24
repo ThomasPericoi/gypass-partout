@@ -102,7 +102,7 @@ $style  = implode('; ', $styles);
                     <div id="shades-4" class="shades">
                         <h3 class="shades-title p-size"><?php echo __("Teinte personnalisée"); ?></h3>
                         <div class="shades-grid">
-                            <span></span>
+                            <span data-tooltip="<?php echo __("Vous souhaitez une couleur particulière, nous la reproduisons en la contretypant.", "gypass"); ?>"></span>
                         </div>
                     </div>
                 </div>

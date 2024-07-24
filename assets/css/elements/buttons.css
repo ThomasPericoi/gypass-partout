@@ -248,3 +248,45 @@
 .btn-scroll:focus svg path {
     fill: var(--primary);
 }
+
+/* Tooltip */
+[data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+[data-tooltip]:after {
+    content: attr(data-tooltip);
+    width: 150px;
+    margin-bottom: 5px;
+    padding: 12px;
+    position: absolute;
+    bottom: 100%;
+    left: unset;
+    color: var(--white);
+    text-align: center;
+    font-size: 12px;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.2;
+    background-color: var(--scooter);
+    opacity: 0;
+    transform: translateX(50%);
+    transition: opacity ease 250ms;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@media screen and (min-width: 992px) {
+    [data-tooltip]:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+[data-tooltip]:hover:after,
+[data-tooltip]:focus:after {
+    opacity: 1;
+    visibility: visible;
+}

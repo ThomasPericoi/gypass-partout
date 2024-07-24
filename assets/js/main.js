@@ -611,8 +611,8 @@ document.addEventListener("DOMContentLoaded", function () {
       el: ".swiper-pagination",
     },
     autoplay: {
-      delay: 3500,
-      disableOnInteraction: false,
+      delay: 5000,
+      disableOnInteraction: true,
     },
   });
 
