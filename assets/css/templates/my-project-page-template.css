@@ -175,7 +175,19 @@
 
 .page-template-my-project-page-template details .form-elements,
 .page-template-my-project-page-template details .video-wrapper {
-    margin: var(--spacing-section-inner) 0;
+    margin: var(--spacing-section-inner) auto;
+}
+
+.page-template-my-project-page-template details .video-wrapper,
+.page-template-my-project-page-template img.special-image {
+    max-width: 500px;
+}
+
+.page-template-my-project-page-template img.special-image {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
 }
 
 /* Informations */
@@ -193,6 +205,7 @@
 .page-template-my-project-page-template .form-elements input[type="email"],
 .page-template-my-project-page-template .form-elements input[type="text"],
 .page-template-my-project-page-template .form-elements input[type="tel"],
+.page-template-my-project-page-template .form-elements input[type="number"],
 .page-template-my-project-page-template .form-elements textarea {
     color: var(--secondary);
     border: 0;
@@ -205,6 +218,8 @@
 .page-template-my-project-page-template .form-elements input[type="text"]:focus,
 .page-template-my-project-page-template .form-elements input[type="tel"]:not(:placeholder-shown),
 .page-template-my-project-page-template .form-elements input[type="tel"]:focus,
+.page-template-my-project-page-template .form-elements input[type="number"]:not(:placeholder-shown),
+.page-template-my-project-page-template .form-elements input[type="number"]:focus,
 .page-template-my-project-page-template .form-elements textarea:not(:placeholder-shown),
 .page-template-my-project-page-template .form-elements textarea:focus {
     outline: 4px solid var(--secondary);
@@ -213,6 +228,7 @@
 .page-template-my-project-page-template .form-elements input[type="email"]::placeholder,
 .page-template-my-project-page-template .form-elements input[type="text"]::placeholder,
 .page-template-my-project-page-template .form-elements input[type="tel"]::placeholder,
+.page-template-my-project-page-template .form-elements input[type="number"]::placeholder,
 .page-template-my-project-page-template .form-elements textarea::placeholder {
     color: var(--secondary);
 }

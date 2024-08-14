@@ -209,7 +209,7 @@
 @media screen and (min-width: 1200px) {
     .single-gypass_range .filters .filter {
         flex: 1 1 0;
-        gap: 3em;
+        gap: 2em;
     }
 }
 
@@ -242,4 +242,12 @@
 .single-gypass_range .filters .filter button:focus:after,
 .single-gypass_range .filters .filter button.active:after {
     transform: scaleX(1);
+}
+
+.single-gypass_range .filters .filter button img {
+    width: 100%;
+    max-width: 125px;
+    height: auto;
+    margin-bottom: 5px;
+    display: block;
 }
