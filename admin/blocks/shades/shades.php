@@ -14,6 +14,9 @@
 
 $title = get_field('title');
 $instructions = get_field('instructions');
+$shades_1_title = get_field('shades_1_title');
+$shades_2_title = get_field('shades_2_title');
+$shades_3_title = get_field('shades_3_title');
 $text = get_field('text');
 $download_chart_file = get_field('download_chart_file');
 $download_chart_label = get_field('download_chart_label');
@@ -53,7 +56,7 @@ $style  = implode('; ', $styles);
                 <div class="shades-wrapper">
                     <?php if (have_rows('shades_1')) : ?>
                         <div id="shades-1" class="shades">
-                            <h3 class="shades-title p-size"><span id="shades-count-1"></span> <?php echo __("teintes Fine Texture"); ?></h3>
+                            <h3 class="shades-title p-size"><span id="shades-count-1"></span> <?php echo ($shades_1_title) ? $shades_1_title : __("teintes Fine Texture", "gypass"); ?></h3>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_1')) : the_row();
                                     $label = get_sub_field('code_label');
@@ -69,7 +72,7 @@ $style  = implode('; ', $styles);
                     <?php endif; ?>
                     <?php if (have_rows('shades_2')) : ?>
                         <div id="shades-2" class="shades">
-                            <h3 class="shades-title p-size"><span id="shades-count-2"></span> <?php echo __("teintes Sablées"); ?></h3>
+                            <h3 class="shades-title p-size"><span id="shades-count-2"></span> <?php echo ($shades_2_title) ? $shades_2_title : __("teintes Sablées", "gypass"); ?></h3>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_2')) : the_row();
                                     $label = get_sub_field('code_label');
@@ -85,7 +88,7 @@ $style  = implode('; ', $styles);
                     <?php endif; ?>
                     <?php if (have_rows('shades_3')) : ?>
                         <div id="shades-3" class="shades">
-                            <h3 class="shades-title p-size"><?php echo __("Teinte Métallisée mat"); ?></h3>
+                            <h3 class="shades-title p-size"><?php echo ($shades_3_title) ? $shades_3_title : __("teinte Métallisée mat", "gypass"); ?></h3>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_3')) : the_row();
                                     $label = get_sub_field('code_label');

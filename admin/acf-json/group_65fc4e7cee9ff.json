@@ -57,9 +57,11 @@
                 "bay-of-many": "Bay of Many",
                 "blue-lagoon": "Blue Lagoon",
                 "boston-blue": "Boston Blue",
+                "cerulean": "Cerulean",
                 "fountain-blue": "Fountain Blue",
                 "havelock-blue": "Havelock Blue",
-                "lochmara": "Lochmara"
+                "lochmara": "Lochmara",
+                "science-blue": "Science Blue"
             },
             "default_value": "bay-of-many",
             "return_format": "value",
@@ -651,5 +653,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719818410
+    "modified": 1724342778
 }

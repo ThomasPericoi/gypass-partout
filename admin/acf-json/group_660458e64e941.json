@@ -101,6 +101,7 @@
                     "collapsed": "",
                     "button_label": "Ajouter un point",
                     "rows_per_page": 20,
+                    "parent_repeater": "field_6683f840b0696",
                     "sub_fields": [
                         {
                             "key": "field_6683f8c5b0699",
@@ -123,8 +124,7 @@
                             "new_lines": "br",
                             "parent_repeater": "field_6683f8b2b0698"
                         }
-                    ],
-                    "parent_repeater": "field_6683f840b0696"
+                    ]
                 }
             ]
         },
@@ -548,5 +548,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719931722
+    "modified": 1724342778
 }

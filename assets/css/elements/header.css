@@ -557,9 +557,18 @@ body.js-menuOpened .super-menu-overlay {
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(6) .sub-menu a:after,
 .super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(6) .sub-menu a:after {
-    filter: brightness(0) saturate(100%) invert(86%) sepia(6%) saturate(4879%) hue-rotate(159deg) brightness(82%) contrast(86%);
+    filter: brightness(0) saturate(100%) invert(37%) sepia(68%) saturate(5998%) hue-rotate(179deg) brightness(96%) contrast(101%);
 }
 
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(7) .sub-menu a:after,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(7) .sub-menu a:after {
+    filter: brightness(0) saturate(100%) invert(63%) sepia(72%) saturate(4518%) hue-rotate(162deg) brightness(90%) contrast(101%);
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(8) .sub-menu a:after,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(8) .sub-menu a:after {
+    filter: brightness(0) saturate(100%) invert(86%) sepia(6%) saturate(4879%) hue-rotate(159deg) brightness(82%) contrast(86%);
+}
 
 .super-menu-wrapper .menu-header .menu-item-alt a:after,
 .super-menu-wrapper .menu-header .menu-item-primary a:after,
@@ -670,6 +679,16 @@ body.js-menuOpened .super-menu-overlay {
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(6)>a,
 .super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(6)>a {
+    background-color: var(--science-blue);
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(7)>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(7)>a {
+    background-color: var(--cerulean);
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(8)>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(8)>a {
     background-color: var(--fountain-blue);
 }
 
@@ -709,6 +728,16 @@ body.js-menuOpened .super-menu-overlay {
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(6) .sub-menu a,
 .super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(6) .sub-menu a {
+    color: var(--science-blue);
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(7) .sub-menu a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(7) .sub-menu a {
+    color: var(--cerulean);
+}
+
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(8) .sub-menu a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(8) .sub-menu a {
     color: var(--fountain-blue);
 }
 

@@ -99,6 +99,26 @@
             "append": ""
         },
         {
+            "key": "field_66c75dd4675b6",
+            "label": "Label \"Fine Texture\"",
+            "name": "shades_1_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "teintes Fine Texture",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_660306d3c3df9",
             "label": "Teintes \"Fine Texture\"",
             "name": "shades_1",
@@ -245,6 +265,26 @@
             ]
         },
         {
+            "key": "field_66c75e3e675b7",
+            "label": "Label \"Sablées\"",
+            "name": "shades_2_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "teintes Sablées",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
             "key": "field_6603091c9bdb5",
             "label": "Teintes \"Sablée\"",
             "name": "shades_2",
@@ -389,6 +429,26 @@
                     "parent_repeater": "field_6603091c9bdb5"
                 }
             ]
+        },
+        {
+            "key": "field_66c75e96675b8",
+            "label": "Label \"Sablées\"",
+            "name": "shades_3_title",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "teinte Métallisée mat",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_66053498724f7",
@@ -681,5 +741,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1719818410
+    "modified": 1724342778
 }
