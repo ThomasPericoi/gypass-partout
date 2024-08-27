@@ -122,6 +122,12 @@ function redirect_tax_archive($template)
             return $new_template;
         }
     }
+    if (is_tax('gypass_range_product_family') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_range.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
     if (is_tax('gypass_trip_trick_product_family') && is_archive()) {
         $new_template = locate_template(array('archive-gypass_tip_trick.php'));
         if ('' != $new_template) {
