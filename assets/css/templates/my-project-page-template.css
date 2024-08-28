@@ -107,7 +107,8 @@
     }
 }
 
-.page-template-my-project-page-template .form-elements input:checked+label {
+.page-template-my-project-page-template .form-elements input:checked+label,
+.page-template-my-project-page-template .form-elements label.selected {
     outline: 4px solid var(--secondary);
 }
 
@@ -241,4 +242,11 @@
     margin: 0 auto;
     display: block;
     font-weight: 700;
+}
+
+/* Other */
+.page-template-my-project-page-template .btn-inline {
+    text-align: center;
+    color: var(--secondary);
+    text-decoration: underline;
 }
