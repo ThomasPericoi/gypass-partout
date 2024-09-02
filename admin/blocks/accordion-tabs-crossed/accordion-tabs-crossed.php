@@ -57,8 +57,10 @@ $style  = implode('; ', $styles);
                                 <?php while (have_rows('options')) : the_row();
                                     $id = get_sub_field('id');
                                     $title = get_sub_field('title');
-                                    $color = get_sub_field('color'); ?>
-                                    <button class="color" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" style="background-color: <?php echo $color; ?>;" title="<?php echo $title; ?>"></button>
+                                    $color = get_sub_field('color');
+                                    $color_bg = get_sub_field('color_bg');
+                                    $bg = $color ? "background-color:" . $color . ";" : "background-image: url(" . $color_bg . ");" ?>
+                                    <button class="color" id="<?php echo $id; ?>" data-label="<?php echo $title; ?>" style="<?php echo $bg; ?>" title="<?php echo $title; ?>"></button>
                                 <?php endwhile; ?>
                             </nav>
                         <?php else : ?>

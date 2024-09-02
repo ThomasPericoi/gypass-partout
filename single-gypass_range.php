@@ -13,13 +13,13 @@
         <?php endif; ?>
         <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
             <p>
-                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a></span>
-                <span class="separator"> &gt; </span>
-                <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
-                    <span class="js-openRanges"><a><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a></span>
+                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a>
                     <span class="separator"> &gt; </span>
-                <?php endif; ?>
-                <span class="last"><?php echo get_the_title(); ?></span>
+                    <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
+                        <span class="js-openRanges"><a><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a></span>
+                        <span class="separator"> &gt; </span>
+                    <?php endif; ?>
+                    <span class="last"><?php echo get_the_title(); ?></span>
             </p>
         </nav>
     </div>
@@ -29,8 +29,8 @@
 <section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
     <div class="container">
         <h1 class="h4-size">
-            <?php echo __("Gamme", "gypass"); ?><br />
-            <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
+            <?php if (get_field("range_range_prefix") !== true) : ?><?php echo __("Gamme", "gypass"); ?><br /><?php endif; ?>
+        <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
         </h1>
         <h2 class="h1-size"><?php echo get_field("range_title") ?: get_the_title(); ?></h2>
         <a class="btn-scroll" href="#plus">

@@ -69,13 +69,19 @@
 
 @media screen and (min-width: 992px) {
     .plus-list .plus img {
-        max-width: 200px;
+        max-width: 180px;
     }
 }
 
 .plus-list .plus .content {
     position: relative;
     flex-grow: 1;
+}
+
+@media screen and (min-width: 992px) {
+    .plus-list .plus .content {
+        min-height: 180px;
+    }
 }
 
 .plus-list .plus:not(:last-child) .content:after {

@@ -58,7 +58,6 @@
                 "blue-lagoon": "Blue Lagoon",
                 "boston-blue": "Boston Blue",
                 "cerulean": "Cerulean",
-                "fountain-blue": "Fountain Blue",
                 "havelock-blue": "Havelock Blue",
                 "lochmara": "Lochmara",
                 "science-blue": "Science Blue"
@@ -653,5 +652,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724342778
+    "modified": 1725278354
 }

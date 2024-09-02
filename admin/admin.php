@@ -243,7 +243,7 @@ add_filter('block_categories_all', 'register_block_category', 10, 2);
 function manage_user_roles()
 {
     remove_role('subscriber');
-    remove_role('editor');
+    // remove_role('editor');
     remove_role('contributor');
     remove_role('author');
 }
