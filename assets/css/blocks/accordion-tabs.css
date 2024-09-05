@@ -164,6 +164,10 @@
     transition: background-color ease 350ms;
 }
 
+.accordion-tabs-block .menu .accordion-list button.light {
+    color: var(--white);
+}
+
 .accordion-tabs-block .menu .accordion-list button:hover,
 .accordion-tabs-block .menu .accordion-list button:focus {
     background-color: var(--ebb);

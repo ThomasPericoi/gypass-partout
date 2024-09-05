@@ -213,7 +213,7 @@ add_action('init', 'enable_dynamic_rw_rules');
 // Register blocks
 function register_acf_blocks()
 {
-    $blocks = ["accordion-tabs", "accordion-tabs-crossed", "accordion-tabs-crossed-double", "accordion-tabs-crossed-double-special", "content-2-columns", "content-3-columns", "image-legend", "shades", "tooltip-double", "tooltip-simple", "tooltip-special", "video"];
+    $blocks = ["accordion-tabs", "accordion-tabs-crossed", "accordion-tabs-crossed-colors", "accordion-tabs-crossed-double", "accordion-tabs-crossed-double-special", "content-2-columns", "content-3-columns", "image-legend", "shades", "tooltip-double", "tooltip-simple", "tooltip-special", "video"];
 
     foreach ($blocks as $block) {
         register_block_type(__DIR__ . '/blocks/' . $block);

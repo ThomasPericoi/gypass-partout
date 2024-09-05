@@ -18,7 +18,7 @@ endif;
             array(
                 'taxonomy'   => 'gypass_inspi_product_family',
                 'hide_empty' => false,
-                'include' => array(26, 38, 35, 28, 27),
+                'include' => array(26, 63, 38, 35, 28, 27, 55),
                 'orderby'  => 'include',
             )
         );
