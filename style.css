@@ -44,6 +44,7 @@ Text Domain: gypass
 --------------------------------------------------------------- */
 
 @import "./assets/css/blocks/accordion-tabs.css";
+@import "./assets/css/blocks/accordion-tabs-colors.css";
 @import "./assets/css/blocks/accordion-tabs-crossed.css";
 @import "./assets/css/blocks/accordion-tabs-crossed-double.css";
 @import "./assets/css/blocks/content-2-columns.css";

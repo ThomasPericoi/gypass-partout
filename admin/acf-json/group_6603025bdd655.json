@@ -99,6 +99,80 @@
             "append": ""
         },
         {
+            "key": "field_66030638c3df8",
+            "label": "Nuancier",
+            "name": "download_chart_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6603060dc3df7",
+            "label": "Label du bouton de téléchargement",
+            "name": "download_chart_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6603025bf354a",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_66def8e0d6747",
+            "label": "Contenu - \"Fine Texture\"",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_66c75dd4675b6",
             "label": "Label \"Fine Texture\"",
             "name": "shades_1_title",
@@ -263,6 +337,24 @@
                     "parent_repeater": "field_660306d3c3df9"
                 }
             ]
+        },
+        {
+            "key": "field_66def8fdd6748",
+            "label": "Contenu - \"Sablées\"",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
         },
         {
             "key": "field_66c75e3e675b7",
@@ -431,8 +523,26 @@
             ]
         },
         {
+            "key": "field_66def90ad6749",
+            "label": "Contenu - \"Métallisée\"",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_66c75e96675b8",
-            "label": "Label \"Sablées\"",
+            "label": "Label \"Métallisée\"",
             "name": "shades_3_title",
             "aria-label": "",
             "type": "text",
@@ -446,6 +556,7 @@
             },
             "default_value": "teinte Métallisée mat",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
@@ -597,62 +708,6 @@
             ]
         },
         {
-            "key": "field_66030638c3df8",
-            "label": "Nuancier",
-            "name": "download_chart_file",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_6603060dc3df7",
-            "label": "Label du bouton de téléchargement",
-            "name": "download_chart_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6603025bf354a",
-            "label": "CTA",
-            "name": "cta",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_6603025c1cd56",
             "label": "Options de style",
             "name": "",
@@ -741,5 +796,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725279193
+    "modified": 1725888850
 }

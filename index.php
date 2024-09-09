@@ -26,14 +26,16 @@ endif;
         if (!empty($categories) && is_array($categories)) : ?>
             <div class="filters">
                 <span class="filters-label"><?php echo __("Filtres", "gypass"); ?></span>
-                <a href="<?php echo esc_url(get_post_type_archive_link('post')) ?>" class="btn btn-outline-primary<?php if (!is_category()) : ?> active<?php endif; ?>">
-                    <?php echo __("Tout", "gypass"); ?>
-                </a>
-                <?php foreach ($categories as $category) : ?>
-                    <a href="<?php echo esc_url(get_term_link($category)) ?>" class="btn btn-outline-primary<?php if (is_category($category->name)) : ?> active<?php endif; ?>">
-                        <?php echo $category->name; ?>
+                <div class="filters-grid">
+                    <a href="<?php echo esc_url(get_post_type_archive_link('post')) ?>" class="btn btn-outline-primary<?php if (!is_category()) : ?> active<?php endif; ?>">
+                        <?php echo __("Tout", "gypass"); ?>
                     </a>
-                <?php endforeach; ?>
+                    <?php foreach ($categories as $category) : ?>
+                        <a href="<?php echo esc_url(get_term_link($category)) ?>" class="btn btn-outline-primary<?php if (is_category($category->name)) : ?> active<?php endif; ?>">
+                            <?php echo $category->name; ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>
