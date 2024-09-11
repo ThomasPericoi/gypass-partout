@@ -22,8 +22,9 @@ $options_count = count(get_field('options'));
 $container = get_field('container_size');
 $background = get_field('background');
 $border_top = get_field('border_top');
+$scroll = get_field('scroll');
 
-$classes = array('accordion-tabs-block', 'accordion-tabs-crossed-block', 'accordion-tabs-crossed-colors-block', $background, $border_top);
+$classes = array('accordion-tabs-block', 'accordion-tabs-crossed-block', 'accordion-tabs-crossed-colors-block', $background, $border_top, $scroll);
 $classes  = implode(' ', $classes);
 if (!empty($block['className'])) {
     $classes .= ' ' . $block['className'];

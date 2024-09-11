@@ -565,6 +565,32 @@
             "other_choice": 0,
             "layout": "horizontal",
             "save_other_choice": 0
+        },
+        {
+            "key": "field_66e02366ccf3c",
+            "label": "Scroll interne",
+            "name": "scroll",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "scroll": "Activer",
+                "no-scroll": "Désactiver"
+            },
+            "default_value": "no-scroll",
+            "return_format": "value",
+            "allow_null": 0,
+            "other_choice": 0,
+            "allow_in_bindings": 1,
+            "layout": "horizontal",
+            "save_other_choice": 0
         }
     ],
     "location": [
@@ -585,5 +611,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725888599
+    "modified": 1725965197
 }
