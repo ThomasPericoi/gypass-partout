@@ -6,8 +6,8 @@
 // Add options page
 if (function_exists('acf_add_options_page')) {
     acf_add_options_page(array(
-        'page_title'    => __('Options du thème Gypass', 'gypass'),
-        'menu_title'    => __('Thème Gypass', 'gypass'),
+        'page_title'    => __('Options du thème GYPASS', 'gypass'),
+        'menu_title'    => __('Thème GYPASS', 'gypass'),
         'menu_slug'     => 'options',
         'capability'    => 'edit_pages',
         'redirect'      => true,
@@ -229,7 +229,7 @@ function register_block_category($categories, $post)
         array(
             array(
                 'slug' => 'gypass-block',
-                'title' => __('Gypass', 'gypass'),
+                'title' => __('GYPASS', 'gypass'),
             ),
         )
     );

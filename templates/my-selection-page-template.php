@@ -5,7 +5,7 @@ get_header(); ?>
 <!-- Hero -->
 <?php
 $title = get_field('my_selection_title', 'options') ?: __("Ma sélection", "gypass");
-$description = get_field('my_selection_description', 'options') ?: __("Retrouvez ici toutes les inspirations Gypass.", "gypass");
+$description = get_field('my_selection_description', 'options') ?: __("Retrouvez ici toutes les inspirations GYPASS.", "gypass");
 ?>
 <section id="hero" class="hero-listing">
     <div class="container">

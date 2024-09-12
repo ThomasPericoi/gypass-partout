@@ -3,10 +3,10 @@
 <!-- Hero -->
 <?php if (is_tax()) :
     $title = get_queried_object()->name;
-    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités Gypass.", "gypass");
+    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités GYPASS.", "gypass");
 else :
     $title = get_field('documents_title', 'options') ?: __("Documents", "gypass");
-    $description = get_field('documents_description', 'options') ?: __("Retrouvez ici toute la documentation Gypass.", "gypass");
+    $description = get_field('documents_description', 'options') ?: __("Retrouvez ici toute la documentation GYPASS.", "gypass");
 endif;
 ?>
 <section id="hero" class="hero-listing">
