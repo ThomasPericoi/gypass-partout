@@ -381,14 +381,14 @@ add_action('wp_before_admin_bar_render', 'change_admin_bar_logo');
 // Change admin footer text
 function change_admin_footer_text()
 {
-    echo __('Propulsé par <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Thème réalisé par <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a> sous la supervision de <a href="https://www.red-agency.fr/" target="_blank">Red Agency</a></p>', 'gypass');
+    echo __('Propulsé par <a href="http://www.wordpress.org" target="_blank">WordPress</a> | Thème réalisé par <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a> sous la supervision de <a href="https://www.red-agency.fr/" target="_blank">RED Agency</a></p>', 'gypass');
 }
 add_filter('admin_footer_text', 'change_admin_footer_text');
 
 // Add admin widgets
 function custom_dashboard_help()
 {
-    echo __('Ce thème est réalisé par <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a> sous la supervision de <a href="https://www.red-agency.fr/" target="_blank">Red Agency</a>.</p>', 'gypass');
+    echo __('Ce thème est réalisé par <a href="https://www.thomaspericoi.com/" target="_blank">Thomas Pericoi</a> sous la supervision de <a href="https://www.red-agency.fr/" target="_blank">RED Agency</a>.</p>', 'gypass');
 }
 
 function add_admin_widgets()
