@@ -50,7 +50,29 @@
     }
 }
 
-#home-hero .slider-element .range {
+#home-hero .slider-element div.range {
+    color: var(--white);
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+@media screen and (min-width: 1200px) {
+    #home-hero .slider-element div.range {
+        position: absolute;
+        top: 0;
+        left: 2em;
+        z-index: 1;
+        text-align: left;
+    }
+}
+
+#home-hero .slider-element div.range strong {
+    font-size: 30px;
+    font-weight: 500;
+}
+
+#home-hero .slider-element img.range {
     max-width: 250px;
     width: 100%;
     height: auto;
@@ -58,7 +80,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #home-hero .slider-element .range {
+    #home-hero .slider-element img.range {
         position: absolute;
         top: 0;
         left: 2em;

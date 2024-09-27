@@ -138,7 +138,8 @@ if (class_exists('ACF')) {
     }
 }
 
-function my_wp_nav_menu_objects($items, $args)
+// Add ACF icon to menu item
+function add_acf_icon_menu($items, $args)
 {
     foreach ($items as &$item) {
         $icon = get_field('icon', $item);
@@ -148,7 +149,7 @@ function my_wp_nav_menu_objects($items, $args)
     }
     return $items;
 }
-add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+add_filter('wp_nav_menu_objects', 'add_acf_icon_menu', 10, 2);
 
 /* INCLUDES
 --------------------------------------------------------------- */
@@ -368,6 +369,7 @@ function change_admin_bar_logo()
         #wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
             background-image: url(' . get_bloginfo('stylesheet_directory') . '/assets/images/gypass-logo-condensed.svg) !important;
             background-position: 0 0;
+            background-size: cover;
             color:rgba(0, 0, 0, 0);
         }
         #wpadminbar #wp-admin-bar-wp-logo.hover > .ab-item .ab-icon {

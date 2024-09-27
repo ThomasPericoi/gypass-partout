@@ -667,6 +667,22 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
+  // Page - My selection
+  function hideItemsWithoutActiveButton() {
+    const items = document.querySelectorAll('.page-template-my-selection-page-template .inspiration');
+
+    items.forEach(item => {
+      const button = item.querySelector('button.simplefavorite-button');
+      if (!button.classList.contains('active')) {
+        item.style.display = 'none';
+      }
+    });
+  }
+
+  document.querySelectorAll('.page-template-my-selection-page-template button.simplefavorite-button.active').forEach(button => {
+    button.addEventListener('click', function () { setTimeout(hideItemsWithoutActiveButton, 1000) });
+  });
+
   // Page - Range
   $(".single-gypass_range .filters .class-filter button").on("click", function () {
     var classname = $(this).data('classname');

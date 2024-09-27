@@ -7,6 +7,7 @@
                 $title = get_sub_field('title');
                 $label = get_sub_field('label');
                 $url = get_sub_field('url');
+                $range_label = get_sub_field('range_label');
                 $range = get_sub_field('range');
                 $badge = get_sub_field('badge');
                 $class = get_sub_field('class');
@@ -42,6 +43,11 @@
                     <div class="slider-element <?php if ($news) : ?>news<?php endif; ?>  swiper-slide" style="background-image: url('<?php echo $backgrounds[0]; ?>');">
                         <div class="container container-lg <?php if ($class) : echo $class;
                                                             endif; ?>">
+                            <?php if ($range_label) : ?>
+                                <div class="range h4-size">
+                                    <?php echo $range_label; ?>
+                                </div>
+                            <?php endif; ?>
                             <?php if ($range) : ?>
                                 <img class="range" src="<?php echo $range["url"]; ?>" alt="<?php echo $range["title"]; ?>" />
                             <?php endif; ?>

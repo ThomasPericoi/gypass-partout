@@ -6,12 +6,14 @@
 }
 
 /* Hero */
-.page-template-my-project-start-page-template #hero {
+.page-template-my-project-start-page-template #hero,
+.page-template-my-project-page-template #hero {
     margin-bottom: var(--spacing-section-outer);
     text-align: center;
 }
 
-.page-template-my-project-start-page-template #hero h1 {
+.page-template-my-project-start-page-template #hero h1,
+.page-template-my-project-page-template #hero h1 {
     margin-bottom: 1em;
     color: var(--secondary);
 }

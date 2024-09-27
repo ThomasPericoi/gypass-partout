@@ -32,6 +32,12 @@
   background-position: center;
 }
 
+.inspirations-grid .inspiration-thumbnail>img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .simplefavorite-button {
   padding: 1em;
   position: absolute;
