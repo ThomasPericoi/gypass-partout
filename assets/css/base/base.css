@@ -12,10 +12,12 @@ main {
 }
 
 ::selection {
+  color: var(--white);
   background: var(--primary);
 }
 
 ::-moz-selection {
+  color: var(--white);
   background: var(--primary);
 }
 
