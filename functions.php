@@ -196,6 +196,15 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
 /* CONTACT
 --------------------------------------------------------------- */
 
+// Grant Access to Flamingo
+add_filter( 'flamingo_map_meta_cap', function( $meta_caps ) {
+  $meta_caps = array_merge( $meta_caps, array(
+    'flamingo_edit_inbound_message' => 'edit_pages',
+    'flamingo_edit_inbound_messages' => 'edit_pages',
+  ) );
+  return $meta_caps;
+});
+
 // Add Shortcode(s) Contact Form 7
 function add_shortcode_cf7()
 {
