@@ -3,7 +3,7 @@
 <!-- Hero -->
 <?php if (is_category()) :
     $title = get_queried_object()->name;
-    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités Gypass.", "gypass");
+    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités GYPASS.", "gypass");
 else :
     $title = get_field('blog_title', 'options') ?: __("Nos actualités", "gypass");
     $description = get_field('blog_description', 'options') ?: __("Retrouvez ici toutes les actualités GYPASS.", "gypass");

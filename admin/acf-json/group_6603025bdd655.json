@@ -156,7 +156,11 @@
         },
         {
             "key": "field_66def8e0d6747",
+<<<<<<< HEAD
             "label": "Contenu - Teintes #1",
+=======
+            "label": "Contenu - \"Fine Texture\"",
+>>>>>>> origin/main
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -341,7 +345,11 @@
         },
         {
             "key": "field_66def8fdd6748",
+<<<<<<< HEAD
             "label": "Contenu - Teintes #2",
+=======
+            "label": "Contenu - \"Sablées\"",
+>>>>>>> origin/main
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -526,7 +534,11 @@
         },
         {
             "key": "field_66def90ad6749",
+<<<<<<< HEAD
             "label": "Contenu - Teintes #3",
+=======
+            "label": "Contenu - \"Métallisée\"",
+>>>>>>> origin/main
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -544,7 +556,11 @@
         },
         {
             "key": "field_66c75e96675b8",
+<<<<<<< HEAD
             "label": "Label de la liste",
+=======
+            "label": "Label \"Métallisée\"",
+>>>>>>> origin/main
             "name": "shades_3_title",
             "aria-label": "",
             "type": "text",
@@ -798,5 +814,9 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
+<<<<<<< HEAD
     "modified": 1727364012
+=======
+    "modified": 1725888850
+>>>>>>> origin/main
 }

@@ -6,7 +6,7 @@
     $description = get_queried_object()->description ?: __("Retrouvez ici toutes les gammes GYPASS.", "gypass");
 else :
     $title = __("Nos gammes", "gypass");
-    $description = __("Retrouvez ici toutes les gammes Gypass.", "gypass");
+    $description = __("Retrouvez ici toutes les gammes GYPASS.", "gypass");
 endif;
 ?>
 <section id="hero" class="hero-listing">

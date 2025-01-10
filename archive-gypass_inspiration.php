@@ -6,7 +6,7 @@
     $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités GYPASS.", "gypass");
 else :
     $title = get_field('inspirations_title', 'options') ?: __("Inspirations", "gypass");
-    $description = get_field('inspirations_description', 'options') ?: __("Retrouvez ici toutes les inspirations Gypass.", "gypass");
+    $description = get_field('inspirations_description', 'options') ?: __("Retrouvez ici toutes les inspirations GYPASS.", "gypass");
 endif;
 ?>
 <section id="hero" class="hero-listing">
