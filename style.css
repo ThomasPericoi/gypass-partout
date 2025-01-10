@@ -1,9 +1,9 @@
 /*
-Theme Name: Gypass-Partout
+Theme Name: GYPASS-Partout
 Theme URI: https://thomaspericoi.com/
 Author: Thomas Pericoi
 Author URI: https://thomaspericoi.com/
-Description: Un thème Wordpress complet et personnalisable conçu pour Gypass, coordonné par Red Agency.
+Description: Un thème Wordpress complet et personnalisable conçu pour GYPASS, coordonné par RED Agency.
 Version: 1.1
 Requires at least: 5.9
 Tested up to: 6.0.3
@@ -44,6 +44,7 @@ Text Domain: gypass
 --------------------------------------------------------------- */
 
 @import "./assets/css/blocks/accordion-tabs.css";
+@import "./assets/css/blocks/accordion-tabs-colors.css";
 @import "./assets/css/blocks/accordion-tabs-crossed.css";
 @import "./assets/css/blocks/accordion-tabs-crossed-double.css";
 @import "./assets/css/blocks/content-2-columns.css";

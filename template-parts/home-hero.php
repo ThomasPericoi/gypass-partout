@@ -4,9 +4,11 @@
         <div class="swiper-wrapper">
             <?php while (have_rows('home_hero_slider')) : the_row();
                 $backgrounds = get_sub_field('background');
+				$shadowed = get_sub_field('shadowed');
                 $title = get_sub_field('title');
                 $label = get_sub_field('label');
                 $url = get_sub_field('url');
+                $range_label = get_sub_field('range_label');
                 $range = get_sub_field('range');
                 $badge = get_sub_field('badge');
                 $class = get_sub_field('class');
@@ -17,9 +19,13 @@
                         <div class="nested-slider swiper">
                             <div class="swiper-wrapper">
                                 <?php foreach ($backgrounds as $background) : ?>
-                                    <div class="slider-element <?php if ($news) : ?>news<?php endif; ?>  swiper-slide" style="background-image: url('<?php echo $background; ?>');">
-                                        <div class="container container-lg <?php if ($class) : echo $class;
-                                                                            endif; ?>">
+                                    <div class="slider-element <?php if ($news) : ?>news<?php endif; ?> <?php if ($shadowed) : ?>shadowed<?php endif; ?> swiper-slide" style="background-image: url('<?php echo $background; ?>');">
+                                        <div class="container container-lg <?php if ($class) : echo $class; endif; ?>">
+											<?php if ($range_label && $news) : ?>
+												<div class="range h4-size">
+													<?php echo $range_label; ?>
+												</div>
+											<?php endif; ?>
                                             <?php if ($range) : ?>
                                                 <img class="range" src="<?php echo $range["url"]; ?>" alt="<?php echo $range["title"]; ?>" />
                                             <?php endif; ?>
@@ -31,7 +37,9 @@
                                                     <?php echo $title; ?>
                                                 </div>
                                             <?php endif; ?>
-                                            <a <?php if ($url) : ?>href="<?php echo $url; ?>" <?php endif; ?> class="btn btn-outline-white"><?php echo $label; ?></a>
+											<?php if ($label) : ?>
+                                            	<a <?php if ($url) : ?>href="<?php echo $url; ?>" <?php endif; ?> class="btn btn-outline-white"><?php echo $label; ?></a>
+											<?php endif; ?>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
@@ -39,9 +47,13 @@
                         </div>
                     </div>
                 <?php else : ?>
-                    <div class="slider-element <?php if ($news) : ?>news<?php endif; ?>  swiper-slide" style="background-image: url('<?php echo $backgrounds[0]; ?>');">
-                        <div class="container container-lg <?php if ($class) : echo $class;
-                                                            endif; ?>">
+                    <div class="slider-element <?php if ($news) : ?>news<?php endif; ?> <?php if ($shadowed) : ?>shadowed<?php endif; ?> swiper-slide" style="background-image: url('<?php echo $backgrounds[0]; ?>');">
+                        <div class="container container-lg <?php if ($class) : echo $class; endif; ?>">
+                            <?php if ($range_label && $news) : ?>
+                                <div class="range h4-size">
+                                    <?php echo $range_label; ?>
+                                </div>
+                            <?php endif; ?>
                             <?php if ($range) : ?>
                                 <img class="range" src="<?php echo $range["url"]; ?>" alt="<?php echo $range["title"]; ?>" />
                             <?php endif; ?>
@@ -53,7 +65,9 @@
                                     <?php echo $title; ?>
                                 </div>
                             <?php endif; ?>
-                            <a <?php if ($url) : ?>href="<?php echo $url; ?>" <?php endif; ?> class="btn btn-outline-white"><?php echo $label; ?></a>
+							<?php if ($label) : ?>
+                            	<a <?php if ($url) : ?>href="<?php echo $url; ?>" <?php endif; ?> class="btn btn-outline-white"><?php echo $label; ?></a>
+							<?php endif; ?>
                         </div>
                     </div>
                 <?php endif; ?>

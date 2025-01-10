@@ -99,8 +99,82 @@
             "append": ""
         },
         {
+            "key": "field_66030638c3df8",
+            "label": "Nuancier",
+            "name": "download_chart_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": ""
+        },
+        {
+            "key": "field_6603060dc3df7",
+            "label": "Label du bouton de téléchargement",
+            "name": "download_chart_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6603025bf354a",
+            "label": "CTA",
+            "name": "cta",
+            "aria-label": "",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array"
+        },
+        {
+            "key": "field_66def8e0d6747",
+            "label": "Contenu - Teintes #1",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_66c75dd4675b6",
-            "label": "Label \"Fine Texture\"",
+            "label": "Label de la liste",
             "name": "shades_1_title",
             "aria-label": "",
             "type": "text",
@@ -114,18 +188,19 @@
             },
             "default_value": "teintes Fine Texture",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
             "key": "field_660306d3c3df9",
-            "label": "Teintes \"Fine Texture\"",
+            "label": "Teintes",
             "name": "shades_1",
             "aria-label": "",
             "type": "repeater",
             "instructions": "La deuxième teinte sera celle sélectionnée de base.",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -134,10 +209,10 @@
             },
             "layout": "block",
             "pagination": 0,
-            "min": 2,
+            "min": 0,
             "max": 0,
             "collapsed": "field_6603070bc3dfa",
-            "button_label": "Ajouter une teinte \"Fine Texture\"",
+            "button_label": "Ajouter une teinte #1",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -265,8 +340,26 @@
             ]
         },
         {
+            "key": "field_66def8fdd6748",
+            "label": "Contenu - Teintes #2",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_66c75e3e675b7",
-            "label": "Label \"Sablées\"",
+            "label": "Label de la liste",
             "name": "shades_2_title",
             "aria-label": "",
             "type": "text",
@@ -280,13 +373,14 @@
             },
             "default_value": "teintes Sablées",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
             "key": "field_6603091c9bdb5",
-            "label": "Teintes \"Sablée\"",
+            "label": "Teintes",
             "name": "shades_2",
             "aria-label": "",
             "type": "repeater",
@@ -300,10 +394,10 @@
             },
             "layout": "block",
             "pagination": 0,
-            "min": 2,
+            "min": 0,
             "max": 0,
             "collapsed": "field_6603070bc3dfa",
-            "button_label": "Ajouter une teinte \"Sablée\"",
+            "button_label": "Ajouter une teinte #2",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -431,8 +525,26 @@
             ]
         },
         {
+            "key": "field_66def90ad6749",
+            "label": "Contenu - Teintes #3",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
             "key": "field_66c75e96675b8",
-            "label": "Label \"Sablées\"",
+            "label": "Label de la liste",
             "name": "shades_3_title",
             "aria-label": "",
             "type": "text",
@@ -446,13 +558,14 @@
             },
             "default_value": "teinte Métallisée mat",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "placeholder": "",
             "prepend": "",
             "append": ""
         },
         {
             "key": "field_66053498724f7",
-            "label": "Teintes \"Métallisée\"",
+            "label": "Teintes",
             "name": "shades_3",
             "aria-label": "",
             "type": "repeater",
@@ -469,7 +582,7 @@
             "min": 0,
             "max": 0,
             "collapsed": "field_6603070bc3dfa",
-            "button_label": "Ajouter une teinte \"Métallisée\"",
+            "button_label": "Ajouter une teinte #3",
             "rows_per_page": 20,
             "sub_fields": [
                 {
@@ -597,62 +710,6 @@
             ]
         },
         {
-            "key": "field_66030638c3df8",
-            "label": "Nuancier",
-            "name": "download_chart_file",
-            "aria-label": "",
-            "type": "file",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "url",
-            "library": "all",
-            "min_size": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
-            "key": "field_6603060dc3df7",
-            "label": "Label du bouton de téléchargement",
-            "name": "download_chart_label",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_6603025bf354a",
-            "label": "CTA",
-            "name": "cta",
-            "aria-label": "",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array"
-        },
-        {
             "key": "field_6603025c1cd56",
             "label": "Options de style",
             "name": "",
@@ -741,5 +798,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725279193
+    "modified": 1727364012
 }

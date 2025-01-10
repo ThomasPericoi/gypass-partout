@@ -1,0 +1,14 @@
+/* #Accordion Tabs Crossed (Colors)
+--------------------------------------------------------------- */
+.accordion-tabs-crossed-block.accordion-tabs-crossed-colors-block .options {
+    gap: 10px;
+}
+
+.accordion-tabs-crossed-block.accordion-tabs-crossed-colors-block .options button.color {
+    width: 45px;
+    height: 45px;
+}
+
+.accordion-tabs-block.accordion-tabs-crossed-colors-block .menu .accordion-list button.active {
+	box-shadow: inset 0px 0px 0px 2px var(--white);
+}

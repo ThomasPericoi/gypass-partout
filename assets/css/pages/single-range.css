@@ -159,6 +159,7 @@
 .single-gypass_range .features-grid {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: var(--spacing-section-inner);
 }
 
@@ -189,6 +190,7 @@
 
 .single-gypass_range .filters {
     padding: 1em 0;
+    display: block;
     background-color: var(--ebb);
     border-bottom: 1px solid var(--manatee);
 }
@@ -204,6 +206,13 @@
         flex-direction: row;
         gap: 1em;
     }
+}
+
+.single-gypass_range .filters .filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    align-items: center;
 }
 
 @media screen and (min-width: 1200px) {

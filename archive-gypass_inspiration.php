@@ -3,7 +3,7 @@
 <!-- Hero -->
 <?php if (is_tax()) :
     $title = get_queried_object()->name;
-    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités Gypass.", "gypass");
+    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les actualités GYPASS.", "gypass");
 else :
     $title = get_field('inspirations_title', 'options') ?: __("Inspirations", "gypass");
     $description = get_field('inspirations_description', 'options') ?: __("Retrouvez ici toutes les inspirations Gypass.", "gypass");
@@ -25,14 +25,16 @@ endif;
         if (!empty($product_types) && is_array($product_types)) : ?>
             <div class="filters">
                 <span class="filters-label"><?php echo __("Filtres", "gypass"); ?></span>
-                <a href="<?php echo esc_url(get_post_type_archive_link('gypass_inspiration')) ?>" class="btn btn-outline-primary<?php if (!is_tax()) : ?> active<?php endif; ?>">
-                    <?php echo __("Tout", "gypass"); ?>
-                </a>
-                <?php foreach ($product_types as $product_type) : ?>
-                    <a href="<?php echo esc_url(get_term_link($product_type)) ?>" class="btn btn-outline-primary<?php if (is_tax('gypass_inspi_product_family', $product_type->slug)) : ?> active<?php endif; ?>">
-                        <?php echo $product_type->name; ?>
+                <div class="filters-grid">
+                    <a href="<?php echo esc_url(get_post_type_archive_link('gypass_inspiration')) ?>" class="btn btn-outline-primary<?php if (!is_tax()) : ?> active<?php endif; ?>">
+                        <?php echo __("Tout", "gypass"); ?>
                     </a>
-                <?php endforeach; ?>
+                    <?php foreach ($product_types as $product_type) : ?>
+                        <a href="<?php echo esc_url(get_term_link($product_type)) ?>" class="btn btn-outline-primary<?php if (is_tax('gypass_inspi_product_family', $product_type->slug)) : ?> active<?php endif; ?>">
+                            <?php echo $product_type->name; ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>

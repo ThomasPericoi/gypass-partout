@@ -1,13 +1,24 @@
 /* #My Project page
 --------------------------------------------------------------- */
 .page-template-my-project-page-template main {
-    padding: var(--spacing-section-outer) 0;
+	padding-top: 0.5rem;
+    padding-bottom: var(--spacing-section-outer);
     position: relative;
 }
 
 .page-template-my-project-page-template section section {
     padding: var(--spacing-section-outer) 0;
     position: relative;
+}
+
+.page-template-my-project-page-template section section[data-step="1"] {
+	padding: 1.5rem 0;
+}
+
+@media screen and (min-width: 992px) {
+	.page-template-my-project-page-template section section[data-step="1"] {
+		padding-top: var(--spacing-section-outer);
+	}
 }
 
 .page-template-my-project-page-template section.dark {
@@ -175,7 +186,8 @@
 }
 
 .page-template-my-project-page-template details .form-elements,
-.page-template-my-project-page-template details .video-wrapper {
+.page-template-my-project-page-template details .video-wrapper,
+.page-template-my-project-page-template details p {
     margin: var(--spacing-section-inner) auto;
 }
 

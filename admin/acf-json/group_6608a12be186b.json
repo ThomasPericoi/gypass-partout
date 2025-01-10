@@ -95,185 +95,6 @@
             "return_format": "array"
         },
         {
-            "key": "field_6608a12c129d2",
-            "label": "Contenu - Colonne 2 & 3",
-            "name": "",
-            "aria-label": "",
-            "type": "accordion",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "open": 0,
-            "multi_expand": 0,
-            "endpoint": 0
-        },
-        {
-            "key": "field_6608a12c16326",
-            "label": "Menus déroulants",
-            "name": "menus",
-            "aria-label": "",
-            "type": "repeater",
-            "instructions": "",
-            "required": 1,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "layout": "block",
-            "pagination": 0,
-            "min": 1,
-            "max": 2,
-            "collapsed": "",
-            "button_label": "Ajouter un menu déroulant",
-            "rows_per_page": 20,
-            "sub_fields": [
-                {
-                    "key": "field_6608a12c46e76",
-                    "label": "Titre du tab",
-                    "name": "title",
-                    "aria-label": "",
-                    "type": "text",
-                    "instructions": "Indiquez la consigne du menu déroulant.",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "default_value": "",
-                    "maxlength": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "parent_repeater": "field_6608a12c16326"
-                },
-                {
-                    "key": "field_6608a12c4a81d",
-                    "label": "Éléments du tab",
-                    "name": "elements",
-                    "aria-label": "",
-                    "type": "repeater",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "layout": "block",
-                    "min": 1,
-                    "max": 0,
-                    "collapsed": "",
-                    "button_label": "Ajouter un élément",
-                    "rows_per_page": 20,
-                    "parent_repeater": "field_6608a12c16326",
-                    "sub_fields": [
-                        {
-                            "key": "field_6608a12c55edc",
-                            "label": "Label de l'élément",
-                            "name": "label",
-                            "aria-label": "",
-                            "type": "text",
-                            "instructions": "",
-                            "required": 1,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "default_value": "",
-                            "maxlength": "",
-                            "placeholder": "",
-                            "prepend": "",
-                            "append": "",
-                            "parent_repeater": "field_6608a12c4a81d"
-                        },
-                        {
-                            "key": "field_6608a6c999d6c",
-                            "label": "Images",
-                            "name": "images",
-                            "aria-label": "",
-                            "type": "repeater",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "layout": "table",
-                            "min": 0,
-                            "max": 0,
-                            "collapsed": "",
-                            "button_label": "Ajouter une image associée",
-                            "rows_per_page": 20,
-                            "parent_repeater": "field_6608a12c4a81d",
-                            "sub_fields": [
-                                {
-                                    "key": "field_6608a12c59852",
-                                    "label": "Image associée",
-                                    "name": "image",
-                                    "aria-label": "",
-                                    "type": "image",
-                                    "instructions": "",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "return_format": "array",
-                                    "library": "all",
-                                    "min_width": "",
-                                    "min_height": "",
-                                    "min_size": "",
-                                    "max_width": "",
-                                    "max_height": "",
-                                    "max_size": "",
-                                    "mime_types": "",
-                                    "preview_size": "medium",
-                                    "parent_repeater": "field_6608a6c999d6c"
-                                },
-                                {
-                                    "key": "field_6608a70899d6d",
-                                    "label": "Donnée croisée associée",
-                                    "name": "options_id",
-                                    "aria-label": "",
-                                    "type": "text",
-                                    "instructions": "Indiquez la même ID associée au champs \"ID\" du champs \"Données croisées\".",
-                                    "required": 1,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "default_value": "",
-                                    "maxlength": "",
-                                    "placeholder": "",
-                                    "prepend": "",
-                                    "append": "",
-                                    "parent_repeater": "field_6608a6c999d6c"
-                                }
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        {
             "key": "field_6608ac455cc6b",
             "label": "Titre de la donnée croisée",
             "name": "options_title",
@@ -455,6 +276,185 @@
             ]
         },
         {
+            "key": "field_6608a12c129d2",
+            "label": "Contenu - Colonne 2 & 3",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_6608a12c16326",
+            "label": "Menus déroulants",
+            "name": "menus",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "layout": "block",
+            "pagination": 0,
+            "min": 1,
+            "max": 2,
+            "collapsed": "",
+            "button_label": "Ajouter un menu déroulant",
+            "rows_per_page": 20,
+            "sub_fields": [
+                {
+                    "key": "field_6608a12c46e76",
+                    "label": "Titre du tab",
+                    "name": "title",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "Indiquez la consigne du menu déroulant.",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "parent_repeater": "field_6608a12c16326"
+                },
+                {
+                    "key": "field_6608a12c4a81d",
+                    "label": "Éléments du tab",
+                    "name": "elements",
+                    "aria-label": "",
+                    "type": "repeater",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "layout": "block",
+                    "min": 1,
+                    "max": 0,
+                    "collapsed": "",
+                    "button_label": "Ajouter un élément",
+                    "rows_per_page": 20,
+                    "parent_repeater": "field_6608a12c16326",
+                    "sub_fields": [
+                        {
+                            "key": "field_6608a12c55edc",
+                            "label": "Label de l'élément",
+                            "name": "label",
+                            "aria-label": "",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 1,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "maxlength": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "parent_repeater": "field_6608a12c4a81d"
+                        },
+                        {
+                            "key": "field_6608a6c999d6c",
+                            "label": "Images",
+                            "name": "images",
+                            "aria-label": "",
+                            "type": "repeater",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "layout": "table",
+                            "min": 0,
+                            "max": 0,
+                            "collapsed": "",
+                            "button_label": "Ajouter une image associée",
+                            "rows_per_page": 20,
+                            "parent_repeater": "field_6608a12c4a81d",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6608a12c59852",
+                                    "label": "Image associée",
+                                    "name": "image",
+                                    "aria-label": "",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "return_format": "array",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": "",
+                                    "preview_size": "medium",
+                                    "parent_repeater": "field_6608a6c999d6c"
+                                },
+                                {
+                                    "key": "field_6608a70899d6d",
+                                    "label": "Donnée croisée associée",
+                                    "name": "options_id",
+                                    "aria-label": "",
+                                    "type": "text",
+                                    "instructions": "Indiquez la même ID associée au champs \"ID\" du champs \"Données croisées\".",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "default_value": "",
+                                    "maxlength": "",
+                                    "placeholder": "",
+                                    "prepend": "",
+                                    "append": "",
+                                    "parent_repeater": "field_6608a6c999d6c"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "key": "field_6639ed81d9c55",
             "label": "Options de contenu",
             "name": "",
@@ -611,5 +611,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725546900
+    "modified": 1725888562
 }

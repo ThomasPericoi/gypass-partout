@@ -85,6 +85,10 @@
                 "id": ""
             },
             "choices": {
+                "adelaide": "Adélaïde",
+                "auckland": "Auckland",
+                "brisbane": "Brisbane",
+                "canberra": "Canberra",
                 "claustras-maestria": "Claustras Maestria",
                 "claustras-panneaux": "Claustras Panneaux",
                 "claustras-vitrees": "Claustras Vitrées",
@@ -94,18 +98,22 @@
                 "integrale": "Intégrale",
                 "latérales": "Latérales",
                 "maestria": "Maestria",
+                "melbourne": "Melbourne",
                 "perspective": "Perspective",
                 "portes-a-vantaux": "Portes à vantaux",
                 "rivage": "Rivage",
+                "sydney": "Sydney",
                 "tendance": "Tendance",
                 "traditionnelle": "Traditionnelle",
                 "urban": "Urban",
-                "vitree": "Vitrée"
+                "vitree": "Vitrée",
+                "wellington": "Wellington"
             },
             "default_value": false,
             "return_format": "label",
             "multiple": 0,
             "allow_null": 1,
+            "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
             "placeholder": ""
@@ -652,5 +660,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725278354
+    "modified": 1725955834
 }

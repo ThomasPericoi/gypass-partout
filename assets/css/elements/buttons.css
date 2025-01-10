@@ -137,7 +137,7 @@
 }
 
 /* Filters */
-.filters .filter {
+.filters {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
@@ -149,6 +149,13 @@
     font-weight: 700;
     font-size: 17px;
     text-transform: uppercase;
+}
+
+.filters .filters-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
 }
 
 .filters .btn {

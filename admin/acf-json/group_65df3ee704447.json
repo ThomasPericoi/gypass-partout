@@ -72,6 +72,28 @@
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
+                    "key": "field_67629838a5e4d",
+                    "label": "Ajouter une ombre portée ?",
+                    "name": "shadowed",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 1,
+                    "allow_in_bindings": 0,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
                     "key": "field_65fb03eeebfa7",
                     "label": "Titre",
                     "name": "title",
@@ -107,7 +129,7 @@
                     "aria-label": "",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -116,6 +138,7 @@
                     },
                     "default_value": "",
                     "maxlength": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
@@ -140,8 +163,38 @@
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
+                    "key": "field_66f6890a782f1",
+                    "label": "Gamme (Label)",
+                    "name": "range_label",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65fb0318f98cc",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
                     "key": "field_65fb09f466c6b",
-                    "label": "Gamme",
+                    "label": "Gamme (Icône)",
                     "name": "range",
                     "aria-label": "",
                     "type": "image",
@@ -170,6 +223,7 @@
                     "max_height": "",
                     "max_size": "",
                     "mime_types": "png, svg",
+                    "allow_in_bindings": 1,
                     "preview_size": "medium",
                     "parent_repeater": "field_65faeaf703226"
                 },
@@ -801,5 +855,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724342779
+    "modified": 1734514940
 }

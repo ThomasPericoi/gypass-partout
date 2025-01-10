@@ -3,10 +3,10 @@
 <!-- Hero -->
 <?php if (is_tax()) :
     $title = get_queried_object()->name;
-    $description = get_queried_object()->description ?:  __("Retrouvez ici tous les conseils et astuces Gypass.", "gypass");
+    $description = get_queried_object()->description ?:  __("Retrouvez ici tous les conseils et astuces GYPASS.", "gypass");
 else :
     $title = get_field('tips_tricks_title', 'options') ?: __("Conseils & Astuces", "gypass");
-    $description = get_field('tips_tricks__description', 'options') ?: __("Retrouvez ici tous les conseils et astuces Gypass.", "gypass");
+    $description = get_field('tips_tricks__description', 'options') ?: __("Retrouvez ici tous les conseils et astuces GYPASS.", "gypass");
 endif;
 ?>
 <section id="hero" class="hero-listing">
@@ -25,14 +25,16 @@ endif;
         if (!empty($product_families) && is_array($product_families)) : ?>
             <div class="filters">
                 <span class="filters-label"><?php echo __("Filtres", "gypass"); ?></span>
-                <a href="<?php echo esc_url(get_post_type_archive_link('gypass_tip_trick')) ?>" class="btn btn-outline-primary<?php if (!is_tax()) : ?> active<?php endif; ?>">
-                    <?php echo __("Tout", "gypass"); ?>
-                </a>
-                <?php foreach ($product_families as $product_family) : ?>
-                    <a href="<?php echo esc_url(get_term_link($product_family)) ?>" class="btn btn-outline-primary<?php if (is_tax('gypass_trip_trick_product_family', $product_family->slug)) : ?> active<?php endif; ?>">
-                        <?php echo $product_family->name; ?>
+                <div class="filters-grid">
+                    <a href="<?php echo esc_url(get_post_type_archive_link('gypass_tip_trick')) ?>" class="btn btn-outline-primary<?php if (!is_tax()) : ?> active<?php endif; ?>">
+                        <?php echo __("Tout", "gypass"); ?>
                     </a>
-                <?php endforeach; ?>
+                    <?php foreach ($product_families as $product_family) : ?>
+                        <a href="<?php echo esc_url(get_term_link($product_family)) ?>" class="btn btn-outline-primary<?php if (is_tax('gypass_trip_trick_product_family', $product_family->slug)) : ?> active<?php endif; ?>">
+                            <?php echo $product_family->name; ?>
+                        </a>
+                    <?php endforeach; ?>
+                </div>
             </div>
         <?php endif; ?>
     </div>

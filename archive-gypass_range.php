@@ -3,7 +3,7 @@
 <!-- Hero -->
 <?php if (is_tax()) :
     $title = get_queried_object()->name;
-    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les gammes Gypass.", "gypass");
+    $description = get_queried_object()->description ?: __("Retrouvez ici toutes les gammes GYPASS.", "gypass");
 else :
     $title = __("Nos gammes", "gypass");
     $description = __("Retrouvez ici toutes les gammes Gypass.", "gypass");
