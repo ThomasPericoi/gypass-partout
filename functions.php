@@ -151,6 +151,14 @@ function add_acf_icon_menu($items, $args)
 }
 add_filter('wp_nav_menu_objects', 'add_acf_icon_menu', 10, 2);
 
+// Remove conflicts bewteen footnotes and ACF
+add_action('init', function () {
+    remove_action('init', 'register_block_core_footnotes');
+}, 1);
+
+remove_filter( 'sanitize_post_meta_footnotes', '_wp_filter_post_meta_footnotes' );
+
+
 /* INCLUDES
 --------------------------------------------------------------- */
 
@@ -197,13 +205,13 @@ add_action('wp_enqueue_scripts', 'enqueue_theme_scripts');
 --------------------------------------------------------------- */
 
 // Grant Flamingo Access to Editor Role
-add_filter( 'flamingo_map_meta_cap', function( $meta_caps ) {
-  $meta_caps = array_merge( $meta_caps, array(
-    'flamingo_edit_inbound_message' => 'edit_pages',
-    'flamingo_edit_inbound_messages' => 'edit_pages',
-  ) );
+add_filter('flamingo_map_meta_cap', function ($meta_caps) {
+    $meta_caps = array_merge($meta_caps, array(
+        'flamingo_edit_inbound_message' => 'edit_pages',
+        'flamingo_edit_inbound_messages' => 'edit_pages',
+    ));
 
-  return $meta_caps;
+    return $meta_caps;
 });
 
 // Add Shortcode(s) Contact Form 7
