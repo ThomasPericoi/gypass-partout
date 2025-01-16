@@ -1,11 +1,11 @@
 /* #Accordion Tabs Crossed (Double)
 --------------------------------------------------------------- */
-.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .col-wrapper>.content>.formatted {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .cols-wrapper>.content>.formatted {
     display: none;
     animation: fadeIn 1s;
 }
 
-.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .col-wrapper>.content>.formatted.visible {
+.accordion-tabs-crossed-double-block:not(.accordion-tabs-crossed-special-block) .cols-wrapper>.content>.formatted.visible {
     display: block;
 }
 
@@ -43,7 +43,7 @@
 }
 
 /* Options alt */
-.accordion-tabs-crossed-double-block .col-wrapper>.media {
+.accordion-tabs-crossed-double-block .cols-wrapper>.media {
     gap: 0;
     padding-bottom: 40px;
 }

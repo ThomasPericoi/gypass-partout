@@ -14,7 +14,7 @@
     border-top: 1px solid var(--primary);
 }
 
-.shades-block .col-wrapper {
+.shades-block .cols-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -22,7 +22,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .shades-block .col-wrapper {
+    .shades-block .cols-wrapper {
         flex-direction: row;
     }
 }

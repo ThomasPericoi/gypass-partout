@@ -1,6 +1,6 @@
 {
     "key": "group_640af9d31e56a",
-    "title": "Options du thème - Menu",
+    "title": "Options du thème - Menu (En-tête)",
     "fields": [
         {
             "key": "field_640af9d3e561d",
@@ -46,5 +46,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1732885574
+    "modified": 1736871289
 }

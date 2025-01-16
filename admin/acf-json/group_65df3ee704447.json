@@ -34,14 +34,63 @@
                 "class": "",
                 "id": ""
             },
-            "layout": "block",
-            "pagination": 0,
+            "layout": "row",
+            "pagination": 1,
+            "rows_per_page": 1,
             "min": 0,
             "max": 0,
             "collapsed": "",
-            "button_label": "Ajouter un élément",
-            "rows_per_page": 20,
+            "button_label": "Ajouter un slide",
             "sub_fields": [
+                {
+                    "key": "field_65fb0318f98cc",
+                    "label": "Mode \"actualité\"",
+                    "name": "news",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "Change la disposition du slide et ajoute un champs titre.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "message": "",
+                    "default_value": 0,
+                    "allow_in_bindings": 1,
+                    "ui": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
+                    "key": "field_67877fa396e1d",
+                    "label": "Type de fond",
+                    "name": "media_type",
+                    "aria-label": "",
+                    "type": "radio",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "image": "Image",
+                        "video": "Vidéo"
+                    },
+                    "default_value": "image",
+                    "return_format": "value",
+                    "allow_null": 0,
+                    "other_choice": 0,
+                    "allow_in_bindings": 0,
+                    "layout": "vertical",
+                    "save_other_choice": 0,
+                    "parent_repeater": "field_65faeaf703226"
+                },
                 {
                     "key": "field_65faebf803227",
                     "label": "Image(s) de fond",
@@ -50,7 +99,15 @@
                     "type": "gallery",
                     "instructions": "Si plusieurs images sont sélectionnées, alors un slider DANS le slider sera créé, et affichera des images de fond différentes.",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67877fa396e1d",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -72,6 +129,41 @@
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
+                    "key": "field_67866a321d211",
+                    "label": "Image de fond (mobile)",
+                    "name": "background_mobile",
+                    "aria-label": "",
+                    "type": "image",
+                    "instructions": "Ne prend pas effet si plusieurs images sont renseignées dans le champs précédent.",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67877fa396e1d",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "url",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "",
+                    "allow_in_bindings": 0,
+                    "preview_size": "medium",
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
                     "key": "field_67629838a5e4d",
                     "label": "Ajouter une ombre portée ?",
                     "name": "shadowed",
@@ -79,7 +171,15 @@
                     "type": "true_false",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67877fa396e1d",
+                                "operator": "==",
+                                "value": "image"
+                            }
+                        ]
+                    ],
                     "wrapper": {
                         "width": "",
                         "class": "",
@@ -94,13 +194,73 @@
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
+                    "key": "field_67877f5f96e1b",
+                    "label": "Vidéo de fond",
+                    "name": "background_video",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67877fa396e1d",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "mp4, avi, mov, mkv",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
+                    "key": "field_67877f8e96e1c",
+                    "label": "Vidéo de fond (mobile)",
+                    "name": "background_video_mobile",
+                    "aria-label": "",
+                    "type": "file",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_67877fa396e1d",
+                                "operator": "==",
+                                "value": "video"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "return_format": "array",
+                    "library": "all",
+                    "min_size": "",
+                    "max_size": "",
+                    "mime_types": "mp4, avi, mov, mkv",
+                    "allow_in_bindings": 0,
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
                     "key": "field_65fb03eeebfa7",
                     "label": "Titre",
                     "name": "title",
                     "aria-label": "",
                     "type": "wysiwyg",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": [
                         [
                             {
@@ -116,6 +276,7 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "allow_in_bindings": 1,
                     "tabs": "all",
                     "toolbar": "basic",
                     "media_upload": 0,
@@ -159,37 +320,35 @@
                         "id": ""
                     },
                     "default_value": "",
+                    "allow_in_bindings": 1,
                     "placeholder": "",
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
-                    "key": "field_66f6890a782f1",
-                    "label": "Gamme (Label)",
-                    "name": "range_label",
+                    "key": "field_65faf268beb19",
+                    "label": "Classe supplémentaire",
+                    "name": "class",
                     "aria-label": "",
-                    "type": "textarea",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_65fb0318f98cc",
-                                "operator": "==",
-                                "value": "true"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
-                    "maxlength": "",
-                    "allow_in_bindings": 1,
-                    "rows": 2,
+                    "choices": {
+                        "js-openRanges": "js-openRanges",
+                        "js-openProducts": "js-openProducts"
+                    },
+                    "default_value": false,
+                    "return_format": "value",
+                    "multiple": 0,
+                    "allow_null": 1,
+                    "ui": 0,
+                    "ajax": 0,
                     "placeholder": "",
-                    "new_lines": "br",
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
@@ -228,6 +387,36 @@
                     "parent_repeater": "field_65faeaf703226"
                 },
                 {
+                    "key": "field_66f6890a782f1",
+                    "label": "Gamme (Label)",
+                    "name": "range_label",
+                    "aria-label": "",
+                    "type": "textarea",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_65fb0318f98cc",
+                                "operator": "==",
+                                "value": "true"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "maxlength": "",
+                    "allow_in_bindings": 1,
+                    "rows": 2,
+                    "placeholder": "",
+                    "new_lines": "br",
+                    "parent_repeater": "field_65faeaf703226"
+                },
+                {
                     "key": "field_65fb016945782",
                     "label": "Badge",
                     "name": "badge",
@@ -251,59 +440,6 @@
                     "max_size": "",
                     "mime_types": "png, svg",
                     "preview_size": "medium",
-                    "parent_repeater": "field_65faeaf703226"
-                },
-                {
-                    "key": "field_65faf268beb19",
-                    "label": "Classe supplémentaire",
-                    "name": "class",
-                    "aria-label": "",
-                    "type": "select",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "js-openRanges": "js-openRanges",
-                        "js-openProducts": "js-openProducts"
-                    },
-                    "default_value": false,
-                    "return_format": "value",
-                    "multiple": 0,
-                    "allow_null": 1,
-                    "ui": 0,
-                    "ajax": 0,
-                    "placeholder": "",
-                    "parent_repeater": "field_65faeaf703226"
-                },
-                {
-                    "key": "field_65fb0318f98cc",
-                    "label": "Slider d'actualités",
-                    "name": "news",
-                    "aria-label": "",
-                    "type": "checkbox",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "choices": {
-                        "true": "Activer"
-                    },
-                    "default_value": [],
-                    "return_format": "value",
-                    "allow_custom": 0,
-                    "layout": "vertical",
-                    "toggle": 0,
-                    "save_custom": 0,
-                    "custom_choice_button_text": "Ajouter un nouveau choix",
                     "parent_repeater": "field_65faeaf703226"
                 }
             ]
@@ -367,6 +503,7 @@
             },
             "default_value": "",
             "maxlength": "",
+            "allow_in_bindings": 1,
             "rows": 2,
             "placeholder": "",
             "new_lines": "br"
@@ -564,12 +701,12 @@
                 "id": ""
             },
             "layout": "block",
-            "pagination": 0,
+            "pagination": 1,
+            "rows_per_page": 1,
             "min": 0,
             "max": 0,
             "collapsed": "",
             "button_label": "Ajouter un élément",
-            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_65df6135fa867",
@@ -855,5 +992,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1734514940
+    "modified": 1736933402
 }

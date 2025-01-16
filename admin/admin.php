@@ -122,6 +122,12 @@ function redirect_tax_archive($template)
             return $new_template;
         }
     }
+    if (is_tax('gypass_product_product_family') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_product.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
     if (is_tax('gypass_range_product_family') && is_archive()) {
         $new_template = locate_template(array('archive-gypass_range.php'));
         if ('' != $new_template) {

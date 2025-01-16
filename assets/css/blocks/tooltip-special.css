@@ -1,11 +1,11 @@
 /* #Tooltip (Spécial)
 --------------------------------------------------------------- */
-.tooltip-block.tooltip-special-block .col-wrapper {
+.tooltip-block.tooltip-special-block .cols-wrapper {
     flex-direction: column;
     gap: var(--spacing-section-inner);
 }
 
-.tooltip-block.tooltip-special-block .col-wrapper>.content {
+.tooltip-block.tooltip-special-block .cols-wrapper>.content {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;

@@ -12,7 +12,7 @@
     border-top: 1px solid var(--primary);
 }
 
-.content-3-columns-block .col-wrapper {
+.content-3-columns-block .cols-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -21,36 +21,36 @@
 }
 
 @media screen and (min-width: 992px) {
-    .content-3-columns-block .col-wrapper {
+    .content-3-columns-block .cols-wrapper {
         flex-direction: row;
         gap: 2em;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .content-3-columns-block .col-wrapper {
+    .content-3-columns-block .cols-wrapper {
         gap: 4em;
     }
 }
 
-.content-3-columns-block .col-wrapper>.content {
+.content-3-columns-block .cols-wrapper>.content {
     --content-spacing: 1rem;
 }
 
 @media screen and (min-width: 992px) {
-    .content-3-columns-block .col-wrapper>.content {
+    .content-3-columns-block .cols-wrapper>.content {
         flex: 1 1 30%;
     }
 }
 
-.content-3-columns-block .col-wrapper>img {
+.content-3-columns-block .cols-wrapper>img {
     width: 100%;
     height: auto;
     display: block;
 }
 
 @media screen and (min-width: 992px) {
-    .content-3-columns-block .col-wrapper>img {
+    .content-3-columns-block .cols-wrapper>img {
         flex: 1 1 40%;
         height: auto;
         display: block;
@@ -58,7 +58,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    .content-3-columns-block .col-wrapper>.features {
+    .content-3-columns-block .cols-wrapper>.features {
         flex: 1 1 25%;
     }
 }

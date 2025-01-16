@@ -19,7 +19,7 @@
     margin-bottom: var(--spacing-section-inner);
 }
 
-.accordion-tabs-block .col-wrapper {
+.accordion-tabs-block .cols-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,73 +27,73 @@
     gap: var(--spacing-section-inner);
 }
 
-.accordion-tabs-block .col-wrapper>* {
+.accordion-tabs-block .cols-wrapper>* {
     width: 100%;
 }
 
 @media screen and (min-width: 992px) {
-    .accordion-tabs-block .col-wrapper {
+    .accordion-tabs-block .cols-wrapper {
         flex-direction: row;
         gap: 2em;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    .accordion-tabs-block .col-wrapper {
+    .accordion-tabs-block .cols-wrapper {
         gap: 4em;
     }
 }
 
-.accordion-tabs-block .col-wrapper>.content {
+.accordion-tabs-block .cols-wrapper>.content {
     --content-spacing: 1rem;
     order: 1;
 }
 
 @media screen and (min-width: 992px) {
-    .accordion-tabs-block .col-wrapper>.content {
+    .accordion-tabs-block .cols-wrapper>.content {
         flex: 1 1 30%;
         order: unset;
     }
 }
 
-.accordion-tabs-block .col-wrapper>.content .logo {
+.accordion-tabs-block .cols-wrapper>.content .logo {
     max-width: 150px;
     width: 100%;
     height: auto;
     margin-bottom: 1em;
 }
 
-.accordion-tabs-block .col-wrapper>.media {
+.accordion-tabs-block .cols-wrapper>.media {
     position: relative;
     order: 3;
 }
 
 @media screen and (min-width: 992px) {
-    .accordion-tabs-block .col-wrapper>.media {
+    .accordion-tabs-block .cols-wrapper>.media {
         flex: 1 1 40%;
         order: unset;
     }
 }
 
-.accordion-tabs-block .col-wrapper>.media>img,
-.accordion-tabs-block .col-wrapper>.media>.video-wrapper {
+.accordion-tabs-block .cols-wrapper>.media>img,
+.accordion-tabs-block .cols-wrapper>.media>.video-wrapper {
     width: 100%;
     height: auto;
     display: none;
     animation: fadeIn 1s;
 }
 
-.accordion-tabs-block .col-wrapper>.media>*.visible {
+.accordion-tabs-block .cols-wrapper>.media>*.visible {
     display: block;
 }
 
 /* Menus */
-.accordion-tabs-block .col-wrapper>.menus {
+.accordion-tabs-block .cols-wrapper>.menus {
     order: 2;
 }
 
 @media screen and (min-width: 992px) {
-    .accordion-tabs-block .col-wrapper>.menus {
+    .accordion-tabs-block .cols-wrapper>.menus {
         flex: 1 1 25%;
         order: unset;
     }

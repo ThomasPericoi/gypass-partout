@@ -12,7 +12,7 @@
     <?php get_template_part('template-parts/list', 'hiring'); ?>
     <div class="content">
         <div class="container">
-            <div class="col-wrapper">
+            <div class="cols-wrapper">
                 <?php if (get_field("hiring_description_1")) : ?>
                     <div class="col formatted">
                         <?php echo get_field("hiring_description_1"); ?>

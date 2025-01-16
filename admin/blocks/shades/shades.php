@@ -38,7 +38,7 @@ $style  = implode('; ', $styles);
 <!-- Block - Shades -->
 <section class="<?php echo esc_attr($classes); ?>" style="<?php echo esc_attr($style); ?>">
     <div class="container <?php echo $container; ?>">
-        <div class="col-wrapper">
+        <div class="cols-wrapper">
             <div class="selector">
                 <div class="introduction">
                     <?php if ($title) : ?>

@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
   // Element - Header - Menu - Open on click menu items
-  $("a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a").click(
+  $("a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a, .js-openRanges > span, .js-openProducts > span").click(
     function (e) {
       if (!$(e.target).is(".super-menu a")) {
         toggleMenu(1);
@@ -168,15 +168,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  $("a.js-openProducts, .js-openProducts > a").click(function () {
+  $("a.js-openProducts, .js-openProducts > a, .js-openProducts > span").click(function () {
     $(".super-menu .js-openProducts").addClass("opened");
   });
 
-  $("a.js-openRanges, .js-openRanges > a").click(function () {
+  $("a.js-openRanges, .js-openRanges > a, .js-openRanges > span").click(function () {
     $(".super-menu .js-openRanges").addClass("opened");
   });
 
-  $("a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a").on(
+  $("a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a, .js-openRanges > span, .js-openProducts > span").on(
     "keypress",
     function (e) {
       if ((e.keyCode || e.which) == 13) {
@@ -185,13 +185,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   );
 
-  $("a.js-openProducts, .js-openProducts > a").on("keypress", function (e) {
+  $("a.js-openProducts, .js-openProducts > a, .js-openProducts > span").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openProducts").addClass("opened");
     }
   });
 
-  $("a.js-openRanges, .js-openRanges > a").on("keypress", function (e) {
+  $("a.js-openRanges, .js-openRanges > a, .js-openRanges > span").on("keypress", function (e) {
     if ((e.keyCode || e.which) == 13) {
       $(".super-menu .js-openRanges").addClass("opened");
     }
@@ -202,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (
       $("body").hasClass("js-menuOpened") &&
       !$(
-        ".js-toggleMenu, a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a, .menu-item-has-children > a"
+        ".js-toggleMenu, a.js-openRanges, a.js-openProducts, .js-openRanges > a, .js-openProducts > a, .js-openRanges > span, .js-openProducts > span, .menu-item-has-children > a"
       ).is(e.target) &&
       $(e.target).closest(".super-menu-wrapper").length === 0
     ) {

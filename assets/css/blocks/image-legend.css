@@ -13,7 +13,7 @@
     border-top: 1px solid var(--primary);
 }
 
-.image-legend-block .col-wrapper {
+.image-legend-block .cols-wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,7 +21,7 @@
 }
 
 @media screen and (min-width: 992px) {
-    .image-legend-block .col-wrapper {
+    .image-legend-block .cols-wrapper {
         flex-direction: row;
         gap: 2em;
     }

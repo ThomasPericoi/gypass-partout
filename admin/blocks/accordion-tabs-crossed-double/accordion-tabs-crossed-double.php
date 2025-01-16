@@ -42,7 +42,7 @@ $style  = implode('; ', $styles);
                 <?php endif; ?>
             </div>
         <?php endif; ?>
-        <div class="col-wrapper">
+        <div class="cols-wrapper">
             <div class="content">
                 <?php if (have_rows('menus')) :
                     while (have_rows('menus')) : the_row();

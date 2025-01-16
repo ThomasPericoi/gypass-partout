@@ -3,52 +3,63 @@
     <section id="home-hero" class="swiper">
         <div class="swiper-wrapper">
             <?php while (have_rows('home_hero_slider')) : the_row();
+                $news = get_sub_field('news');
                 $backgrounds = get_sub_field('background');
-				$shadowed = get_sub_field('shadowed');
+                $background_mobile = get_sub_field('background_mobile');
+                $shadowed = get_sub_field('shadowed');
+                $background_video = get_sub_field('background_video');
+                $background_video_mobile = get_sub_field('background_video_mobile');
                 $title = get_sub_field('title');
                 $label = get_sub_field('label');
                 $url = get_sub_field('url');
-                $range_label = get_sub_field('range_label');
-                $range = get_sub_field('range');
-                $badge = get_sub_field('badge');
                 $class = get_sub_field('class');
-                $news = get_sub_field('news');
+                $range = get_sub_field('range');
+                $range_label = get_sub_field('range_label');
+                $badge = get_sub_field('badge');
             ?>
                 <?php if (count($backgrounds) > 1) : ?>
-                    <div class="swiper-slide">
+                    <a <?= $url ? 'href="' . $url . '"' : '' ?> class="swiper-slide">
                         <div class="nested-slider swiper">
                             <div class="swiper-wrapper">
                                 <?php foreach ($backgrounds as $background) : ?>
-                                    <div class="slider-element <?php if ($news) : ?>news<?php endif; ?> <?php if ($shadowed) : ?>shadowed<?php endif; ?> swiper-slide" style="background-image: url('<?php echo $background; ?>');">
-                                        <div class="container container-lg <?php if ($class) : echo $class; endif; ?>">
-											<?php if ($range_label && $news) : ?>
-												<div class="range h4-size">
-													<?php echo $range_label; ?>
-												</div>
-											<?php endif; ?>
+                                    <div class="slider-element <?= $news ? 'news' : '' ?> <?= $shadowed ? 'shadowed' : '' ?> swiper-slide" style="--background: <?php echo $background; ?>;">
+                                        <div class="container container-lg <?php if ($class) : echo $class;
+                                                                            endif; ?>">
+                                            <?php if ($range_label && $news) : ?>
+                                                <div class="range h4-size">
+                                                    <?php echo $range_label; ?>
+                                                </div>
+                                            <?php endif; ?>
                                             <?php if ($range) : ?>
                                                 <img class="range" src="<?php echo $range["url"]; ?>" alt="<?php echo $range["title"]; ?>" />
                                             <?php endif; ?>
                                             <?php if ($badge) : ?>
                                                 <img class="badge" src="<?php echo $badge["url"]; ?>" alt="<?php echo $badge["title"]; ?>" />
                                             <?php endif; ?>
-                                            <?php if ($news) : ?>
+                                            <?php if ($news && $title) : ?>
                                                 <div class="h1-size">
                                                     <?php echo $title; ?>
                                                 </div>
                                             <?php endif; ?>
-											<?php if ($label) : ?>
-                                            	<a <?php if ($url) : ?>href="<?php echo $url; ?>" <?php endif; ?> class="btn btn-outline-white"><?php echo $label; ?></a>
-											<?php endif; ?>
+                                            <?php if ($label) : ?>
+                                                <span class="btn btn-outline-white" tabindex="0" role="button"><?php echo $label; ?></span>
+                                            <?php endif; ?>
                                         </div>
                                     </div>
                                 <?php endforeach; ?>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 <?php else : ?>
-                    <div class="slider-element <?php if ($news) : ?>news<?php endif; ?> <?php if ($shadowed) : ?>shadowed<?php endif; ?> swiper-slide" style="background-image: url('<?php echo $backgrounds[0]; ?>');">
-                        <div class="container container-lg <?php if ($class) : echo $class; endif; ?>">
+                    <a <?= $url ? 'href="' . $url . '"' : '' ?> class="slider-element <?= $news ? 'news' : '' ?> <?= $shadowed ? 'shadowed' : '' ?> <?= ($background_mobile || $background_video_mobile) ? 'mobile' : '' ?> swiper-slide" style="<?= $backgrounds[0] ? '--background: url(' . $backgrounds[0] . ');' : '' ?> <?= $background_mobile ? '--background-mobile: url(' . $background_mobile . ');' : '' ?>">
+                        <?php if ($background_video) : ?>
+                            <video class="background-video background-video-desktop" src="<?php echo $background_video["url"]; ?>" autoplay muted inline"></video>
+                        <?php endif; ?>
+                        <?php if ($background_video_mobile) : ?>
+                            <video class="background-video background-video-mobile" src="<?php echo $background_video_mobile["url"]; ?>" autoplay muted inline"></video>
+                        <?php endif; ?>
+                        <div class="container container-lg <?php if ($class) : echo $class;
+                                                            endif; ?>">
                             <?php if ($range_label && $news) : ?>
                                 <div class="range h4-size">
                                     <?php echo $range_label; ?>
@@ -60,16 +71,16 @@
                             <?php if ($badge) : ?>
                                 <img class="badge" src="<?php echo $badge["url"]; ?>" alt="<?php echo $badge["title"]; ?>" />
                             <?php endif; ?>
-                            <?php if ($news) : ?>
+                            <?php if ($news && $title) : ?>
                                 <div class="h1-size">
                                     <?php echo $title; ?>
                                 </div>
                             <?php endif; ?>
-							<?php if ($label) : ?>
-                            	<a <?php if ($url) : ?>href="<?php echo $url; ?>" <?php endif; ?> class="btn btn-outline-white"><?php echo $label; ?></a>
-							<?php endif; ?>
+                            <?php if ($label) : ?>
+                                <span class="btn btn-outline-white" tabindex="0" role="button"><?php echo $label; ?></span>
+                            <?php endif; ?>
                         </div>
-                    </div>
+                    </a>
                 <?php endif; ?>
             <?php endwhile; ?>
         </div>

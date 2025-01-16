@@ -61,19 +61,28 @@
     }
 }
 
-#topbar a[target="_blank"],
-.super-menu .menu-topbar a[target="_blank"] {
+#topbar .primary>a,
+.super-menu .menu-topbar .primary>a,
+#topbar .secondary>a,
+.super-menu .menu-topbar .secondary>a,
+#topbar .scooter>a,
+.super-menu .menu-topbar .scooter>a {
     font-weight: 700;
 }
 
-#topbar li:nth-last-child(2) a[target="_blank"],
-.super-menu .menu-topbar li:nth-last-child(2) a[target="_blank"] {
-    color: var(--scooter);
+#topbar .primary>a,
+.super-menu .menu-topbar .primary>a {
+    color: var(--primary);
 }
 
-#topbar li:nth-last-child(1) a[target="_blank"],
-.super-menu .menu-topbar li:nth-last-child(1) a[target="_blank"] {
-    color: var(--bay-of-many);
+#topbar .secondary>a,
+.super-menu .menu-topbar .secondary>a {
+    color: var(--secondary);
+}
+
+#topbar .scooter>a,
+.super-menu .menu-topbar .scooter>a {
+    color: var(--scooter);
 }
 
 #topbar a:after,
@@ -88,8 +97,12 @@
     transition: transform ease 350ms;
 }
 
-#topbar a[target="_blank"]:after,
-.super-menu .menu-topbar a[target="_blank"]:after {
+#topbar .primary>a:after,
+.super-menu .menu-topbar .primary>a:after,
+#topbar .secondary>a:after,
+.super-menu .menu-topbar .secondary>a:after,
+#topbar .scooter>a:after,
+.super-menu .menu-topbar .scooter>a:after {
     transform: scaleX(1);
 }
 
@@ -101,14 +114,19 @@
     transform: scaleX(1);
 }
 
-#topbar li:nth-last-child(2) a[target="_blank"]:after,
-.super-menu .menu-topbar li:nth-last-child(2) a[target="_blank"]:after {
-    background-color: var(--scooter);
+#topbar .primary>a:after,
+.super-menu .menu-topbar .primary>a:after {
+    background-color: var(--primary);
 }
 
-#topbar li:nth-last-child(1) a[target="_blank"]:after,
-.super-menu .menu-topbar li:nth-last-child(1) a[target="_blank"]:after {
-    background-color: var(--bay-of-many);
+#topbar .secondary>a:after,
+.super-menu .menu-topbar .secondary>a:after {
+    background-color: var(--secondary);
+}
+
+#topbar .scooter>a:after,
+.super-menu .menu-topbar .scooter>a :after {
+    background-color: var(--scooter);
 }
 
 #topbar .btn-search,

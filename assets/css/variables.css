@@ -15,10 +15,12 @@
   --havelock-blue: #449DD7;
   --lochmara: #0578BE;
   --manatee: #9799a2;
+  --parchment: #f8f3ec;
   --science-blue: #0081b8;
   --scooter: #31bbbd;
   --tango: #ec6615;
   --white: #fffffb;
+  --william: #3A6274;
 
   --primary: var(--bay-of-many);
   --secondary: var(--tango);

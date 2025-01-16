@@ -33,7 +33,7 @@ $style  = implode('; ', $styles);
 
 <!-- Block - Content (2 columns) -->
 <section class="<?php echo esc_attr($classes); ?>" style="<?php echo esc_attr($style); ?>">
-    <div class="col-wrapper">
+    <div class="cols-wrapper">
         <div class="content formatted">
             <?php if ($title) : ?>
                 <h2><?php echo $title; ?></h2>

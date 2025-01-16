@@ -156,7 +156,7 @@ add_action('init', function () {
     remove_action('init', 'register_block_core_footnotes');
 }, 1);
 
-remove_filter( 'sanitize_post_meta_footnotes', '_wp_filter_post_meta_footnotes' );
+remove_filter('sanitize_post_meta_footnotes', '_wp_filter_post_meta_footnotes');
 
 
 /* INCLUDES
@@ -358,6 +358,7 @@ function radio_image_handler($tag)
 
     return $input;
 }
+
 
 /* WHITE LABEL
 --------------------------------------------------------------- */

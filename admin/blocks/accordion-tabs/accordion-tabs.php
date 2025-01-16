@@ -48,7 +48,7 @@ $style  = implode('; ', $styles);
                 <?php endif; ?>
             </div>
         <?php endif; ?>
-        <div class="col-wrapper">
+        <div class="cols-wrapper">
             <div class="content formatted">
                 <?php if ($image) : ?>
                     <img class="logo" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />

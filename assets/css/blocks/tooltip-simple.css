@@ -36,25 +36,25 @@
     position: relative;
 }
 
-.tooltip-block .col-wrapper {
+.tooltip-block .cols-wrapper {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: var(--spacing-section-inner);
 }
 
-.tooltip-block.column .col-wrapper {
+.tooltip-block.column .cols-wrapper {
     flex-direction: column;
     align-items: center;
 }
 
 @media screen and (min-width: 992px) {
-    .tooltip-block .col-wrapper {
+    .tooltip-block .cols-wrapper {
         flex-direction: row;
         gap: 2em;
     }
 
-    .tooltip-block.column .col-wrapper {
+    .tooltip-block.column .cols-wrapper {
         gap: 1em;
     }
 }
@@ -66,34 +66,34 @@
 }
 
 @media screen and (min-width: 992px) {
-    .tooltip-block .col-wrapper>.content {
+    .tooltip-block .cols-wrapper>.content {
         flex-basis: 30%;
     }
 
-    .tooltip-block.row .col-wrapper>.content {
+    .tooltip-block.row .cols-wrapper>.content {
         margin-top: var(--spacing-section-inner);
     }
 }
 
-.tooltip-block .col-wrapper .legend {
+.tooltip-block .cols-wrapper .legend {
     display: flex;
     align-items: flex-end;
     gap: 1em;
 }
 
-.tooltip-block.column .col-wrapper .legend {
+.tooltip-block.column .cols-wrapper .legend {
     flex-basis: 30%;
     flex-direction: column;
     align-items: start;
     gap: 13px;
 }
 
-.tooltip-block .col-wrapper .legend img {
+.tooltip-block .cols-wrapper .legend img {
     max-width: 100px;
     display: block;
 }
 
-.tooltip-block.column .col-wrapper .legend img {
+.tooltip-block.column .cols-wrapper .legend img {
     max-width: 250px;
 }
 
@@ -103,28 +103,28 @@
 
 /* Tooltip */
 @media screen and (min-width: 992px) {
-    .tooltip-block .col-wrapper .medias {
+    .tooltip-block .cols-wrapper .medias {
         flex-basis: 50%;
         height: auto;
     }
 
-    .tooltip-block.column .col-wrapper .medias {
+    .tooltip-block.column .cols-wrapper .medias {
         flex-basis: 30%;
         display: flex;
         gap: var(--spacing-section-inner);
     }
 }
 
-.tooltip-block .col-wrapper .image-wrapper {
+.tooltip-block .cols-wrapper .image-wrapper {
     position: relative;
 }
 
-.tooltip-block.column .col-wrapper .image-wrapper {
+.tooltip-block.column .cols-wrapper .image-wrapper {
     max-width: 1000px;
     margin: 0 auto;
 }
 
-.tooltip-block .col-wrapper img {
+.tooltip-block .cols-wrapper img {
     width: 100%;
     height: auto;
     display: block;

@@ -38,7 +38,7 @@ $style  = implode('; ', $styles);
 <!-- Block - Image w/ legend -->
 <section class="<?php echo esc_attr($classes); ?>" style="<?php echo esc_attr($style); ?>">
     <div class="container <?php echo $container; ?>">
-        <div class="col-wrapper">
+        <div class="cols-wrapper">
             <div class="content formatted">
                 <?php if ($title) : ?>
                     <h2><?php echo $title; ?></h2>

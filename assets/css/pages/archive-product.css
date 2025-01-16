@@ -1,0 +1,7 @@
+/* #Archive product
+--------------------------------------------------------------- */
+.post-type-archive-gypass_product main,
+.tax-gypass_product_product_family main {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
