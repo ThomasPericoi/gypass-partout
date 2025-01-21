@@ -6,7 +6,7 @@ get_header(); ?>
 <section id="outdoor-hero" style="background-image: url(<?php echo get_field("outdoor_hero_background"); ?>);">
     <div class="container container-lg">
         <h1 class="h1-size"><?php echo get_field("outdoor_hero_title"); ?></h1>
-        <a class="btn-scroll" href="#content-1">
+        <a class="btn-scroll" href="#outdoor-content-1">
             <?php get_template_part('assets/icons/arrow-line-bottom.svg'); ?>
         </a>
         <img class="badge" src="<?php echo get_field("outdoor_hero_badge")['url']; ?>" alt="<?php echo get_field("outdoor_hero_badge")['title']; ?>">
@@ -14,15 +14,15 @@ get_header(); ?>
 </section>
 
 <!-- Content 1 -->
-<section id="content-1">
-    <div class="container">
+<section id="outdoor-content-1">
+    <div class="container container-sm">
         <div class="cols-wrapper">
             <div class="col">
                 <div class="title-wrapper">
                     <h2 class="h1-size"><?php echo get_field("outdoor_content_1_title"); ?></h2>
                 </div>
                 <?php if (get_field("outdoor_content_1_video")) : ?>
-                    <video src="<?php echo get_field("outdoor_content_1_video")["url"]; ?>" controls></video>
+                    <video <?= get_field("outdoor_content_1_video_poster") ? 'poster="' . get_field("outdoor_content_1_video_poster") . '"' : '' ?> src="<?php echo get_field("outdoor_content_1_video")["url"]; ?>" controls></video>
                 <?php endif; ?>
             </div>
             <div class="col formatted" style="--content-spacing: 1rem;">
@@ -42,17 +42,17 @@ get_header(); ?>
 </section>
 
 <!-- Content 2 -->
-<section id="content-2">
+<section id="outdoor-content-2">
     <div class="container">
         <div class="cols-wrapper">
             <div class="col">
-                <figure>
+                <figure id="outdoor-image-1">
                     <img src="<?php echo esc_url(get_field("outdoor_content_2_image_1")['url']); ?>" alt="<?php echo esc_attr(get_field("outdoor_content_2_image_1")['alt']); ?>" />
                     <p class="caption"><?php echo esc_html(get_field("outdoor_content_2_image_1")['caption']); ?></p>
                 </figure>
             </div>
             <div class="col">
-                <figure>
+                <figure id="outdoor-image-2">
                     <img src="<?php echo esc_url(get_field("outdoor_content_2_image_2")['url']); ?>" alt="<?php echo esc_attr(get_field("outdoor_content_2_image_2")['alt']); ?>" />
                     <p class="caption"><?php echo esc_html(get_field("outdoor_content_2_image_2")['caption']); ?></p>
                 </figure>
@@ -83,13 +83,13 @@ get_header(); ?>
     <div class="container">
         <div class="cols-wrapper">
             <div class="col">
-                <figure>
+                <figure id="outdoor-image-3">
                     <img src="<?php echo esc_url(get_field("outdoor_content_2_image_3")['url']); ?>" alt="<?php echo esc_attr(get_field("outdoor_content_2_image_3")['alt']); ?>" />
                     <p class="caption"><?php echo esc_html(get_field("outdoor_content_2_image_3")['caption']); ?></p>
                 </figure>
             </div>
             <div class="col">
-                <figure>
+                <figure id="outdoor-image-4">
                     <img src="<?php echo esc_url(get_field("outdoor_content_2_image_4")['url']); ?>" alt="<?php echo esc_attr(get_field("outdoor_content_2_image_4")['alt']); ?>" />
                     <p class="caption"><?php echo esc_html(get_field("outdoor_content_2_image_4")['caption']); ?></p>
                 </figure>
@@ -99,7 +99,7 @@ get_header(); ?>
 </section>
 
 <!-- Awards -->
-<section id="awards">
+<section id="outdoor-awards">
     <div class="container">
         <div class="title-wrapper">
             <h2 class="h1-size"><?php echo get_field("outdoor_awards_title"); ?></h2>
@@ -127,11 +127,11 @@ get_header(); ?>
 </section>
 
 <!-- Jury -->
-<section id="jury">
+<section id="outdoor-jury">
     <div class="container">
         <div class="cols-wrapper">
             <div class="col">
-                <figure>
+                <figure id="outdoor-image-5">
                     <img src="<?php echo esc_url(get_field("outdoor_jury_image")['url']); ?>" alt="<?php echo esc_attr(get_field("outdoor_jury_image")['alt']); ?>" />
                     <p class="caption"><?php echo esc_html(get_field("outdoor_jury_image")['caption']); ?></p>
                 </figure>
@@ -149,7 +149,7 @@ get_header(); ?>
 </section>
 
 <!-- Calendar -->
-<section id="calendar">
+<section id="outdoor-calendar">
     <div class="container container-sm">
         <div class="title-wrapper">
             <h2 class="h1-size"><?php echo get_field("outdoor_calendar_title"); ?></h2>
@@ -178,7 +178,7 @@ get_header(); ?>
                 <?php endwhile; ?>
             </div>
         <?php endif; ?>
-        <figure>
+        <figure id="outdoor-image-6">
             <img src="<?php echo esc_url(get_field("outdoor_calendar_image")['url']); ?>" alt="<?php echo esc_attr(get_field("outdoor_calendar_image")['alt']); ?>" />
             <p class="caption"><?php echo esc_html(get_field("outdoor_calendar_image")['caption']); ?></p>
         </figure>
@@ -186,7 +186,7 @@ get_header(); ?>
 </section>
 
 <!-- How -->
-<section id="how">
+<section id="outdoor-how">
     <div class="container">
         <div class="title-wrapper">
             <h2 class="h1-size"><?php echo get_field("outdoor_how_title"); ?></h2>

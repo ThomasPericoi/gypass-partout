@@ -1,14 +1,70 @@
 /* #Outdoor Index
 --------------------------------------------------------------- */
+/* Titles */
 .page-template-outdoor-index-template .title-wrapper {
+    width: max-content;
     margin-bottom: var(--spacing-section-inner);
     position: relative;
 }
 
-.page-template-outdoor-index-template .title-wrapper h2 {
+.page-template-outdoor-index-template .title-wrapper>* {
     font-weight: 600;
     text-transform: uppercase;
     line-height: 1;
+}
+
+.page-template-outdoor-index-template .title-wrapper:before,
+.page-template-outdoor-index-template .title-wrapper:after,
+.page-template-outdoor-index-template .title-wrapper>*:after {
+    content: "";
+    width: 66px;
+    height: 16px;
+    background-color: var(--secondary);
+}
+
+.page-template-outdoor-index-template .title-wrapper:before {
+    margin: 0 auto 16px auto;
+    display: block;
+}
+
+.page-template-outdoor-index-template .title-wrapper:after {
+    margin: 16px auto 0 0;
+    display: block;
+}
+
+.page-template-outdoor-index-template .title-wrapper>*:after {
+    margin-left: 16px;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+/* Structure */
+.page-template-outdoor-index-template .cols-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 1200px) {
+    .page-template-outdoor-index-template .cols-wrapper {
+        flex-direction: row;
+    }
+}
+
+.page-template-outdoor-index-template .cols-wrapper>div {
+    flex: 1 1 0;
+}
+
+@media screen and (min-width: 1200px) {
+    .page-template-outdoor-index-template .cols-wrapper>div {
+        max-width: 50%;
+    }
+}
+
+/* Images */
+.page-template-outdoor-index-template figure {
+    position: relative;
 }
 
 .page-template-outdoor-index-template figure img {
@@ -36,6 +92,7 @@
 #outdoor-hero .container {
     padding: 2rem;
     min-height: 55vh;
+    position: unset;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -79,7 +136,7 @@
         margin-top: 0;
         position: absolute;
         top: 50%;
-        right: -2em;
+        right: 0;
         transform: translateY(-50%);
     }
 }
@@ -100,52 +157,71 @@
 }
 
 /* Content 1 */
-#content-1 {
+#outdoor-content-1 {
     padding: var(--spacing-section-outer) 0;
-}
-
-#content-1 .cols-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-section-inner);
+    position: relative;
 }
 
 @media screen and (min-width: 1200px) {
-    #content-1 .cols-wrapper {
-        flex-direction: row;
+    #outdoor-content-1:before {
+        content: "";
+        width: 66px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        background-color: #EEE1D0;
     }
 }
 
-#content-1 .cols-wrapper>div {
-    flex: 1 1 0;
+#outdoor-content-1 .col:nth-child(2) {
+    position: relative;
 }
 
 @media screen and (min-width: 1200px) {
-    #content-1 .cols-wrapper>div {
-        max-width: 50%;
+    #outdoor-content-1 .col:nth-child(2):before {
+        content: "";
+        width: 66px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 60%;
+        left: calc(var(--spacing-section-inner)* -1 - 33px);
+        background-color: #EEE1D0;
     }
 }
 
-#content-1 video {
+#outdoor-content-1 video {
     width: 100%;
     height: auto;
     display: block;
 }
 
-#content-1 .introduction p {
+@media screen and (min-width: 1200px) {
+    #outdoor-content-1 video {
+        width: 120%;
+        float: right;
+    }
+}
+
+#outdoor-content-1 .introduction p,
+#outdoor-content-2 .introduction p {
     color: var(--secondary);
     font-weight: 600;
     font-size: 19px;
 }
 
-#content-1 .content p {
+#outdoor-content-1 .content p,
+#outdoor-content-1 .content li,
+#outdoor-content-2 .content p,
+#outdoor-content-2 .content li {
     font-weight: 400;
     font-size: 15px;
     line-height: 1.6;
 }
 
-#content-1 .warning {
+#outdoor-content-1 .warning {
     padding: 1.5rem;
     position: relative;
     font-size: 15px;
@@ -155,7 +231,7 @@
     background-color: var(--parchment);
 }
 
-#content-1 .warning:after {
+#outdoor-content-1 .warning:after {
     content: "";
     width: 35px;
     height: 35px;
@@ -168,64 +244,80 @@
     transform: translate(-40%, -40%);
 }
 
-#content-1 .warning span {
+#outdoor-content-1 .warning span {
     color: var(--secondary);
 }
 
-#content-1 .btn {
+#outdoor-content-1 .btn,
+#outdoor-content-2 .btn {
     font-size: 15px;
     background-color: var(--william);
 }
 
 /* Content 2 */
-#content-2 {
+#outdoor-content-2 {
     padding: var(--spacing-section-outer) 0;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-section-inner);
 }
 
-#content-2 .container-sm {
+@media screen and (min-width: 1200px) {
+    #outdoor-image-2:before {
+        content: "";
+        width: 66px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: -23px;
+        background-color: var(--secondary);
+    }
+}
+
+#outdoor-image-3,
+#outdoor-image-4 {
+    width: 115%;
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-image-3:before {
+        content: "";
+        width: 66px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 10%;
+        right: -33px;
+        background-color: var(--secondary);
+    }
+}
+
+#outdoor-image-4 {
+    float: right;
+    z-index: 1;
+    transform: translateY(50%);
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-image-4:before {
+        content: "";
+        width: 66px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: -23px;
+        background-color: var(--secondary);
+    }
+}
+
+#outdoor-content-2 .container-sm {
     max-width: 750px;
 }
 
-#content-2 .cols-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spacing-section-inner);
-}
-
-@media screen and (min-width: 1200px) {
-    #content-2 .cols-wrapper {
-        flex-direction: row;
-    }
-}
-
-#content-2 .cols-wrapper>div {
-    flex: 1 1 0;
-}
-
-@media screen and (min-width: 1200px) {
-    #content-2 .cols-wrapper>div {
-        max-width: 50%;
-    }
-}
-
-#content-2 .introduction p {
-    color: var(--secondary);
-    font-weight: 600;
-    font-size: 19px;
-}
-
-#content-2 .content p,
-#content-2 .content li {
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 1.6;
-}
-
-#content-2 .content .check-list > li:before {
+#outdoor-content-2 .content .check-list>li:before {
     content: "✓";
     top: -10px;
     left: -5px;
@@ -235,18 +327,33 @@
     transform: unset;
 }
 
-#content-2 .btn {
-    font-size: 15px;
-    background-color: var(--william);
-}
-
 /* Awards */
-#awards {
+#outdoor-awards {
     padding: var(--spacing-section-outer) 0;
+    position: relative;
     background-color: var(--parchment);
 }
 
-#awards .awards {
+@media screen and (min-width: 1200px) {
+    #outdoor-awards:before {
+        content: "";
+        width: 100%;
+        height: calc(var(--spacing-section-outer) + 75px);
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--white);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-awards .title-wrapper:before {
+        background-color: #EEE1D0;
+    }
+}
+
+#outdoor-awards .awards {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-section-inner);
@@ -255,14 +362,14 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #awards .awards {
+    #outdoor-awards .awards {
         flex-direction: row;
     }
 }
 
-#awards .awards .award {
+#outdoor-awards .awards .award {
     width: 250px;
-    height: 95px;
+    height: 100px;
     padding: 1rem;
     display: flex;
     align-items: center;
@@ -273,134 +380,206 @@
     text-align: center;
 }
 
-#awards .awards .award h3 {
+#outdoor-awards .awards .award h3 {
     font-size: 19px;
     font-weight: 600;
     text-transform: uppercase;
 }
 
-#awards .awards .award p {
+#outdoor-awards .awards .award p {
     font-weight: 500;
 }
 
-#awards .awards .award * {
+#outdoor-awards .awards .award * {
     color: var(--theme);
 }
 
-#awards .legend {
+#outdoor-awards .legend {
     margin-top: 1rem;
     font-weight: 500;
     text-align: center;
 }
 
 /* Jury */
-#jury {
+#outdoor-jury {
     padding: var(--spacing-section-outer) 0;
     background-color: var(--parchment);
 }
 
-#jury .cols-wrapper {
-    display: flex;
-    flex-direction: column;
+@media screen and (min-width: 1200px) {
+    #outdoor-jury {
+        margin-bottom: 4rem;
+        position: relative;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-jury:after {
+        content: "";
+        width: 66px;
+        height: 16px;
+        margin-top: 16px;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        background-color: var(--secondary);
+        transform: translateY(calc(var(--spacing-section-outer) + 50%));
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-jury .container {
+        position: unset;
+    }
+}
+
+#outdoor-jury .cols-wrapper {
     align-items: flex-start;
-    gap: var(--spacing-section-inner);
 }
 
-@media screen and (min-width: 1200px) {
-    #jury .cols-wrapper {
-        flex-direction: row;
-    }
-}
-
-#jury .cols-wrapper>div {
-    flex: 1 1 0;
-}
-
-@media screen and (min-width: 1200px) {
-    #jury .cols-wrapper>div {
-        max-width: 50%;
-    }
-}
-
-#jury .cols-wrapper>div:nth-child(2) {
+#outdoor-jury .cols-wrapper>div:nth-child(2) {
     display: flex;
     flex-direction: column;
     gap: 1rem;
 }
 
 @media screen and (min-width: 1200px) {
-    #jury .cols-wrapper>div:nth-child(2) {
+    #outdoor-jury .cols-wrapper>div:nth-child(2) {
         flex-direction: row;
         align-items: flex-end;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    #jury .title-wrapper {
+    #outdoor-jury .title-wrapper {
         margin-bottom: unset;
     }
 }
 
 @media screen and (min-width: 1200px) {
-    #jury .subtitle {
+
+    #outdoor-jury .title-wrapper:before {
+        margin-right: 0;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    #outdoor-jury .title-wrapper:after,
+    #outdoor-jury .title-wrapper>*:after {
+        content: none;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-jury .subtitle {
         max-width: 350px;
         font-weight: 600;
     }
 }
 
+@media screen and (min-width: 1200px) {
+    #outdoor-jury .subtitle:after {
+        content: "";
+        width: 66px;
+        height: 16px;
+        margin-top: 16px;
+        display: block;
+        background-color: var(--secondary);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-jury figure {
+        width: calc((100% - var(--spacing-section-inner) - 4em) / 2);
+        max-width: 650px;
+        position: absolute;
+        left: 0;
+    }
+}
+
 /* Calendar */
-#calendar {
+#outdoor-calendar {
     padding: var(--spacing-section-outer) 0;
 }
 
-#calendar .cols-wrapper {
+@media screen and (min-width: 1200px) {
+    #outdoor-calendar .title-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+#outdoor-calendar .cols-wrapper {
     margin-bottom: var(--spacing-section-inner);
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    gap: var(--spacing-section-inner);
 }
 
 @media screen and (min-width: 1200px) {
-    #calendar .cols-wrapper {
-        flex-direction: row;
+    #outdoor-calendar .cols-wrapper {
+        max-width: 650px;
+        margin-bottom: 0;
+        transform: translate(450px, calc(var(--spacing-section-inner) * -1));
     }
 }
 
-#calendar .cols-wrapper>div {
-    flex: 1 1 0;
-}
-
-@media screen and (min-width: 1200px) {
-    #calendar .cols-wrapper>div {
-        max-width: 50%;
-    }
-}
-
-#calendar h3 {
+#outdoor-calendar h3 {
     font-size: 18px;
     color: var(--secondary);
     text-transform: uppercase;
     font-weight: 700;
 }
 
-#calendar ul {
+#outdoor-calendar ul {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 
-#calendar li {
+#outdoor-calendar li {
     list-style: none;
 }
 
+@media screen and (min-width: 1200px) {
+    #outdoor-calendar figure {
+        transform: translateX(-10%);
+    }
+}
+
 /* How */
-#how {
+#outdoor-how {
     padding: var(--spacing-section-outer) 0;
+    position: relative;
     background-color: var(--parchment);
 }
 
-#how .steps {
+@media screen and (min-width: 1200px) {
+    #outdoor-how:before {
+        content: "";
+        width: 66px;
+        height: 16px;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 30%;
+        background-color: var(--secondary);
+        transform: translateY(-50%);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-how .title-wrapper:before {
+        content: none;
+    }
+}
+
+.page-template-outdoor-index-template .title-wrapper:before {
+    margin: 0 auto 16px auto;
+    display: block;
+}
+
+
+#outdoor-how .steps {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -409,7 +588,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #how .steps:before {
+    #outdoor-how .steps:before {
         content: "";
         width: 100%;
         height: 1px;
@@ -420,12 +599,12 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #how .steps {
+    #outdoor-how .steps {
         flex-direction: row;
     }
 }
 
-#how .step {
+#outdoor-how .step {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -433,12 +612,12 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #how .step {
+    #outdoor-how .step {
         max-width: 285px;
     }
 }
 
-#how .step span {
+#outdoor-how .step span {
     width: 200px;
     display: block;
     font-weight: 600;
@@ -449,29 +628,29 @@
     z-index: 1;
 }
 
-#how .step:nth-child(1) span {
+#outdoor-how .step:nth-child(1) span {
     margin-right: auto;
 }
 
-#how .step:nth-child(2) span {
+#outdoor-how .step:nth-child(2) span {
     margin: 0 auto;
 }
 
-#how .step:nth-child(3) span {
+#outdoor-how .step:nth-child(3) span {
     margin-left: auto;
 }
 
-#how .step h3 {
+#outdoor-how .step h3 {
     color: var(--secondary);
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
 }
 
-#how .step p {
+#outdoor-how .step p {
     font-weight: 600;
 }
 
-#how .step .btn {
+#outdoor-how .step .btn {
     font-size: 15px;
 }

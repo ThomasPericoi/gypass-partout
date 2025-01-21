@@ -1,2 +1,108 @@
 /* #Outdoor Form
 --------------------------------------------------------------- */
+.page-template-outdoor-form-template main {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.page-template-outdoor-form-template main:before,
+.page-template-outdoor-form-template main:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    background-color: var(--secondary);
+}
+
+@media screen and (min-width: 992px) {
+    .page-template-outdoor-form-template main:before,
+    .page-template-outdoor-form-template main:after {
+        width: 66px;
+    }
+}
+
+.page-template-outdoor-form-template main:before {
+    left: 0;
+    top: 66%;
+}
+
+.page-template-outdoor-form-template main:after {
+    top: 33%;
+    right: 0;
+}
+
+.page-template-outdoor-form-template form>[class*="uacf7-form"] {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+    align-items: flex-start;
+}
+
+/* Titles */
+.page-template-outdoor-form-template .title-wrapper {
+    align-self: center;
+    position: relative;
+}
+
+.page-template-outdoor-form-template .title-wrapper:before,
+.page-template-outdoor-form-template .title-wrapper:after,
+.page-template-outdoor-form-template .title-wrapper>*:after {
+    content: "";
+    width: 66px;
+    height: 16px;
+    background-color: var(--secondary);
+}
+
+.page-template-outdoor-form-template .title-wrapper:before {
+    margin: 0 auto 16px auto;
+    display: block;
+}
+
+.page-template-outdoor-form-template .title-wrapper:after {
+    margin: 16px auto 0 0;
+    display: block;
+}
+
+.page-template-outdoor-form-template .title-wrapper>*:after {
+    margin-left: 16px;
+    display: inline-block;
+    transform: translateY(-50%);
+}
+
+.page-template-outdoor-form-template .title-wrapper>* {
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.page-template-outdoor-form-template .label-title {
+    font-weight: 700;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+/* Forms */
+.page-template-outdoor-form-template form>[class*="uacf7-form"]>section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+@media screen and (min-width: 992px) {
+    .page-template-outdoor-form-template form>[class*="uacf7-form"]>section:not(.full) {
+        max-width: 700px;
+    }
+}
+
+.page-template-outdoor-form-template form label input[type="text"],
+.page-template-outdoor-form-template form label input[type="email"],
+.page-template-outdoor-form-template form label input[type="tel"],
+.page-template-outdoor-form-template form label input[type="file"] {
+    margin-top: 8px;
+}
+
+.page-template-outdoor-form-template form .btn {
+    align-self: center;
+    background-color: var(--william);
+}

@@ -154,6 +154,32 @@
             "allow_in_bindings": 1
         },
         {
+            "key": "field_678fde2321959",
+            "label": "Poster de la vidéo",
+            "name": "outdoor_content_1_video_poster",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
             "key": "field_6788f87478f9e",
             "label": "Texte introductif",
             "name": "outdoor_content_1_introduction",
@@ -1097,5 +1123,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737056319
+    "modified": 1737481788
 }

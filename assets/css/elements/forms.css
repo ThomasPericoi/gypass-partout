@@ -148,3 +148,7 @@ main .label-text {
     margin-left: 0 !important;
     font-size: 0.8rem;
 }
+
+.wpcf7-list-item.first {
+    margin-left: 0;
+}

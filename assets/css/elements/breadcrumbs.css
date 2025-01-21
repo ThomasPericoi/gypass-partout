@@ -17,18 +17,18 @@
     }
 }
 
-#breadcrumbs .btn-back {
+.btn-back {
     display: block;
     transition: transform ease 350ms;
     cursor: pointer;
 }
 
-#breadcrumbs .btn-back:hover,
-#breadcrumbs .btn-back:focus {
+.btn-back:hover,
+.btn-back:focus {
     transform: translateX(-5px);
 }
 
-#breadcrumbs .btn-back svg {
+.btn-back svg {
     max-width: 29px;
     width: 100%;
     height: auto;

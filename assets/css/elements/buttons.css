@@ -51,9 +51,9 @@
     background-color: var(--secondary);
 }
 
-.btn-primary:hover,
-.btn-primary:focus,
-.btn-primary.active {
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary.active {
     background-color: var(--scooter);
 }
 
