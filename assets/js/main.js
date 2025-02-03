@@ -616,6 +616,10 @@ document.addEventListener("DOMContentLoaded", function () {
     },
   });
 
+  swiperHero.autoplay.stop();
+
+  setTimeout(() => swiperHero.autoplay.start(), 10000);
+
   const swiperHeroNested = new Swiper('#home-hero .nested-slider', {
     loop: true,
     autoHeight: true,

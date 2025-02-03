@@ -132,7 +132,7 @@
 
 @media screen and (min-width: 1200px) {
     #outdoor-hero .badge {
-        max-width: 700px;
+        max-width: 650px;
         margin-top: 0;
         position: absolute;
         top: 50%;
@@ -264,21 +264,51 @@
 }
 
 @media screen and (min-width: 1200px) {
-    #outdoor-image-2:before {
-        content: "";
-        width: 66px;
-        height: 16px;
-        display: block;
+    #outdoor-content-2 .container:nth-child(1) {
+        width: 100%;
+        position: unset;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-content-2 .title-wrapper {
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #outdoor-image-1 {
         position: absolute;
-        top: 70%;
-        left: -23px;
-        background-color: var(--secondary);
+        top: 0;
+        left: 0;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #outdoor-image-2 {
+        position: absolute;
+        top: 33%;
+        right: 0;
+    }
+}
+
+#outdoor-content-2 .introduction-download {
+    font-weight: 600;
+    font-size: 19px;
+    color: var(--william);
+}
+
+@media screen and (min-width: 1200px) {
+    #outdoor-content-2 .introduction-download .btn {
+        margin-left: 8px;
     }
 }
 
 #outdoor-image-3,
 #outdoor-image-4 {
-    width: 115%;
+    width: 110%;
 }
 
 @media screen and (min-width: 1200px) {

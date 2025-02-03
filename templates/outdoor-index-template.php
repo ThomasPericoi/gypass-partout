@@ -43,7 +43,7 @@ get_header(); ?>
 
 <!-- Content 2 -->
 <section id="outdoor-content-2">
-    <div class="container">
+    <div class="container container-sm">
         <div class="cols-wrapper">
             <div class="col">
                 <figure id="outdoor-image-1">
@@ -66,6 +66,12 @@ get_header(); ?>
         <div class="introduction formatted">
             <?php echo get_field("outdoor_content_2_introduction"); ?>
         </div>
+        <?php if (get_field('outdoor_content_2_introduction_download')) : ?>
+            <div class="introduction-download">
+                <?php echo get_field("outdoor_content_2_introduction_download"); ?>
+                <a class="btn" href="<?php echo get_field("outdoor_content_2_files"); ?>"><?php echo get_field("outdoor_content_2_files_label"); ?></a>
+            </div>
+        <?php endif; ?>
         <div class="content formatted">
             <?php echo get_field("outdoor_content_2_content"); ?>
             <?php if (have_rows('outdoor_content_2_list')) : ?>

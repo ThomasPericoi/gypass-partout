@@ -29,8 +29,10 @@
 <section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
     <div class="container">
         <h1 class="h4-size">
-            <?php if (get_field("range_range_prefix") !== true) : ?><?php echo __("Gamme", "gypass"); ?><br /><?php endif; ?>
-        <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
+            <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
+                <?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?><br />
+            <?php endif; ?>
+            <strong><?php echo __("Gamme", "gypass"); ?> <?php echo get_field("range_range") ?: get_the_title(); ?></strong>
         </h1>
         <h2 class="h1-size"><?php echo get_field("range_title") ?: get_the_title(); ?></h2>
         <a class="btn-scroll" href="#plus">

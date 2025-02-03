@@ -243,7 +243,7 @@
             "new_lines": "br"
         },
         {
-            "key": "field_6788f9fb02abf",
+            "key": "field_6790f40908fe4",
             "label": "Fichier associé au bouton",
             "name": "outdoor_content_1_button",
             "aria-label": "",
@@ -343,6 +343,69 @@
             "toolbar": "basic",
             "media_upload": 0,
             "delay": 1
+        },
+        {
+            "key": "field_6790f37e08fe3",
+            "label": "Instructions pour le téléchargement",
+            "name": "outdoor_content_2_introduction_download",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "Apparaîtra en vert d'eau.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
+        },
+        {
+            "key": "field_6788f9fb02abf",
+            "label": "Fichiers à télécharger",
+            "name": "outdoor_content_2_files",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6790f41e08fe5",
+            "label": "Label du bouton",
+            "name": "outdoor_content_2_files_label",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "maxlength": "",
+            "allow_in_bindings": 0,
+            "placeholder": "",
+            "prepend": "",
+            "append": ""
         },
         {
             "key": "field_6788fc1d121e0",
@@ -1123,5 +1186,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1737481788
+    "modified": 1737553016
 }
