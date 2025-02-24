@@ -31,6 +31,7 @@ $args = [
         'thumbnail',
         'excerpt',
         'custom-fields',
+        'revisions',
     ],
     'taxonomies' => [],
     'has_archive' => true,

@@ -30,6 +30,7 @@ $args = [
         'editor',
         'thumbnail',
         'custom-fields',
+        'revisions',
     ],
     'taxonomies' => [],
     'has_archive' => true,
