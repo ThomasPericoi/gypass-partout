@@ -1,0 +1,127 @@
+/* #Taxonomy Range Product
+--------------------------------------------------------------- */
+.taxonomy-range-product main {
+    padding-bottom: 0;
+}
+
+.taxonomy-range-product h1 {
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1200px) {
+    .taxonomy-range-product h1 {
+        font-size: 50px;
+    }
+}
+
+/* Posts */
+.taxonomy-range-product #posts {
+    margin: var(--spacing-section-outer) 0;
+}
+
+.taxonomy-range-product #posts h2 {
+    margin-bottom: var(--spacing-title);
+}
+
+/* Steps */
+.taxonomy-range-product #steps {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+    text-align: center;
+    background-color: var(--primary);
+}
+
+.taxonomy-range-product #steps:before {
+    content: "";
+    aspect-ratio: 0.5;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../images/gypass-condensed.svg");
+}
+
+.taxonomy-range-product #steps h2 {
+    margin-bottom: var(--spacing-title);
+    color: var(--white);
+    font-weight: 300;
+}
+
+.taxonomy-range-product #steps h2 strong {
+    font-weight: 600;
+}
+
+.taxonomy-range-product #steps .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4rem;
+}
+
+@media screen and (min-width: 1200px) {
+    .taxonomy-range-product #steps .steps-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.taxonomy-range-product #steps .steps-grid .step:nth-child(2) {
+    position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+
+    .taxonomy-range-product #steps .steps-grid .step:nth-child(2):before,
+    .taxonomy-range-product #steps .steps-grid .step:nth-child(2):after {
+        content: "";
+        width: 1px;
+        position: absolute;
+        top: 4rem;
+        bottom: 0;
+        display: block;
+        background-color: #31BBBD;
+    }
+
+    .taxonomy-range-product #steps .steps-grid .step:nth-child(2):before {
+        left: -2rem;
+    }
+
+    .taxonomy-range-product #steps .steps-grid .step:nth-child(2):after {
+        right: -2rem;
+    }
+}
+
+.taxonomy-range-product #steps .steps-grid h3 {
+    margin-bottom: var(--spacing-title);
+    display: flex;
+    flex-direction: column;
+    font-weight: 300;
+    gap: 0.5rem;
+    color: #31BBBD;
+}
+
+.taxonomy-range-product #steps .steps-grid h3 strong {
+    text-transform: uppercase;
+    font-size: 95%;
+}
+
+.taxonomy-range-product #steps .steps-grid p {
+    color: #F1EEEE;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/* Products */
+.taxonomy-range-product #products {
+    margin: var(--spacing-section-outer) 0;
+}
+
+.taxonomy-range-product #products h2 {
+    margin-bottom: var(--spacing-title);
+}
+
+/* FAQ */
+.taxonomy-range-product #faq {
+    background-color: var(--snuff);
+}
