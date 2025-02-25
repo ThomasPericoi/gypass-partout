@@ -26,7 +26,8 @@
 </section>
 
 <!-- Hero -->
-<section id="hero" <?php if (has_post_thumbnail()) : ?>style="background-image: url('<?php echo get_the_post_thumbnail_url(); ?>');" <?php endif; ?>>
+<?php $background_url = get_field("product_background") ?: get_the_post_thumbnail_url(); ?>
+<section id="hero" <?php if ($background_url) : ?>style="background-image: url('<?php echo $background_url; ?>');" <?php endif; ?>>
     <div class="container">
         <h1 class="h4-size">
             <?php if (get_field("product_top_title_1") || get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>

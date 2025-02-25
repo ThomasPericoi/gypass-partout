@@ -22,11 +22,11 @@
         },
         {
             "key": "field_65f09d00aae51",
-            "label": "Hero",
-            "name": "",
+            "label": "Image de fond",
+            "name": "product_background",
             "aria-label": "",
-            "type": "tab",
-            "instructions": "",
+            "type": "image",
+            "instructions": "Laisser le champs vide pour afficher l'image mise en avant de base.",
             "required": 0,
             "conditional_logic": 0,
             "wrapper": {
@@ -34,9 +34,17 @@
                 "class": "",
                 "id": ""
             },
-            "placement": "left",
-            "endpoint": 0,
-            "selected": 0
+            "return_format": "url",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 1,
+            "preview_size": "medium"
         },
         {
             "key": "field_660438317dfba",
@@ -541,5 +549,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724342778
+    "modified": 1740497878
 }
