@@ -46,7 +46,9 @@ endif;
     <div class="container">
         <?php if (have_posts()) : ?>
 
-            <?php get_template_part('template-parts/grid', 'posts'); ?>
+            <?php get_template_part('template-parts/grid', 'posts', array(
+                'title_tag' => 'h2',
+            )); ?>); ?>
 
         <?php else : echo __('Aucune actualité n\'a (encore) été publié.', 'gypass');
         endif; ?>

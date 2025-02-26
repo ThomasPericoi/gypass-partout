@@ -21,7 +21,9 @@ $description = get_queried_object()->description ?: __("Retrouvez ici toutes les
 
         <?php if (have_posts()) : ?>
 
-            <?php get_template_part('template-parts/grid', 'posts'); ?>
+            <?php get_template_part('template-parts/grid', 'posts', array(
+                'title_tag' => 'h3',
+            )); ?>
 
         <?php else : echo __('Aucune gamme n\'a (encore) été publié.', 'gypass');
         endif; ?>
@@ -87,7 +89,7 @@ $description = get_queried_object()->description ?: __("Retrouvez ici toutes les
                             <img class="badge" src="<?php echo get_field("post_badge")["url"]; ?>" alt="<?php echo get_field("post_badge")["title"]; ?>" />
                         <?php endif; ?>
                         <div class="content">
-                            <h2 class="title"><?php the_title(); ?></h2>
+                            <h3 class="title"><?php the_title(); ?></h3>
                             <?php if (has_excerpt()) : ?>
                                 <p><?php the_excerpt(); ?></p>
                             <?php endif; ?>

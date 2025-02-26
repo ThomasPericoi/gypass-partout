@@ -8,7 +8,7 @@
                 <img class="badge" src="<?php echo get_field("post_badge")["url"]; ?>" alt="<?php echo get_field("post_badge")["title"]; ?>" />
             <?php endif; ?>
             <div class="content">
-                <h2 class="title"><?php the_title(); ?></h2>
+                <<?php echo $args["title_tag"]; ?> class="title"><?php the_title(); ?></<?php echo $args["title_tag"]; ?>>
                 <?php if (has_excerpt()) : ?>
                     <p><?php the_excerpt(); ?></p>
                 <?php endif; ?>
