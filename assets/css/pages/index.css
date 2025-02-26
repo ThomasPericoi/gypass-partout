@@ -36,10 +36,27 @@
 
 .posts-grid .post .thumbnail {
     width: 100%;
+    aspect-ratio: 1;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+.posts-grid .post:after {
+    content: '';
+    width: 100%;
     aspect-ratio: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    background: var(--primary);
+    transition: opacity ease 350ms;
+}
+
+.posts-grid .post:hover:after,
+.posts-grid .post:focus:after {
+    opacity: 0.4;
 }
 
 .posts-grid .badge {
