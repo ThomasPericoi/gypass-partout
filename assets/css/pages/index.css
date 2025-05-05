@@ -42,7 +42,7 @@
     background-position: center;
 }
 
-.posts-grid .post:after {
+.posts-grid .post .thumbnail:after {
     content: '';
     width: 100%;
     aspect-ratio: 1;
@@ -54,8 +54,8 @@
     transition: opacity ease 350ms;
 }
 
-.posts-grid .post:hover:after,
-.posts-grid .post:focus:after {
+.posts-grid .post:hover .thumbnail:after,
+.posts-grid .post:focus .thumbnail:after {
     opacity: 0.4;
 }
 

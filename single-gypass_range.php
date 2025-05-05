@@ -13,13 +13,13 @@
         <?php endif; ?>
         <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
             <p>
-                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a>
+                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a></span>
+                <span class="separator"> &gt; </span>
+                <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
+                    <a href="<?php echo site_url() . "/nos-gammes/" . get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->slug; ?>"><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a>
                     <span class="separator"> &gt; </span>
-                    <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
-                        <span class="js-openRanges"><a><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a></span>
-                        <span class="separator"> &gt; </span>
-                    <?php endif; ?>
-                    <span class="last"><?php echo get_the_title(); ?></span>
+                <?php endif; ?>
+                <span class="last"><?php echo get_the_title(); ?></span>
             </p>
         </nav>
     </div>

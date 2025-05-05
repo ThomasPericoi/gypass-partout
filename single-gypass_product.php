@@ -16,7 +16,7 @@
                 <span class="js-openProducts"><a><?php echo __("Produits", "gypass"); ?></a></span>
                 <span class="separator"> &gt; </span>
                 <?php if (get_the_terms(get_the_id(), 'gypass_product_product_family')) : ?>
-                    <span class="js-openProducts"><a><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></a></span>
+                    <a href="<?php echo site_url() . "/nos-gammes/" . get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->slug; ?>"><?php echo get_the_terms(get_the_id(), 'gypass_product_product_family')[0]->name; ?></a>
                     <span class="separator"> &gt; </span>
                 <?php endif; ?>
                 <span class="last"><?php echo get_the_title(); ?></span>
