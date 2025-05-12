@@ -592,7 +592,9 @@ body.js-menuOpened .super-menu-overlay {
 .super-menu-wrapper .menu-header .menu-item-primary a:after,
 .super-menu-wrapper .menu-header .menu-item-secondary a:after,
 .super-menu-wrapper .js-openProducts>.sub-menu>li>a:after,
-.super-menu-wrapper .js-openRanges>.sub-menu>li>a:after {
+.super-menu-wrapper .js-openRanges>.sub-menu>li>a:after,
+.super-menu-wrapper .js-openProducts>.sub-menu>li>.sub-menu .header-menu-item>a:after,
+.super-menu-wrapper .js-openRanges>.sub-menu>li>.sub-menu .header-menu-item>a:after {
     filter: brightness(0) invert(1);
 }
 
@@ -670,43 +672,64 @@ body.js-menuOpened .super-menu-overlay {
     color: var(--white);
 }
 
+.super-menu-wrapper .js-openProducts>.sub-menu>li>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li>.sub-menu .header-menu-item>a {
+    color: var(--white) !important;
+}
+
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(1)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(1)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(1)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(1)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(1)>.sub-menu .header-menu-item>a {
     background-color: var(--bahama-blue);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(2)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(2)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(2)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(2)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(2)>.sub-menu .header-menu-item>a {
     background-color: var(--science-blue);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(3)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(3)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(3)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(3)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(3)>.sub-menu .header-menu-item>a {
     background-color: var(--lochmara);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(4)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(4)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(4)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(4)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(4)>.sub-menu .header-menu-item>a {
     background-color: var(--havelock-blue);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(5)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(5)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(5)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(5)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(5)>.sub-menu .header-menu-item>a {
     background-color: var(--boston-blue);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(6)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(6)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(6)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(6)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(6)>.sub-menu .header-menu-item>a {
     background-color: var(--blue-lagoon);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(7)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(7)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(7)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(7)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(7)>.sub-menu .header-menu-item>a {
     background-color: var(--cerulean);
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(8)>a,
-.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(8)>a {
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(8)>a,
+.super-menu-wrapper .js-openProducts>.sub-menu>li:nth-child(8)>.sub-menu .header-menu-item>a,
+.super-menu-wrapper .js-openRanges>.sub-menu>li:nth-child(8)>.sub-menu .header-menu-item>a {
     background-color: var(--science-blue);
 }
 
@@ -768,7 +791,9 @@ body.js-menuOpened .super-menu-overlay {
 }
 
 .super-menu-wrapper .js-openProducts>.sub-menu .sub-menu li a:hover img,
-.super-menu-wrapper .js-openRanges>.sub-menu .sub-menu li a:hover img {
+.super-menu-wrapper .js-openRanges>.sub-menu .sub-menu li a:hover img,
+.super-menu-wrapper .js-openProducts>.sub-menu>li>.sub-menu .header-menu-item>a img,
+.super-menu-wrapper .js-openRanges>.sub-menu>li>.sub-menu .header-menu-item>a img {
     filter: brightness(0) invert(1);
 }
 
