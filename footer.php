@@ -50,25 +50,25 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
             <div class="menus">
                 <?php if (has_nav_menu('footer-menu-1')) : ?>
                     <div class="menu menu-footer">
-                        <h3 class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-1'])->name; ?></h3>
+                        <p class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-1'])->name; ?></p>
                         <?php wp_nav_menu(array('theme_location' => 'footer-menu-1', 'container' => false, 'depth' => 1)); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (has_nav_menu('footer-menu-2')) : ?>
                     <div class="menu menu-footer">
-                        <h3 class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-2'])->name; ?></h3>
+                        <p class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-2'])->name; ?></p>
                         <?php wp_nav_menu(array('theme_location' => 'footer-menu-2', 'container' => false, 'depth' => 1)); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (has_nav_menu('footer-menu-3')) : ?>
                     <div class="menu menu-footer">
-                        <h3 class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-3'])->name; ?></h3>
+                        <p class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-3'])->name; ?></p>
                         <?php wp_nav_menu(array('theme_location' => 'footer-menu-3', 'container' => false, 'depth' => 1)); ?>
                     </div>
                 <?php endif; ?>
                 <?php if (has_nav_menu('footer-menu-4')) : ?>
                     <div class="menu menu-footer">
-                        <h3 class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-4'])->name; ?></h3>
+                        <p class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-4'])->name; ?></p>
                         <?php wp_nav_menu(array('theme_location' => 'footer-menu-4', 'container' => false, 'depth' => 1)); ?>
                     </div>
                 <?php endif; ?>
@@ -77,7 +77,7 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
             <div class="contact">
                 <?php if (get_field("footer_contact_button", "options")) : ?>
                     <?php if (get_field("footer_contact_title", "options")) : ?>
-                        <h3 class="title"><?php echo get_field("footer_contact_title", "options"); ?></h3>
+                        <p class="title"><?php echo get_field("footer_contact_title", "options"); ?></p>
                     <?php endif; ?>
                     <?php if (get_field("footer_contact_address", "options")) : ?>
                         <p><?php echo get_field("footer_contact_address", "options"); ?></p>
@@ -103,7 +103,7 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
             <?php if (get_field("footer_newsletter_shortcode", "options")) : ?>
                 <div class="newsletter">
                     <?php if (get_field("footer_newsletter_title", "options")) : ?>
-                        <h3 class="title"><?php echo get_field("footer_newsletter_title", "options"); ?></h3>
+                        <p class="title"><?php echo get_field("footer_newsletter_title", "options"); ?></p>
                     <?php endif; ?>
                     <?php $shortcode_newsletter = '[contact-form-7 id="' . get_field("footer_newsletter_shortcode", "options") . '"]';
                     echo do_shortcode($shortcode_newsletter); ?>
@@ -112,7 +112,7 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
 
             <?php if (has_nav_menu('footer-menu-5')) : ?>
                 <div class="menu menu-footer menu-external">
-                    <h3 class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-5'])->name; ?></h3>
+                    <p class="title"><?php echo wp_get_nav_menu_object($locations['footer-menu-5'])->name; ?></p>
                     <?php wp_nav_menu(array('theme_location' => 'footer-menu-5', 'container' => false, 'depth' => 1)); ?>
                 </div>
             <?php endif; ?>

@@ -56,7 +56,7 @@ $style  = implode('; ', $styles);
                 <div class="shades-wrapper">
                     <?php if (have_rows('shades_1')) : ?>
                         <div id="shades-1" class="shades">
-                            <h3 class="shades-title p-size"><span id="shades-count-1"></span> <?php echo ($shades_1_title) ? $shades_1_title : __("teintes Fine Texture", "gypass"); ?></h3>
+                            <p class="shades-title p-size"><span id="shades-count-1"></span> <?php echo ($shades_1_title) ? $shades_1_title : __("teintes Fine Texture", "gypass"); ?></p>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_1')) : the_row();
                                     $label = get_sub_field('code_label');
@@ -72,7 +72,7 @@ $style  = implode('; ', $styles);
                     <?php endif; ?>
                     <?php if (have_rows('shades_2')) : ?>
                         <div id="shades-2" class="shades">
-                            <h3 class="shades-title p-size"><span id="shades-count-2"></span> <?php echo ($shades_2_title) ? $shades_2_title : __("teintes Sablées", "gypass"); ?></h3>
+                            <p class="shades-title p-size"><span id="shades-count-2"></span> <?php echo ($shades_2_title) ? $shades_2_title : __("teintes Sablées", "gypass"); ?></p>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_2')) : the_row();
                                     $label = get_sub_field('code_label');
@@ -88,7 +88,7 @@ $style  = implode('; ', $styles);
                     <?php endif; ?>
                     <?php if (have_rows('shades_3')) : ?>
                         <div id="shades-3" class="shades">
-                            <h3 class="shades-title p-size"><?php echo ($shades_3_title) ? $shades_3_title : __("teinte Métallisée mat", "gypass"); ?></h3>
+                            <p class="shades-title p-size"><?php echo ($shades_3_title) ? $shades_3_title : __("teinte Métallisée mat", "gypass"); ?></p>
                             <div class="shades-grid">
                                 <?php while (have_rows('shades_3')) : the_row();
                                     $label = get_sub_field('code_label');
@@ -103,7 +103,7 @@ $style  = implode('; ', $styles);
                         </div>
                     <?php endif; ?>
                     <div id="shades-4" class="shades">
-                        <h3 class="shades-title p-size"><?php echo __("Teinte personnalisée"); ?></h3>
+                        <p class="shades-title p-size"><?php echo __("Teinte personnalisée"); ?></p>
                         <div class="shades-grid">
                             <span data-tooltip="<?php echo __("Vous souhaitez une couleur particulière, nous la reproduisons en la contretypant.", "gypass"); ?>"></span>
                         </div>

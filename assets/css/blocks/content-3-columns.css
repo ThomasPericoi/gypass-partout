@@ -78,7 +78,7 @@
     margin-top: 0;
 }
 
-.content-3-columns-block .feature.formatted h3 {
+.content-3-columns-block .feature.formatted .title {
     font-size: 15px;
     text-transform: uppercase;
 }

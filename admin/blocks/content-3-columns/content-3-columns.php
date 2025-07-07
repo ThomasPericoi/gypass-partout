@@ -55,7 +55,7 @@ $style  = implode('; ', $styles);
                     ?>
                         <div class="feature formatted">
                             <?php if ($title) : ?>
-                                <h3 class="p-size"><?php echo $title; ?></h3>
+                                <p class="title"><?php echo $title; ?></p>
                             <?php endif; ?>
                             <?php if ($content) : ?>
                                 <?php echo $content; ?>

@@ -2,7 +2,7 @@
 
 <!-- Hero -->
 <?php if (is_tax()) :
-    $title = get_queried_object()->name;
+    $title = $title = is_tax('gypass_trip_trick_product_family', 41) ? get_queried_object()->name : __("Nos conseils pour vos ", "gypass") . get_queried_object()->name;
     $description = get_queried_object()->description ?:  __("Retrouvez ici tous les conseils et astuces GYPASS.", "gypass");
 else :
     $title = get_field('tips_tricks_title', 'options') ?: __("Conseils & Astuces", "gypass");

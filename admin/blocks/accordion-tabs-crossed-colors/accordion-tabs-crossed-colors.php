@@ -89,7 +89,7 @@ $style  = implode('; ', $styles);
                         $tab_index = get_row_index();
                         $title = get_sub_field('title'); ?>
                         <nav id="menu-<?php echo $tab_index; ?>" class="menu">
-                            <h3 tabindex="0" role="button"><?php echo $title; ?></h3>
+                            <p class="title" tabindex="0" role="button"><?php echo $title; ?></p>
                             <div class="accordion-content">
                                 <div class="accordion-list">
                                     <?php if (have_rows('elements')) :

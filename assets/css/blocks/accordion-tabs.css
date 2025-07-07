@@ -99,7 +99,7 @@
     }
 }
 
-.accordion-tabs-block .menu h3 {
+.accordion-tabs-block .menu p.title {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -115,7 +115,7 @@
     cursor: pointer;
 }
 
-.accordion-tabs-block .menu h3:after {
+.accordion-tabs-block .menu p.title:after {
     content: "";
     width: 15px;
     height: 15px;
@@ -127,7 +127,7 @@
     transition: transform ease 350ms;
 }
 
-.accordion-tabs-block .menu h3.active:after {
+.accordion-tabs-block .menu p.title.active:after {
     transform: rotate(90deg);
 }
 
