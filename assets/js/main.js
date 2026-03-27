@@ -450,8 +450,6 @@ document.addEventListener("DOMContentLoaded", function () {
       if (parent.find("[data-options-alt-id='" + optionAlt + "'][data-tab-index='" + option_3 + "'][data-element-index='" + option_4 + "']").length > 0) {
         $(this).show();
         optionsElIndex++;
-      } else {
-        $(this).hide();
       }
     });
 

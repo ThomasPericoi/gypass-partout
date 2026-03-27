@@ -129,7 +129,7 @@ function redirect_tax_archive($template)
         }
     }
     if (is_tax('gypass_range_product_family') && is_archive()) {
-        if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails'))) {
+        if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails')) || (is_tax('gypass_range_product_family', 'Clôtures')) || (is_tax('gypass_range_product_family', 'Claustras')) || (is_tax('gypass_range_product_family', 'Pergolas')) || (is_tax('gypass_range_product_family', 'Carports')) || (is_tax('gypass_range_product_family', 'portes-dentree'))) {
             $new_template = locate_template(array('taxonomy-range-product.php'));
         } else {
             $new_template = locate_template(array('archive-gypass_range.php'));
@@ -220,7 +220,7 @@ add_action('init', 'enable_dynamic_rw_rules');
 // Add classes to body based on template
 function add_custom_classes_to_templates($classes)
 {
-    if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails'))) {
+    if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails')) || (is_tax('gypass_range_product_family', 'Clôtures')) || (is_tax('gypass_range_product_family', 'Claustras')) || (is_tax('gypass_range_product_family', 'Pergolas')) || (is_tax('gypass_range_product_family', 'Carports')) || (is_tax('gypass_range_product_family', 'portes-dentree'))) {
         $classes[] = 'taxonomy-range-product';
     }
     return $classes;

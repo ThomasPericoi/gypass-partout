@@ -68,7 +68,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_65fd96aa745b6",
@@ -85,8 +87,10 @@
                 "id": ""
             },
             "choices": {
+                "accely": "Accely",
                 "adelaide": "Adélaïde",
                 "auckland": "Auckland",
+                "augusta": "Augusta",
                 "brisbane": "Brisbane",
                 "canberra": "Canberra",
                 "claustras-maestria": "Claustras Maestria",
@@ -116,7 +120,9 @@
             "allow_in_bindings": 1,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_67bde3d22ca88",
@@ -469,7 +475,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_65fda0892f68d",
@@ -686,5 +694,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740497932
+    "display_title": "",
+    "modified": 1774283177
 }

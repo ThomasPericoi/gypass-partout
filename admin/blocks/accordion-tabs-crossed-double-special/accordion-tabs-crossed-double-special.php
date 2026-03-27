@@ -33,7 +33,7 @@ $styles = array("");
 $style  = implode('; ', $styles);
 ?>
 
-<!-- Block - Accordion Tabs (Crossed) -->
+<!-- Block - Accordion Tabs (Crossed / Special) -->
 <section id="<?php echo $id; ?>" class="<?php echo esc_attr($classes); ?>" style="<?php echo esc_attr($style); ?>">
     <div class="container <?php echo $container; ?>">
         <div class="cols-wrapper">
@@ -87,7 +87,7 @@ $style  = implode('; ', $styles);
                 <?php if (have_rows('options_2')) : ?>
                     <div class="options-alt-wrapper">
                         <nav class="menu options-alt">
-                            <p class="title" tabindex="0" role="button"><?php echo $options_2_title; ?></p>
+							<p class="title" tabindex="0" role="button"><?php echo $options_2_title; ?></p>
                             <div class="accordion-content">
                                 <div class="accordion-list">
                                     <?php while (have_rows('options_2')) : the_row();

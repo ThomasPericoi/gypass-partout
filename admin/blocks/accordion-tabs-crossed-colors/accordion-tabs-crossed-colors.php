@@ -34,7 +34,7 @@ $styles = array("");
 $style  = implode('; ', $styles);
 ?>
 
-<!-- Block - Accordion Tabs (Crossed) -->
+<!-- Block - Accordion Tabs (Crossed / Colors) -->
 <section id="<?php echo $id; ?>" class="<?php echo esc_attr($classes); ?>" style="<?php echo esc_attr($style); ?>">
     <div class="container <?php echo $container; ?>">
         <div class="cols-wrapper">

@@ -8,7 +8,8 @@
     position: relative;
 }
 
-.blog #posts {
+.blog #posts,
+.archive #posts {
     margin-bottom: var(--spacing-section-outer);
 }
 

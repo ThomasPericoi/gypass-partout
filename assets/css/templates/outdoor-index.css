@@ -118,6 +118,7 @@
 #outdoor-hero h1 p {
     color: var(--white);
     font-weight: 300;
+	line-height: 1;
 }
 
 #outdoor-hero .badge {

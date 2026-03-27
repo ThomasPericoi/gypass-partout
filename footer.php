@@ -100,6 +100,7 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
                 <?php endif; ?>
             </div>
 
+			<!--
             <?php if (get_field("footer_newsletter_shortcode", "options")) : ?>
                 <div class="newsletter">
                     <?php if (get_field("footer_newsletter_title", "options")) : ?>
@@ -109,6 +110,7 @@ $logo_alt = get_field('footer_logo_alt', 'options'); ?>
                     echo do_shortcode($shortcode_newsletter); ?>
                 </div>
             <?php endif; ?>
+-->
 
             <?php if (has_nav_menu('footer-menu-5')) : ?>
                 <div class="menu menu-footer menu-external">
