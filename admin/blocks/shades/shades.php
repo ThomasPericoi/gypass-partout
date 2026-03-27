@@ -17,6 +17,7 @@ $instructions = get_field('instructions');
 $shades_1_title = get_field('shades_1_title');
 $shades_2_title = get_field('shades_2_title');
 $shades_3_title = get_field('shades_3_title');
+$shades_custom = get_field('shades_custom') ?? true;
 $text = get_field('text');
 $download_chart_file = get_field('download_chart_file');
 $download_chart_label = get_field('download_chart_label');
@@ -102,12 +103,14 @@ $style  = implode('; ', $styles);
                             </div>
                         </div>
                     <?php endif; ?>
-                    <div id="shades-4" class="shades">
-                        <p class="shades-title p-size"><?php echo __("Teinte personnalisée"); ?></p>
-                        <div class="shades-grid">
-                            <span data-tooltip="<?php echo __("Vous souhaitez une couleur particulière, nous la reproduisons en la contretypant.", "gypass"); ?>"></span>
+                    <?php if ($shades_custom) : ?>
+                        <div id="shades-4" class="shades">
+                            <p class="shades-title p-size"><?php echo __("Teinte personnalisée"); ?></p>
+                            <div class="shades-grid">
+                                <span data-tooltip="<?php echo __("Vous souhaitez une couleur particulière, nous la reproduisons en la contretypant.", "gypass"); ?>"></span>
+                            </div>
                         </div>
-                    </div>
+                    <?php endif; ?>
                 </div>
                 <?php if ($download_chart_file && $download_chart_label) : ?>
                     <p class="chart"><?php echo $download_chart_label; ?> <a href="<?php echo $download_chart_file; ?>" download><?php echo __("ici", "gypass") ?></a></p>

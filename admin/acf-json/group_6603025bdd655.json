@@ -156,11 +156,7 @@
         },
         {
             "key": "field_66def8e0d6747",
-<<<<<<< HEAD
             "label": "Contenu - Teintes #1",
-=======
-            "label": "Contenu - \"Fine Texture\"",
->>>>>>> origin/main
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -345,11 +341,7 @@
         },
         {
             "key": "field_66def8fdd6748",
-<<<<<<< HEAD
             "label": "Contenu - Teintes #2",
-=======
-            "label": "Contenu - \"Sablées\"",
->>>>>>> origin/main
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -534,11 +526,7 @@
         },
         {
             "key": "field_66def90ad6749",
-<<<<<<< HEAD
             "label": "Contenu - Teintes #3",
-=======
-            "label": "Contenu - \"Métallisée\"",
->>>>>>> origin/main
             "name": "",
             "aria-label": "",
             "type": "accordion",
@@ -556,11 +544,7 @@
         },
         {
             "key": "field_66c75e96675b8",
-<<<<<<< HEAD
             "label": "Label de la liste",
-=======
-            "label": "Label \"Métallisée\"",
->>>>>>> origin/main
             "name": "shades_3_title",
             "aria-label": "",
             "type": "text",
@@ -726,6 +710,45 @@
             ]
         },
         {
+            "key": "field_69c68acb24070",
+            "label": "Contenu - Teintes personnalisées",
+            "name": "",
+            "aria-label": "",
+            "type": "accordion",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "open": 0,
+            "multi_expand": 0,
+            "endpoint": 0
+        },
+        {
+            "key": "field_69c68ada24071",
+            "label": "Afficher le tooltip des teintes personnalisées",
+            "name": "shades_custom",
+            "aria-label": "",
+            "type": "true_false",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "",
+            "default_value": 1,
+            "allow_in_bindings": 0,
+            "ui": 0,
+            "ui_on_text": "",
+            "ui_off_text": ""
+        },
+        {
             "key": "field_6603025c1cd56",
             "label": "Options de style",
             "name": "",
@@ -768,7 +791,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6615026ea5ef7",
@@ -814,9 +839,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-<<<<<<< HEAD
-    "modified": 1727364012
-=======
-    "modified": 1725888850
->>>>>>> origin/main
+    "display_title": "",
+    "modified": 1774619406
 }
