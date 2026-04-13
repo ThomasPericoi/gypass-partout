@@ -212,7 +212,7 @@
             "layout": "block",
             "pagination": 0,
             "min": 1,
-            "max": 2,
+            "max": 4,
             "collapsed": "",
             "button_label": "Ajouter un menu déroulant",
             "rows_per_page": 20,
@@ -417,7 +417,9 @@
             "allow_null": 1,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6607eeb4d28b1",
@@ -462,7 +464,9 @@
             "allow_null": 0,
             "ui": 0,
             "ajax": 0,
-            "placeholder": ""
+            "placeholder": "",
+            "create_options": 0,
+            "save_options": 0
         },
         {
             "key": "field_6607eeb4d9f24",
@@ -558,5 +562,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1725965163
+    "display_title": "",
+    "modified": 1775639405
 }
