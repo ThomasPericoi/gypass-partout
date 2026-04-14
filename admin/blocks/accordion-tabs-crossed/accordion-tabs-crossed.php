@@ -13,6 +13,7 @@
  */
 
 $id = uniqid("accordion-crossed-");
+
 $title = get_field('title');
 $content = get_field('content');
 $cta = get_field('cta');

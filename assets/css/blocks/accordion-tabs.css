@@ -131,7 +131,7 @@
     transform: rotate(90deg);
 }
 
-.accordion-tabs-block .menu {
+.accordion-tabs-block .menu:not(.options) {
     display: flex;
     flex-direction: column;
 }

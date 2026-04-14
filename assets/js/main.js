@@ -350,11 +350,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  function showContentAccordionTabs(tab, element, parent) {
+  function showContentAccordionTabs(tab, element, parent, label = false) {
     parent.find("img.visible, .video-wrapper.visible").removeClass("visible");
     parent.find("img[data-tab-index='" + tab + "'][data-element-index='" + element + "'], .video-wrapper[data-tab-index='" + tab + "'][data-element-index='" + element + "']").addClass("visible");
     parent.find("nav.menu button.active").removeClass("active");
     parent.find("nav.menu button[data-tab-target='" + tab + "'][data-element-target='" + element + "']").addClass("active");
+    if (label) {
+      parent.find('#active-label') && parent.find('#active-label').text(label);
+    }
   }
 
   $(".accordion-tabs-block:not(.accordion-tabs-crossed-block) nav.menu button").on("click", function () {
@@ -536,6 +539,86 @@ document.addEventListener("DOMContentLoaded", function () {
       nextEl: ".button-next",
       prevEl: ".button-prev",
     },
+  });
+
+  // Block - Accordion Tabs Colors Slider
+  function syncAccordionSliderToActiveButton(parent, targetButton) {
+    const swiper = parent.data('options-swiper');
+
+    if (!swiper || !targetButton || !targetButton.length) {
+      return;
+    }
+
+    const targetSlide = targetButton.closest('.swiper-slide');
+
+    if (!targetSlide.length) {
+      return;
+    }
+
+    const targetSlideIndex = targetSlide.index();
+
+    if (targetSlideIndex !== swiper.activeIndex) {
+      swiper.slideTo(targetSlideIndex);
+    }
+  }
+
+  $('.accordion-tabs-colors-slider-block').each(function () {
+    const block = $(this);
+
+    const swiper = new Swiper(block.find('.options-swiper')[0], {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      autoHeight: true,
+      watchOverflow: true,
+      pagination: {
+        el: block.find('.options-pagination')[0],
+        clickable: true,
+        renderBullet: function (index, className) {
+          return `<span class="${className}">${index + 1}</span>`;
+        },
+      },
+    });
+
+    block.data('options-swiper', swiper);
+  });
+
+  $(".accordion-tabs-colors-slider-block nav.options button").on("click", function () {
+    tabIndex = $(this).data("tab-target");
+    elementIndex = $(this).data("element-target");
+    label = $(this).data("label");
+    showContentAccordionTabs(tabIndex, elementIndex, $(this).closest('.accordion-tabs-block'), label);
+  });
+
+  $('.accordion-tabs-colors-slider-block').each(function () {
+    showContentAccordionTabs(1, 1, $(this), $(this).find("nav.options button:first-child").data("label"));
+  });
+
+  $(".accordion-tabs-colors-slider-block .button-prev, .accordion-tabs-colors-slider-block .button-next").on("click", function () {
+    const parent = $(this).closest('.accordion-tabs-block');
+    const buttons = parent.find("nav.options button");
+    const currentActiveButton = buttons.filter(".active");
+
+    let currentIndex = buttons.index(currentActiveButton);
+
+    if (currentIndex === -1) {
+      currentIndex = 0;
+    }
+
+    let newIndex;
+
+    if ($(this).hasClass("button-next")) {
+      newIndex = (currentIndex + 1) % buttons.length;
+    } else {
+      newIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+    }
+
+    const targetButton = buttons.eq(newIndex);
+    const tabIndex = targetButton.data("tab-target");
+    const elementIndex = targetButton.data("element-target");
+    const label = targetButton.data("label");
+
+    showContentAccordionTabs(tabIndex, elementIndex, parent, label);
+    syncAccordionSliderToActiveButton(parent, targetButton);
   });
 
   // Block - Shades
