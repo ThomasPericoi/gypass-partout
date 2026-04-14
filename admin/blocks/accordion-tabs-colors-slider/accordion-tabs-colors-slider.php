@@ -54,7 +54,7 @@ if (!empty($options) && is_array($options)) {
     }
 }
 
-$options_chunks = array_chunk($formatted_options, 5);
+$options_chunks = array_chunk($formatted_options, 30);
 ?>
 
 <!-- Block - Accordion Tabs (Colors Slider) -->
