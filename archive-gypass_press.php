@@ -36,7 +36,7 @@ endif;
                     </a>
                     <?php foreach ($document_types as $document_type): ?>
                         <a href="<?php echo esc_url(get_term_link($document_type)) ?>"
-                            class="btn btn-outline-primary<?php if (is_tax('gypass_document_type', $document_type->slug)): ?> active<?php endif; ?>">
+                            class="btn btn-outline-primary<?php if (is_tax('gypass_press_type', $document_type->slug)): ?> active<?php endif; ?>">
                             <?php echo $document_type->name; ?>
                         </a>
                     <?php endforeach; ?>
