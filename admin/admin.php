@@ -24,7 +24,7 @@ if (function_exists('acf_add_options_page')) {
 // Register post types
 function register_custom_post_types()
 {
-    $post_types = ["document", "hiring", "inspiration", "product", "range", "tip-trick"];
+    $post_types = ["document", "hiring", "inspiration", "press-document", "product", "range", "tip-trick"];
     foreach ($post_types as $post_type) {
         include_once(__DIR__ . '/post-types/' . $post_type . '.php');
     }
@@ -60,6 +60,20 @@ function register_custom_taxonomy()
             'show_admin_column' => true,
             'hierarchical' => true,
             'rewrite' => ['slug' => 'inspirations-types', 'with_front' => true],
+        )
+    );
+    register_taxonomy(
+        'gypass_press_type',
+        array('gypass_press'),
+        array(
+            'label' => __('Types de documents presse', 'gypass'),
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'rewrite' => ['slug' => 'press-documents', 'with_front' => true],
         )
     );
     register_taxonomy(
@@ -118,6 +132,12 @@ function redirect_tax_archive($template)
     }
     if (is_tax('gypass_inspi_product_family') && is_archive()) {
         $new_template = locate_template(array('archive-gypass_inspiration.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
+    if (is_tax('gypass_press_type') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_press.php'));
         if ('' != $new_template) {
             return $new_template;
         }

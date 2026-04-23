@@ -1,12 +1,15 @@
 /* #Archive document
 --------------------------------------------------------------- */
 .post-type-archive-gypass_document main,
-.tax-gypass_document_type main {
+.tax-gypass_document_type main,
+.post-type-archive-gypass_press main,
+.tax-gypass_press_type main {
   padding: var(--spacing-section-outer) 0;
   position: relative;
 }
 
-#documents {
+#documents,
+#press {
   margin-bottom: var(--spacing-section-outer);
 }
 
@@ -54,4 +57,14 @@
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
+}
+
+.post-type-archive-gypass_press .document .btn-wrapper,
+.tax-gypass_press_type .document .btn-wrapper {
+  justify-content: center;
+}
+
+.post-type-archive-gypass_press .document .btn-icon-eye,
+.tax-gypass_press_type .document .btn-icon-eye {
+  display: none;
 }

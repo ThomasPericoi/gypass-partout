@@ -1,0 +1,81 @@
+{
+    "key": "group_69ea2c3128571",
+    "title": "Options de contenu - Documents presse",
+    "fields": [
+        {
+            "key": "field_69ea2c312a0fa",
+            "label": "Rappel",
+            "name": "",
+            "aria-label": "",
+            "type": "message",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "message": "Pensez à cocher UNE SEULE \"Type de documents\" sur la colonne de droite avant de publier.",
+            "new_lines": "wpautop",
+            "esc_html": 0
+        },
+        {
+            "key": "field_69ea2c312a100",
+            "label": "Fichier du document",
+            "name": "document_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "Le format demandé est PDF.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "url",
+            "library": "all",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf"
+        },
+        {
+            "key": "field_69ea2c312a103",
+            "label": "Lien vers une liseuse",
+            "name": "document_url_read",
+            "aria-label": "",
+            "type": "url",
+            "instructions": "Lien externe vers un PDF reader.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "gypass_press"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "display_title": "",
+    "modified": 1776954450
+}
