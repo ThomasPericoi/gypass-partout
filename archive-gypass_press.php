@@ -30,7 +30,7 @@ endif;
                     <?php echo __("Filtres", "gypass"); ?>
                 </span>
                 <div class="filters-grid">
-                    <a href="<?php echo esc_url(get_post_type_archive_link('gypass_document')) ?>"
+                    <a href="<?php echo esc_url(get_post_type_archive_link('gypass_press')) ?>"
                         class="btn btn-outline-primary<?php if (!is_tax()): ?> active<?php endif; ?>">
                         <?php echo __("Tout", "gypass"); ?>
                     </a>

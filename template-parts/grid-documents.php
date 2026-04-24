@@ -5,9 +5,19 @@
                 <?php the_post_thumbnail(); ?>
             <?php endif; ?>
             <div class="content">
-                <?php if (get_the_terms($post->ID, 'gypass_document_type')) : ?>
-                    <span class="category"><?php echo get_the_terms($post->ID, 'gypass_document_type')[0]->name; ?></span>
-                <?php endif; ?>
+                <?php
+                $terms = get_the_terms($post->ID, 'gypass_document_type');
+
+                if (!$terms || is_wp_error($terms)) {
+                    $terms = get_the_terms($post->ID, 'gypass_press_type');
+                }
+
+                if ($terms && !is_wp_error($terms)) :
+                    foreach ($terms as $term) : ?>
+                        <span class="category"><?php echo esc_html($term->name); ?></span>
+                <?php endforeach;
+                endif;
+                ?>
                 <h2 class="title"><?php the_title(); ?></h2>
                 <div class="btn-wrapper">
                     <a class="btn-inline btn-icon-eye" href="<?php echo get_field('document_url_read') ?: get_field('document_file'); ?>" target="_blank"><?php echo __("Lire"); ?></a>
