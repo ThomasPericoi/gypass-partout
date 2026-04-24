@@ -59,11 +59,6 @@
   flex-wrap: wrap;
 }
 
-.post-type-archive-gypass_press .document .btn-wrapper,
-.tax-gypass_press_type .document .btn-wrapper {
-  justify-content: center;
-}
-
 .post-type-archive-gypass_press .document .btn-icon-eye,
 .tax-gypass_press_type .document .btn-icon-eye {
   display: none;
