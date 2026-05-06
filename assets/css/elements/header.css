@@ -642,27 +642,18 @@ body.js-menuOpened .super-menu-overlay {
 }
 
 .super-menu[data-step="2"] .menu-header>li.opened>.sub-menu>li.opened>.sub-menu {
+    padding-bottom: 2em;
+    box-sizing: border-box;
+    overflow-y: auto;
     transform: translateX(0);
 }
 
 @media screen and (min-width: 1200px) {
     .super-menu[data-step="2"] .menu-header>li.opened>.sub-menu>li.opened>.sub-menu {
+        height: 100vh;
+        padding-top: calc(41px + 70px + 2em);
+        top: calc(-41px - 70px - 2em);
         transform: translateX(calc(100% + 1px));
-    }
-
-    .super-menu[data-step="2"] .menu-header>li.opened>.sub-menu>li>.sub-menu:before {
-        content: "";
-        height: 160vh;
-        position: absolute;
-        display: block;
-        top: -30vh;
-        right: 0;
-        left: 0;
-        background-color: var(--white);
-    }
-
-    .super-menu[data-step="2"] .menu-header>li.opened>.sub-menu>li.opened>.sub-menu:before {
-        opacity: 1;
     }
 }
 
