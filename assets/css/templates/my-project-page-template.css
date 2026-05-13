@@ -83,6 +83,9 @@
 .page-template-my-project-page-template .form-elements>label,
 .page-template-my-project-page-template .form-elements>.uacf7_conditional {
     flex: 0 0 calc((100% - (2 * 1em)) / 2);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
     outline: 1px solid var(--secondary);
     box-sizing: border-box;
 }

@@ -16,7 +16,7 @@
                 "class": "",
                 "id": ""
             },
-            "message": "Ne cocher cette case que si la catégorie est \"Portes de garage\" ou \"Portails\"",
+            "message": "Ne cocher cette case que si l'affichage de la catégorie est avancée.",
             "default_value": 0,
             "allow_in_bindings": 0,
             "ui": 0,
@@ -281,5 +281,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740494826
+    "modified": 1759246452
 }

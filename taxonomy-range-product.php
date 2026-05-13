@@ -1,5 +1,17 @@
 <?php get_header(); ?>
 
+<!-- Breadcrumbs -->
+<section id="breadcrumbs">
+    <div class="container container-lg">
+        <span class="js-openRanges">
+            <a class="btn-back">
+                <?php get_template_part('assets/icons/arrow-line-left.svg'); ?>
+            </a>
+        </span>
+        <?php if (function_exists('rank_math_the_breadcrumbs')) rank_math_the_breadcrumbs(); ?>
+    </div>
+</section>
+
 <!-- Hero -->
 <?php $title = get_queried_object()->name;
 $description = get_queried_object()->description ?: __("Retrouvez ici toutes les gammes BRO.", "gypass");

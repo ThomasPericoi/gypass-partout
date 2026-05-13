@@ -278,7 +278,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65dca50e0c75f"
+                    "parent_repeater": "field_65dca50e0c75f",
+                    "create_options": 0,
+                    "save_options": 0
                 },
                 {
                     "key": "field_65dca5a30c761",
@@ -299,64 +301,6 @@
                     "parent_repeater": "field_65dca50e0c75f"
                 }
             ]
-        },
-        {
-            "key": "field_65ddb7c88a190",
-            "label": "Newsletter",
-            "name": "",
-            "aria-label": "",
-            "type": "tab",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "placement": "top",
-            "endpoint": 0,
-            "selected": 0
-        },
-        {
-            "key": "field_65ddc219071a6",
-            "label": "Titre du formulaire",
-            "name": "footer_newsletter_title",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
-        },
-        {
-            "key": "field_65ddb69137a37",
-            "label": "Code court du formulaire",
-            "name": "footer_newsletter_shortcode",
-            "aria-label": "",
-            "type": "text",
-            "instructions": "Insérer l'ID du formulaire du code court généré via le plugin Contact Form 7.",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "maxlength": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": ""
         }
     ],
     "location": [
@@ -377,5 +321,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1724342779
+    "modified": 1758619346
 }

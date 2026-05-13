@@ -24,7 +24,7 @@ if (function_exists('acf_add_options_page')) {
 // Register post types
 function register_custom_post_types()
 {
-    $post_types = ["document", "hiring", "inspiration", "product", "range", "tip-trick"];
+    $post_types = ["document", "hiring", "inspiration", "press-document", "product", "range", "tip-trick"];
     foreach ($post_types as $post_type) {
         include_once(__DIR__ . '/post-types/' . $post_type . '.php');
     }
@@ -60,6 +60,20 @@ function register_custom_taxonomy()
             'show_admin_column' => true,
             'hierarchical' => true,
             'rewrite' => ['slug' => 'inspirations-types', 'with_front' => true],
+        )
+    );
+    register_taxonomy(
+        'gypass_press_type',
+        array('gypass_press'),
+        array(
+            'label' => __('Types de documents presse', 'gypass'),
+            'public' => true,
+            'show_ui' => true,
+            'show_in_menu' => true,
+            'show_in_rest' => true,
+            'show_admin_column' => true,
+            'hierarchical' => true,
+            'rewrite' => ['slug' => 'press-documents', 'with_front' => true],
         )
     );
     register_taxonomy(
@@ -122,6 +136,12 @@ function redirect_tax_archive($template)
             return $new_template;
         }
     }
+    if (is_tax('gypass_press_type') && is_archive()) {
+        $new_template = locate_template(array('archive-gypass_press.php'));
+        if ('' != $new_template) {
+            return $new_template;
+        }
+    }
     if (is_tax('gypass_product_product_family') && is_archive()) {
         $new_template = locate_template(array('archive-gypass_product.php'));
         if ('' != $new_template) {
@@ -129,7 +149,7 @@ function redirect_tax_archive($template)
         }
     }
     if (is_tax('gypass_range_product_family') && is_archive()) {
-        if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails'))) {
+        if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails')) || (is_tax('gypass_range_product_family', 'Clôtures')) || (is_tax('gypass_range_product_family', 'Claustras')) || (is_tax('gypass_range_product_family', 'Pergolas')) || (is_tax('gypass_range_product_family', 'Carports')) || (is_tax('gypass_range_product_family', 'portes-dentree'))) {
             $new_template = locate_template(array('taxonomy-range-product.php'));
         } else {
             $new_template = locate_template(array('archive-gypass_range.php'));
@@ -220,7 +240,7 @@ add_action('init', 'enable_dynamic_rw_rules');
 // Add classes to body based on template
 function add_custom_classes_to_templates($classes)
 {
-    if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails'))) {
+    if ((is_tax('gypass_range_product_family', 'Portes de garage')) || (is_tax('gypass_range_product_family', 'Portails')) || (is_tax('gypass_range_product_family', 'Clôtures')) || (is_tax('gypass_range_product_family', 'Claustras')) || (is_tax('gypass_range_product_family', 'Pergolas')) || (is_tax('gypass_range_product_family', 'Carports')) || (is_tax('gypass_range_product_family', 'portes-dentree'))) {
         $classes[] = 'taxonomy-range-product';
     }
     return $classes;
@@ -233,7 +253,7 @@ add_filter('body_class', 'add_custom_classes_to_templates');
 // Register blocks
 function register_acf_blocks()
 {
-    $blocks = ["accordion-tabs", "accordion-tabs-crossed", "accordion-tabs-crossed-colors", "accordion-tabs-crossed-double", "accordion-tabs-crossed-double-special", "content-2-columns", "content-3-columns", "image-legend", "shades", "tooltip-double", "tooltip-simple", "tooltip-special", "video"];
+    $blocks = ["accordion-tabs", "accordion-tabs-colors-slider", "accordion-tabs-crossed", "accordion-tabs-crossed-colors", "accordion-tabs-crossed-double", "accordion-tabs-crossed-double-special", "content-2-columns", "content-3-columns", "image-legend", "shades", "tooltip-double", "tooltip-simple", "tooltip-special", "video"];
 
     foreach ($blocks as $block) {
         register_block_type(__DIR__ . '/blocks/' . $block);

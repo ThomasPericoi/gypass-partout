@@ -1,0 +1,15 @@
+{
+    "name": "acf/accordion-tabs-colors-slider",
+    "title": "Tabs accordéon type nuancier",
+    "description": "Une grille d'images pour sélectionner l'image que l'on souhaite.",
+    "category": "gypass-block",
+    "icon": "admin-customizer",
+    "keywords": [
+        "image",
+        "text"
+    ],
+    "acf": {
+        "mode": "edit",
+        "renderTemplate": "accordion-tabs-colors-slider.php"
+    }
+}

@@ -13,15 +13,15 @@
         <?php endif; ?>
         <nav aria-label="breadcrumbs" class="rank-math-breadcrumb">
             <p>
-                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a>
+                <span class="js-openRanges"><a><?php echo __("Gammes", "gypass"); ?></a></span>
+                <span class="separator"> &gt; </span>
+                <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
+                    <a href="<?php echo site_url() . "/nos-gammes/" . get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->slug; ?>"><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a>
                     <span class="separator"> &gt; </span>
-                    <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
-                        <span class="js-openRanges"><a><?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?></a></span>
-                        <span class="separator"> &gt; </span>
-                    <?php endif; ?>
-                    <span class="last"><?php echo get_the_title(); ?></span>
+                <?php endif; ?>
+                <span class="last"><?php echo get_the_title(); ?></span>
             </p>
-        </nav>
+		</nav>
     </div>
 </section>
 
@@ -33,7 +33,7 @@
             <?php if (get_the_terms(get_the_id(), 'gypass_range_product_family')) : ?>
                 <?php echo get_the_terms(get_the_id(), 'gypass_range_product_family')[0]->name; ?><br />
             <?php endif; ?>
-            <strong><?php echo __("Gamme", "gypass"); ?> <?php echo get_field("range_range") ?: get_the_title(); ?></strong>
+            <strong><?php echo get_field("range_range") ?: get_the_title(); ?></strong>
         </h1>
         <h2 class="h1-size"><?php echo get_field("range_title") ?: get_the_title(); ?></h2>
         <a class="btn-scroll" href="#plus">

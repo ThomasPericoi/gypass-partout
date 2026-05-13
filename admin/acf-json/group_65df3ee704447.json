@@ -266,7 +266,7 @@
                             {
                                 "field": "field_65fb0318f98cc",
                                 "operator": "==",
-                                "value": "true"
+                                "value": "1"
                             }
                         ]
                     ],
@@ -349,7 +349,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65faeaf703226"
+                    "parent_repeater": "field_65faeaf703226",
+                    "create_options": 0,
+                    "save_options": 0
                 },
                 {
                     "key": "field_65fb09f466c6b",
@@ -364,7 +366,7 @@
                             {
                                 "field": "field_65fb0318f98cc",
                                 "operator": "==",
-                                "value": "true"
+                                "value": "1"
                             }
                         ]
                     ],
@@ -399,7 +401,7 @@
                             {
                                 "field": "field_65fb0318f98cc",
                                 "operator": "==",
-                                "value": "true"
+                                "value": "1"
                             }
                         ]
                     ],
@@ -906,7 +908,9 @@
                     "ui": 0,
                     "ajax": 0,
                     "placeholder": "",
-                    "parent_repeater": "field_65df3fee8d7bf"
+                    "parent_repeater": "field_65df3fee8d7bf",
+                    "create_options": 0,
+                    "save_options": 0
                 },
                 {
                     "key": "field_65df40788d7c1",
@@ -992,5 +996,6 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1740492960
+    "display_title": "",
+    "modified": 1774283831
 }
